@@ -7,7 +7,7 @@ import java.util.*;
 import java.util.regex.*;
 import static sordland.data.Domain.*;
 
-
+                                                                                                  
 public final class Loader {
     public static final String ENTITY_FILE = "SuzerainDataDumper.entity_data.json";
     public static final String CONVERSATIONS_FILE = "SuzerainDataDumper.conversations_Sordland.json";
@@ -64,7 +64,7 @@ public final class Loader {
                 }
             }
         }
-        
+                                                                                                        
         GameFlow gameFlow=readGameFlow(catalogue.get("GameFlowData"),items,ancillary,diagnostics,ignored,entityFile);
         int fragments=0;
         for(Conversation c:conversations.values()) {
@@ -83,7 +83,9 @@ public final class Loader {
         diagnostics.add("Excluded "+excluded+" catalogue records outside Sordland scope or without unambiguous Sordland evidence; exact source records remain in Ignored data.");
         diagnostics.add("Retained "+ignored.size()+" readable unsupported, incomplete, or out-of-scope source records in Ignored data. News and conditional instructions remain supported graphical types.");
         diagnostics.add("Speaker names are corroborated from source dialogue titles. Actor-name source indices have no proven dialogue ActorID mapping; every supplied record is retained in Ignored data.");
-        return new Dataset(items,conversations,ancillary,diagnostics,gameFlow,ignored);
+        var runtime=sordland.data.runtime.RuntimeDatabaseLoader.load(entityPath.resolveSibling("runtime"));
+        diagnostics.addAll(runtime.diagnostics);
+        return new Dataset(items,conversations,ancillary,diagnostics,gameFlow,ignored,runtime);
     }
 
     private static void readActorNames(Path path,List<String> diagnostics,List<IgnoredData> ignored)throws IOException {
@@ -163,7 +165,7 @@ public final class Loader {
     }
 
     private record IndexedValue(int index,Object value) {}
-    
+                                                                                           
     private static List<IndexedValue> indexedValues(Object value,String context)throws IOException {
         requireCollection(value,context);List<IndexedValue> result=new ArrayList<>();
         if(value instanceof List<?> list) {
@@ -193,7 +195,7 @@ public final class Loader {
         if(values.isEmpty())throw new IOException("Conversation database has no conversations.");
         retainUnknownFields(ignored,file,"Conversation root","","$",root,Set.of("conversations","_type"));
         Map<Integer,Map<String,Integer>> names=new LinkedHashMap<>();
-        
+                                                                                        
         for(SourceValue value:values) {
             Map<String,Object> c=Json.object(value.value());
             if(!Json.string(c,"Title").startsWith("Sordland/"))continue;
@@ -298,7 +300,7 @@ public final class Loader {
         return result;
     }
 
-    
+                                                                                                      
     private static final class CorruptTopology extends IOException {
         CorruptTopology(String message){super(message);}
     }
@@ -362,10 +364,10 @@ public final class Loader {
         if(turn==null&&turn(path)!=null){turn=turn(path);turnSource="Path";}
         List<Option> options=new ArrayList<>();
         if(type.equals("Bill")) {
-            
+                                                                                                       
             options.add(new Option("SIGN","",requiredString(p,"SignVariables",name+".BillProperties")));
             String disabled=sourceText(p,"IsVetoDisabledCondition",name+".BillProperties");
-            
+                                                                                                                   
             options.add(new Option("VETO",disabled.isBlank()?"":"Disabled when: "+disabled,requiredString(p,"VetoVariables",name+".BillProperties")));
         } else if(type.equals("Decision")) {
             requireCollection(p.get("Options"),name+".DecisionProperties.Options");

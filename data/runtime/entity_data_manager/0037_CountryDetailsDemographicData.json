@@ -1,0 +1,343 @@
+{
+  "dataset": "CountryDetailsDemographicData",
+  "sourceFile": "EntityDataManager/0037_CountryDetailsDemographicData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.CountryDetailsDemographicData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.4944562Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "76",
+    "errors": "0",
+    "cycles": "6",
+    "nodes": "124",
+    "bytes": "24193"
+  },
+  "primitiveValuesParsed": 76,
+  "referencesParsed": 6,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 6,
+    "$items": [
+{
+        "$type": "Il2Cpp.CountryDetailsDemographicData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CountryDetailsDemographicProperties": {
+          "$type": "Il2Cpp.CountryDetailsDemographicProperties",
+          "$objectId": 5,
+          "GraphFunctionalityTypeString": "ManualDataValues",
+          "Title": "Age",
+          "Values": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 6,
+            "$declaredCount": 5,
+            "$items": [
+{
+                "$type": "Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue",
+                "$objectId": 7,
+                "demographicTitle": "1-18",
+                "demographicValue": 29.2
+              },
+{
+                "$type": "Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue",
+                "$objectId": 8,
+                "demographicTitle": "19-29",
+                "demographicValue": 25.4
+              },
+{
+                "$type": "Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue",
+                "$objectId": 9,
+                "demographicTitle": "30-49",
+                "demographicValue": 23.2
+              },
+{
+                "$type": "Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue",
+                "$objectId": 10,
+                "demographicTitle": "50-69",
+                "demographicValue": 18.1
+              },
+{
+                "$type": "Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue",
+                "$objectId": 11,
+                "demographicTitle": "70+",
+                "demographicValue": 7.1
+              }
+            ]
+          }
+        },
+        "GraphFunctionalityType": "ManualDataValues",
+        "Id": "0x0100006C00000C0C",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Age",
+        "Notes": "",
+        "Path": "Sordland/Country Details",
+        "Values": {
+          "$ref": 6,
+          "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+        }
+      },
+{
+        "$type": "Il2Cpp.CountryDetailsDemographicData",
+        "$objectId": 12,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 13,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 14,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CountryDetailsDemographicProperties": {
+          "$type": "Il2Cpp.CountryDetailsDemographicProperties",
+          "$objectId": 15,
+          "GraphFunctionalityTypeString": "TotalEthnicity",
+          "Title": "Ethnicity",
+          "Values": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 16,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "GraphFunctionalityType": "TotalEthnicity",
+        "Id": "0x0100006C00000C00",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Ethnicity",
+        "Notes": "",
+        "Path": "Sordland/Country Details",
+        "Values": {
+          "$ref": 16,
+          "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+        }
+      },
+{
+        "$type": "Il2Cpp.CountryDetailsDemographicData",
+        "$objectId": 17,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 18,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 19,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CountryDetailsDemographicProperties": {
+          "$type": "Il2Cpp.CountryDetailsDemographicProperties",
+          "$objectId": 20,
+          "GraphFunctionalityTypeString": "GDPPerRegion",
+          "Title": "GDP Per Region",
+          "Values": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 21,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "GraphFunctionalityType": "GDPPerRegion",
+        "Id": "0x0100006C00000C14",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_GDPPerRegion",
+        "Notes": "",
+        "Path": "Sordland/Country Details",
+        "Values": {
+          "$ref": 21,
+          "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+        }
+      },
+{
+        "$type": "Il2Cpp.CountryDetailsDemographicData",
+        "$objectId": 22,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 23,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 24,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CountryDetailsDemographicProperties": {
+          "$type": "Il2Cpp.CountryDetailsDemographicProperties",
+          "$objectId": 25,
+          "GraphFunctionalityTypeString": "ManualDataValues",
+          "Title": "Last Election",
+          "Values": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 26,
+            "$declaredCount": 6,
+            "$items": [
+{
+                "$type": "Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue",
+                "$objectId": 27,
+                "demographicTitle": "USP",
+                "demographicValue": 37
+              },
+{
+                "$type": "Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue",
+                "$objectId": 28,
+                "demographicTitle": "PFJP",
+                "demographicValue": 20
+              },
+{
+                "$type": "Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue",
+                "$objectId": 29,
+                "demographicTitle": "NFP",
+                "demographicValue": 11
+              },
+{
+                "$type": "Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue",
+                "$objectId": 30,
+                "demographicTitle": "WPB",
+                "demographicValue": 9
+              },
+{
+                "$type": "Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue",
+                "$objectId": 31,
+                "demographicTitle": "CPS",
+                "demographicValue": 8
+              },
+{
+                "$type": "Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue",
+                "$objectId": 32,
+                "demographicTitle": "Others & Invalid",
+                "demographicValue": 15
+              }
+            ]
+          }
+        },
+        "GraphFunctionalityType": "ManualDataValues",
+        "Id": "0x0100006C00000C08",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_LastElection",
+        "Notes": "",
+        "Path": "Sordland/Country Details",
+        "Values": {
+          "$ref": 26,
+          "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+        }
+      },
+{
+        "$type": "Il2Cpp.CountryDetailsDemographicData",
+        "$objectId": 33,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 34,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 35,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CountryDetailsDemographicProperties": {
+          "$type": "Il2Cpp.CountryDetailsDemographicProperties",
+          "$objectId": 36,
+          "GraphFunctionalityTypeString": "PopulationPerRegion",
+          "Title": "Population per Region",
+          "Values": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 37,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "GraphFunctionalityType": "PopulationPerRegion",
+        "Id": "0x0100006C00000C10",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_PopPerRegion",
+        "Notes": "",
+        "Path": "Sordland/Country Details",
+        "Values": {
+          "$ref": 37,
+          "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+        }
+      },
+{
+        "$type": "Il2Cpp.CountryDetailsDemographicData",
+        "$objectId": 38,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 39,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 40,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CountryDetailsDemographicProperties": {
+          "$type": "Il2Cpp.CountryDetailsDemographicProperties",
+          "$objectId": 41,
+          "GraphFunctionalityTypeString": "TotalReligion",
+          "Title": "Religion",
+          "Values": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 42,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "GraphFunctionalityType": "TotalReligion",
+        "Id": "0x0100006C00000C04",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Religion",
+        "Notes": "",
+        "Path": "Sordland/Country Details",
+        "Values": {
+          "$ref": 42,
+          "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsDemographicProperties+CountryDetailsDemographicValue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"
+        }
+      }
+    ]
+  }
+}

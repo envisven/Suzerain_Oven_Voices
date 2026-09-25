@@ -1,0 +1,268 @@
+{
+  "dataset": "newsCategoryData",
+  "sourceFile": "EntityDataManager/0138_newsCategoryData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.newsCategoryData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.6777101Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "81",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "114",
+    "bytes": "15871"
+  },
+  "primitiveValuesParsed": 81,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.NewsCategoryData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 8,
+    "$items": [
+{
+        "$type": "Il2Cpp.NewsCategoryData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000580000B347",
+        "IsWIP": false,
+        "NameInDatabase": "Newspaper_Economists",
+        "NewsCategoryProperties": {
+          "$type": "Il2Cpp.NewsCategoryProperties",
+          "$objectId": 5,
+          "ButtonImagePath": "News Panel/button_news_ekonomists",
+          "ButtonSelectedImagePath": "News Panel/button_news_ekonomists_selected",
+          "IsNewspaperDisabledCondition": "",
+          "NewspaperLogoImagePath": "News Panel/logo_news_ekonomists"
+        },
+        "Notes": "",
+        "Path": "Sordland/News Categories"
+      },
+{
+        "$type": "Il2Cpp.NewsCategoryData",
+        "$objectId": 6,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 7,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000580000B33F",
+        "IsWIP": false,
+        "NameInDatabase": "Newspaper_HolsordPost",
+        "NewsCategoryProperties": {
+          "$type": "Il2Cpp.NewsCategoryProperties",
+          "$objectId": 9,
+          "ButtonImagePath": "News Panel/button_news_holsordpost",
+          "ButtonSelectedImagePath": "News Panel/button_news_holsordpost_selected",
+          "IsNewspaperDisabledCondition": "",
+          "NewspaperLogoImagePath": "News Panel/logo_news_holsordpost"
+        },
+        "Notes": "",
+        "Path": "Sordland/News Categories"
+      },
+{
+        "$type": "Il2Cpp.NewsCategoryData",
+        "$objectId": 10,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 11,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 12,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000580000B34F",
+        "IsWIP": false,
+        "NameInDatabase": "Newspaper_LachavenTimes",
+        "NewsCategoryProperties": {
+          "$type": "Il2Cpp.NewsCategoryProperties",
+          "$objectId": 13,
+          "ButtonImagePath": "News Panel/button_news_lachaventimes",
+          "ButtonSelectedImagePath": "News Panel/button_news_lachaventimes_selected",
+          "IsNewspaperDisabledCondition": "",
+          "NewspaperLogoImagePath": "News Panel/logo_news_lachaventimes"
+        },
+        "Notes": "",
+        "Path": "Sordland/News Categories"
+      },
+{
+        "$type": "Il2Cpp.NewsCategoryData",
+        "$objectId": 14,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 15,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006500000216",
+        "IsWIP": false,
+        "NameInDatabase": "Newspaper_RoyalHerald",
+        "NewsCategoryProperties": {
+          "$type": "Il2Cpp.NewsCategoryProperties",
+          "$objectId": 17,
+          "ButtonImagePath": "News Panel/button_news_royalherald",
+          "ButtonSelectedImagePath": "News Panel/button_news_royalherald_selected",
+          "IsNewspaperDisabledCondition": "",
+          "NewspaperLogoImagePath": "News Panel/logo_news_royalherald"
+        },
+        "Notes": "",
+        "Path": "Rizia/News Categories"
+      },
+{
+        "$type": "Il2Cpp.NewsCategoryData",
+        "$objectId": 18,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 19,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 20,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000580000B343",
+        "IsWIP": false,
+        "NameInDatabase": "Newspaper_SordlandToday",
+        "NewsCategoryProperties": {
+          "$type": "Il2Cpp.NewsCategoryProperties",
+          "$objectId": 21,
+          "ButtonImagePath": "News Panel/button_news_sordlandtoday",
+          "ButtonSelectedImagePath": "News Panel/button_news_sordlandtoday_selected",
+          "IsNewspaperDisabledCondition": "",
+          "NewspaperLogoImagePath": "News Panel/logo_news_sordlandtoday"
+        },
+        "Notes": "",
+        "Path": "Sordland/News Categories"
+      },
+{
+        "$type": "Il2Cpp.NewsCategoryData",
+        "$objectId": 22,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 23,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 24,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000580000B353",
+        "IsWIP": false,
+        "NameInDatabase": "Newspaper_TheRadical",
+        "NewsCategoryProperties": {
+          "$type": "Il2Cpp.NewsCategoryProperties",
+          "$objectId": 25,
+          "ButtonImagePath": "News Panel/button_news_radical",
+          "ButtonSelectedImagePath": "News Panel/button_news_radical_selected",
+          "IsNewspaperDisabledCondition": "BaseGame.Media_Censored == true",
+          "NewspaperLogoImagePath": "News Panel/logo_news_radical"
+        },
+        "Notes": "",
+        "Path": "Sordland/News Categories"
+      },
+{
+        "$type": "Il2Cpp.NewsCategoryData",
+        "$objectId": 26,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 27,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 28,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006500000226",
+        "IsWIP": false,
+        "NameInDatabase": "Newspaper_VoiceOfRizia",
+        "NewsCategoryProperties": {
+          "$type": "Il2Cpp.NewsCategoryProperties",
+          "$objectId": 29,
+          "ButtonImagePath": "News Panel/button_news_voiceofrizia",
+          "ButtonSelectedImagePath": "News Panel/button_news_voiceofrizia_selected",
+          "IsNewspaperDisabledCondition": "RiziaDLC.Policy_RD_Welfare_FreePress == false",
+          "NewspaperLogoImagePath": "News Panel/logo_news_voiceofrizia"
+        },
+        "Notes": "",
+        "Path": "Rizia/News Categories"
+      },
+{
+        "$type": "Il2Cpp.NewsCategoryData",
+        "$objectId": 30,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 31,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 32,
+            "$declaredCount": 2,
+            "$items": [
+"StoryPack_Main",
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000580000B34B",
+        "IsWIP": false,
+        "NameInDatabase": "SharedNewspaper_Geopolitico",
+        "NewsCategoryProperties": {
+          "$type": "Il2Cpp.NewsCategoryProperties",
+          "$objectId": 33,
+          "ButtonImagePath": "News Panel/button_news_geopolitico",
+          "ButtonSelectedImagePath": "News Panel/button_news_geopolitico_selected",
+          "IsNewspaperDisabledCondition": "",
+          "NewspaperLogoImagePath": "News Panel/logo_news_geopolitico"
+        },
+        "Notes": "",
+        "Path": "Shared/Shared News Categories"
+      }
+    ]
+  }
+}

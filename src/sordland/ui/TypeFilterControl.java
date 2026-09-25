@@ -11,7 +11,7 @@ import javafx.util.StringConverter;
 import java.util.*;
 import java.util.function.Consumer;
 
-
+                                                                                 
 public final class TypeFilterControl extends MenuButton {
     public static final class TypeItem {
         private final String name;private final BooleanProperty selected=new SimpleBooleanProperty();
@@ -36,7 +36,7 @@ public final class TypeFilterControl extends MenuButton {
         for(String name:types){var item=new TypeItem(name,selected.contains(name));item.selectedProperty().addListener((p,old,value)->{updateCaption();debounce.playFromStart();});list.getItems().add(item);}
         list.setPrefHeight(Math.min(330,Math.max(80,types.size()*29+4)));updateCaption();
     }
-    
+                                                                                               
     public void setSelected(String name,boolean selected){
         var item=list.getItems().stream().filter(i->i.name().equals(name)).findFirst().orElseThrow();item.selectedProperty().set(selected);
     }

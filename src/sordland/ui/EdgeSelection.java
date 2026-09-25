@@ -5,13 +5,13 @@ import sordland.layout.EdgeHitTest;
 import sordland.layout.LayoutEngine;
 import java.util.*;
 
-
+                                                                                   
 public final class EdgeSelection {
     private Graph.Edge selected;
 
     public Graph.Edge selected() { return selected; }
 
-    
+                                                                                      
     public boolean click(List<LayoutEngine.Line> lines, double worldX, double worldY,
                          double scale, double tolerancePixels) {
         Set<Graph.Edge> candidates = EdgeHitTest.candidates(lines, worldX, worldY, scale, tolerancePixels);
@@ -22,7 +22,7 @@ public final class EdgeSelection {
         return true;
     }
 
-    
+                                                                                                
     public boolean retainEdges(Collection<Graph.Edge> edges) {
         Objects.requireNonNull(edges, "edges");
         if (selected == null) return false;

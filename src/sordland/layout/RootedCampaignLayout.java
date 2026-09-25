@@ -4,8 +4,8 @@ import sordland.graph.Graph;
 import sordland.layout.LayoutEngine.*;
 import java.util.*;
 
-
-
+                                                                                
+                                                                              
 public final class RootedCampaignLayout {
     private static final double MARGIN=92,GAP_X=42,GAP_Y=64,PADDING=14,MEMBER_GAP=22,MAX_GROUP_WIDTH=1500;
     private static final Size POINT=new Size(2,2,List.of(),List.of(),List.of());
@@ -37,11 +37,11 @@ public final class RootedCampaignLayout {
         var units=new LinkedHashMap<String,Unit>();
         var owner=new HashMap<String,Unit>();
         var attachments=new LinkedHashMap<String,List<Graph.NewsAttachment>>();
-        for(var attachment:graph.campaign.news())if(nodes.containsKey(attachment.eventId())&&nodes.containsKey(attachment.effectId()))
+        for(var attachment:java.util.stream.Stream.concat(graph.campaign.news().stream(),graph.campaign.runtime().stream()).toList())if(nodes.containsKey(attachment.eventId())&&nodes.containsKey(attachment.effectId()))
             attachments.computeIfAbsent(attachment.eventId(),k->new ArrayList<>()).add(attachment);
         for(var group:graph.campaign.groups()){
-            
-            
+                                                                                 
+                                                                                 
             if(group.eventIds().stream().anyMatch(attachments::containsKey))continue;
             Unit unit=new Unit(group.id());unit.group=group;
             packGroup(unit,group,nodes,sizes);
@@ -60,13 +60,13 @@ public final class RootedCampaignLayout {
             if(unit==null){unit=new Unit(node.id);unit.nodes.add(node);unit.width=sizes.get(node.id).width();unit.height=sizes.get(node.id).height();units.put(unit.id,unit);owner.put(node.id,unit);}
             if(unit.order==0)unit.order=++order;
         }
-        
-        
+                                                                             
+                                                                                  
         order=0;var assigned=new HashSet<Unit>();
         for(var level:graph.campaign.levels())for(String id:level.eventIds())if(assigned.add(owner.get(id)))owner.get(id).order=order++;
 
-        
-        
+                                                                               
+                                                                                 
         var component=new HashMap<String,String>();units.keySet().forEach(id->component.put(id,id));
         for(var level:graph.campaign.levels()){
             String first=null;
@@ -106,8 +106,8 @@ public final class RootedCampaignLayout {
             double width=layer.stream().mapToDouble(u->u.width).sum()+GAP_X*(layer.size()-1),x=-width/2;
             for(Unit unit:layer){unit.x=x;x+=unit.width+GAP_X;}
         }
-        
-        
+                                                                                 
+                                                                                 
         for(var layer:layers.descendingMap().values()){
             if(layer.stream().noneMatch(Unit::condition))continue;
             for(Unit unit:layer)if(unit.condition()){
@@ -155,7 +155,7 @@ public final class RootedCampaignLayout {
                 groups.add(new Group(group.id(),unit.x,unit.y,unit.width,unit.height,group.entryId(),group.exitId(),group.eventIds()));
             }
         }
-        
+                                                                                  
         var boxes=new ArrayList<Box>();for(var n:graph.nodes)boxes.add(boxesById.get(n.id));
         var lines=new ArrayList<Line>();
         var parallel=new HashMap<String,List<Graph.Edge>>();
@@ -169,7 +169,7 @@ public final class RootedCampaignLayout {
                     var points=List.of(new Point(from.cx(),from.bottom()),new Point(from.cx(),exitY),new Point(lane,exitY),new Point(lane,enterY),new Point(to.cx(),enterY),new Point(to.cx(),to.y()));
                     lines.add(new Line(edge,from,to,lane,clean(points)));
                 }
-                continue; 
+                continue;                                                     
             }
             double exitY=rankBottom.get(a.rank)+14,enterY=rankTop.get(b.rank)-14;
             if(b.rank==a.rank+1)exitY=enterY=(rankBottom.get(a.rank)+rankTop.get(b.rank))/2;
@@ -182,8 +182,8 @@ public final class RootedCampaignLayout {
                 double left=Double.POSITIVE_INFINITY,right=Double.NEGATIVE_INFINITY;
                 for(Unit obstacle:units.values())if(obstacle.rank>=a.rank&&obstacle.rank<=b.rank){left=Math.min(left,obstacle.x-24);right=Math.max(right,obstacle.x+obstacle.width+24);}
                 double leftDistance=Math.abs(from.cx()-left)+Math.abs(to.cx()-left),rightDistance=Math.abs(from.cx()-right)+Math.abs(to.cx()-right);
-                
-                
+                                                                                 
+                                                                               
                 int alternative=alternatives.indexOf(edge);
                 lane=distinct?(alternative%2==0?left:right):(leftDistance<=rightDistance?left:right);
                 if(distinct){double track=Math.min(6,(rankTop.get(b.rank)-rankBottom.get(a.rank)-24)/(alternatives.size()*2));exitY=rankBottom.get(a.rank)+12+alternative*track;enterY=rankTop.get(b.rank)-12-alternative*track;}

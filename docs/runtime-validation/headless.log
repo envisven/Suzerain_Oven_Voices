@@ -1,0 +1,13 @@
+Compiled Sordland Tree Viewer.
+ACCOUNT SuzerainDataDumper.entity_data.json/AllBillsData: total=26 consumed=22 retained=4 unaccounted=0
+ACCOUNT SuzerainDataDumper.entity_data.json/AllConversationsData: total=264 consumed=151 retained=113 unaccounted=0
+ACCOUNT SuzerainDataDumper.entity_data.json/AllDecisionsData: total=310 consumed=56 retained=254 unaccounted=0
+ACCOUNT SuzerainDataDumper.entity_data.json/conditionalInstructionData: total=368 consumed=4 retained=364 unaccounted=0
+ACCOUNT SuzerainDataDumper.entity_data.json/GameFlowData: total=2 consumed=1 retained=1 unaccounted=0
+ACCOUNT SuzerainDataDumper.entity_data.json/NewsData: total=1476 consumed=1436 retained=40 unaccounted=0
+ACCOUNT SuzerainDataDumper.conversations_Sordland.json: conversations=286 entries=83454 fields=868521 links=104553; all consumed/raw-retained; unaccounted=0
+ACCOUNT SuzerainDataDumper.actor_names.json: total=103 consumed=0 retained=103 rejected=0 unaccounted=0
+Real dialogue coverage: 286 complete canonical graphs; 159924 boxes; 187600 exact source links; maximum 3187 boxes (conversation 257); zero continuations.
+Runtime ROOTED types: [Decree, Journal, Policy, Report, Situation, Token status]
+Runtime counts: {carouselchoicepagedata=17, situationsdata=228, decreesdata=19, journalentriesdata=561, multiplechoicepagedata=24, policiesdata=164, reportsdata=862, tokenstatuseffectsdata=106, carouselchoiceoptiondata=55, multiplechoiceoptiondata=64, pageddecisionpanelsdata=8}; 286 enriched dialogue graphs, exact Budget effects/continuation and panel geometry PASS.
+PASS: 11.869.167 checks in 10,97 s

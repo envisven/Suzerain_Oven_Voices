@@ -7,7 +7,7 @@ import sordland.data.Domain.IgnoredData;
 import sordland.data.Json;
 import java.util.*;
 
-
+                                                                                                
 public final class IgnoredDataView extends BorderPane {
     public IgnoredDataView(List<IgnoredData> records){
         setPadding(new Insets(20));setStyle(Theme.PANEL_STYLE);

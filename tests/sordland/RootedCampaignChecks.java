@@ -5,7 +5,7 @@ import sordland.graph.*;
 import java.util.*;
 import static sordland.TestSupport.*;
 
-
+                                                                
 final class RootedCampaignChecks {
     private RootedCampaignChecks() {}
     static void run(Dataset actual) {

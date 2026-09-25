@@ -1,0 +1,121 @@
+{
+  "dataset": "characterDetailsPanelData",
+  "sourceFile": "EntityDataManager/0094_characterDetailsPanelData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.characterDetailsPanelData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.0355532Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "38",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "49",
+    "bytes": "7827"
+  },
+  "primitiveValuesParsed": 38,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CharacterDetailsPanelData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 2,
+    "$items": [
+{
+        "$type": "Il2Cpp.CharacterDetailsPanelData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterDetailsPanelProperties": {
+          "$type": "Il2Cpp.CharacterDetailsPanelProperties",
+          "$objectId": 5,
+          "ImagePath": "Character Details Panel/signature_anton",
+          "Sections": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 6,
+            "$declaredCount": 11,
+            "$items": [
+"AntonRayne_AssumedOffice",
+"AntonRayne_InOffice",
+"AntonRayne_PrecededBy",
+"AntonRayne_SuccededBy",
+"AntonRayne_VicePresident",
+"AntonRayne_Born",
+"AntonRayne_Died",
+"AntonRayne_AlmaMater",
+"AntonRayne_Spouse",
+"AntonRayne_Children",
+"AntonRayne_Affiliations"
+            ]
+          },
+          "Subtitle": "President of Sordland",
+          "Title": "Anton Rayne"
+        },
+        "Id": "0x0100006C000002EE",
+        "IsWIP": false,
+        "NameInDatabase": "CharacterDetails_AntonRayne",
+        "Notes": "",
+        "Path": "Sordland/Character Details"
+      },
+{
+        "$type": "Il2Cpp.CharacterDetailsPanelData",
+        "$objectId": 7,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 8,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 9,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterDetailsPanelProperties": {
+          "$type": "Il2Cpp.CharacterDetailsPanelProperties",
+          "$objectId": 10,
+          "ImagePath": "Character Details Panel/signature_romus",
+          "Sections": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 11,
+            "$declaredCount": 9,
+            "$items": [
+"RomusToras_InReign",
+"RomusToras_Born",
+"RomusToras_PrecededBy",
+"RomusToras_SucceededBy",
+"RomusToras_GrandVizier",
+"RomusToras_Died",
+"RomusToras_Spouse",
+"RomusToras_Children",
+"RomusToras_AlmaMatter"
+            ]
+          },
+          "Subtitle": "King of Rizia",
+          "Title": "Romus Toras"
+        },
+        "Id": "0x0100006C00000CC6",
+        "IsWIP": false,
+        "NameInDatabase": "CharacterDetails_RomusToras",
+        "Notes": "",
+        "Path": "Rizia/Character Details"
+      }
+    ]
+  }
+}

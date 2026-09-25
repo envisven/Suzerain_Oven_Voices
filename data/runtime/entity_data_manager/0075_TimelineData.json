@@ -1,0 +1,76 @@
+{
+  "dataset": "TimelineData",
+  "sourceFile": "EntityDataManager/0075_TimelineData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.TimelineData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.8037254Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "21",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "27",
+    "bytes": "4061"
+  },
+  "primitiveValuesParsed": 21,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.TimelineData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 1,
+    "$items": [
+{
+        "$type": "Il2Cpp.TimelineData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100005800007DDF",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Timeline_Prologue",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Prologue Timeline",
+        "TimelineProperties": {
+          "$type": "Il2Cpp.TimelineProperties",
+          "$objectId": 5,
+          "TimelineElements": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 6,
+            "$declaredCount": 15,
+            "$items": [
+"Sordland_Timeline_Prologue_1",
+"Sordland_Timeline_Prologue_2",
+"Sordland_Timeline_Prologue_3",
+"Sordland_Timeline_Prologue_4",
+"Sordland_Timeline_Prologue_5",
+"Sordland_Timeline_Prologue_6",
+"Sordland_Timeline_Prologue_7",
+"Sordland_Timeline_Prologue_8",
+"Sordland_Timeline_Prologue_9",
+"Sordland_Timeline_Prologue_10",
+"Sordland_Timeline_Prologue_11",
+"Sordland_Timeline_Prologue_12",
+"Sordland_Timeline_Prologue_13",
+"Sordland_Timeline_Prologue_14",
+"Sordland_Timeline_Prologue_15"
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

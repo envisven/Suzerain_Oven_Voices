@@ -1,3 +1,18 @@
+# Runtime integration — 2026-09-21
+
+- Added a reusable catalog-driven runtime loader and exact name/Id/enable-variable indexes. Preferred logical members load once; only StoryPack_Main records enter the runtime entity index. All raw preferred-source envelopes remain inspectable.
+- Kept the original dialogue and GameFlow pipelines authoritative. No dumper changes, data replacement, build framework or JSON dependency was introduced.
+- Added structured `ShowPagedDecisionsPanel` semantics, generic carousel/multiple-choice resolution, explicit unresolved references, existing-style condition gates, and bundled choice instructions plus panel counter/bar effects.
+- Added independent PanelGroup/PanelCategory/PanelBranch semantics and a measured panel layout. Actor projection retains panel metadata. Budget has one container, aligned headers, twelve effect bundles and a single completion continuation.
+- Added exact ROOTED runtime content attachments and PLAIN catalogue types; new types default off. Decrees attach through explicit AssignedDecreePanel membership, not assumed enactment. GameFlow turn/step instructions are also considered exact source evidence.
+- Added a separate Runtime sources inspector and richer conditional-instruction source details. The original Ignored data view and its smoke assertions are unchanged.
+- Quarantined the Main-tagged Rizia journal anomaly from gameplay while preserving its raw source and catalog count.
+- Added headless integration tests, JavaFX Budget visual checks, screenshots and reproducible validation logs. All original test classes/assertions remain unchanged; AllTests runs legacy linear-chain checks with the optional runtime absent, then the runtime-aware suite with it present.
+
+---
+
+## Preserved baseline documentation (historical)
+
 # Completed overhaul and final audit repairs
 
 ## Run 1 / Run 2 functionality preserved

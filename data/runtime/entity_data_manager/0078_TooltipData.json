@@ -1,0 +1,643 @@
+{
+  "dataset": "TooltipData",
+  "sourceFile": "EntityDataManager/0078_TooltipData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.TooltipData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.8189685Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "176",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "265",
+    "bytes": "34176"
+  },
+  "primitiveValuesParsed": 176,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.TooltipData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 22,
+    "$items": [
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000039D",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Deana",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 5,
+          "Description": "Your daughter.",
+          "Title": "Deana"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 6,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 7,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000037F",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_DeividWisci",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 9,
+          "Description": "Your teacher and mentor from university. He is the son of the first president of Sordland -- the revolutionary Artor S. Wisci.",
+          "Title": "Deivid Wisci"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 10,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 11,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 12,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000355",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Deyr",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 13,
+          "Description": "The second largest city in Sordland.",
+          "Title": "Deyr"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 14,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 15,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003A9",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_EwaldAlphonso",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 17,
+          "Description": "A reformist businessman who had become the leader of the reformist wing of the United Sordland Party.",
+          "Title": "Ewald Alphonso"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 18,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 19,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 20,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000397",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Franc",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 21,
+          "Description": "Your son.",
+          "Title": "Franc"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 22,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 23,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 24,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003AF",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_FrensRicter",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 25,
+          "Description": "A new and popular figure from the People's Freedom and Justice Party, who currently serves as its leader.",
+          "Title": "Frens Ricter"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 26,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 27,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 28,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100005800007E85",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_GeneralLuderin",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 29,
+          "Description": "The nationalist general who led a military coup and declared martial law in 1927.",
+          "Title": "Luderin"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 30,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 31,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 32,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000036D",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_GeneralRikard",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 33,
+          "Description": "The communist general who led an attack in 1928 against General Luderin's military coup.",
+          "Title": "Rikard"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 34,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 35,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 36,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003C1",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_GreciSordland",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 37,
+          "Description": "Sordish for: \"Great Sordland\"",
+          "Title": "Greci Sordland"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 38,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 39,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 40,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003BB",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_GusManger",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 41,
+          "Description": "The famous businessman and Minister of Rural Development, who's known for his close ties with President Alphonso.",
+          "Title": "Gus Manger"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 42,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 43,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 44,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000361",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Holsord",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 45,
+          "Description": "The capital of the Republic of Sordland.",
+          "Title": "Holsord"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 46,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 47,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 48,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000385",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_IosefLancea",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 49,
+          "Description": "A famous commanding officer from the Sordish Armed Forces who you served under.",
+          "Title": "Iosef Lancea"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 50,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 51,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 52,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000035B",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Lachaven",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 53,
+          "Description": "The richest city in Sordland.",
+          "Title": "Deyr"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 54,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 55,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 56,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000367",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Monica",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 57,
+          "Description": "The love of your life.",
+          "Title": "Monica"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 58,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 59,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 60,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000034F",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_PetrVectern",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 61,
+          "Description": "Your best friend.",
+          "Title": "Petr Vectern"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 62,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 63,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 64,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003B5",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_PresidentAlphonso",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 65,
+          "Description": "The President of Sordland and the new leader of the United Sordland Party.",
+          "Title": "President Alphonso"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 66,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 67,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 68,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003A3",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_PresidentSoll",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 69,
+          "Description": "President Tarquin Soll, the famous colonel who re-established the republic in 1929.",
+          "Title": "President Soll"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 70,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 71,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 72,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100005800008302",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_RepublicOfSordland",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 73,
+          "Description": "The only home you've ever known.",
+          "Title": "Republic of Sordland"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 74,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 75,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 76,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000373",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_TarquinSoll",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 77,
+          "Description": "The President of Sordland and the famous colonel who re-established the republic in 1929.",
+          "Title": "Tarquin Soll"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 78,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 79,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 80,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000391",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_UnitedSordlandParty",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 81,
+          "Description": "Established in 1929 by Colonel Tarquin Soll, the USP is the governing party in Sordland.",
+          "Title": "United Sordland Party"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 82,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 83,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 84,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000379",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_USP",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 85,
+          "Description": "Established in 1929 by Colonel Tarquin Soll, the United Sordland Party is the governing party in Sordland.",
+          "Title": "USP"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 86,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 87,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 88,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000038B",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Wehlen",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 89,
+          "Description": "The Republic of Wehlen is a young and fragile republic located in south-east Merkopa.",
+          "Title": "Wehlen"
+        }
+      }
+    ]
+  }
+}

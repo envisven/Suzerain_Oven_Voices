@@ -3,11 +3,11 @@ package sordland.graph;
 import java.util.*;
 import static sordland.graph.Graph.*;
 
-
+                                                                                                  
 public final class ActorProjection {
     private ActorProjection() {}
 
-    
+                                                                                                     
     public static List<String> actors(Graph canonical) {
         Objects.requireNonNull(canonical);
         var names=new TreeSet<String>(String.CASE_INSENSITIVE_ORDER.thenComparing(Comparator.naturalOrder()));
@@ -18,11 +18,11 @@ public final class ActorProjection {
         result.addAll(names);return List.copyOf(result);
     }
 
-    
-
-
-
-
+       
+                                                                                              
+                                                                                               
+                                                                                              
+       
     public static Graph project(Graph canonical,Set<String> selectedActors) {
         Objects.requireNonNull(canonical);Objects.requireNonNull(selectedActors);
         var selected=new HashSet<String>();selectedActors.forEach(a->selected.add(normalize(a)));
@@ -31,7 +31,7 @@ public final class ActorProjection {
             if(nodes.putIfAbsent(node.id,node)!=null)throw new IllegalArgumentException("Duplicate visual node ID: "+node.id);
             if(isSpeech(node)&&!selected.contains(actor(node)))hidden.add(node.id);
         }
-        
+                                                                                                      
         if(hidden.isEmpty())return canonical;
         var outgoing=new LinkedHashMap<String,List<Edge>>();var incoming=new HashMap<String,Integer>();
         for(Edge edge:canonical.edges){
@@ -46,8 +46,8 @@ public final class ActorProjection {
                 anchors.put(id,role);
             }
         }
-        
-        
+                                                                                            
+                                                                                            
         var settled=new HashSet<String>();
         for(String start:hidden){
             if(anchors.containsKey(start)||settled.contains(start))continue;
@@ -96,7 +96,7 @@ public final class ActorProjection {
         var notes=new ArrayList<>(canonical.diagnostics);
         notes.add("Actor filter hides "+hidden.size()+" speech boxes; "+bypasses+" projected connectors retain exact original-edge evidence. All source mechanics remain visible.");
         if(!anchors.isEmpty())notes.add("Actor filter retains "+anchors.size()+" compact hidden-speech junctions for source branches, merges, roots, endpoints or closed cycles. These are visual references, not additional game logic.");
-        return DialogueGraphBuilder.classifyBackEdges(new Graph(canonical.title,visible,projected,notes));
+        return DialogueGraphBuilder.classifyBackEdges(new Graph(canonical.title,visible,projected,notes,canonical.campaign,canonical.panels));
     }
 
     private static boolean isSpeech(Node node){return node.kind==Kind.CHARACTER||node.kind==Kind.NARRATOR||node.kind==Kind.CHOICE;}

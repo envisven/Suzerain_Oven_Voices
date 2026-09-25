@@ -3,11 +3,11 @@ package sordland.layout;
 import sordland.graph.Graph;
 import java.util.*;
 
-
+                                                                                     
 public final class EdgeHitTest {
     private EdgeHitTest() {}
 
-    
+                                                                                                  
     public static Set<Graph.Edge> candidates(List<LayoutEngine.Line> lines,
             double worldX, double worldY, double scale, double tolerancePixels) {
         Objects.requireNonNull(lines, "lines");

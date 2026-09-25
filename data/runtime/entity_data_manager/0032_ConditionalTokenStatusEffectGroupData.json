@@ -1,0 +1,788 @@
+{
+  "dataset": "ConditionalTokenStatusEffectGroupData",
+  "sourceFile": "EntityDataManager/0032_ConditionalTokenStatusEffectGroupData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.ConditionalTokenStatusEffectGroupData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.4627814Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "154",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "269",
+    "bytes": "63441"
+  },
+  "primitiveValuesParsed": 154,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 18,
+    "$items": [
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 5,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 6,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "Id": "0x010000920000001E",
+        "IsWIP": false,
+        "NameInDatabase": "Cities_EPAReversalOutcomes",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects/WIP"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 7,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 8,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 9,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 10,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 11,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "Id": "0x0100008E00000309",
+        "IsWIP": false,
+        "NameInDatabase": "Cities_GasomOutcomes",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects/WIP"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 12,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 13,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 14,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 15,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 16,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "Id": "0x0100008E00000166",
+        "IsWIP": false,
+        "NameInDatabase": "Cities_IndustrialExpansionChanges",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects/WIP"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 17,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 18,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 19,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 20,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 21,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 22,
+                "Condition": "BaseGame.Turn09_EnT_SordishDepression",
+                "StatusEffect": "City_DecreasingJobOpenings"
+              },
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 23,
+                "Condition": "BaseGame.Turn09_EnT_SordishRecovery",
+                "StatusEffect": "City_IncreasingJobOpenings"
+              }
+            ]
+          }
+        },
+        "Id": "0x0100009200000001",
+        "IsWIP": false,
+        "NameInDatabase": "Cities_LateGameEconomicImpact",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 24,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 25,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 26,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 27,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 28,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 29,
+                "Condition": "BaseGame.Situation_Welfare_FundingDisruption",
+                "StatusEffect": "City_HealthcareDisruptions"
+              },
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 30,
+                "Condition": "BaseGame.Situation_Welfare_FundingDisruption",
+                "StatusEffect": "City_EducationDisruptions"
+              }
+            ]
+          }
+        },
+        "Id": "0x0100008E00000016",
+        "IsWIP": false,
+        "NameInDatabase": "Cities_LateGameWelfareImpact",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 31,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 32,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 33,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 34,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 35,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 36,
+                "Condition": "BaseGame.Situation_Welfare_EpidemicControlled == true &&\nBaseGame.Situation_Welfare_EpidemicPrevented == false && BaseGame.Situation_Welfare_EpidemicSpreads == false",
+                "StatusEffect": "City_PolioEpidemic"
+              }
+            ]
+          }
+        },
+        "Id": "0x0100006500005C3C",
+        "IsWIP": false,
+        "NameInDatabase": "Cities_PolioEpidemicImpacts",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 37,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 38,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 39,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 40,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 41,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 42,
+                "Condition": "BaseGame.Situation_Welfare_EpidemicControlled == false &&\nBaseGame.Situation_Welfare_EpidemicPrevented == false && BaseGame.Situation_Welfare_EpidemicSpreads == true",
+                "StatusEffect": "City_PolioPandemic"
+              }
+            ]
+          }
+        },
+        "Id": "0x0100008E0000001A",
+        "IsWIP": false,
+        "NameInDatabase": "Cities_PolioPandemicImpacts",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 43,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 44,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 45,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 46,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 47,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "Id": "0x0100008E00000408",
+        "IsWIP": false,
+        "NameInDatabase": "Cities_RegionalEconomyChanges",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects/WIP"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 48,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 49,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 50,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 51,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 52,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "Id": "0x0100009200000016",
+        "IsWIP": false,
+        "NameInDatabase": "Cities_SordishArmedForcesPositions",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects/WIP"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 53,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 54,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 55,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 56,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 57,
+            "$declaredCount": 5,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 58,
+                "Condition": "BaseGame.Policy_Diplomacy_CSP == false && BaseGame.Situation_Diplomacy_Lespia_Coal_Trade == true",
+                "StatusEffect": "Country_Lespia_Trade_Coal"
+              },
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 59,
+                "Condition": "BaseGame.Policy_Diplomacy_CSP == false && BaseGame.Situation_Diplomacy_Lespia_Fish_Trade == true",
+                "StatusEffect": "Country_Lespia_Trade_Fish"
+              },
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 60,
+                "Condition": "BaseGame.Policy_Diplomacy_CSP == false && BaseGame.Situation_Diplomacy_Lespia_SordishPetroleum == true",
+                "StatusEffect": "Country_Lespia_Trade_SordishPetroleum"
+              },
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 61,
+                "Condition": "BaseGame.Policy_Diplomacy_CSP == false && BaseGame.Situation_Diplomacy_Lespia_Tungsten_Trade == true",
+                "StatusEffect": "Country_Lespia_Trade_Tungsten"
+              },
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 62,
+                "Condition": "BaseGame.Policy_Diplomacy_CSP == false && BaseGame.Situation_Diplomacy_Lespia_Wheat_Trade == true",
+                "StatusEffect": "Country_Lespia_Trade_Wheat"
+              }
+            ]
+          }
+        },
+        "Id": "0x010000920000001A",
+        "IsWIP": false,
+        "NameInDatabase": "Countries_LespiaTradeOutcomes",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 63,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 64,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 65,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 66,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 67,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 68,
+                "Condition": "BaseGame.Situation_Welfare_EpidemicControlled == false &&\nBaseGame.Situation_Welfare_EpidemicPrevented == false && BaseGame.Situation_Welfare_EpidemicSpreads == true && BaseGame.Policy_Diplomacy_Agnolia_Trade == true",
+                "StatusEffect": "Country_Agnolia_PolioSpread"
+              }
+            ]
+          }
+        },
+        "Id": "0x01000057000073A1",
+        "IsWIP": false,
+        "NameInDatabase": "Countries_PolioPandemicAgnolia",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 69,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 70,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 71,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 72,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 73,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 74,
+                "Condition": "BaseGame.Situation_Welfare_EpidemicControlled == false &&\nBaseGame.Situation_Welfare_EpidemicPrevented == false && BaseGame.Situation_Welfare_EpidemicSpreads == true && BaseGame.Policy_Diplomacy_TradeZone_Lespia == true",
+                "StatusEffect": "Country_Lespia_PolioSpread"
+              }
+            ]
+          }
+        },
+        "Id": "0x0100008E00000310",
+        "IsWIP": false,
+        "NameInDatabase": "Countries_PolioPandemicLespia",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 75,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 76,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 77,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 78,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 79,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 80,
+                "Condition": "BaseGame.Situation_Welfare_EpidemicControlled == false &&\nBaseGame.Situation_Welfare_EpidemicPrevented == false && BaseGame.Situation_Welfare_EpidemicSpreads == true && BaseGame.Policy_Diplomacy_Rumburg_Trade == true",
+                "StatusEffect": "Country_Rumburg_Trade"
+              }
+            ]
+          }
+        },
+        "Id": "0x0100008E0000031E",
+        "IsWIP": false,
+        "NameInDatabase": "Countries_PolioPandemicRumburg",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 81,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 82,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 83,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 84,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 85,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 86,
+                "Condition": "BaseGame.Situation_Welfare_EpidemicControlled == false &&\nBaseGame.Situation_Welfare_EpidemicPrevented == false && BaseGame.Situation_Welfare_EpidemicSpreads == true && BaseGame.Policy_Diplomacy_Wehlen_Trade == true",
+                "StatusEffect": "Country_Wehlen_PolioSpread"
+              }
+            ]
+          }
+        },
+        "Id": "0x0100008E0000032C",
+        "IsWIP": false,
+        "NameInDatabase": "Countries_PolioPandemicWehlen",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 87,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 88,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 89,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 90,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 91,
+            "$declaredCount": 3,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 92,
+                "Condition": "BaseGame.Rumburg_PeaceSummit",
+                "StatusEffect": "Country_Rumburg_Trade"
+              },
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 93,
+                "Condition": "BaseGame.Rumburg_PeaceSummit",
+                "StatusEffect": "Country_Rumburg_Trade_GasPipeline"
+              },
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 94,
+                "Condition": "BaseGame.Rumburg_PeaceSummit",
+                "StatusEffect": "Country_Rumburg_Trade_KA74License"
+              }
+            ]
+          }
+        },
+        "Id": "0x01000065000060E8",
+        "IsWIP": false,
+        "NameInDatabase": "Countries_RumburgPeace",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 95,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 96,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 97,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 98,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 99,
+            "$declaredCount": 4,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 100,
+                "Condition": "BaseGame.Policy_Diplomacy_ATO == false && BaseGame.Situation_Diplomacy_Valgsland_Coal_Trade == true",
+                "StatusEffect": "Country_Valgsland_Trade_Coal"
+              },
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 101,
+                "Condition": "BaseGame.Policy_Diplomacy_ATO == false && BaseGame.Situation_Diplomacy_Valgsland_Fish_Trade == true",
+                "StatusEffect": "Country_Valgsland_Trade_Fish"
+              },
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 102,
+                "Condition": "BaseGame.Policy_Diplomacy_ATO == false && BaseGame.Situation_Diplomacy_Valgsland_Tungsten_Trade == true",
+                "StatusEffect": "Country_Valgsland_Trade_Tungsten"
+              },
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 103,
+                "Condition": "BaseGame.Policy_Diplomacy_ATO == false && BaseGame.Situation_Diplomacy_Valgsland_Wheat_Trade == true",
+                "StatusEffect": "Country_Valgsland_Trade_Wheat"
+              }
+            ]
+          }
+        },
+        "Id": "0x010000920000007A",
+        "IsWIP": false,
+        "NameInDatabase": "Countries_ValgslandTradeOutcomes",
+        "Notes": "",
+        "Path": "Sordland/Tokens/Token Status Effects/Conditional Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 104,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 105,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 106,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 107,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 108,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 109,
+                "Condition": "RiziaDLCSetup.CurrentTurn > 9 && BaseGame.Joined_ATO == true",
+                "StatusEffect": "Country_ATO"
+              }
+            ]
+          }
+        },
+        "Id": "0x010000C5000007AF",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_ConditionalStatus_ATO",
+        "Notes": "",
+        "Path": "Shared/Shared Tokens/Country Token Status Effects"
+      },
+{
+        "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupData",
+        "$objectId": 110,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 111,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 112,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalTokenStatusEffectGroupProperties": {
+          "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties",
+          "$objectId": 113,
+          "StatusEffectConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 114,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalTokenStatusEffectGroupProperties+StatusEffectCondition",
+                "$objectId": 115,
+                "Condition": "RiziaDLCSetup.CurrentTurn > 9 && BaseGame.Joined_CSP == true",
+                "StatusEffect": "Country_CSP"
+              }
+            ]
+          }
+        },
+        "Id": "0x010000C5000007A9",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_ConditionalStatus_CSP",
+        "Notes": "",
+        "Path": "Shared/Shared Tokens/Country Token Status Effects"
+      }
+    ]
+  }
+}

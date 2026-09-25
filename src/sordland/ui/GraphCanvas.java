@@ -13,7 +13,7 @@ import sordland.layout.LayoutEngine.*;
 import java.util.*;
 import java.util.function.*;
 
-
+                                                                                                       
 public final class GraphCanvas extends Region {
     private final Canvas canvas=new Canvas();
     private Result result; private final Viewport viewport=new Viewport(); private double pressX,pressY,lastX,lastY;private boolean dragged;
@@ -63,7 +63,7 @@ public final class GraphCanvas extends Region {
     public Result result(){return result;}
     public void setResult(Result r,boolean reset){if(!reset&&result!=null&&selected!=null){Box old=result.byId.get(selected),next=r.byId.get(selected);if(old!=null&&next!=null){viewport.panX+=(old.x()-next.x())*viewport.scale;viewport.panY+=(old.y()-next.y())*viewport.scale;}}result=r;edgeSelection.retainEdges(r.lines.stream().map(Line::edge).toList());if(reset){viewport.scale=.85;viewport.panX=48;viewport.panY=40;if(!r.boxes.isEmpty())focus(r.boxes.getFirst().node().id);}redraw();}
     public void setSpeakerColors(boolean value){speakerColors=value;redraw();}
-    
+                                                                                            
     public void setCampaignSearch(String query){campaignQuery=Objects.requireNonNullElse(query,"").trim();redraw();}
     public void setCampaignFilters(String query,String ignoredLegacyType){setCampaignSearch(query);}
     public static boolean campaignMatch(Graph.Node node,String query){
@@ -100,10 +100,10 @@ public final class GraphCanvas extends Region {
                 g.save();g.translate(left+42/viewport.scale,(visibleTop+visibleBottom+measured/viewport.scale)/2);g.rotate(-90);g.scale(1/viewport.scale,1/viewport.scale);g.setFill(Color.web(Theme.TURN_TEXT));g.setFont(TextMeasurer.TURN_LABEL);g.fillText(label,0,0);g.restore();
             }
         }
-        
-        
+                                                                           
+                                                                                 
         if(!result.sectors.isEmpty()){g.beginPath();g.rect(left+64/viewport.scale,top,Math.max(0,vw-64/viewport.scale),vh);g.clip();}
-        
+                                                                            
         for(var group:result.groups){
             if(group.bottom()<top||group.y()>top+vh||group.x()+group.width()<left||group.x()>left+vw)continue;
             g.setFill(Color.web(Theme.GROUP));g.fillRoundRect(group.x(),group.y(),group.width(),group.height(),20,20);
@@ -128,7 +128,7 @@ public final class GraphCanvas extends Region {
         g.beginPath();boolean first=true;for(var point:line.points()){if(first){g.moveTo(point.x(),point.y());first=false;}else g.lineTo(point.x(),point.y());}g.stroke();
         var end=line.points().getLast();
         if((result.sectors.isEmpty()||result.graph.campaign!=null)&&viewport.scale>.18&&t.node().kind!=Graph.Kind.JUNCTION){
-            
+                                                                               
             g.setLineDashes();g.strokeLine(end.x()-4,end.y()-7,end.x(),end.y());g.strokeLine(end.x()+4,end.y()-7,end.x(),end.y());
         }
         boolean booleanBranch=result.graph.campaign!=null&&line.edge().label.toUpperCase(Locale.ROOT).matches(".*\\b(TRUE|FALSE)\\b.*");
@@ -147,7 +147,7 @@ public final class GraphCanvas extends Region {
     private void drawNode(GraphicsContext g,Box b){
         var n=b.node();
         if(n.kind==Graph.Kind.JUNCTION){
-            
+                                                                               
             if(!n.type.equals("Type projection")&&result.groups.stream().noneMatch(group->group.entryId().equals(n.id)||group.exitId().equals(n.id))){g.setFill(Color.web(Theme.EDGE));g.fillOval(b.cx()-2,b.y()-1,4,4);}
             return;
         }

@@ -1,0 +1,20 @@
+{
+  "dataset": "BUILD_CONFIG_PATH",
+  "sourceFile": "EntityDataManager/0009_BUILD_CONFIG_PATH.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.BUILD_CONFIG_PATH",
+    "GENERATED_UTC": "2026-09-21T10:59:01.0399516Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "1",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "1",
+    "bytes": "508"
+  },
+  "primitiveValuesParsed": 1,
+  "referencesParsed": 0,
+  "data": "Assets/_Setup/Build Configuration.asset"
+}

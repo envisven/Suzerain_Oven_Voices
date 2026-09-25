@@ -1,0 +1,118 @@
+{
+  "dataset": "CompositionPageData",
+  "sourceFile": "EntityDataManager/0029_CompositionPageData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.CompositionPageData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.4514698Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "35",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "46",
+    "bytes": "6844"
+  },
+  "primitiveValuesParsed": 35,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionPageData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 2,
+    "$items": [
+{
+        "$type": "Il2Cpp.CompositionPageData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionPageProperties": {
+          "$type": "Il2Cpp.CompositionPageProperties",
+          "$objectId": 5,
+          "CurrentComposition": "JudiciaryComposition_Default",
+          "ImagePath": "Connections/icon_connections_judiciary",
+          "Name": "Judiciary",
+          "Positions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 6,
+            "$declaredCount": 4,
+            "$items": [
+"Position_ChiefJustice",
+"Position_NotableJustice_1",
+"Position_NotableJustice_2",
+"Position_NotableJustice_3"
+            ]
+          },
+          "Title": "THE SUPREME COURT"
+        },
+        "CurrentComposition": "JudiciaryComposition_Default",
+        "Id": "0x0100009A000007A7",
+        "IsWIP": false,
+        "NameInDatabase": "Page_Judiciary",
+        "Notes": "",
+        "Path": "Sordland/Connections/Judiciary",
+        "currentComposition": ""
+      },
+{
+        "$type": "Il2Cpp.CompositionPageData",
+        "$objectId": 7,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 8,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 9,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionPageProperties": {
+          "$type": "Il2Cpp.CompositionPageProperties",
+          "$objectId": 10,
+          "CurrentComposition": "LegislativeComposition_Default",
+          "ImagePath": "Connections/icon_connections_legislative",
+          "Name": "Legislative",
+          "Positions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 11,
+            "$declaredCount": 7,
+            "$items": [
+"Position_Speaker",
+"Position_NotableMember_1",
+"Position_NotableMember_2",
+"Position_NotableMember_3",
+"Position_NotableMember_4",
+"Position_NotableMember_5",
+"Position_NotableMember_6"
+            ]
+          },
+          "Title": "THE GRAND NATIONAL ASSEMBLY"
+        },
+        "CurrentComposition": "LegislativeComposition_Default",
+        "Id": "0x0100009A000009D6",
+        "IsWIP": false,
+        "NameInDatabase": "Page_Legislative",
+        "Notes": "",
+        "Path": "Sordland/Connections/Legislative",
+        "currentComposition": ""
+      }
+    ]
+  }
+}

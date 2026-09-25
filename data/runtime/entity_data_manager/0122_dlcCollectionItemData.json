@@ -1,0 +1,91 @@
+{
+  "dataset": "dlcCollectionItemData",
+  "sourceFile": "EntityDataManager/0122_dlcCollectionItemData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.dlcCollectionItemData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.5866787Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "22",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "31",
+    "bytes": "5436"
+  },
+  "primitiveValuesParsed": 22,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.DLCCollectionItemData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 2,
+    "$items": [
+{
+        "$type": "Il2Cpp.DLCCollectionItemData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "DLCCollectionItemProperties": {
+          "$type": "Il2Cpp.DLCCollectionItemProperties",
+          "$objectId": 5,
+          "Description": "A token of Rizia’s wealth and riches, eternalized into this one kilogram bar of solid gold and ornate golden coin. Mined by Rizia’s Royal Gold, may it bring great prosperity to its owner and serve as a token of gratitude and creation.",
+          "EpicAppId": "",
+          "GogAppId": "",
+          "ImagePath": "Collection Items/icon_collectionitem_goldbar",
+          "SteamAppId": "2794000",
+          "Title": "Royal Gold Bar"
+        },
+        "Id": "0x0100009900000145",
+        "IsWIP": false,
+        "NameInDatabase": "DLCCollectionItem_GoldBar",
+        "Notes": "",
+        "Path": "Shared/DLC Collection Items"
+      },
+{
+        "$type": "Il2Cpp.DLCCollectionItemData",
+        "$objectId": 6,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 7,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "DLCCollectionItemProperties": {
+          "$type": "Il2Cpp.DLCCollectionItemProperties",
+          "$objectId": 9,
+          "Description": "Unrivaled in prestige and distinction, the Vulpitzer Award is a symbol of utmost achievement on the globe. Its radiant presence on your desk embodies a profound testament to extraordinary contribution, unwavering integrity, and the audacious pursuit of truth. \n\nEvery shimmering facet of this award echoes with the influential actions of its holder, serving as a beacon of inspiration and a reminder of their indomitable spirit.",
+          "EpicAppId": "e59e78813a8d49eeb94aec2f101fa4ac",
+          "GogAppId": "1913293539",
+          "ImagePath": "Collection Items/icon_collectionitem_vulpitzeraward",
+          "SteamAppId": "2435940",
+          "Title": "Vulpitzer Award"
+        },
+        "Id": "0x0100006A0000B87A",
+        "IsWIP": false,
+        "NameInDatabase": "DLCCollectionItem_VulpitzerAward",
+        "Notes": "",
+        "Path": "Shared/DLC Collection Items"
+      }
+    ]
+  }
+}

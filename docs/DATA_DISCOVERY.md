@@ -1,3 +1,33 @@
+# Runtime data discovery — 2026-09-21
+
+`entity_catalog.json` lists 162 reflected members in 88 case-insensitive logical groups. The loader selects exactly one `preferredForCoverage` member per logicalKey and follows its `outputFile`; numbered filenames are never hardcoded. Missing or ambiguous preferred members produce diagnostics. The complete catalog and preferred envelopes preserve unsupported records/fields and serializer reference metadata.
+
+| StoryPack_Main logical collection | Records |
+|---|---:|
+| PagedDecisionPanelsData | 8 |
+| CarouselChoicePageData | 17 |
+| CarouselChoiceOptionData | 55 |
+| MultipleChoicePageData | 24 |
+| MultipleChoiceOptionData | 64 |
+| PoliciesData | 164 |
+| SituationsData | 228 |
+| ReportsData | 862 |
+| DecreesData | 19 |
+| JournalEntriesData | 561 |
+| TokenStatusEffectsData | 106 |
+
+Supporting collections include OneTimeDecreesPanelData, ConditionalInstructionData (four Main-tagged records), AllConversationsData for exact completion references, and all other preferred collections as source/index data. Old AllConversationsData, Decisions, Bills, News and GameFlow remain authoritative for the mature renderer.
+
+Budget's source page order is Healthcare, Security, Education, Military. Each page source orders Maintain before Increase, so the display explicitly reorders these known choices to Increase / Maintain / Decrease while retaining the raw list. The Security page's choice variables use LawEnforcement. GovernmentBudget deltas come from PanelCounterVariable plus option PanelCounterIncrement, independently of Instruction.
+
+Data conflict: JournalEntriesData includes `Turn05_Security_Iza_ReduceSOAuthority` tagged only StoryPack_Main, but its path is `Rizia/Journal Entries/Turn05` and IsEnabledVariable is `RiziaDLCSupport.Journal_Turn05_Security_Iza_ReduceSOAuthority`. It remains in the 561 source count and raw index, with an explicit diagnostic; gameplay rendering excludes it. Runtime News also includes shared articles under Rizia paths; runtime News is not used to replace the established News pipeline.
+
+`PagedDecisionPanel_PromisesPanel.ConversationOnFinish` names `Turn01_Start_Inauguration`. Completion fields produce exact reference cards (or explicit unresolved notices), never substituted or fabricated dialogue pointers. Other supplied Main panels have empty completion fields. Budget's dialogue source supplies exactly 27:1.
+
+---
+
+## Preserved baseline documentation (historical)
+
 # Supplied data: findings and limits
 
 This report describes the supplied newest entity, Sordland conversation and actor-name JSON files, packaged under canonical names in `data/`. The application reads them without modification. Only `StoryPack_Main` is used for campaign GameFlow; no Rizia view or execution model is implemented.

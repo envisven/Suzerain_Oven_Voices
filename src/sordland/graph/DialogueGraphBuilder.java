@@ -5,8 +5,8 @@ import sordland.graph.Graph.*;
 import sordland.graph.Semantics.CommandKind;
 import java.util.*;
 
-
-
+                                                                                     
+                                                                                             
 public final class DialogueGraphBuilder {
     private record Box(Kind kind, String title, String text, String metadata) {}
     private record EntryVisual(String first, String last, Entry entry, Semantics.Analysis analysis) {}
@@ -21,6 +21,7 @@ public final class DialogueGraphBuilder {
         if (!roots.isEmpty()) componentRoots.remove(roots.getFirst());
         List<Node> nodes = new ArrayList<>();
         List<Edge> edges = new ArrayList<>();
+        List<PanelGroup> panels = new ArrayList<>();
         Map<EntryKey,EntryVisual> visuals = new LinkedHashMap<>();
         Deque<EntryKey> pending = new ArrayDeque<>(roots);
         Set<EntryKey> missing = new LinkedHashSet<>();
@@ -54,6 +55,11 @@ public final class DialogueGraphBuilder {
                     case CHARACTER -> entry.speaker().isBlank() ? "UNKNOWN SPEAKER" : entry.speaker();
                     default -> "";
                 };
+                if(box.title().equals("DECISION PANEL")) {
+                    if(previous!=null)edges.add(new Edge(previous,id,"",false));
+                    previous=PanelGraphBuilder.append(dataset.runtime(),box.text(),id,key,nodes,edges,panels,diagnostics);
+                    continue;
+                }
                 nodes.add(new Node(id, box.kind(), caption, box.text(), box.metadata(), "Dialogue", entry.speaker(),
                     null, null, key, actor));
                 if (previous != null) edges.add(new Edge(previous, id, "", false));
@@ -88,11 +94,11 @@ public final class DialogueGraphBuilder {
         diagnostics.add("Complete source coverage: " + (visuals.size() - missing.size()) + " unique entries, " + sourceLinks
             + " exact outgoing links, " + nodes.size() + " visual boxes. Each source entry is represented once.");
         diagnostics.add("Conditions/effects are displayed but not evaluated. Source order is retained; no IF/ELSE relationship is inferred. End()/output denotes conversation control, not a campaign ending.");
-        Graph result = classifyBackEdges(new Graph(conversation.title(), nodes, edges, diagnostics));
+        Graph result = classifyBackEdges(new Graph(conversation.title(), nodes, edges, diagnostics,null,panels));
         long back = result.edges.stream().filter(e -> e.back).count();
         if (back > 0) {
             diagnostics.add(back + " source loop/back-reference connections use dashed connectors.");
-            result = new Graph(result.title, result.nodes, result.edges, diagnostics);
+            result = new Graph(result.title, result.nodes, result.edges, diagnostics,result.campaign,result.panels);
         }
         return result;
     }
@@ -116,8 +122,8 @@ public final class DialogueGraphBuilder {
         return seen;
     }
 
-    
-
+                                                                                   
+                                                                                      
     public static Graph classifyBackEdges(Graph graph) {
         Map<String,List<Integer>> outgoing = new HashMap<>();
         for (int i = 0; i < graph.edges.size(); i++)
@@ -144,10 +150,10 @@ public final class DialogueGraphBuilder {
         }
         List<Edge> classified = new ArrayList<>(graph.edges.size());
         for (int i = 0; i < graph.edges.size(); i++) classified.add(graph.edges.get(i).withBack(back.contains(i)));
-        return new Graph(graph.title, graph.nodes, classified, graph.diagnostics);
+        return new Graph(graph.title, graph.nodes, classified, graph.diagnostics,graph.campaign,graph.panels);
     }
-    
-
+                                                                                
+                                                                                     
     private static List<EntryKey> findRoots(Dataset dataset, Conversation conversation, List<String> diagnostics) {
         Map<Integer,Entry> entries = conversation.entries();
         var starts = new ArrayList<Entry>();
@@ -175,8 +181,8 @@ public final class DialogueGraphBuilder {
                 Entry entry = dataset.entry(key);
                 if (entry != null) for (Link link : entry.links()) pending.addLast(link.target());
             }
-            
-            
+                                                                              
+                                                                               
             if (roots.size() == 1) primaryReachable = (int) visited.stream()
                 .filter(k -> k.conversationId() == conversation.id() && entries.containsKey(k.dialogueId())).count();
         }
@@ -199,8 +205,8 @@ public final class DialogueGraphBuilder {
         boolean bareEnd = pureControl && analysis.terminal()
             && analysis.commands().stream().allMatch(c -> c.kind() == CommandKind.COSMETIC || c.kind() == CommandKind.TERMINAL);
         boolean hasSemanticBox = !entry.condition().isBlank() || analysis.commands().stream().anyMatch(c -> c.kind() != CommandKind.COSMETIC);
-        
-        
+                                                                            
+                                                                               
         if (!pureControl || !hasSemanticBox || rawTitle.equalsIgnoreCase("START") || rawTitle.equalsIgnoreCase("input") || rawTitle.equalsIgnoreCase("output")) {
             Kind kind;
             String caption;
@@ -217,6 +223,8 @@ public final class DialogueGraphBuilder {
             if (command.kind() == CommandKind.COSMETIC) continue;
             if (command.kind() == CommandKind.EFFECT)
                 result.add(new Box(Kind.EFFECT, "EFFECT · " + command.origin(), Semantics.conditionDisplay(command.raw()), metadata));
+            else if (command.kind() == CommandKind.PANEL)
+                result.add(new Box(Kind.CONTROL, "DECISION PANEL", command.raw(), metadata));
             else if (command.kind() == CommandKind.UNKNOWN)
                 result.add(new Box(Kind.NOTICE, "UNRESOLVED COMMAND · " + command.origin(), command.raw(), metadata));
             else result.add(new Box(Kind.TERMINAL, "End()", "Conversation control terminal", metadata));

@@ -1,0 +1,115 @@
+{
+  "dataset": "HUDStatData",
+  "sourceFile": "EntityDataManager/0052_HUDStatData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.HUDStatData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.5681407Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "30",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "41",
+    "bytes": "5596"
+  },
+  "primitiveValuesParsed": 30,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.HUDStatData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 2,
+    "$items": [
+{
+        "$type": "Il2Cpp.HUDStatData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "HUDStatProperties": {
+          "$type": "Il2Cpp.HUDStatProperties",
+          "$objectId": 5,
+          "HasMaxValue": true,
+          "HasMinValue": true,
+          "ImagePath": "Icons/ui_icon_category_economy",
+          "IsStatValueColored": true,
+          "MaxValue": "BaseGame.Sordland_HUDStat_GovernmentBudget_Max",
+          "MinValue": "BaseGame.Sordland_HUDStat_GovernmentBudget_Min",
+          "Modifiers": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 6,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          },
+          "ModifiersTotalVariable": "",
+          "StatVariable": "BaseGame.GovernmentBudget",
+          "Title": "Government Budget"
+        },
+        "Id": "0x0100006A00005BD3",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_HUDStat_GovernmentBudget",
+        "Notes": "",
+        "Path": "Sordland/HUD Panel"
+      },
+{
+        "$type": "Il2Cpp.HUDStatData",
+        "$objectId": 7,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 8,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 9,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "HUDStatProperties": {
+          "$type": "Il2Cpp.HUDStatProperties",
+          "$objectId": 10,
+          "HasMaxValue": true,
+          "HasMinValue": true,
+          "ImagePath": "Icons/ui_icon_wallet",
+          "IsStatValueColored": false,
+          "MaxValue": "BaseGame.Sordland_HUDStat_PersonalWealth_Max",
+          "MinValue": "BaseGame.Sordland_HUDStat_PersonalWealth_Min",
+          "Modifiers": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 11,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          },
+          "ModifiersTotalVariable": "",
+          "StatVariable": "BaseGame.PersonalWealth",
+          "Title": "Personal Wealth"
+        },
+        "Id": "0x0100006A00005BDA",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_HUDStat_PersonalWealth",
+        "Notes": "",
+        "Path": "Sordland/HUD Panel"
+      }
+    ]
+  }
+}

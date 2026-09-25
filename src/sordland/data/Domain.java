@@ -2,7 +2,7 @@ package sordland.data;
 
 import java.util.*;
 
-
+                                                                                        
 public final class Domain {
     private Domain() {}
 
@@ -28,7 +28,7 @@ public final class Domain {
                        List<Option> options, Map<String,Object> raw) {
         public Item { options = List.copyOf(options); raw = immutableMap(raw); }
     }
-    
+                                                                                                     
     public record GameFlow(String storyPack, int sourceIndex, List<Turn> turns, Map<String,Object> raw) {
         public GameFlow { turns = List.copyOf(turns); raw = immutableMap(raw); }
         public static GameFlow empty() { return new GameFlow("", -1, List.of(), Map.of()); }
@@ -36,35 +36,40 @@ public final class Domain {
     public record Turn(int sourceIndex, String condition, String transitionTitle,
                        String onTurnStartInstruction, List<Step> steps, Map<String,Object> raw) {
         public Turn { steps = List.copyOf(steps); raw = immutableMap(raw); }
-        
+                                                                        
         public int turnNumber() { return sourceIndex + 1; }
     }
     public record Step(int sourceIndex, String onStepStartInstruction,
                        List<Fragment> fragments, Map<String,Object> raw) {
         public Step { fragments = List.copyOf(fragments); raw = immutableMap(raw); }
     }
-    
+                                                                                               
     public record Fragment(int sourceIndex, String name, Item item, String diagnostic) {
         public boolean resolved() { return item != null; }
         public String id() { return name; }
     }
-    
+                                                                                                     
     public record IgnoredData(String sourceFile, String collection, String sourceIndex, String location,
                               String identity, String reason, Object raw) {}
     public record Dataset(List<Item> items, Map<Integer,Conversation> conversations,
                           List<Item> ancillary, List<String> diagnostics, GameFlow gameFlow,
-                          List<IgnoredData> ignoredData) {
+                          List<IgnoredData> ignoredData, sordland.data.runtime.RuntimeDatabase runtime) {
         public Dataset {
+            runtime=Objects.requireNonNull(runtime);
             items = List.copyOf(items); conversations = immutableMap(conversations);
             ancillary = List.copyOf(ancillary); diagnostics = List.copyOf(diagnostics);
             gameFlow = Objects.requireNonNull(gameFlow);
             ignoredData = List.copyOf(ignoredData);
         }
         public Dataset(List<Item> items, Map<Integer,Conversation> conversations,
+                       List<Item> ancillary, List<String> diagnostics, GameFlow gameFlow,List<IgnoredData> ignoredData) {
+            this(items,conversations,ancillary,diagnostics,gameFlow,ignoredData,sordland.data.runtime.RuntimeDatabase.empty());
+        }
+        public Dataset(List<Item> items, Map<Integer,Conversation> conversations,
                        List<Item> ancillary, List<String> diagnostics, GameFlow gameFlow) {
             this(items,conversations,ancillary,diagnostics,gameFlow,List.of());
         }
-        
+                                                                                    
         public Dataset(List<Item> items, Map<Integer,Conversation> conversations,
                        List<Item> ancillary, List<String> diagnostics) {
             this(items, conversations, ancillary, diagnostics, GameFlow.empty());
@@ -73,7 +78,7 @@ public final class Domain {
             Conversation c = conversations.get(key.conversationId());
             return c == null ? null : c.entries().get(key.dialogueId());
         }
-        
+                                                                                                   
         public List<Item> news() { return ancillary.stream().filter(item->item.type().equals("News")).toList(); }
     }
     private static <K,V> Map<K,V> immutableMap(Map<K,V> map) {

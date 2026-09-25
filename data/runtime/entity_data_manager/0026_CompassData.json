@@ -1,0 +1,64 @@
+{
+  "dataset": "CompassData",
+  "sourceFile": "EntityDataManager/0026_CompassData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.CompassData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.4294883Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "9",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "15",
+    "bytes": "2572"
+  },
+  "primitiveValuesParsed": 9,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompassData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 1,
+    "$items": [
+{
+        "$type": "Il2Cpp.CompassData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompassProperties": {
+          "$type": "Il2Cpp.CompassProperties",
+          "$objectId": 5,
+          "CharacterGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 6,
+            "$declaredCount": 1,
+            "$items": [
+"Sordland_CharacterGroup_SordishPoliticians"
+            ]
+          },
+          "Configuration": "Sordland_Compass_Configuration",
+          "Title": "Sordland_Compass_Title"
+        },
+        "Id": "0x0100006A00006A22",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Compass",
+        "Notes": "",
+        "Path": "Sordland/Compass"
+      }
+    ]
+  }
+}

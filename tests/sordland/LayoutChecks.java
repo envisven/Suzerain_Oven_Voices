@@ -50,7 +50,7 @@ final class LayoutChecks {
             check(Double.isFinite(box.x())&&Double.isFinite(box.y())&&box.w()>0&&box.h()>0,label+" has valid measured rectangles");
             check(box.x()>=0&&box.y()>=0&&box.x()+box.w()<=result.width+.001&&box.bottom()<=result.height+.001,label+" rectangle stays in fit bounds");
         }
-        
+                                                                                                                
         var sorted=new ArrayList<>(result.boxes); sorted.sort(Comparator.comparingDouble(LayoutEngine.Box::y));
         var active=new ArrayList<LayoutEngine.Box>();
         for(var box:sorted) {

@@ -1,3 +1,49 @@
+# Runtime integration changed files — 2026-09-21
+
+Modified baseline files:
+
+- `README.md`
+- `docs/CHANGES.md`
+- `docs/DATA_DISCOVERY.md`
+- `docs/SOURCE_ACCOUNTING.md`
+- `docs/VALIDATION.md`
+- `src/sordland/Main.java`
+- `src/sordland/data/Domain.java`
+- `src/sordland/data/Loader.java`
+- `src/sordland/graph/ActorProjection.java`
+- `src/sordland/graph/CampaignGraphBuilder.java`
+- `src/sordland/graph/DialogueGraphBuilder.java`
+- `src/sordland/graph/Graph.java`
+- `src/sordland/graph/RootedCampaignGraphBuilder.java`
+- `src/sordland/graph/Semantics.java`
+- `src/sordland/graph/TypeProjection.java`
+- `src/sordland/graph/TypeSelection.java`
+- `src/sordland/layout/LayoutEngine.java`
+- `src/sordland/layout/RootedCampaignLayout.java`
+- `tests/sordland/AllTests.java`
+- `docs/CHANGED_FILES.md`
+
+Added files:
+
+- `scripts/test-runtime-ui.sh`
+- `src/sordland/data/runtime/RuntimeDatabase.java`
+- `src/sordland/data/runtime/RuntimeDatabaseLoader.java`
+- `src/sordland/graph/PanelGraphBuilder.java`
+- `src/sordland/graph/RuntimeGraphBuilder.java`
+- `src/sordland/layout/PanelLayout.java`
+- `tests/sordland/RuntimeChecks.java`
+- `tests/sordland/RuntimeVisualChecks.java`
+- `data/runtime/entity_catalog.json` and all 162 supplied `entity_data_manager/*.json` files.
+- `docs/runtime-validation/`: test logs and actual JavaFX Budget screenshots.
+- `docs/RUNTIME_INTEGRATION.md`: implementation and limitations report.
+
+No original source data, dumper code, existing run/build scripts, IntelliJ files, or original regression assertions were changed.
+
+
+---
+
+## Preserved baseline documentation (historical)
+
 # Changed files
 
 ## This final completion pass

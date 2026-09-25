@@ -1,0 +1,1097 @@
+{
+  "dataset": "compositionData",
+  "sourceFile": "EntityDataManager/0106_compositionData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.compositionData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.4007436Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "246",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "403",
+    "bytes": "75921"
+  },
+  "primitiveValuesParsed": 246,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 14,
+    "$items": [
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 5,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 6,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 7,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 8,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 9,
+                      "ElementIcon": "Connections/icon_connection_abolished",
+                      "ElementName": "Removed",
+                      "ElementValue": 70
+                    }
+                  ]
+                },
+                "GroupName": "Government"
+              }
+            ]
+          },
+          "ImagePath": "Connections/houseofdelegates_abolished"
+        },
+        "Id": "0x0100006500006BA1",
+        "IsWIP": false,
+        "NameInDatabase": "HODComposition_Abolished",
+        "Notes": "",
+        "Path": "Rizia/Connections/House of Delegates/Composition"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 10,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 11,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 12,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 13,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 14,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 15,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 16,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 17,
+                      "ElementIcon": "Connections/icon_connection_rnc",
+                      "ElementName": "RNC",
+                      "ElementValue": 44
+                    }
+                  ]
+                },
+                "GroupName": "Government"
+              },
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 18,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 19,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 20,
+                      "ElementIcon": "Connections/icon_connection_rpp",
+                      "ElementName": "RPP",
+                      "ElementValue": 26
+                    }
+                  ]
+                },
+                "GroupName": "Opposition"
+              }
+            ]
+          },
+          "ImagePath": "Connections/houseofdelegates_default"
+        },
+        "Id": "0x0100006500007241",
+        "IsWIP": false,
+        "NameInDatabase": "HODComposition_Default",
+        "Notes": "",
+        "Path": "Rizia/Connections/House of Delegates/Composition"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 21,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 22,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 23,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 24,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 25,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 26,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 27,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 28,
+                      "ElementIcon": "Connections/icon_connection_rnc",
+                      "ElementName": "RNC",
+                      "ElementValue": 51
+                    }
+                  ]
+                },
+                "GroupName": "Government"
+              },
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 29,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 30,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 31,
+                      "ElementIcon": "Connections/icon_connection_rpp",
+                      "ElementName": "RPP",
+                      "ElementValue": 19
+                    }
+                  ]
+                },
+                "GroupName": "Opposition"
+              }
+            ]
+          },
+          "ImagePath": "Connections/houseofdelegates_rncwin"
+        },
+        "Id": "0x01000065000071FF",
+        "IsWIP": false,
+        "NameInDatabase": "HODComposition_RNCWins",
+        "Notes": "",
+        "Path": "Rizia/Connections/House of Delegates/Composition"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 32,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 33,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 34,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 35,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 36,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 37,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 38,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 39,
+                      "ElementIcon": "Connections/icon_connection_rpp",
+                      "ElementName": "RPP",
+                      "ElementValue": 37
+                    }
+                  ]
+                },
+                "GroupName": "Government"
+              },
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 40,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 41,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 42,
+                      "ElementIcon": "Connections/icon_connection_rnc",
+                      "ElementName": "RNC",
+                      "ElementValue": 33
+                    }
+                  ]
+                },
+                "GroupName": "Opposition"
+              }
+            ]
+          },
+          "ImagePath": "Connections/houseofdelegates_rppwin"
+        },
+        "Id": "0x010000650000720A",
+        "IsWIP": false,
+        "NameInDatabase": "HODComposition_RPPWins",
+        "Notes": "",
+        "Path": "Rizia/Connections/House of Delegates/Composition"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 43,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 44,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 45,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 46,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 47,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 48,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 49,
+                  "$declaredCount": 3,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 50,
+                      "ElementIcon": "Connections/icon_connection_oldguard",
+                      "ElementName": "Old Guard",
+                      "ElementValue": 5
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 51,
+                      "ElementIcon": "Connections/icon_connection_centrist",
+                      "ElementName": "Centrists",
+                      "ElementValue": 3
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 52,
+                      "ElementIcon": "Connections/icon_connection_reformist",
+                      "ElementName": "Reformists",
+                      "ElementValue": 3
+                    }
+                  ]
+                },
+                "GroupName": "Factions"
+              }
+            ]
+          },
+          "ImagePath": "Connections/court_default"
+        },
+        "Id": "0x0100009A00000818",
+        "IsWIP": false,
+        "NameInDatabase": "JudiciaryComposition_Default",
+        "Notes": "",
+        "Path": "Sordland/Connections/Judiciary/Compositions"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 53,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 54,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 55,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 56,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 57,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 58,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 59,
+                  "$declaredCount": 3,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 60,
+                      "ElementIcon": "Connections/icon_connection_oldguard",
+                      "ElementName": "Old Guard",
+                      "ElementValue": 4
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 61,
+                      "ElementIcon": "Connections/icon_connection_centrist",
+                      "ElementName": "Centrists",
+                      "ElementValue": 4
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 62,
+                      "ElementIcon": "Connections/icon_connection_reformist",
+                      "ElementName": "Reformists",
+                      "ElementValue": 3
+                    }
+                  ]
+                },
+                "GroupName": "Factions"
+              }
+            ]
+          },
+          "ImagePath": "Connections/court_experiencedjustice"
+        },
+        "Id": "0x0100009A0000081E",
+        "IsWIP": false,
+        "NameInDatabase": "JudiciaryComposition_ExperiencedJustice",
+        "Notes": "",
+        "Path": "Sordland/Connections/Judiciary/Compositions"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 63,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 64,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 65,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 66,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 67,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 68,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 69,
+                  "$declaredCount": 3,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 70,
+                      "ElementIcon": "Connections/icon_connection_oldguard",
+                      "ElementName": "Old Guard",
+                      "ElementValue": 4
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 71,
+                      "ElementIcon": "Connections/icon_connection_centrist",
+                      "ElementName": "Centrists",
+                      "ElementValue": 4
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 72,
+                      "ElementIcon": "Connections/icon_connection_reformist",
+                      "ElementName": "Reformists",
+                      "ElementValue": 3
+                    }
+                  ]
+                },
+                "GroupName": "Factions"
+              }
+            ]
+          },
+          "ImagePath": "Connections/court_loyaljustice"
+        },
+        "Id": "0x0100009A00000824",
+        "IsWIP": false,
+        "NameInDatabase": "JudiciaryComposition_LoyalJustice",
+        "Notes": "",
+        "Path": "Sordland/Connections/Judiciary/Compositions"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 73,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 74,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 75,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 76,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 77,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 78,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 79,
+                  "$declaredCount": 3,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 80,
+                      "ElementIcon": "Connections/icon_connection_oldguard",
+                      "ElementName": "Old Guard",
+                      "ElementValue": 0
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 81,
+                      "ElementIcon": "Connections/icon_connection_centrist",
+                      "ElementName": "Centrists",
+                      "ElementValue": 6
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 82,
+                      "ElementIcon": "Connections/icon_connection_reformist",
+                      "ElementName": "Reformists",
+                      "ElementValue": 5
+                    }
+                  ]
+                },
+                "GroupName": "Factions"
+              }
+            ]
+          },
+          "ImagePath": "Connections/court_oldguardremoved"
+        },
+        "Id": "0x0100009A0000082A",
+        "IsWIP": false,
+        "NameInDatabase": "JudiciaryComposition_OldGuardReplaced",
+        "Notes": "",
+        "Path": "Sordland/Connections/Judiciary/Compositions"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 83,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 84,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 85,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 86,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 87,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 88,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 89,
+                  "$declaredCount": 3,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 90,
+                      "ElementIcon": "Connections/icon_connection_oldguard",
+                      "ElementName": "Old Guard",
+                      "ElementValue": 2
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 91,
+                      "ElementIcon": "Connections/icon_connection_centrist",
+                      "ElementName": "Centrists",
+                      "ElementValue": 5
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 92,
+                      "ElementIcon": "Connections/icon_connection_reformist",
+                      "ElementName": "Reformists",
+                      "ElementValue": 4
+                    }
+                  ]
+                },
+                "GroupName": "Factions"
+              }
+            ]
+          },
+          "ImagePath": "Connections/court_shuffled"
+        },
+        "Id": "0x0100009A00000830",
+        "IsWIP": false,
+        "NameInDatabase": "JudiciaryComposition_Shuffled",
+        "Notes": "",
+        "Path": "Sordland/Connections/Judiciary/Compositions"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 93,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 94,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 95,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 96,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 97,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 98,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 99,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 100,
+                      "ElementIcon": "Connections/icon_connection_usp",
+                      "ElementName": "USP",
+                      "ElementValue": 117
+                    }
+                  ]
+                },
+                "GroupName": "Government"
+              },
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 101,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 102,
+                  "$declaredCount": 3,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 103,
+                      "ElementIcon": "Connections/icon_connection_pfjp",
+                      "ElementName": "PFJP",
+                      "ElementValue": 81
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 104,
+                      "ElementIcon": "Connections/icon_connection_nfp",
+                      "ElementName": "NFP",
+                      "ElementValue": 40
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 105,
+                      "ElementIcon": "Connections/icon_connection_independent",
+                      "ElementName": "Independents",
+                      "ElementValue": 12
+                    }
+                  ]
+                },
+                "GroupName": "Opposition"
+              }
+            ]
+          },
+          "ImagePath": "Connections/assembly_neosollist"
+        },
+        "Id": "0x0100009A00000A69",
+        "IsWIP": false,
+        "NameInDatabase": "LegislativeComposition_Conservative",
+        "Notes": "",
+        "Path": "Sordland/Connections/Legislative/Compositions"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 106,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 107,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 108,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 109,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 110,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 111,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 112,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 113,
+                      "ElementIcon": "Connections/icon_connection_usp",
+                      "ElementName": "USP",
+                      "ElementValue": 130
+                    }
+                  ]
+                },
+                "GroupName": "Government"
+              },
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 114,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 115,
+                  "$declaredCount": 3,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 116,
+                      "ElementIcon": "Connections/icon_connection_pfjp",
+                      "ElementName": "PFJP",
+                      "ElementValue": 70
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 117,
+                      "ElementIcon": "Connections/icon_connection_nfp",
+                      "ElementName": "NFP",
+                      "ElementValue": 40
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 118,
+                      "ElementIcon": "Connections/icon_connection_independent",
+                      "ElementName": "Independents",
+                      "ElementValue": 10
+                    }
+                  ]
+                },
+                "GroupName": "Opposition"
+              }
+            ]
+          },
+          "ImagePath": "Connections/assembly_default"
+        },
+        "Id": "0x0100009A00000A55",
+        "IsWIP": false,
+        "NameInDatabase": "LegislativeComposition_Default",
+        "Notes": "",
+        "Path": "Sordland/Connections/Legislative/Compositions"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 119,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 120,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 121,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 122,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 123,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 124,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 125,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 126,
+                      "ElementIcon": "Connections/icon_connection_usp",
+                      "ElementName": "USP",
+                      "ElementValue": 104
+                    }
+                  ]
+                },
+                "GroupName": "Government"
+              },
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 127,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 128,
+                  "$declaredCount": 3,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 129,
+                      "ElementIcon": "Connections/icon_connection_pfjp",
+                      "ElementName": "PFJP",
+                      "ElementValue": 70
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 130,
+                      "ElementIcon": "Connections/icon_connection_nfp",
+                      "ElementName": "NFP",
+                      "ElementValue": 54
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 131,
+                      "ElementIcon": "Connections/icon_connection_independent",
+                      "ElementName": "Independents",
+                      "ElementValue": 22
+                    }
+                  ]
+                },
+                "GroupName": "Opposition"
+              }
+            ]
+          },
+          "ImagePath": "Connections/assembly_liberal"
+        },
+        "Id": "0x0100009A00000A64",
+        "IsWIP": false,
+        "NameInDatabase": "LegislativeComposition_Liberal",
+        "Notes": "",
+        "Path": "Sordland/Connections/Legislative/Compositions"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 132,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 133,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 134,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 135,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 136,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 137,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 138,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 139,
+                      "ElementIcon": "Connections/icon_connection_usp",
+                      "ElementName": "USP",
+                      "ElementValue": 91
+                    }
+                  ]
+                },
+                "GroupName": "Government"
+              },
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 140,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 141,
+                  "$declaredCount": 3,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 142,
+                      "ElementIcon": "Connections/icon_connection_pfjp",
+                      "ElementName": "PFJP",
+                      "ElementValue": 74
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 143,
+                      "ElementIcon": "Connections/icon_connection_nfp",
+                      "ElementName": "NFP",
+                      "ElementValue": 59
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 144,
+                      "ElementIcon": "Connections/icon_connection_independent",
+                      "ElementName": "Independents",
+                      "ElementValue": 26
+                    }
+                  ]
+                },
+                "GroupName": "Opposition"
+              }
+            ]
+          },
+          "ImagePath": "Connections/assembly_socialist"
+        },
+        "Id": "0x0100009A00000A5A",
+        "IsWIP": false,
+        "NameInDatabase": "LegislativeComposition_Socialist",
+        "Notes": "",
+        "Path": "Sordland/Connections/Legislative/Compositions"
+      },
+{
+        "$type": "Il2Cpp.CompositionData",
+        "$objectId": 145,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 146,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 147,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompositionProperties": {
+          "$type": "Il2Cpp.CompositionProperties",
+          "$objectId": 148,
+          "CompositionGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroup, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 149,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 150,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 151,
+                  "$declaredCount": 1,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 152,
+                      "ElementIcon": "Connections/icon_connection_usp",
+                      "ElementName": "USP",
+                      "ElementValue": 104
+                    }
+                  ]
+                },
+                "GroupName": "Government"
+              },
+{
+                "$type": "Il2Cpp.CompositionProperties+CompositionGroup",
+                "$objectId": 153,
+                "GroupElements": {
+                  "$kind": "collection",
+                  "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompositionProperties+CompositionGroupElement, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+                  "$objectId": 154,
+                  "$declaredCount": 3,
+                  "$items": [
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 155,
+                      "ElementIcon": "Connections/icon_connection_pfjp",
+                      "ElementName": "PFJP",
+                      "ElementValue": 87
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 156,
+                      "ElementIcon": "Connections/icon_connection_nfp",
+                      "ElementName": "NFP",
+                      "ElementValue": 40
+                    },
+{
+                      "$type": "Il2Cpp.CompositionProperties+CompositionGroupElement",
+                      "$objectId": 157,
+                      "ElementIcon": "Connections/icon_connection_independent",
+                      "ElementName": "Independents",
+                      "ElementValue": 19
+                    }
+                  ]
+                },
+                "GroupName": "Opposition"
+              }
+            ]
+          },
+          "ImagePath": "Connections/assembly_ultranationalist"
+        },
+        "Id": "0x0100009A00000A5F",
+        "IsWIP": false,
+        "NameInDatabase": "LegislativeComposition_Ultranationalist",
+        "Notes": "",
+        "Path": "Sordland/Connections/Legislative/Compositions"
+      }
+    ]
+  }
+}

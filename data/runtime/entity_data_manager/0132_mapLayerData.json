@@ -1,0 +1,783 @@
+{
+  "dataset": "mapLayerData",
+  "sourceFile": "EntityDataManager/0132_mapLayerData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.mapLayerData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.6487032Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "216",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "325",
+    "bytes": "41741"
+  },
+  "primitiveValuesParsed": 216,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.MapLayerData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 27,
+    "$items": [
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100007400006EE9",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 5,
+          "AssignedStoryPack": "StoryPack_Main",
+          "Condition": "BaseGame.Heljiland_Map_Layer == 2"
+        },
+        "NameInDatabase": "MapLayer_Heljiland_Agnolia",
+        "Notes": "",
+        "Path": "Sordland/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 6,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 7,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100007400006EEF",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 9,
+          "AssignedStoryPack": "StoryPack_Main",
+          "Condition": "BaseGame.Heljiland_Map_Layer == 1"
+        },
+        "NameInDatabase": "MapLayer_Heljiland_Default",
+        "Notes": "",
+        "Path": "Sordland/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 10,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 11,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 12,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100007400006EE2",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 13,
+          "AssignedStoryPack": "StoryPack_Main",
+          "Condition": "BaseGame.Heljiland_Map_Layer == 3"
+        },
+        "NameInDatabase": "MapLayer_Heljiland_Invaded",
+        "Notes": "",
+        "Path": "Sordland/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 14,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 15,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100007400006EF5",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 17,
+          "AssignedStoryPack": "StoryPack_Main",
+          "Condition": "BaseGame.Heljiland_Map_Layer == 4"
+        },
+        "NameInDatabase": "MapLayer_Heljiland_Valgsland",
+        "Notes": "",
+        "Path": "Sordland/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 18,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 19,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 20,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00008424",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 21,
+          "AssignedStoryPack": "StoryPack_Main",
+          "Condition": "BaseGame.Policy_Economy_HighwayProject == true"
+        },
+        "NameInDatabase": "MapLayer_Highway_New",
+        "Notes": "",
+        "Path": "Sordland/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 22,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 23,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 24,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A0000841E",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 25,
+          "AssignedStoryPack": "StoryPack_Main",
+          "Condition": "BaseGame.Policy_Economy_HighwayProject == false"
+        },
+        "NameInDatabase": "MapLayer_Highway_Old",
+        "Notes": "",
+        "Path": "Sordland/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 26,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 27,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 28,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100003EF4",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 29,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_Iza_CityState == true"
+        },
+        "NameInDatabase": "MapLayer_Iza_CityState",
+        "Notes": "",
+        "Path": "Rizia/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 30,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 31,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 32,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100003ED1",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 33,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_Pales_Big == true"
+        },
+        "NameInDatabase": "MapLayer_Pales_Big",
+        "Notes": "",
+        "Path": "Rizia/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 34,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 35,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 36,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100003F19",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 37,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_Pales_Default == true"
+        },
+        "NameInDatabase": "MapLayer_Pales_Default",
+        "Notes": "",
+        "Path": "Rizia/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 38,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 39,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 40,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100003ED8",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 41,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_Pales_Half == true"
+        },
+        "NameInDatabase": "MapLayer_Pales_Half",
+        "Notes": "",
+        "Path": "Rizia/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 42,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 43,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 44,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100003EDF",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 45,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_Pales_Rizia == true"
+        },
+        "NameInDatabase": "MapLayer_Pales_Rizia",
+        "Notes": "",
+        "Path": "Rizia/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 46,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 47,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 48,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A0000842A",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 49,
+          "AssignedStoryPack": "StoryPack_Main",
+          "Condition": "BaseGame.Policy_Economy_RailwayProject == true"
+        },
+        "NameInDatabase": "MapLayer_Railway_New",
+        "Notes": "",
+        "Path": "Sordland/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 50,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 51,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 52,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00008430",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 53,
+          "AssignedStoryPack": "StoryPack_Main",
+          "Condition": "BaseGame.Policy_Economy_RailwayProject == false"
+        },
+        "NameInDatabase": "MapLayer_Railway_Old",
+        "Notes": "",
+        "Path": "Sordland/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 54,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 55,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 56,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00008436",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 57,
+          "AssignedStoryPack": "StoryPack_Main",
+          "Condition": "BaseGame.Policy_Economy_PortProject == true"
+        },
+        "NameInDatabase": "MapLayer_Sealine_New",
+        "Notes": "",
+        "Path": "Sordland/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 58,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 59,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 60,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100004380",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 61,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_World_Flag_Default == true"
+        },
+        "NameInDatabase": "MapLayer_World_Flag_Default",
+        "Notes": "",
+        "Path": "Rizia/Map Layers/World"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 62,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 63,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 64,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100004399",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 65,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_World_Flag_Zille == true"
+        },
+        "NameInDatabase": "MapLayer_World_Flag_Zille",
+        "Notes": "",
+        "Path": "Rizia/Map Layers/World"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 66,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 67,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 68,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A300000AFF",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 69,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_World_Zille_Rizia == true"
+        },
+        "NameInDatabase": "MapLayer_World_Heljiland_Agnolia",
+        "Notes": "",
+        "Path": "Rizia/Map Layers/World"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 70,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 71,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 72,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A300000B07",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 73,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_World_Heljiland_Valgsland == true"
+        },
+        "NameInDatabase": "MapLayer_World_Heljiland_Valgsland",
+        "Notes": "",
+        "Path": "Rizia/Map Layers/World"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 74,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 75,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 76,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100003F2E",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 77,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_World_Pales_Big == true"
+        },
+        "NameInDatabase": "MapLayer_World_Pales_Big",
+        "Notes": "",
+        "Path": "Rizia/Map Layers/World"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 78,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 79,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 80,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100004391",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 81,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_World_Pales_Default == true"
+        },
+        "NameInDatabase": "MapLayer_World_Pales_Default",
+        "Notes": "",
+        "Path": "Rizia/Map Layers/World"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 82,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 83,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 84,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100003F36",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 85,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_World_Pales_Rizian == true"
+        },
+        "NameInDatabase": "MapLayer_World_Pales_Rizian",
+        "Notes": "",
+        "Path": "Rizia/Map Layers/World"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 86,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 87,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 88,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100003F3E",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 89,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_World_Pales_Split == true"
+        },
+        "NameInDatabase": "MapLayer_World_Pales_Split",
+        "Notes": "",
+        "Path": "Rizia/Map Layers/World"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 90,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 91,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 92,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A300000B10",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 93,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_World_Rizia_Default == true"
+        },
+        "NameInDatabase": "MapLayer_World_Rizia_Default",
+        "Notes": "",
+        "Path": "Rizia/Map Layers/World"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 94,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 95,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 96,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100004360",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 97,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_World_Rizia_PalesText == true"
+        },
+        "NameInDatabase": "MapLayer_World_Rizia_PalesText",
+        "Notes": "",
+        "Path": "Rizia/Map Layers/World"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 98,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 99,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 100,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A300000AF7",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 101,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_World_Zille_Rizia == true"
+        },
+        "NameInDatabase": "MapLayer_World_Zille_Rizia",
+        "Notes": "",
+        "Path": "Rizia/Map Layers/World"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 102,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 103,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 104,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100003EE6",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 105,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_Zille_Brenas == true"
+        },
+        "NameInDatabase": "MapLayer_Zille_Brenas",
+        "Notes": "",
+        "Path": "Rizia/Map Layers"
+      },
+{
+        "$type": "Il2Cpp.MapLayerData",
+        "$objectId": 106,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 107,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 108,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000A100003EED",
+        "IsWIP": false,
+        "MapLayerProperties": {
+          "$type": "Il2Cpp.MapLayerProperties",
+          "$objectId": 109,
+          "AssignedStoryPack": "StoryPack_Rizia",
+          "Condition": "RiziaDLC.MapLayer_Zille_OwnState == true"
+        },
+        "NameInDatabase": "MapLayer_Zille_OwnState",
+        "Notes": "",
+        "Path": "Rizia/Map Layers"
+      }
+    ]
+  }
+}

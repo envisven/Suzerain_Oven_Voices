@@ -6,7 +6,7 @@ import sordland.graph.Graph.*;
 import java.util.*;
 import java.util.regex.Pattern;
 
-
+                                                                                                            
 public final class NewsGraphBuilder {
     private static final String IDENT="[A-Za-z_]\\w*(?:\\.[A-Za-z_]\\w*)*";
     private static final Pattern DIRECT_WRITE=Pattern.compile("^("+IDENT+")\\s*([+*/%\\-]?=)(?!=)\\s*(.+)$",Pattern.DOTALL);
@@ -15,8 +15,8 @@ public final class NewsGraphBuilder {
     private static final Pattern RHS_CALL=Pattern.compile("\\b[A-Za-z_]\\w*\\s*\\(");
     public record Evidence(Item news,String statement,String proof) {}
 
-    
-
+                                                                                                            
+                                                                                                            
     public static List<Evidence> evidence(String source,List<Item> news) {
         Map<String,List<Item>> variables=new LinkedHashMap<>(),names=new LinkedHashMap<>();
         for(Item item:news) {
@@ -27,11 +27,11 @@ public final class NewsGraphBuilder {
         return evidence(source,variables,names);
     }
     private static List<Evidence> evidence(String source,Map<String,List<Item>> variables,Map<String,List<Item>> names) {
-        
+                                                                                                 
         var analysis=Semantics.analyze(instructionNewlines(source),"");
         if(!analysis.unknown().isEmpty())return List.of();
-        
-        
+                                                                                            
+                                                                                                 
         for(var command:analysis.commands()) {
             var direct=DIRECT_WRITE.matcher(command.raw());var bracket=VARIABLE_WRITE.matcher(command.raw());
             String rhs=bracket.matches()?bracket.group(4):direct.matches()?direct.group(3):"";
@@ -47,14 +47,14 @@ public final class NewsGraphBuilder {
             if(bracket.matches()){variable=bracket.group(2);operator=bracket.group(3);value=bracket.group(4).trim();}
             else if(direct.matches()){variable=direct.group(1);operator=direct.group(2);value=direct.group(3).trim();}
             if(variable!=null)for(Item item:variables.getOrDefault(variable,List.of())) {
-                
+                                                                                                              
                 proven.remove(item.id());
                 if(operator.equals("=")&&value.equals("true"))proven.put(item.id(),new Evidence(item,raw,"Exact write to NewsProperties.IsEnabledVariable: "+variable));
             }
             if(call.matches()) {
                 var matches=names.getOrDefault(call.group(2),List.of());
-                
-                
+                                                                                          
+                                                                                                
                 if(matches.size()==1) {
                     Item item=matches.getFirst();
                     proven.put(item.id(),new Evidence(item,raw,"Exact EnableNews argument equals NewsData.NameInDatabase: "+call.group(2)));
@@ -78,7 +78,7 @@ public final class NewsGraphBuilder {
         var attachments=new ArrayList<>(graph.campaign.news());var represented=new LinkedHashSet<String>();
         Map<String,Node> byId=new LinkedHashMap<>();graph.nodes.forEach(n->byId.put(n.id,n));
         var context=new Context(nodes,edges,attachments,represented,variables,names);
-        
+                                                                                                     
         for(Node event:graph.nodes)if(event.item!=null&&event.kind==Kind.EVENT&&!event.type.equals("News")) {
             Item item=event.item;
             context.add(event,"begin",item.beginInstruction(),"StoryFragmentProperties.OnStoryFragmentBeginInstruction",false,null,item.condition());
@@ -122,7 +122,7 @@ public final class NewsGraphBuilder {
         return graph.edges.stream().filter(e->e.from.equals(anchor.id)).map(e->graph.nodes.stream().filter(n->n.id.equals(e.to)&&n.type.equals("Turn condition")).findFirst().orElse(null)).filter(Objects::nonNull).findFirst().orElse(anchor);
     }
     private static List<Entry> reachableEntries(Dataset data,Conversation conversation) {
-        
+                                                                                                                        
         var pending=new ArrayDeque<EntryKey>();conversation.entries().values().stream().filter(e->e.title().trim().equalsIgnoreCase("START")).forEach(e->pending.add(e.key()));
         var seen=new LinkedHashSet<EntryKey>();var result=new ArrayList<Entry>();
         while(!pending.isEmpty()) {
@@ -138,7 +138,7 @@ public final class NewsGraphBuilder {
         Context(List<Node> nodes,List<Edge> edges,List<NewsAttachment> attachments,Set<String> represented,Map<String,List<Item>> variables,Map<String,List<Item>> names){this.nodes=nodes;this.edges=edges;this.attachments=attachments;this.represented=represented;this.variables=variables;this.names=names;}
         void add(Node anchor,String suffix,String script,String source,boolean optional,EntryKey key,String condition) {
             var evidence=evidence(script,variables,names);
-            
+                                                                                                                        
             var statements=new LinkedHashMap<String,List<Evidence>>();
             evidence.forEach(e->statements.computeIfAbsent(e.statement(),k->new ArrayList<>()).add(e));
             int index=0;

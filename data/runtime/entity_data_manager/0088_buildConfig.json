@@ -1,0 +1,109 @@
+{
+  "dataset": "buildConfig",
+  "sourceFile": "EntityDataManager/0088_buildConfig.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.buildConfig",
+    "GENERATED_UTC": "2026-09-21T10:59:01.9776099Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "38",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "50",
+    "bytes": "6227"
+  },
+  "primitiveValuesParsed": 38,
+  "referencesParsed": 0,
+  "data": {
+    "$type": "Il2Cpp.BuildConfiguration",
+    "$objectId": 1,
+    "IsGalmlandIncluded": false,
+    "IsNeutralLensIncluded": false,
+    "IsRiziaIncluded": true,
+    "IsSordlandIncluded": true,
+    "debugSettings": {
+      "$type": "Il2Cpp.BuildConfiguration+BuildDebugSettings",
+      "$objectId": 2,
+      "debugWarFragmentNameInDatabase": "",
+      "dontSetStoryFragmentsAsDone": false,
+      "endTurnButtonReloadsScene": false,
+      "forceEnableSaveButton": false,
+      "isAllStoryPacksPurchased": false,
+      "isDebugLogCanvasEnabled": false,
+      "isFpsCounterEnabled": false,
+      "isOperationNotFragmented": false,
+      "preventAutosave": false,
+      "skipCharacterCustomization": false,
+      "skipDialogueText": false,
+      "skipPrologue": false,
+      "startWithOperation": false
+    },
+    "demoMode": false,
+    "enabledForRelease": true,
+    "featureFlags": {
+      "$type": "Il2Cpp.BuildConfiguration+GameFeatures",
+      "$objectId": 3,
+      "AnonymousSignIn": false,
+      "CloudSave": true,
+      "FreeToPlay": false,
+      "GiftCodes": false,
+      "HasSaveFileLimit": false,
+      "InGameStore": false,
+      "Localization": false,
+      "MenuExitButton": true,
+      "MenuSocialButtons": true,
+      "OffersDiscounts": false,
+      "ProfileHUD": true,
+      "Rewards": false,
+      "SignOut": true,
+      "WelcomePanel": false
+    },
+    "sceneConfigurations": {
+      "$kind": "collection",
+      "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.BuildConfiguration+SceneConfiguration, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+      "$objectId": 4,
+      "$declaredCount": 4,
+      "$items": [
+{
+          "$type": "Il2Cpp.BuildConfiguration+SceneConfiguration",
+          "$objectId": 5,
+          "assetReference": {
+            "$type": "UnityEngine.AddressableAssets.AssetReference",
+            "$objectId": 6
+          },
+          "sceneName": "Main Menu"
+        },
+{
+          "$type": "Il2Cpp.BuildConfiguration+SceneConfiguration",
+          "$objectId": 7,
+          "assetReference": {
+            "$type": "UnityEngine.AddressableAssets.AssetReference",
+            "$objectId": 8
+          },
+          "sceneName": "Sordland"
+        },
+{
+          "$type": "Il2Cpp.BuildConfiguration+SceneConfiguration",
+          "$objectId": 9,
+          "assetReference": {
+            "$type": "UnityEngine.AddressableAssets.AssetReference",
+            "$objectId": 10
+          },
+          "sceneName": "Rizia"
+        },
+{
+          "$type": "Il2Cpp.BuildConfiguration+SceneConfiguration",
+          "$objectId": 11,
+          "assetReference": {
+            "$type": "UnityEngine.AddressableAssets.AssetReference",
+            "$objectId": 12
+          },
+          "sceneName": "Stories_NeutralLens"
+        }
+      ]
+    },
+    "storeType": "Steam"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "dataset": "warProductionPanelData",
+  "sourceFile": "EntityDataManager/0161_warProductionPanelData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.warProductionPanelData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.9191303Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "9",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "14",
+    "bytes": "2553"
+  },
+  "primitiveValuesParsed": 9,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.WarProductionPanelData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 1,
+    "$items": [
+{
+        "$type": "Il2Cpp.WarProductionPanelData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100009A000092F9",
+        "IsWIP": false,
+        "NameInDatabase": "WarProductionPanel",
+        "Notes": "",
+        "Path": "Rizia/War Production Panel",
+        "WarProductionPanelProperties": {
+          "$type": "Il2Cpp.WarProductionPanelProperties",
+          "$objectId": 5,
+          "PanelCondition": "RiziaDLC.Panel_WarProduction == true",
+          "Subtitle": "Resources & Units",
+          "Title": "Rizian Armed Forces"
+        }
+      }
+    ]
+  }
+}

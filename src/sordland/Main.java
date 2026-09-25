@@ -21,7 +21,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.function.*;
 
-
+                                                                                          
 public final class Main extends Application {
     private Stage stage;private BorderPane root;private StackPane center;private VBox top;
     private final ExecutorService worker=Executors.newSingleThreadExecutor(r->{Thread t=new Thread(r,"sordland-model");t.setDaemon(true);return t;});
@@ -31,6 +31,7 @@ public final class Main extends Application {
     private final TypeFilterControl typeFilter=new TypeFilterControl();private final TypeSelection typePreferences=new TypeSelection();
     private final CheckBox speakerColors=new CheckBox("Speaker Colors");
     private final Button ignoredData=new Button("Ignored data");
+    private final Button runtimeSources=new Button("Runtime sources");
     private final Button back=new Button("← Back"),itemDetails=new Button("Item details"),eventView=new Button("Event view: ROOTED");private HBox filters;
     private boolean rootedCampaign=true;private int smokeStage;private View smokeReturnView;private Graph smokeCanonical;
     private final List<Button> zoomButtons=new ArrayList<>();
@@ -70,7 +71,8 @@ public final class Main extends Application {
         search.setPromptText("Find title or database name…");search.setPrefWidth(340);search.setOnAction(e->search());
         Button find=new Button("Find");find.setOnAction(e->search());
         typeFilter.setPrefWidth(170);turn.setPrefWidth(150);turn.setOnAction(e->{if(!initializing)rebuildCampaign();});ignoredData.setOnAction(e->openIgnoredData());
-        filters=new HBox(10,search,find,typeFilter,turn,ignoredData,actorFilter);filters.setAlignment(Pos.CENTER_LEFT);filters.setPadding(new Insets(0,20,12,20));
+        runtimeSources.setOnAction(e->{if(data!=null){history.push(current);show(new View(null,null,false,"Runtime sources",null,new IgnoredDataView(data.runtime().sourceInspection()),Set.of()));}});
+        filters=new HBox(10,search,find,typeFilter,turn,ignoredData,runtimeSources,actorFilter);filters.setAlignment(Pos.CENTER_LEFT);filters.setPadding(new Insets(0,20,12,20));
         notice.setWrapText(true);notice.setStyle("-fx-font-size: 11px; -fx-text-fill: #bac9d8;");notice.setPadding(new Insets(0,20,11,20));
         top.getChildren().addAll(mast,toolbar,filters,notice);root.setTop(top);
         status.setPadding(new Insets(8,20,8,20));status.setStyle("-fx-background-color: #17212d; -fx-text-fill: #bac9d8;");status.setMaxWidth(Double.MAX_VALUE);root.setBottom(status);
@@ -169,6 +171,7 @@ public final class Main extends Application {
     };view.canvas.onEdge=this::inspectEdge;}
     private void relayout(View view){runWork("Updating measured layout…",()->view.campaign?new LayoutEngine().campaign(TypeProjection.project(view.graph,view.selectedTypes),view.expanded,new TextMeasurer()):new LayoutEngine().dialogue(ActorProjection.project(view.graph,view.selectedActors),view.expanded,new TextMeasurer()),layout->{view.canvas.setResult(layout,false);show(view);if(smokeDir!=null&&smokeStage==9)Platform.runLater(this::smokeFinish);});}
     private void openItem(Item item){
+        if(item.type().equals("Decision panel")){buildDialogue(item.title(),item,()->PanelGraphBuilder.build(data.runtime(),item.internalName()));return;}
         if(item.conversationId()==null){history.push(current);show(new View(null,null,false,item.title(),item,detail(item),Set.of()));return;}
         Conversation conversation=data.conversations().get(item.conversationId());
         if(conversation==null){error(new IllegalArgumentException("Unresolved conversation ID: "+item.conversationId()));return;}
@@ -187,7 +190,7 @@ public final class Main extends Application {
         }
         search.setText(view.query);root.setRight(null);center.getChildren().setAll(view.canvas==null?view.detail:view.canvas);title.setText(view.name);title.setTooltip(new Tooltip(view.name));back.setVisible(!history.isEmpty());back.setManaged(!history.isEmpty());speakerColors.setVisible(!view.campaign&&view.canvas!=null);speakerColors.setManaged(!view.campaign&&view.canvas!=null);
         eventView.setVisible(view.campaign);eventView.setManaged(view.campaign);eventView.setText(isRooted(view)?"Event view: ROOTED":"Event view: PLAIN");
-        typeFilter.setVisible(view.campaign);typeFilter.setManaged(view.campaign);turn.setVisible(view.campaign);turn.setManaged(view.campaign);ignoredData.setVisible(view.campaign);ignoredData.setManaged(view.campaign);
+        typeFilter.setVisible(view.campaign);typeFilter.setManaged(view.campaign);turn.setVisible(view.campaign);turn.setManaged(view.campaign);ignoredData.setVisible(view.campaign);ignoredData.setManaged(view.campaign);runtimeSources.setVisible(view.campaign);runtimeSources.setManaged(view.campaign);
         search.setPromptText(view.campaign?"Find title or database name…":"Find text or source ID…");search.setVisible(view.canvas!=null);search.setManaged(view.canvas!=null);filters.getChildren().get(1).setVisible(view.canvas!=null);filters.getChildren().get(1).setManaged(view.canvas!=null);
         boolean dialogue=!view.campaign&&view.canvas!=null;
         actorFilter.setVisible(dialogue);actorFilter.setManaged(dialogue);
@@ -211,7 +214,7 @@ public final class Main extends Application {
         if(!edge.projectionPath.isEmpty()){
             text.append("\n\nVISUAL PROJECTION THROUGH HIDDEN CARDS\nThis arrow abbreviates the following original connectors; it is not a new JSON link.\n");
             for(var original:edge.projectionPath)text.append(original.sourceLink==null?original.from+" → "+original.to:original.sourceFrom+" → "+original.sourceTo).append("  ").append(original.label).append('\n');
-        } else if(edge.sourceLink==null)text.append(isRooted(current)?"\n\nGameFlow campaign connector. Neutral junctions and group ports are layout mechanisms; only condition/choice evidence stated above establishes a specific event branch.":"\n\nInternal source-entry box sequence.");
+        } else if(edge.sourceLink==null)text.append(isRooted(current)?"\n\nGameFlow campaign connector. Neutral junctions and group ports are layout mechanisms; only condition/choice evidence stated above establishes a specific event branch.":"\n\nSource mechanic connection: panel page membership, independent option branch, panel completion, or internal source-entry sequence. This is not an additional outgoing dialogue pointer.");
         if(!from.metadata.isBlank())text.append("\n\nFROM SOURCE METADATA\n").append(from.metadata);
         if(!to.metadata.isBlank())text.append("\n\nTO SOURCE METADATA\n").append(to.metadata);
         Label heading=new Label("Selected arrow");heading.setStyle("-fx-font-weight: bold;");Button close=new Button("×");close.setOnAction(e->root.setRight(null));
@@ -243,6 +246,10 @@ public final class Main extends Application {
             page.getChildren().add(content);
         }
         if(!item.endInstruction().isBlank())page.getChildren().add(card("ON END",CampaignGraphBuilder.display(item.endInstruction()),"#244237"));
+        if(item.type().equals("Conditional instruction")){
+            var runtime=data.runtime().resolve(item.internalName(),"conditionalinstructiondata");
+            if(runtime!=null){TitledPane richer=new TitledPane("Additional runtime conditional instruction source",copyBlock(runtime.metadata(),true));richer.setExpanded(false);page.getChildren().add(richer);}
+        }
         TitledPane source=new TitledPane("Complete source metadata",copyBlock(Json.pretty(item.raw()),true));source.setExpanded(false);page.getChildren().add(source);
         ScrollPane scroll=new ScrollPane(page);scroll.setFitToWidth(true);scroll.setStyle("-fx-background: #101722; -fx-background-color: #101722;");return scroll;
     }
@@ -356,8 +363,8 @@ public final class Main extends Application {
             }
             if(smokeStage==32){smokeStage=33;turn.setValue("All turns");return;}
             if(smokeStage==33){
-                
-                
+                                                                                           
+                                                                                            
                 if(!current.selectedTypes.equals(Set.of("News"))){smokeStage=34;for(String name:current.types)typeFilter.setSelected(name,name.equals("News"));return;}
                 smokeStage=4;eventView.fire();return;
             }
@@ -394,7 +401,7 @@ public final class Main extends Application {
             smokeStage=9;Graph.Node event=current.canvas.result().graph.nodes.stream().filter(n->n.item!=null).findFirst().orElseThrow();current.canvas.onNode.accept(event,true);
         }catch(Exception e){error(e);}
     }
-    
+                                                                                          
     private void smokeClickEdge(){
         var canvas=current.canvas;var layout=canvas.result();
         for(var line:layout.lines)for(int i=1;i<line.points().size();i++){

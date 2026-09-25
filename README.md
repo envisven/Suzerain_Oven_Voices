@@ -2,6 +2,20 @@
 
 A local JavaFX viewer built from the supplied Suzerain Sordland entity and conversation dumps. The original JSON files are read-only inputs. No Maven, Gradle, external JSON library, network service, or downloaded portrait is required.
 
+## Runtime database integration (2026-09-21)
+
+The supplied working viewer remains the baseline. The three original JSON files are unchanged: the old conversation dump owns explicit dialogue links, and the old entity dump owns GameFlow, Decisions, Bills, News and the existing catalogue. `data/runtime/entity_catalog.json` selects the preferred member of each logical runtime collection. The runtime database is optional; removing its folder preserves the legacy viewer with a diagnostic.
+
+Open **Budget Allocation of the Government of Sordland** to see the resolved funding panel at conversation 26 / entry 209. Health, Law Enforcement, Education and Military each have Increase / Maintain / Decrease choices. Each choice is one effect card; counter changes are combined visually while retaining their separate provenance. A distinct completion port retains the single exact continuation to conversation 27 / entry 1.
+
+**Types** adds Policy, Situation, Report, Decree, Journal, Token status and Decision panel, all off by default. ROOTED attaches content only where exact source instructions prove the relationship. PLAIN exposes eligible Sordland catalogue records whether or not a rooted relationship exists. Opening a Decision panel from PLAIN shows its structured mechanics. Dialogue mechanics remain visible independently of campaign type defaults.
+
+**Runtime sources** opens the complete preferred runtime sources and catalog, including unrendered configuration and quarantined records. Original **Ignored data** remains unchanged. Item details retain raw runtime objects, source file/index, panel/page context, instructions and counter fields. The four existing conditional-instruction records can show their richer runtime source alongside their original source.
+
+Runtime StoryPack_Main counts match the metacard. One of the 561 tagged journal entries actually has a Rizia path and enable variable; it is retained and diagnosed, but excluded from gameplay (560 eligible journal cards). See [implementation report](docs/RUNTIME_INTEGRATION.md), [validation](docs/VALIDATION.md), and [Budget image](docs/runtime-validation/budget-full.png).
+
+Run `./scripts/test.sh` for the complete legacy and runtime-aware headless suite. The original legacy assertions remain intact; new checks separately audit all 286 enriched graphs, panel branches, source pointers and deterministic geometry. Run `./scripts/test-runtime-ui.sh` on a desktop to reproduce the real JavaFX Budget snapshots and interaction checks.
+
 ## Run in IntelliJ IDEA
 
 1. Open this folder as a project.
@@ -49,13 +63,13 @@ The JVM property `-Dsuzerain.data=/absolute/path/to/data` is also supported. Use
 - Parsing and layout run in the background; use **Cancel** to return to the previous view.
 - **Event view: ROOTED** is the startup default. Click the same button to switch to **Event view: PLAIN** and back. The toggle is available only at campaign level.
 - ROOTED starts at synthetic **START** and follows the complete Sordland GameFlow. Selecting one turn uses **TURN START**; All turns restores the continuous graph.
-- In ROOTED, **Find** highlights matching visible cards and cycles focus without removing intermediary nodes. **Types X / Y** is the same independent checklist in ROOTED and PLAIN: all applicable types start selected except News. Condition is independent. Unchecked cards disappear; original routes are projected through hidden cards without merging alternatives. Search never restores hidden types. PLAIN search filters the catalogue.
+- In ROOTED, **Find** highlights matching visible cards and cycles focus without removing intermediary nodes. **Types X / Y** is the same independent checklist in ROOTED and PLAIN: all applicable types start selected except News and the new runtime gameplay types. Condition is independent. Unchecked cards disappear; original routes are projected through hidden cards without merging alternatives. Search never restores hidden types. PLAIN search filters the catalogue.
 - **Ignored data** opens a searchable source inspector with collapsible source-file groups, exact locations, identities, reasons and raw JSON. Supported News and conditional instructions remain normal graphical types.
 - **Speaker Colors** assigns stable colors to character speakers. Narrator and player choices retain their fixed styles.
 
 ## Reading the graphs
 
-Conditions use dark purple boxes with a purple border; gameplay effects have a dedicated style. Only the literal `BaseGame.` prefix is removed for display. Raw expressions and source identifiers remain available in metadata.
+Conditions use dark purple boxes with a purple border; gameplay effects have a dedicated style. Legacy dialogue expressions only remove the literal `BaseGame.` prefix. Runtime panel choices additionally shorten literal assignment names and arithmetic for readability. Raw expressions and source identifiers remain available in metadata.
 
 Each exact source entry `(conversationID, dialogueID)` has one representation in a dialogue graph. Its condition, speech/control, effects, unknown commands and terminal markers remain in source order. Every outgoing source link points to that destination's single representation, including links from branches with different effects. The viewer displays the JSON pointer graph; it does not calculate whether a particular accumulated game state can take a route.
 

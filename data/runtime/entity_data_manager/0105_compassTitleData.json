@@ -1,0 +1,291 @@
+{
+  "dataset": "compassTitleData",
+  "sourceFile": "EntityDataManager/0105_compassTitleData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.compassTitleData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.3964191Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "80",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "123",
+    "bytes": "23396"
+  },
+  "primitiveValuesParsed": 80,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompassTitleData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 2,
+    "$items": [
+{
+        "$type": "Il2Cpp.CompassTitleData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CompassTitleProperties": {
+          "$type": "Il2Cpp.CompassTitleProperties",
+          "$objectId": 5,
+          "MainTitle": "History will remember you as...",
+          "TitleConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompassTitleProperties+CompassTitleCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 6,
+            "$declaredCount": 16,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 7,
+                "Condition": "RiziaDLC.Title_Great == true",
+                "Text": "the Great"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 8,
+                "Condition": "RiziaDLC.Title_Liberator == true",
+                "Text": "the Liberator"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 9,
+                "Condition": "RiziaDLC.Title_Conqueror == true",
+                "Text": "the Conqueror"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 10,
+                "Condition": "RiziaDLC.Title_ScourgeOfNur == true",
+                "Text": "the Scourge of Nur"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 11,
+                "Condition": "RiziaDLC.Title_Faithful == true ",
+                "Text": "the Faithful"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 12,
+                "Condition": "RiziaDLC.Title_Reformer == true ",
+                "Text": "the Reformer"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 13,
+                "Condition": "RiziaDLC.Title_Peaceful == true ",
+                "Text": "the Peaceful"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 14,
+                "Condition": "RiziaDLC.Title_Generous == true ",
+                "Text": "the Generous"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 15,
+                "Condition": "RiziaDLC.Title_Frailer == true ",
+                "Text": "the Frailer"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 16,
+                "Condition": "RiziaDLC.Title_Armslord == true ",
+                "Text": "the Armslord"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 17,
+                "Condition": "RiziaDLC.Title_Lawgiver == true ",
+                "Text": "the Lawgiver"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 18,
+                "Condition": "RiziaDLC.Title_Tyrant == true ",
+                "Text": "the Tyrant\n"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 19,
+                "Condition": "RiziaDLC.Title_Rebellious == true ",
+                "Text": "the Rebellious"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 20,
+                "Condition": "RiziaDLC.Title_Funny == true ",
+                "Text": "the Funny"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 21,
+                "Condition": "RiziaDLC.Title_Sober == true ",
+                "Text": "the Sober"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 22,
+                "Condition": "RiziaDLC.Title_First == true",
+                "Text": "the First"
+              }
+            ]
+          },
+          "TitleVariable": "RiziaDLC.Summary_Title"
+        },
+        "Id": "0x010000650000CAB4",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Compass_Title",
+        "Notes": "",
+        "Path": "Rizia/Compass"
+      },
+{
+        "$type": "Il2Cpp.CompassTitleData",
+        "$objectId": 23,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 24,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 25,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompassTitleProperties": {
+          "$type": "Il2Cpp.CompassTitleProperties",
+          "$objectId": 26,
+          "MainTitle": "History will remember you as...",
+          "TitleConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompassTitleProperties+CompassTitleCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 27,
+            "$declaredCount": 16,
+            "$items": [
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 28,
+                "Condition": "BaseGameUI.Compass_Player_Y <= 4 && BaseGameUI.Compass_Player_Y >= -4 && BaseGameUI.Compass_Player_X <= 4 && BaseGameUI.Compass_Player_X >= -4",
+                "Text": "Centrist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 29,
+                "Condition": "BaseGameUI.Compass_Player_Y >= 5 &&\nBaseGameUI.Compass_Player_Y <= 7 &&  BaseGameUI.Compass_Player_X <= 6 && BaseGameUI.Compass_Player_X >= -6 && BaseGame.Sollist > 30",
+                "Text": "Sollist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 30,
+                "Condition": "BaseGameUI.Compass_Player_Y >= 5 && \nBaseGameUI.Compass_Player_Y <= 7 && BaseGameUI.Compass_Player_X <= 6 && BaseGameUI.Compass_Player_X >= -6 && BaseGame.Sollist <= 30",
+                "Text": "Neo-Sollist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 31,
+                "Condition": "BaseGameUI.Compass_Player_Y >= 8 && BaseGameUI.Compass_Player_X <= 6 && BaseGameUI.Compass_Player_X >= -6 && BaseGame.Sollist > 30",
+                "Text": "Radical Sollist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 32,
+                "Condition": "BaseGameUI.Compass_Player_Y >= 8 && BaseGameUI.Compass_Player_X <= 6 && BaseGameUI.Compass_Player_X >= -6 && BaseGame.Sollist <= 30",
+                "Text": "Radical Neo-Sollist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 33,
+                "Condition": "BaseGameUI.Compass_Player_Y >= 5 && BaseGameUI.Compass_Player_X >= 6",
+                "Text": "Neo-Sollist Capitalist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 34,
+                "Condition": "BaseGameUI.Compass_Player_Y >= 5 && BaseGameUI.Compass_Player_X <= -6",
+                "Text": "National-Malenyevist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 35,
+                "Condition": "BaseGameUI.Compass_Player_Y <= 4 && BaseGameUI.Compass_Player_Y >= -4 && BaseGameUI.Compass_Player_X <= 7 && BaseGameUI.Compass_Player_X >= 5",
+                "Text": "Sordish Capitalist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 36,
+                "Condition": "BaseGameUI.Compass_Player_Y <= 4 && BaseGameUI.Compass_Player_Y >= -4 && BaseGameUI.Compass_Player_X >= 8",
+                "Text": "Arcasian Capitalist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 37,
+                "Condition": "BaseGameUI.Compass_Player_Y <= 4 && BaseGameUI.Compass_Player_Y >= -4 && BaseGameUI.Compass_Player_X <= -5 && BaseGameUI.Compass_Player_X >= -7",
+                "Text": "Centrist-Malenyevist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 38,
+                "Condition": "BaseGameUI.Compass_Player_Y <= 4 && BaseGameUI.Compass_Player_Y >= -4 && BaseGameUI.Compass_Player_X <= -8",
+                "Text": "Malenyevist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 39,
+                "Condition": "BaseGameUI.Compass_Player_Y <= -5 && BaseGameUI.Compass_Player_X <= 4 && BaseGameUI.Compass_Player_X >= -4",
+                "Text": "Centrist Reformist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 40,
+                "Condition": "BaseGameUI.Compass_Player_Y <= -5 && BaseGameUI.Compass_Player_X <= -5 && BaseGameUI.Compass_Player_X >= -7",
+                "Text": "Democratic Malenyevist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 41,
+                "Condition": "BaseGameUI.Compass_Player_Y <= -5 && BaseGameUI.Compass_Player_X <= -8",
+                "Text": "Valgslandian Socialist"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 42,
+                "Condition": "BaseGameUI.Compass_Player_Y <= -5 && BaseGameUI.Compass_Player_X >= 5 && BaseGameUI.Compass_Player_X <= 7",
+                "Text": "Sordish Liberal"
+              },
+{
+                "$type": "Il2Cpp.CompassTitleProperties+CompassTitleCondition",
+                "$objectId": 43,
+                "Condition": "BaseGameUI.Compass_Player_Y <= -5 && BaseGameUI.Compass_Player_X >= 8",
+                "Text": "Neo-Liberal Reformist"
+              }
+            ]
+          },
+          "TitleVariable": "BaseGame.Summary_Title"
+        },
+        "Id": "0x0100006A00006A2C",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Compass_Title",
+        "Notes": "",
+        "Path": "Sordland/Compass"
+      }
+    ]
+  }
+}

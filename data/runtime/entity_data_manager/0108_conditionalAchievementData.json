@@ -1,0 +1,621 @@
+{
+  "dataset": "conditionalAchievementData",
+  "sourceFile": "EntityDataManager/0108_conditionalAchievementData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.conditionalAchievementData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.4048189Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "132",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "221",
+    "bytes": "36854"
+  },
+  "primitiveValuesParsed": 132,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalAchievementData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 22,
+    "$items": [
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 5,
+          "Condition": "BaseGame.AMorgnaWesCore >= 7"
+        },
+        "Id": "0x0100006A00005615",
+        "IsWIP": false,
+        "NameInDatabase": "Game_AMorgna",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 6,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 7,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 9,
+          "Condition": "BaseGame.Bill_Turn09_BludishCommission_Signed == true"
+        },
+        "Id": "0x0100006A00005630",
+        "IsWIP": false,
+        "NameInDatabase": "Game_BludishRights",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 10,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 11,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 12,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 13,
+          "Condition": "BaseGame.GovernmentBudget >= 10"
+        },
+        "Id": "0x0100006A0000562B",
+        "IsWIP": false,
+        "NameInDatabase": "Game_BudgetSurplus",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 14,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 15,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 17,
+          "Condition": "GetUnlockedCollectionItemsCount(\"StoryPack_Main\") >= 15"
+        },
+        "Id": "0x0100009600000036",
+        "IsWIP": false,
+        "NameInDatabase": "Game_ExecutiveHoarder",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 18,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 19,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 20,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 21,
+          "Condition": "BaseGame.Decision_Turn05_AutocratEmergency_Extend == true && BaseGame.Decision_Turn08_ExtendEmergency_Extend == true"
+        },
+        "Id": "0x0100006A000055D7",
+        "IsWIP": false,
+        "NameInDatabase": "Game_HawkerPlan",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 22,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 23,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 24,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 25,
+          "Condition": "BaseGame.SignedBillCount >= 10"
+        },
+        "Id": "0x0100006A0000561C",
+        "IsWIP": false,
+        "NameInDatabase": "Game_Lawmaker",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 26,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 27,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 28,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 29,
+          "Condition": "BaseGame.LateGameCrisis >= 4"
+        },
+        "Id": "0x010000960000003B",
+        "IsWIP": false,
+        "NameInDatabase": "Game_MasterOfCrisis",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 30,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 31,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 32,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 33,
+          "Condition": "BaseGame.VetoedBillCount >= 8"
+        },
+        "Id": "0x0100006A00005621",
+        "IsWIP": false,
+        "NameInDatabase": "Game_Obstructionist",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 34,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 35,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 36,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 37,
+          "Condition": "BaseGame.PersonalWealth >= 5 && BaseGame.Prologue_Birthplace_Lachaven_Rich == false"
+        },
+        "Id": "0x0100006A00005626",
+        "IsWIP": false,
+        "NameInDatabase": "Game_WealthSurplus",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 38,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 39,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 40,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 41,
+          "Condition": "RiziaDLC.ExportArmsCount >= 7"
+        },
+        "Id": "0x0100009E0000EA21",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_ArmsExporter",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 42,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 43,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 44,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 45,
+          "Condition": "RiziaDLC.ImportArmsCount >= 7"
+        },
+        "Id": "0x0100009E0000EA26",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_ArmsImporter",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 46,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 47,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 48,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 49,
+          "Condition": "RiziaDLC.Resources_Authority >= 15"
+        },
+        "Id": "0x0100009E0000EAB9",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Authority",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 50,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 51,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 52,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 53,
+          "Condition": "GetUnlockedCollectionItemsCount(\"StoryPack_Rizia\") >= 18"
+        },
+        "Id": "0x0100009E0000EA7C",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Collectibles",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 54,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 55,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 56,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 57,
+          "Condition": "RiziaDLC.Said_GlovuriusAxaRizia >= 10"
+        },
+        "Id": "0x010000740000E8E1",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Glovurius",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 58,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 59,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 60,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 61,
+          "Condition": "RiziaDLC.Said_Halaita >= 10"
+        },
+        "Id": "0x010000740000E838",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Halaita",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 62,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 63,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 64,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 65,
+          "Condition": "RiziaDLC.Situation_Military_Manpower_Massive == true"
+        },
+        "Id": "0x0100009E0000EA6A",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Manpower",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 66,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 67,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 68,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 69,
+          "Condition": "RiziaDLC.Council_Security_Taddeus == true && RiziaDLC.Iza_PowerTransfer_Angelica == true"
+        },
+        "Id": "0x0100009E0000EACA",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_MomDad",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 70,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 71,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 72,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 73,
+          "Condition": "RiziaDLC.Situation_Economy_RRG_StateOwns100 == true"
+        },
+        "Id": "0x0100009E0000EACF",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_NationalizedRRG",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 74,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 75,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 76,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 77,
+          "Condition": "RiziaDLC.War_Used_ExperimentalWeapons > 0"
+        },
+        "Id": "0x0100009E0000EA99",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Nerve",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 78,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 79,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 80,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 81,
+          "Condition": "RiziaDLC.Situation_Diplomacy_PowerProjection_Overwhelming == true"
+        },
+        "Id": "0x0100009E0000EA01",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_PowerProjection",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 82,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 83,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 84,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 85,
+          "Condition": "RiziaDLC.Policy_RD_Welfare_RomusTorasHospital_Completed == true && RiziaDLC.Policy_RD_Order_RomusTorasAcademy_Completed == true && RiziaDLC.Policy_RD_Welfare_RomusTorasUniversity_Completed == true"
+        },
+        "Id": "0x010000740000E65F",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SayMyName",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      },
+{
+        "$type": "Il2Cpp.ConditionalAchievementData",
+        "$objectId": 86,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 87,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 88,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "ConditionalAchievementProperties": {
+          "$type": "Il2Cpp.ConditionalAchievementProperties",
+          "$objectId": 89,
+          "Condition": "RiziaDLC.Situation_Diplomacy_Sordland_WineWhiskeyDeal == true && RiziaDLC.Situation_Economy_Sordland_ResortDeal == true && (RiziaDLC.Situation_Diplomacy_Sordland_GasomAverageOutput == true || RiziaDLC.Situation_Diplomacy_Sordland_GasomHighOutput == true || RiziaDLC.Situation_Diplomacy_Sordland_GasomLowOutput == true)"
+        },
+        "Id": "0x0100009E0000E9FB",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Sordland",
+        "Notes": "",
+        "Path": "Setup/Conditional Achievements"
+      }
+    ]
+  }
+}

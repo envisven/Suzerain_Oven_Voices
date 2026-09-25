@@ -1,0 +1,107 @@
+{
+  "dataset": "compassConfigurationData",
+  "sourceFile": "EntityDataManager/0103_compassConfigurationData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.compassConfigurationData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.3945603Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "40",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "49",
+    "bytes": "6966"
+  },
+  "primitiveValuesParsed": 40,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompassConfigurationData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 2,
+    "$items": [
+{
+        "$type": "Il2Cpp.CompassConfigurationData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CompassConfigurationProperties": {
+          "$type": "Il2Cpp.CompassConfigurationProperties",
+          "$objectId": 5,
+          "BottomTitle": "Immediatism",
+          "FlipPlayerXAxis": false,
+          "FlipPlayerYAxis": true,
+          "GridXVariable": "RiziaDLCUI.Compass_Player_X",
+          "GridYVariable": "RiziaDLCUI.Compass_Player_Y",
+          "LeftTitle": "Statism",
+          "MaxX": 10,
+          "MaxY": 21,
+          "MinX": -10,
+          "MinY": -16,
+          "RightTitle": "Arcasian Capitalism",
+          "TopTitle": "Monarchism",
+          "XVariable": "RiziaDLC.LeaningValue_ProBusiness",
+          "YVariable": "RiziaDLC.LeaningValue_Democratic"
+        },
+        "Id": "0x010000650000CAD9",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Compass_Configuration",
+        "Notes": "",
+        "Path": "Rizia/Compass"
+      },
+{
+        "$type": "Il2Cpp.CompassConfigurationData",
+        "$objectId": 6,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 7,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompassConfigurationProperties": {
+          "$type": "Il2Cpp.CompassConfigurationProperties",
+          "$objectId": 9,
+          "BottomTitle": "Sordish Reformism",
+          "FlipPlayerXAxis": false,
+          "FlipPlayerYAxis": true,
+          "GridXVariable": "BaseGameUI.Compass_Player_X",
+          "GridYVariable": "BaseGameUI.Compass_Player_Y",
+          "LeftTitle": "Malenyevism",
+          "MaxX": 27,
+          "MaxY": 32,
+          "MinX": -37,
+          "MinY": -42,
+          "RightTitle": "Arcasian Capitalism",
+          "TopTitle": "Sollism",
+          "XVariable": "BaseGame.Capitalist",
+          "YVariable": "BaseGame.Democratic"
+        },
+        "Id": "0x0100006A00006A30",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Compass_Configuration",
+        "Notes": "",
+        "Path": "Sordland/Compass"
+      }
+    ]
+  }
+}

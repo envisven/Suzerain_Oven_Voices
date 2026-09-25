@@ -1,0 +1,58 @@
+{
+  "dataset": "oneTimeDecreesPanelData",
+  "sourceFile": "EntityDataManager/0141_oneTimeDecreesPanelData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.oneTimeDecreesPanelData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.7805166Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "11",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "16",
+    "bytes": "2829"
+  },
+  "primitiveValuesParsed": 11,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.OneTimeDecreesPanelData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 1,
+    "$items": [
+{
+        "$type": "Il2Cpp.OneTimeDecreesPanelData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A000027C3",
+        "IsWIP": false,
+        "NameInDatabase": "Panel_PresidentialDecrees",
+        "Notes": "",
+        "OneTimeDecreesPanelProperties": {
+          "$type": "Il2Cpp.OneTimeDecreesPanelProperties",
+          "$objectId": 5,
+          "ConversationOnFinish": "",
+          "MaxNumberOfEnactedDecrees": 3,
+          "PagedDecisionPanelOnFinish": "",
+          "Subtitle": "You can select up to three decrees to enact.",
+          "Title": "Presidential Decrees"
+        },
+        "Path": "Sordland/Presidential Decrees Panel"
+      }
+    ]
+  }
+}

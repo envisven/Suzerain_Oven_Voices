@@ -6,7 +6,7 @@ import sordland.data.*;
 import sordland.data.Domain.*;
 import static sordland.TestSupport.*;
 
-
+                                                                                           
 final class SourceAccountingChecks {
     static void run(Path directory,Dataset data)throws Exception {
         var entities=Json.object(Json.parse(directory.resolve(Loader.ENTITY_FILE)));

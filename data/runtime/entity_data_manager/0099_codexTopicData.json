@@ -1,0 +1,756 @@
+{
+  "dataset": "codexTopicData",
+  "sourceFile": "EntityDataManager/0099_codexTopicData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.codexTopicData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.0735655Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "162",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "271",
+    "bytes": "37180"
+  },
+  "primitiveValuesParsed": 162,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CodexTopicData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 27,
+    "$items": [
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 5,
+          "Title": "Assembly"
+        },
+        "Id": "0x0100006A00008EEB",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Characters_Assembly",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Characters"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 6,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 7,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 9,
+          "Title": "Business"
+        },
+        "Id": "0x0100006A00008EEF",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Characters_Business",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Characters"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 10,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 11,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 12,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 13,
+          "Title": "Cabinet"
+        },
+        "Id": "0x0100006A00008EF3",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Characters_Cabinet",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Characters"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 14,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 15,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 17,
+          "Title": "Council"
+        },
+        "Id": "0x0100006A00009540",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Characters_Council",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Characters"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 18,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 19,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 20,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 21,
+          "Title": "Family"
+        },
+        "Id": "0x0100006A00008F03",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Characters_Family",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Characters"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 22,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 23,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 24,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 25,
+          "Title": "Foreign Leaders"
+        },
+        "Id": "0x0100006A00008F07",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Characters_ForeignLeaders",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Characters"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 26,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 27,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 28,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 29,
+          "Title": "Former Presidents"
+        },
+        "Id": "0x0100006A00008EFF",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Characters_FormerPresidents",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Characters"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 30,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 31,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 32,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 33,
+          "Title": "Others"
+        },
+        "Id": "0x0100006A00008F0B",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Characters_Others",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Characters"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 34,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 35,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 36,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 37,
+          "Title": "Party Leaders"
+        },
+        "Id": "0x0100006A00008F0F",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Characters_PartyLeaders",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Characters"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 38,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 39,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 40,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 41,
+          "Title": "State Figures"
+        },
+        "Id": "0x0100006A00008EF7",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Characters_StateFigures",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Characters"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 42,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 43,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 44,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 45,
+          "Title": "Supreme Court"
+        },
+        "Id": "0x0100006A00008EFB",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Characters_SupremeCourt",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Characters"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 46,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 47,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 48,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 49,
+          "Title": "Ideologies"
+        },
+        "Id": "0x0100006A00008F13",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_History_Ideologies",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/History"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 50,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 51,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 52,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 53,
+          "Title": "Important Events"
+        },
+        "Id": "0x0100006A00008F17",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_History_ImportantEvents",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/History"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 54,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 55,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 56,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 57,
+          "Title": "Misc History"
+        },
+        "Id": "0x010000650000BB98",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_History_MiscHistory",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/History"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 58,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 59,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 60,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 61,
+          "Title": "Religion"
+        },
+        "Id": "0x0100006A00008F1B",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_History_Religion",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/History"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 62,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 63,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 64,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 65,
+          "Title": "Timeline"
+        },
+        "Id": "0x0100006A00008F1F",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_History_Timeline",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/History"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 66,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 67,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 68,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 69,
+          "Title": "Cities"
+        },
+        "Id": "0x0100006A00008F23",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Locations_Cities",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Locations"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 70,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 71,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 72,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 73,
+          "Title": "Countries"
+        },
+        "Id": "0x0100006A00008F27",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Locations_Countries",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Locations"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 74,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 75,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 76,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 77,
+          "Title": "Landmarks"
+        },
+        "Id": "0x0100006A00008F2B",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Locations_Landmarks",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Locations"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 78,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 79,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 80,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 81,
+          "Title": "Regions"
+        },
+        "Id": "0x0100006A00008F2F",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Locations_Regions",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Locations"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 82,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 83,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 84,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 85,
+          "Title": "Corporations"
+        },
+        "Id": "0x0100006A00008F33",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Organisations_Corporations",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Organisations"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 86,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 87,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 88,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 89,
+          "Title": "Factions"
+        },
+        "Id": "0x0100006A00008F37",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Organisations_Factions",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Organisations"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 90,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 91,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 92,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 93,
+          "Title": "Governmental"
+        },
+        "Id": "0x0100006A00008F3B",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Organisations_Governmental",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Organisations"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 94,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 95,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 96,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 97,
+          "Title": "Inter-Governmental"
+        },
+        "Id": "0x0100006A00008F3F",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Organisations_InterGovernmental",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Organisations"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 98,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 99,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 100,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 101,
+          "Title": "Misc Organisations"
+        },
+        "Id": "0x0100006A00008F43",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Organisations_MiscOrganisations",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Organisations"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 102,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 103,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 104,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 105,
+          "Title": "Political"
+        },
+        "Id": "0x0100006A00008F47",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Organisations_Political",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Organisations"
+      },
+{
+        "$type": "Il2Cpp.CodexTopicData",
+        "$objectId": 106,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 107,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 108,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "CodexTopicProperties": {
+          "$type": "Il2Cpp.CodexTopicProperties",
+          "$objectId": 109,
+          "Title": "Political Parties"
+        },
+        "Id": "0x0100006A00008F4B",
+        "IsWIP": false,
+        "NameInDatabase": "CodexTopic_Organisations_PoliticalParties",
+        "Notes": "",
+        "Path": "Shared/Codex Categories/Organisations"
+      }
+    ]
+  }
+}

@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 
-
+                                                                                    
 public final class Theme {
     private Theme() {}
     public static final String BACKGROUND="#111a23",SURFACE="#1b2733",INPUT="#14202b",BORDER="#587084";
@@ -56,7 +56,7 @@ public final class Theme {
             };
         });
     }
-    
+                                                                     
     public static Color speakerFill(Color source){return Color.hsb(source.getHue(),Math.min(.5,Math.max(.25,source.getSaturation())),.29);}
     public static double contrast(Color a,Color b){double first=luminance(a),second=luminance(b);return(Math.max(first,second)+.05)/(Math.min(first,second)+.05);}
     private static double luminance(Color c){return .2126*linear(c.getRed())+.7152*linear(c.getGreen())+.0722*linear(c.getBlue());}

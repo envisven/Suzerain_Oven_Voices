@@ -5,7 +5,7 @@ import sordland.graph.Graph.*;
 import java.util.*;
 import java.util.regex.Pattern;
 
-
+                                                                                  
 public final class RootedCampaignGraphBuilder {
     private static final String IDENT = "(?:[A-Za-z_]\\w*)(?:\\.[A-Za-z_]\\w*)*";
     private static final Pattern BOOLEAN_TEST = Pattern.compile("^("+IDENT+")\\s*==\\s*(true|false)$");
@@ -51,7 +51,7 @@ public final class RootedCampaignGraphBuilder {
                 String prefix="campaign:t"+turn.sourceIndex()+":s"+step.sourceIndex();
                 DecisionProof proof=!firstStep&&previousTurn==turn?proveDecision(previousOccurrences,step,prefix):null;
                 if(proof!=null) {
-                    
+                                                                                                        
                     String oldExit=previousExit;
                     nodes.removeIf(n->n.id.equals(oldExit));edges.removeIf(e->e.from.equals(oldExit)||e.to.equals(oldExit));
                     CampaignLevel before=levels.removeLast();
@@ -136,7 +136,7 @@ public final class RootedCampaignGraphBuilder {
         Set<String> turnGates=new HashSet<>();nodes.stream().filter(n->n.type.equals("Turn condition")).forEach(n->turnGates.add(n.id));
         for(int i=0;i<edges.size();i++){Edge edge=edges.get(i);if(turnGates.contains(edge.from)&&edge.label.isBlank())edges.set(i,new Edge(edge.from,edge.to,"TRUE",false));}
         Graph result=new Graph(selectedTurn==null?"Sordland campaign":"Sordland campaign · Turn "+selectedTurn,nodes,edges,diagnostics,new CampaignMetadata(turns,levels,groups));
-        return new NewsGraphBuilder().attach(data,result);
+        return new RuntimeGraphBuilder().attach(data,new NewsGraphBuilder().attach(data,result));
     }
 
     private static void unresolvedTurnFalse(List<Node> nodes,List<Edge> edges,List<String> diagnostics,String gate,Turn turn) {
@@ -162,7 +162,7 @@ public final class RootedCampaignGraphBuilder {
             +(item.conversationId()==null?"":"\nConversation ID: "+item.conversationId())
             +"\nRaw activation condition: "+item.condition()+"\nOn begin: "+item.beginInstruction()+"\nOn end: "+item.endInstruction());
     }
-    
+                                                                                                                 
     public static boolean complements(String first,String second) {
         BoolTest a=booleanTest(first),b=booleanTest(second);
         return a!=null&&b!=null&&a.variable().equals(b.variable())&&a.value()!=b.value();
@@ -179,9 +179,9 @@ public final class RootedCampaignGraphBuilder {
         }
         return expression;
     }
-    
-
-
+                                                                                                         
+                                                                                                       
+                                                                                                      
     private static DecisionProof proveDecision(List<Occurrence> previous,Step step,String prefix) {
         if(previous.size()!=1||step.fragments().size()<2||!step.onStepStartInstruction().isBlank())return null;
         var next=step.fragments().stream().map(f->new Occurrence(f,prefix+":f"+f.sourceIndex())).toList();
@@ -195,7 +195,7 @@ public final class RootedCampaignGraphBuilder {
             for(var command:analysis.commands()) {
                 if(command.kind()==Semantics.CommandKind.COSMETIC)continue;
                 var assignment=ANY_WRITE.matcher(command.raw().trim());
-                
+                                                                                                            
                 if(!assignment.matches()||!LITERAL_WRITE.matcher(command.raw().trim()).matches())return null;
                 var matcher=BOOLEAN_WRITE.matcher(command.raw().trim());
                 if(matcher.matches())writes.put(matcher.group(1),Boolean.parseBoolean(matcher.group(2)));

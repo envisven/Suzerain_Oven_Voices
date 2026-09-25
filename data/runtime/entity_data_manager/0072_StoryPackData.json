@@ -1,0 +1,287 @@
+{
+  "dataset": "StoryPackData",
+  "sourceFile": "EntityDataManager/0072_StoryPackData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.StoryPackData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.7937861Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "146",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "171",
+    "bytes": "22199"
+  },
+  "primitiveValuesParsed": 146,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.StoryPackData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 2,
+    "$items": [
+{
+        "$type": "Il2Cpp.StoryPackData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "Id": "0x0100006A000017BC",
+        "IsComingSoon": false,
+        "IsFinished": false,
+        "IsHidden": false,
+        "IsMainStoryPack": true,
+        "IsNeutralLens": false,
+        "IsNewRelease": false,
+        "IsPlayable": true,
+        "IsPrologueFinished": true,
+        "IsPrologueSkipped": false,
+        "IsPurchased": true,
+        "IsRizia": false,
+        "IsSideStoryPack": false,
+        "IsSordland": true,
+        "IsWIP": false,
+        "NameInDatabase": "StoryPack_Main",
+        "Notes": "",
+        "Path": "Setup/Story Packs",
+        "SceneBuildIndex": 1,
+        "SelectionState": "StartStory",
+        "StoryPackConfigurationProperties": {
+          "$type": "Il2Cpp.StoryPackConfigurationProperties",
+          "$objectId": 5,
+          "CurrentStepVariable": "BaseGameSetup.CurrentStep",
+          "CurrentTurnVariable": "BaseGameSetup.CurrentTurn",
+          "CustomizationAccessoriesVariable": "BaseGameUI.Customization_Accessories",
+          "CustomizationAttireVariable": "BaseGameUI.Customization_Attire",
+          "CustomizationBackgroundVariable": "BaseGameUI.Customization_Background",
+          "CustomizationBaseImage": "Character Customization/Anton_Base",
+          "CustomizationFacialHairVariable": "BaseGameUI.Customization_FacialHair",
+          "CustomizationHairVariable": "BaseGameUI.Customization_HairStyle",
+          "EpilogueConversation": "Sordland/Epilogue",
+          "IsPrologueCompletedVariable": "BaseGameSetup.IsPrologueCompleted",
+          "IsStoryPackCompletedVariable": "BaseGameSetup.IsStoryPackCompleted",
+          "PlayerActor": "Player",
+          "PlayerItalicActor": "Player_Italic",
+          "PrologueConversation": "Sordland/Prologue",
+          "PrologueSkip": "Panel_Sordland_PrologueSkip",
+          "PrologueSkipVariable": "BaseGame.Prologue_Skipped",
+          "StoryPackIndex": 0,
+          "StoryPackType": "Main",
+          "UnitySceneName": "Sordland"
+        },
+        "StoryPackProperties": {
+          "$type": "Il2Cpp.StoryPackProperties",
+          "$objectId": 6,
+          "CountryName": "Republic of Sordland",
+          "CountryNameShort": "Sordland",
+          "Fields": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.StoryPackProperties+StoryPackField, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 7,
+            "$declaredCount": 5,
+            "$items": [
+{
+                "$type": "Il2Cpp.StoryPackProperties+StoryPackField",
+                "$objectId": 8,
+                "Title": "Government",
+                "Value": "Presidential Republic"
+              },
+{
+                "$type": "Il2Cpp.StoryPackProperties+StoryPackField",
+                "$objectId": 9,
+                "Title": "Population",
+                "Value": "36 Million"
+              },
+{
+                "$type": "Il2Cpp.StoryPackProperties+StoryPackField",
+                "$objectId": 10,
+                "Title": "Economy",
+                "Value": "In Recession"
+              },
+{
+                "$type": "Il2Cpp.StoryPackProperties+StoryPackField",
+                "$objectId": 11,
+                "Title": "Regional Influence",
+                "Value": "Major Power"
+              },
+{
+                "$type": "Il2Cpp.StoryPackProperties+StoryPackField",
+                "$objectId": 12,
+                "Title": "Starting Date",
+                "Value": "1954"
+              }
+            ]
+          },
+          "FlagImage": "Codex Entries/c_sordland",
+          "LeaderDescription": "Anton Rayne has been elected the 4th President of Sordland amidst a deep recession, demands for reform and external pressures. His victory followed a campaign focused on turning a new page and recovery from economic hardship, striking a chord with a divided electorate. \n\nNow, as his administration takes shape, uncertainty lingers in the halls of power. Rayne faces a nation burdened by institutional fatigue, cautious optimism and the quiet urgency of change.",
+          "LeaderName": "Anton Rayne",
+          "LeaderTitle": "4th President of Sordland",
+          "LockedStoryPackImage": "Story Packs/icon_sordland_256",
+          "QuoteAuthor": "Nâzim Hikmet Ran",
+          "QuoteText": "You are my enslavement and my freedom,\nYou are my flesh burning like a raw summer night,\nYou are my country.",
+          "StoryPackTitle": "Main Story",
+          "UnlockedStoryPackImage": "Story Packs/icon_sordland_256"
+        },
+        "StoryPackStoreProperties": {
+          "$type": "Il2Cpp.StoryPackStoreProperties",
+          "$objectId": 13,
+          "ComingSoonURL": "",
+          "EpicAppId": "",
+          "EpicNotPurchasedURL": "",
+          "GogAppId": "",
+          "GogNotPurchasedURL": "",
+          "IsComingSoon": false,
+          "IsHidden": false,
+          "IsNewRelease": false,
+          "PlaystationStoreId": "UP8520-PPSA31764_00-XXXXXXXXXXXXXXXX",
+          "SteamAppId": "",
+          "SteamNotPurchasedURL": "",
+          "XboxStoreId": ""
+        },
+        "StoryType": "Main"
+      },
+{
+        "$type": "Il2Cpp.StoryPackData",
+        "$objectId": 14,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 15,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          }
+        },
+        "Id": "0x0100006A000017CE",
+        "IsComingSoon": false,
+        "IsFinished": false,
+        "IsHidden": false,
+        "IsMainStoryPack": true,
+        "IsNeutralLens": false,
+        "IsNewRelease": true,
+        "IsPlayable": true,
+        "IsPrologueFinished": false,
+        "IsPrologueSkipped": false,
+        "IsPurchased": true,
+        "IsRizia": true,
+        "IsSideStoryPack": false,
+        "IsSordland": false,
+        "IsWIP": false,
+        "NameInDatabase": "StoryPack_Rizia",
+        "Notes": "",
+        "Path": "Setup/Story Packs",
+        "SceneBuildIndex": 2,
+        "SelectionState": "StartStory",
+        "StoryPackConfigurationProperties": {
+          "$type": "Il2Cpp.StoryPackConfigurationProperties",
+          "$objectId": 17,
+          "CurrentStepVariable": "RiziaDLCSetup.CurrentStep",
+          "CurrentTurnVariable": "RiziaDLCSetup.CurrentTurn",
+          "CustomizationAccessoriesVariable": "RiziaDLCUI.Customization_Accessories",
+          "CustomizationAttireVariable": "RiziaDLCUI.Customization_Attire",
+          "CustomizationBackgroundVariable": "RiziaDLCUI.Customization_Background",
+          "CustomizationBaseImage": "Character Customization/Romus_Base",
+          "CustomizationFacialHairVariable": "RiziaDLCUI.Customization_FacialHair",
+          "CustomizationHairVariable": "RiziaDLCUI.Customization_HairStyle",
+          "EpilogueConversation": "Rizia/Epilogue",
+          "IsPrologueCompletedVariable": "RiziaDLCSetup.IsPrologueCompleted",
+          "IsStoryPackCompletedVariable": "RiziaDLCSetup.IsStoryPackCompleted",
+          "PlayerActor": "Player_Romus",
+          "PlayerItalicActor": "Player_Romus_Italic",
+          "PrologueConversation": "Rizia/Prologue",
+          "PrologueSkip": "Panel_Rizia_PrologueSkip",
+          "PrologueSkipVariable": "RiziaDLC.Prologue_Skipped",
+          "StoryPackIndex": 1,
+          "StoryPackType": "Main",
+          "UnitySceneName": "Rizia"
+        },
+        "StoryPackProperties": {
+          "$type": "Il2Cpp.StoryPackProperties",
+          "$objectId": 18,
+          "CountryName": "Kingdom of Rizia",
+          "CountryNameShort": "Rizia",
+          "Fields": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.StoryPackProperties+StoryPackField, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 19,
+            "$declaredCount": 5,
+            "$items": [
+{
+                "$type": "Il2Cpp.StoryPackProperties+StoryPackField",
+                "$objectId": 20,
+                "Title": "Government",
+                "Value": "Semi-Constitutional Monarchy"
+              },
+{
+                "$type": "Il2Cpp.StoryPackProperties+StoryPackField",
+                "$objectId": 21,
+                "Title": "Population",
+                "Value": "40 Million"
+              },
+{
+                "$type": "Il2Cpp.StoryPackProperties+StoryPackField",
+                "$objectId": 22,
+                "Title": "State Religion",
+                "Value": "Wruhecism"
+              },
+{
+                "$type": "Il2Cpp.StoryPackProperties+StoryPackField",
+                "$objectId": 23,
+                "Title": "Key Exports",
+                "Value": "Gas, Gold, and Wine"
+              },
+{
+                "$type": "Il2Cpp.StoryPackProperties+StoryPackField",
+                "$objectId": 24,
+                "Title": "Starting Date",
+                "Value": "1950"
+              }
+            ]
+          },
+          "FlagImage": "Codex Entries/c_rizia",
+          "LeaderDescription": "King Romus Toras has ascended to the throne. His reign begins under geopolitical strife, contention between noble houses, and demands for the reclamation of lost lands. A monarch born into privilege yet crowned in crisis, Romus inherits a troubled realm and the burden of restoring the Golden Kingdom’s fractured prestige. \n\nThe natural resource economy stagnates, welfare burdens strain the treasury, and whispers of reform grow louder within court and country. Inheriting a legacy both revered and contested, he must navigate a kingdom caught between tradition and transformation.",
+          "LeaderName": "Romus Toras",
+          "LeaderTitle": "King of Rizia",
+          "LockedStoryPackImage": "Story Packs/icon_rizia_gray_256",
+          "QuoteAuthor": "Victor Hugo",
+          "QuoteText": "\"Monarch, your reign and your abode,\nYour scepter, and the orb you hold,\nAnd e'en the ground on which you trod,\nAll will be dust when you are cold.\"",
+          "StoryPackTitle": "Story DLC",
+          "UnlockedStoryPackImage": "Story Packs/icon_rizia_256"
+        },
+        "StoryPackStoreProperties": {
+          "$type": "Il2Cpp.StoryPackStoreProperties",
+          "$objectId": 25,
+          "ComingSoonURL": "https://www.torporgames.com",
+          "EpicAppId": "b949e5749e1a41e98568209c9047a4e4",
+          "EpicNotPurchasedURL": "https://store.epicgames.com/en-US/p/suzerain",
+          "GogAppId": "1727282816",
+          "GogNotPurchasedURL": "https://www.gog.com/en/game/suzerain_kingdom_of_rizia",
+          "IsComingSoon": false,
+          "IsHidden": false,
+          "IsNewRelease": true,
+          "PlaystationStoreId": "UP8520-PPSA31764_00-0720242341756519",
+          "SteamAppId": "2352340",
+          "SteamNotPurchasedURL": "https://store.steampowered.com/app/2352340/Suzerain_Kingdom_of_Rizia/",
+          "XboxStoreId": "9P25MWZW6R52"
+        },
+        "StoryType": "Main"
+      }
+    ]
+  }
+}

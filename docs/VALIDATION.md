@@ -1,3 +1,22 @@
+# Runtime integration validation — 2026-09-21
+
+Environment: existing BellSoft Liberica FULL JDK 25.0.4.1 with JavaFX on macOS. No dependencies or runtime were downloaded.
+
+- Unmodified supplied baseline: **6,671,942 checks PASS**.
+- Final `./scripts/test.sh`: **11,869,167 checks PASS**, exit 0 (10.97 seconds).
+- Original legacy regression classes and assertions are unchanged. AllTests preserves their legacy linear-entry contract by running them with optional runtime absent. RuntimeChecks separately verifies all 286 enriched graphs, every exact Link object and cardinality, runtime counts/preferred selection/scope, raw source provenance, all Budget booleans/Economy/counter effects, twelve bundled cards, one continuation, unresolved fixtures, generic panels, conditions, actor projection, defaults, PLAIN/ROOTED content and geometry.
+- Deterministic Budget geometry checks cover containment, aligned headers, no overlapping cards, no segments through unrelated cards, incoming top-middle connection, correct branch exits, expanded cards, actor filtering and node hit testing.
+- Existing desktop smoke suite: **PASS**, including ROOTED/PLAIN, independent type selection, News evidence/details, conditions, search/turn state, Ignored data, navigation, actor filters, metadata, fit/zoom/readable and edge trace. No old smoke assertions were weakened.
+- `./scripts/test-runtime-ui.sh`: **PASS** with actual GraphCanvas and TextMeasurer, fit, zoom/focus, measured member hit tests, edge hit tests and screenshots. Budget full and education-detail images were visually inspected.
+- Initial sandbox GUI startup failed because JavaFX had no exposed screen. The final desktop runs succeeded with screen access; this was an execution-environment limitation, not a skipped UI test.
+- Original JSONs, existing scripts, IntelliJ configuration, and original test classes (except the additive AllTests orchestration) were byte-compared against the supplied ZIP. Full runtime catalog and all 162 member JSON files are shipped unchanged.
+
+Logs and Budget screenshots: `docs/runtime-validation/`. The distributed archive excludes generated build classes; scripts rebuild from source. This preserves the supplied project structure, `.idea`, `.run`, `.iml`, and all original documentation/assets.
+
+---
+
+## Preserved baseline documentation (historical)
+
 # Validation — final current-source completion
 
 Validated on the local Mac using the installed BellSoft Liberica FULL JDK 25.0.4.1, including JavaFX. No runtime or dependency downloads were required.

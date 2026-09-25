@@ -1,0 +1,131 @@
+{
+  "dataset": "characterCustomizationPanelsData",
+  "sourceFile": "EntityDataManager/0092_characterCustomizationPanelsData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.characterCustomizationPanelsData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.0321027Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "48",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "59",
+    "bytes": "10537"
+  },
+  "primitiveValuesParsed": 48,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CharacterCustomizationPanelData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 2,
+    "$items": [
+{
+        "$type": "Il2Cpp.CharacterCustomizationPanelData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationPanelProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationPanelProperties",
+          "$objectId": 5,
+          "CharacterCustomizationTypes": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 6,
+            "$declaredCount": 5,
+            "$items": [
+"Customization_AntonRayne_Hair",
+"Customization_AntonRayne_FacialHair",
+"Customization_AntonRayne_Attire",
+"Customization_AntonRayne_Background",
+"Customization_AntonRayne_Accessories"
+            ]
+          },
+          "CharacterInfoMiscImage": "Character Customization/signature_anton",
+          "CharacterInfoSubtitle_1": "1953",
+          "CharacterInfoSubtitle_2": "United Sordland Party",
+          "CharacterInfoTitle_1": "Elected In:",
+          "CharacterInfoTitle_2": "Political Party:",
+          "CharacterName": "Anton Rayne",
+          "CharacterTitle": "4th President of Sordland",
+          "ConversationOnFinish": "",
+          "IsDone": true,
+          "PagedDecisionPanelOnFinish": "PagedDecisionPanel_PromisesPanel",
+          "PanelSubtitle": "Choose the distinct look of President Anton Rayne. The confirmed style will remain throughout the story, and you won't be able to change it later.",
+          "PanelTitle": "Character Customization"
+        },
+        "Id": "0x01000046000222CD",
+        "IsDone": true,
+        "IsWIP": false,
+        "NameInDatabase": "CharacterCustomization_AntonRayne",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationPanelData",
+        "$objectId": 7,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 8,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 9,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationPanelProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationPanelProperties",
+          "$objectId": 10,
+          "CharacterCustomizationTypes": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 11,
+            "$declaredCount": 5,
+            "$items": [
+"Customization_RomusToras_Hair",
+"Customization_RomusToras_FacialHair",
+"Customization_RomusToras_Attire",
+"Customization_RomusToras_Background",
+"Customization_RomusToras_Accessories"
+            ]
+          },
+          "CharacterInfoMiscImage": "Character Customization/signature_romus",
+          "CharacterInfoSubtitle_1": "1950",
+          "CharacterInfoSubtitle_2": "Rizian National Coalition",
+          "CharacterInfoTitle_1": "Ascended In:",
+          "CharacterInfoTitle_2": "Political Party:",
+          "CharacterName": "Romus Toras",
+          "CharacterTitle": "15th Monarch of Rizia",
+          "ConversationOnFinish": "",
+          "IsDone": false,
+          "PagedDecisionPanelOnFinish": "Panel_Focus",
+          "PanelSubtitle": "Choose the distinct look of King Romus Toras. The confirmed style will remain throughout the story, and you won't be able to change it later.",
+          "PanelTitle": "Character Customization"
+        },
+        "Id": "0x0100005B00000036",
+        "IsDone": false,
+        "IsWIP": false,
+        "NameInDatabase": "CharacterCustomization_RomusToras",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel"
+      }
+    ]
+  }
+}

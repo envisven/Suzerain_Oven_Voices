@@ -1,3 +1,23 @@
+# Runtime source accounting — 2026-09-21
+
+The existing source-accounting tests still report zero unaccounted legacy records/entries/links. All three old inputs remain byte-for-byte unchanged.
+
+RuntimeDatabase keeps the complete catalog, complete preferred-source envelopes and full raw entity objects. Each indexed entity retains logical collection, dataset, outputFile, original `$items` index, Id, NameInDatabase, Path and StoryPacks. Exact indexes never interpret `$objectId` or `$ref` as gameplay relationships. Non-preferred member files are also shipped unchanged, but never merged into the preferred collection.
+
+Records without StoryPack_Main do not enter the entity index or gameplay. They remain inspectable in the complete source envelopes. Main-tagged records with conflicting Rizia path/variable evidence are additionally excluded from gameplay and diagnosed. No scope is guessed from numeric Ids or filename numbers.
+
+Graph relationships come only from source pointers, panel/page/option names, exact supported command arguments, explicit IsEnabledVariable assignments, or decree AssignedDecreePanel references. Unsupported constructs, malformed references and non-literal arguments are retained and diagnosed; no fuzzy matches or variable reader/writer webs are produced.
+
+Panel choice metadata retains raw Condition, Instruction, full descriptions, source identity, page/panel IDs, raw counter/bar increments and panel variable fields. Item details contain a separate PanelContext with its source location; that context does not overwrite the original option object fields. Presentation shortens only complete literal assignments. Unknown instructions and quoted strings are not rewritten.
+
+Panel completion is distinct from all choice consequences. Original outgoing Link objects, order, priority and connector flags survive exactly once. Both the legacy and runtime-aware tests audit the full set of 286 conversations. The new panel model is separate from CampaignGroup; no common option-exit semantics are introduced.
+
+The Runtime sources inspector exposes all preferred runtime envelopes and manifest. Configuration/support collections remain source/index-only unless an exact gameplay relation is implemented. Conditional-instruction runtime data supplements source details without replacing the established scheduling interpretation.
+
+---
+
+## Preserved baseline documentation (historical)
+
 # Independent source-accounting audit
 
 Audited the current `work/run1/SordlandTreeViewer` implementation before editing and repeated the inventory after the fixes. The three supplied inputs were read independently of Loader’s counters. `SourceAccountingChecks` compares every original supported entity field, whole conversation and whole entry with the resulting raw model, and matches every unconsumed record to an exact Ignored Data record. Nested raw values are compared recursively by collection equality. Source bytes remain unchanged.

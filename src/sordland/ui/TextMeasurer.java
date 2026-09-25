@@ -17,7 +17,7 @@ public final class TextMeasurer implements LayoutEngine.Measurer {
     private record MeasureKey(Graph.Kind kind,String title,String body,String metadata) {}
     private final Map<MeasureKey,LayoutEngine.Size> sizes=new HashMap<>();
     public double width(String s,Font f){String key=f.toString()+s;return widths.computeIfAbsent(key,k->{Text t=new Text(s);t.setFont(f);return t.getLayoutBounds().getWidth();});}
-    
+                                                                                        
     public String ellipsize(String text,double max,Font font){
         String single=Objects.requireNonNullElse(text,"").replaceAll("\\R"," ");
         if(width(single,font)<=max)return single;

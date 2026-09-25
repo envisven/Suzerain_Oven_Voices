@@ -4,14 +4,14 @@ import sordland.data.Domain.*;
 import sordland.data.Json;
 import java.util.*;
 
-
-
+                                                                               
+                                                                          
 public final class CampaignGraphBuilder {
     public Graph build(Dataset data, String query, String type, Integer turn, boolean ancillary) {
         var nodes = new ArrayList<Graph.Node>();
         var edges = new ArrayList<Graph.Edge>();
         var items = new ArrayList<>(data.items());
-        if (ancillary) items.addAll(data.ancillary());
+        if (ancillary) { items.addAll(data.ancillary()); items.addAll(data.runtime().items()); }
         String q = query == null ? "" : query.toLowerCase(Locale.ROOT).trim();
         for (Item item : items) {
             if (!q.isEmpty() && !(item.title()+" "+item.internalName()+" "+item.path()+" "+item.condition()).toLowerCase(Locale.ROOT).contains(q)) continue;
