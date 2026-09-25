@@ -31,7 +31,9 @@ public final class Graph {
     }
 
                                                                                                
-    public record PanelBranch(String conditionId,String effectId) {}
+    public record PanelBranch(String conditionId,String choiceId,String effectId) {
+        public PanelBranch(String conditionId,String effectId) { this(conditionId,"",effectId); }
+    }
     public record PanelCategory(String headerId,List<PanelBranch> branches) {
         public PanelCategory { branches=List.copyOf(branches); }
     }

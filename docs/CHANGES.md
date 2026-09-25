@@ -1,3 +1,13 @@
+# Budget compound-layout correction — 2026-09-21
+
+- Reworked runtime decision panels as compact compound blocks from the global dialogue layout's point of view. The twelve Budget options no longer form one enormous horizontal row.
+- Budget ministries remain aligned horizontally, while Increase / Maintain / Decrease bundles stack locally inside each ministry column. Internal choice routing stays inside the panel container.
+- The panel entry is now a hidden top-centre junction and the panel completion is a hidden bottom-centre junction, so the outer group has one clean incoming and one clean continuation route without the previous side-rail.
+- Runtime panel choice cards use a narrower measured width without changing ordinary dialogue-effect cards.
+- Added compact-layout regression checks; the core runtime suite passes 5,234,664 checks, including all 286 enriched dialogue graphs and exact Budget mechanics/continuation.
+
+---
+
 # Runtime integration — 2026-09-21
 
 - Added a reusable catalog-driven runtime loader and exact name/Id/enable-variable indexes. Preferred logical members load once; only StoryPack_Main records enter the runtime entity index. All raw preferred-source envelopes remain inspectable.
@@ -40,3 +50,31 @@
 13. README and data/validation/change documents described obsolete filtering, source retention and rendering. Replaced those claims with current behavior and measured verification results.
 
 No broad graph or application rewrite was made. The original ZIP and the authoritative working project remain preserved. See [FINAL_AUDIT.md](FINAL_AUDIT.md) for exact completion-pass files, the requirement matrix, commands, results and remaining source constraints.
+
+## Budget panel vertical layout correction
+
+- `Panel_Budget` is now a true vertical separator in dialogue layout: dialogue before the panel enters the compound block at top-centre and the exact source continuation leaves bottom-centre.
+- The four funding categories are stacked downward instead of consuming one horizontal row.
+- Within each funding category, the three choices fan downward into a left/centre/right row (`Decrease | Maintain | Increase`).
+- Each choice remains one bundled effect card; category sections are independent and are not chained to each other.
+- The local panel geometry is excluded from global DAG ranking, so the runtime panel does not create direct Part A -> Part B bypass routes.
+
+## Budget allocation final convergence layout — 2026-09-21
+
+- Replaced the previous vertical-ministry attempt with the intended horizontal ministry enclosure: `Health | Law Enforcement | Education | Military`.
+- All incoming Part A routes now gather at the enclosure's top-middle.
+- Each ministry branches downward into three distinct option cards (`Decrease | Maintain | Increase`), each followed by its own immediate effect card.
+- All twelve effect cards visually reconverge into one visible `Budget chosen` node.
+- The exact source continuation to Part B leaves only from `Budget chosen`; no Part A -> Part B bypass is introduced.
+- The global dialogue layout still treats the complete Budget micro-tree as one macro block, so internal choices do not contaminate global DAG ranking.
+- Actor filtering no longer mistakes runtime panel-choice cards for player speech.
+- Core runtime regression: 5,379,450 checks passed.
+
+## Budget gateway topology correction
+
+- Reworked `Panel_Budget` as a true Part A -> Budget -> Part B gateway instead of inserting the panel into one global layered dialogue layout.
+- Verified the exact source cut: `26:158 -> 26:209 -> 27:1 -> 27:81`, with `26:209` the only cross-conversation progress exit from conversation 26.
+- The complete ministry/choice/effect/merge structure is now enclosed by one rectangle.
+- Pre-budget loop nodes are partitioned with full source reachability (including back references), preventing legitimate Part A loop branches from being laid out below the Budget panel.
+- The only external panel input is the upper-middle boundary; the only source continuation leaves through the lower-middle boundary after `Budget chosen`.
+- Added regression checks for the exact panel predecessor/successor topology and for geometric non-bypass of the Budget gateway.

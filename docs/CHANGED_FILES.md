@@ -1,3 +1,14 @@
+# Budget compound-layout correction
+
+Modified in this repair:
+
+- `src/sordland/layout/PanelLayout.java` — compound panel sizing, per-ministry vertical choice stacks, local edge routing, no synthetic completion side-rail.
+- `src/sordland/graph/PanelGraphBuilder.java` — hidden panel entry junction and shorter choice-bundle titles.
+- `src/sordland/ui/TextMeasurer.java` — compact width for runtime panel choice bundles only.
+- `tests/sordland/RuntimeChecks.java` — compact-width and same-column stacking regressions.
+
+---
+
 # Runtime integration changed files — 2026-09-21
 
 Modified baseline files:

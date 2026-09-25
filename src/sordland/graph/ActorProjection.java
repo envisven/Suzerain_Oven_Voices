@@ -99,7 +99,7 @@ public final class ActorProjection {
         return DialogueGraphBuilder.classifyBackEdges(new Graph(canonical.title,visible,projected,notes,canonical.campaign,canonical.panels));
     }
 
-    private static boolean isSpeech(Node node){return node.kind==Kind.CHARACTER||node.kind==Kind.NARRATOR||node.kind==Kind.CHOICE;}
+    private static boolean isSpeech(Node node){return node.kind==Kind.CHARACTER||node.kind==Kind.NARRATOR||(node.kind==Kind.CHOICE&&!node.type.equals("Panel choice"));}
     private static String actor(Node node){
         if(node.kind==Kind.CHOICE)return "You";
         if(node.kind==Kind.NARRATOR)return "Narrator";

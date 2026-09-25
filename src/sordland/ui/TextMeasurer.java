@@ -45,7 +45,10 @@ public final class TextMeasurer implements LayoutEngine.Measurer {
         if(n.kind==Graph.Kind.JUNCTION)return new LayoutEngine.Size(2,2,List.of(),List.of(),List.of());
         var key=new MeasureKey(n.kind,n.title,n.text,expanded?n.metadata:"");
         var cached=sizes.get(key);if(cached!=null)return cached;
-        double w=switch(n.kind){case EVENT->350;case CONDITION,EFFECT->390;case CONTROL,TERMINAL->290;default->350;};
+        boolean panelEffect=n.type.equals("Panel effect")||(n.kind==Graph.Kind.EFFECT&&n.item!=null&&n.item.raw().containsKey("PanelContext"));
+        boolean panelChoice=n.type.equals("Panel choice");
+        boolean panelHeader=n.type.equals("Panel header");
+        double w=panelEffect?210:panelChoice?150:panelHeader?240:switch(n.kind){case EVENT->350;case CONDITION,EFFECT->390;case CONTROL,TERMINAL->290;default->350;};
         double usable=w-32-(n.kind==Graph.Kind.EVENT?36:0);
         var title=wrap(n.title,usable,TITLE);var body=wrap(n.text,w-32,BODY);var meta=expanded?wrap(n.metadata,w-32,META):List.<String>of();
         double h=24+Math.max(1,title.size())*18+(body.isEmpty()?0:14+body.size()*20)+(meta.isEmpty()?0:18+meta.size()*17);
