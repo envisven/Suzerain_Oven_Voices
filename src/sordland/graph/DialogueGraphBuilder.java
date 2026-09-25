@@ -83,6 +83,8 @@ public final class DialogueGraphBuilder {
         }
         if (!missing.isEmpty()) diagnostics.add("Exact linked destinations missing from the supplied dump: " + missing);
         if (unknownEntries > 0) diagnostics.add(unknownEntries + " source entries contain unresolved commands, shown explicitly without interpreting their behavior.");
+        long gatedEntries=visuals.values().stream().filter(v->v.entry()!=null&&!v.entry().condition().isBlank()).count();
+        if(gatedEntries>0)diagnostics.add(gatedEntries+" dialogue activation predicates have no separately encoded false destination. Exact outgoing JSON pointers are retained; source link order alone does not prove an else/fallthrough route, so no false destination is invented.");
         diagnostics.add("Complete source coverage: " + (visuals.size() - missing.size()) + " unique entries, " + sourceLinks
             + " exact outgoing links, " + nodes.size() + " visual boxes. Each source entry is represented once.");
         diagnostics.add("Conditions/effects are displayed but not evaluated. Source order is retained; no IF/ELSE relationship is inferred. End()/output denotes conversation control, not a campaign ending.");

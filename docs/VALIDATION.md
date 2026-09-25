@@ -1,38 +1,68 @@
-# Validation record — GameFlow campaign implementation
+# Validation — final current-source completion
 
-## Build and complete automated suite
+Validated on the local Mac using the installed BellSoft Liberica FULL JDK 25.0.4.1, including JavaFX. No runtime or dependency downloads were required.
 
-The existing `./scripts/build.sh` and `./scripts/test.sh` scripts pass with the local Liberica JDK 25 FULL runtime. Final integrated run: **3,994,635 checks passed in 4.85 seconds**.
+## Clean build and principal suite
 
-The complete suite includes:
+From the authoritative project directory:
 
-- Exact StoryPack_Main loading: 11 turns, 132 steps, 227 fragment occurrences, zero unresolved references in the supplied source. Every source turn, step, fragment, condition, instruction and index is compared with the raw JSON.
-- Missing, ambiguous, case-mismatched and repeated fragment fixtures; sparse source indices; invalid schema and duplicate Main schedules; explicit unresolved graph nodes and diagnostics.
-- Immediate START → Inauguration, one continuous root, isolated TURN START, local Gasom decision → condition → event branches without a bypass, neutral fallback, safe Boolean complements and separate unrelated/numeric predicates.
-- Multiple unconditional siblings, singleton exclusion, mixed levels, empty turns/steps, retained source instructions and acyclic/reachable graph coverage.
-- Deterministic measured layout for the whole campaign, all metadata expanded, every isolated turn and a wrapping mixed-level fixture. No card overlaps; every visible connector is orthogonal and avoids card and group interiors. Groups have tight 14-unit bounding padding, one top-middle incoming connector and one bottom-middle outgoing connector. Containers and junctions have no click target; event/condition hit targets remain available.
-- PLAIN builds and retains filtering/catalogue behavior. Decision option instructions and Bill SIGN/VETO source actions remain valid.
-- All existing dialogue tests remain unchanged. All 286 complete canonical dialogue graphs build: 159,924 visual boxes and 187,600 exact outgoing source links across those graphs; the largest has 3,187 boxes. Actor filtering, source identity, reconvergence, loops, routing, connector selection, viewport and text measurement regressions pass.
-- The dialogue builder, actor projection, semantic analyzer and dialogue edge router are byte-for-byte unchanged from the supplied project.
+```sh
+rm -rf build/classes build/test-classes
+./scripts/test.sh
+```
 
-## Graphical verification limit
+Only generated class directories were removed. The test script recompiles all current production and test sources. Result: **6,671,942 checks passed in 9.26 seconds; exit 0**. Build succeeded. See `validation/tests-final.log` for the exact output (the JVM prints grouped numbers with the local locale).
 
-The graphical smoke test was attempted with `./scripts/run.sh --smoke=...`. This execution environment exposes no JavaFX display: native startup fails in `Screen.getMainScreen` / `MTLPipeline`. The desktop tool also rejected Terminal access for safety reasons. **No successful interactive application or JavaFX screenshot run is claimed.**
+All 18 `*Checks.java` suites are called by AllTests, including ThemeTypographyChecks and the new SourceAccountingChecks. No orphan test suite remains. The final runnable archive is also extracted into a fresh verification directory and tested independently before delivery.
 
-The smoke harness is included for a desktop run. It verifies ROOTED startup; toggling to PLAIN and back; isolated turns; search/type filters preserving graph and layout; existing Decision/Bill and dialogue click callbacks; and Back navigation. A plain Java launcher starts the 60-second smoke watchdog before JavaFX initialization; the environment-limited smoke attempt exits with code 2 rather than hanging.
+Coverage includes:
 
-Separate headless previews of the actual measured layout were inspected for Turn 1 sibling groups and Turn 3 Gasom branching. These confirm geometry and grouping, not JavaFX window interaction. Physical clicking, window rendering, file choosers and toolbar presentation still require a graphical desktop session.
+- Independent accounting of all three source files, exact original raw-field retention and byte integrity.
+- 11 turns, 132 steps, 227 exact GameFlow references; missing/ambiguous/incomplete/unresolved fixtures and strict branch proof rejection.
+- Exact News variable/call evidence; no approximate matching; optional-route provenance; conservative unplaced articles; compact ROOTED and PLAIN News card text.
+- Type defaults, independence, hidden chains/branches, original-edge provenance, immutable canonical graphs and state snapshots.
+- All **64** applicable ROOTED type combinations, all turns, expanded metadata and named combinations from the task cards. Geometry checks cover node/group collisions, orthogonal connector clearance, separate parallel alternatives, turn containment, tight containers and independent hit targets.
+- All 286 complete dialogue graphs: 159,924 boxes and 187,600 exact source links across those graphs, maximum 3,187 boxes. Counts across graphs include cross-conversation reachable subgraphs; the original input contains 104,553 link records.
+- Actor projection, loops/reconvergence, unknown instructions, exact entry identity, link ordering, edge hit testing/selection, viewport transforms and text metrics.
+- Exact font family/weight/size measurement, Unicode-safe truncation and wrapping, dark-theme text/metadata contrast, strong turn-label/connector contrast and practical condition heights.
+
+## Real JavaFX runtime verification
+
+Command, from the same working project:
+
+```sh
+./scripts/run.sh --smoke=../completion-audit/gui
+```
+
+The script recompiles the current sources before launching. It ran with permission to use the local Mac display and returned **SMOKE PASSED, exit 0**. This replaces the earlier display-limited result; no stale classes or headless proxy render was used.
+
+The harness exercises real JavaFX scenes, controls, observable checkbox properties, asynchronous layout, navigation handlers and Canvas hit testing. It saves rendered scene PNGs, including the popup’s own scene. It verifies:
+
+- ROOTED default and PLAIN toggle, News-off/Condition-on defaults and no ROOTED Dialogue fragment category.
+- Actual Types popup appearance, multi-selection, canonical identity, hidden Condition and only-News projections.
+- ROOTED News appearance, compact cards and full article detail/Back.
+- Ignored Data file groups, counts, searchable provenance and raw-record inspection/Back.
+- PLAIN turn filtering, Bill details, hidden matching type staying absent under search, clearing search and compatible mode transitions.
+- ROOTED turn selection, visible Gasom search, clear TRUE/FALSE skip routes, query/turn/type persistence.
+- Dialogue opening, speaker colors, actor-hidden speech with mechanics retained, Back to the same campaign.
+- Metadata expansion, zoom, Fit and Readable at 100%.
+- A synthetic mouse release through the real Canvas handler at a unique connector location, with an assertion that **Selected arrow** opens (not merely any inspector).
+- Shared dark Data notes dialog.
+
+Reviewed actual screenshots include startup, popup, Turn 2 band, Gasom branches, ROOTED/PLAIN News, both types of details, ignored groups/raw/search, dialogue/colors/actor filtering, metadata and selected-arrow inspector. Files are in `validation/screenshots/`; the run log is `validation/gui-final.log`.
+
+The native desktop connector could not bind to the unbundled Java executable. Verification therefore used the explicitly requested existing JavaFX smoke automation and image inspection. It is not described as manual physical clicking. The model/geometry suite supplies exhaustive type-combination coverage; screenshots supply representative rendered acceptance, not a claim to inspect every one of 83,454 entries manually. Windows launch scripts are included but this validation was performed on macOS.
+
+## Discrepancy search
+
+Reviewed source, docs and tests for obsolete behavior. Remaining `ancillary` references are the compatible internal Dataset storage/accessor and PLAIN builder argument; the UI always includes supported records in its canonical catalogue and uses Types for visibility. `All types` is the retained builder sentinel used by tests/Main, not a type-selection widget. The only Main ComboBox is Turn. No old type ComboBox, Ancillary checkbox, opacity-based type filtering or duplicate horizontal ROOTED turn labels remain. Historical defect descriptions in CHANGES are intentional.
 
 ## Source integrity
 
-All three canonical files are byte-for-byte identical to the newest inputs supplied for this task. The regression suite also verifies unchanged source bytes after parsing/build/layout. Actor names remain packaged and parse-validated without changing dialogue speaker inference.
-
-| File | SHA-256 |
+| Input | SHA-256 |
 | --- | --- |
-| `SuzerainDataDumper.actor_names.json` | `336d59165011e37425c5c8e1322df820c9fecf8696abd591ddb08c142ae5bd5c` |
-| `SuzerainDataDumper.conversations_Sordland.json` | `e74761760ae80f14b8445c01450f8a03d638b4c1713b2e46816ab3c7f0440531` |
-| `SuzerainDataDumper.entity_data.json` | `884143c99773afd420d0f6fc716a8086efdd431fd543f4adb7fb8043cbf7e6ec` |
+| SuzerainDataDumper.actor_names.json | `336d59165011e37425c5c8e1322df820c9fecf8696abd591ddb08c142ae5bd5c` |
+| SuzerainDataDumper.conversations_Sordland.json | `e74761760ae80f14b8445c01450f8a03d638b4c1713b2e46816ab3c7f0440531` |
+| SuzerainDataDumper.entity_data.json | `884143c99773afd420d0f6fc716a8086efdd431fd543f4adb7fb8043cbf7e6ec` |
 
-## Interpretation limits
-
-GameFlow authoritatively establishes Turn → Step → Fragment ordering. It usually does not prove a unique event parent, so neutral junctions communicate progression. Direct branches are restricted to exact adjacent decision evidence; only strictly proven Boolean complements share an if/else block. Conditions/scripts are displayed, never executed. Gray sibling containers are visual, not campaign events. No Rizia view is implemented.
+The three files are unchanged from the supplied ZIP. The current working project is preserved; final outputs are made from that project. See [SOURCE_ACCOUNTING.md](SOURCE_ACCOUNTING.md) and [FINAL_AUDIT.md](FINAL_AUDIT.md) for outcome counts, complete requirement coverage, fixes and source constraints.

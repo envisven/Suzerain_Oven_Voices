@@ -40,6 +40,7 @@ public final class RootedCampaignGraphBuilder {
                     String gate=turnEntry+":condition";
                     nodes.add(new Node(gate,Kind.CONDITION,"CONDITION",Semantics.conditionDisplay(turn.condition()),turnMetadata(data,turn),"Turn condition","",turn.turnNumber(),null,null));
                     edges.add(edge(previousExit,gate));previousExit=gate;
+                    unresolvedTurnFalse(nodes,edges,diagnostics,gate,turn);
                 }
                 String notice=turnEntry+":notice";
                 nodes.add(new Node(notice,Kind.NOTICE,"EMPTY GAMEFLOW TURN","Turn "+turn.turnNumber(),turnMetadata(data,turn),"GameFlow","",turn.turnNumber(),null,null));
@@ -80,6 +81,7 @@ public final class RootedCampaignGraphBuilder {
                     String gate=prefix+":turn-condition";
                     nodes.add(new Node(gate,Kind.CONDITION,"CONDITION",Semantics.conditionDisplay(turn.condition()),turnMetadata(data,turn),"Turn condition","",turn.turnNumber(),null,null));
                     conditionIds.add(gate);edges.add(edge(entryId,gate));branchEntry=gate;
+                    unresolvedTurnFalse(nodes,edges,diagnostics,gate,turn);
                 }
                 Set<String> consumed=new HashSet<>();
                 var unconditional=occurrences.stream().filter(o->o.fragment().resolved()&&o.condition().isBlank()).toList();
@@ -110,11 +112,12 @@ public final class RootedCampaignGraphBuilder {
                         consumed.add(opposite.id());
                         conditionMetadata+="\nComplementary fragment: "+opposite.fragment().name()+"\nRaw complementary condition: "+opposite.condition()+"\nComplement proof: identical boolean variable compared with opposite boolean literals.";
                         if(proof!=null)conditionMetadata+="\nExact complementary decision proof: "+proof.reasons().get(opposite.id());
-                    }
+                    }else conditionMetadata+="\nFALSE / skip proof: StoryFragmentCondition controls activation of this candidate in its authoritative GameFlow step. When false, this candidate is omitted and its branch reaches the same neutral level transition. This is not an inferred direct event-to-event route; other same-level candidates remain independent.";
                     nodes.add(new Node(cid,Kind.CONDITION,"CONDITION",Semantics.conditionDisplay(occurrence.condition()),conditionMetadata,"Condition","",turn.turnNumber(),null,null));
                     conditionIds.add(cid);edges.add(edge(parent,cid));
-                    edges.add(new Edge(cid,occurrence.id(),opposite==null?"":"true",false));edges.add(edge(occurrence.id(),exitId));
-                    if(opposite!=null){edges.add(new Edge(cid,opposite.id(),"false",false));edges.add(edge(opposite.id(),exitId));}
+                    edges.add(new Edge(cid,occurrence.id(),"TRUE",false));edges.add(edge(occurrence.id(),exitId));
+                    if(opposite!=null){edges.add(new Edge(cid,opposite.id(),"FALSE",false));edges.add(edge(opposite.id(),exitId));}
+                    else edges.add(new Edge(cid,exitId,"FALSE",false));
                 }
                 if(occurrences.isEmpty()) {
                     String emptyId=prefix+":empty";
@@ -130,7 +133,17 @@ public final class RootedCampaignGraphBuilder {
         if(levels.isEmpty())diagnostics.add("No StoryPack_Main GameFlow steps are available"+(selectedTurn==null?"":" for turn "+selectedTurn)+".");
         diagnostics.add("ROOTED uses StoryPack_Main GameFlow Turn → Step → Fragment order: "+levels.size()+" levels, "+occurrenceCount+" fragment occurrences, "+unresolvedCount+" unresolved.");
         diagnostics.add("Conditions are displayed, not evaluated. Neutral junctions communicate level progression without invented event causality. Gray sibling containers have no source semantics.");
-        return new Graph(selectedTurn==null?"Sordland campaign":"Sordland campaign · Turn "+selectedTurn,nodes,edges,diagnostics,new CampaignMetadata(turns,levels,groups));
+        Set<String> turnGates=new HashSet<>();nodes.stream().filter(n->n.type.equals("Turn condition")).forEach(n->turnGates.add(n.id));
+        for(int i=0;i<edges.size();i++){Edge edge=edges.get(i);if(turnGates.contains(edge.from)&&edge.label.isBlank())edges.set(i,new Edge(edge.from,edge.to,"TRUE",false));}
+        Graph result=new Graph(selectedTurn==null?"Sordland campaign":"Sordland campaign · Turn "+selectedTurn,nodes,edges,diagnostics,new CampaignMetadata(turns,levels,groups));
+        return new NewsGraphBuilder().attach(data,result);
+    }
+
+    private static void unresolvedTurnFalse(List<Node> nodes,List<Edge> edges,List<String> diagnostics,String gate,Turn turn) {
+        String id=gate+":false-unresolved";
+        String reason="Turn["+turn.sourceIndex()+"].Condition can be false, but GameFlow provides no explicit false destination. No later event or turn is inferred. This notice represents missing route semantics, not a campaign ending.\nRaw condition: "+turn.condition();
+        nodes.add(new Node(id,Kind.NOTICE,"FALSE DESTINATION UNRESOLVED","Turn activation did not pass",reason,"Unresolved","",turn.turnNumber(),null,null));
+        edges.add(new Edge(gate,id,"FALSE",false));diagnostics.add(reason);
     }
 
     private static Node junction(String id,int turn){return new Node(id,Kind.JUNCTION,"","","","","",turn,null,null);}

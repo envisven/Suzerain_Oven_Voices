@@ -10,8 +10,10 @@ public final class Graph {
     public enum Kind { EVENT, CONDITION, EFFECT, CHARACTER, NARRATOR, CHOICE, CONTROL, TERMINAL, REFERENCE, NOTICE, JUNCTION }
 
     
-    public record CampaignMetadata(List<CampaignTurn> turns, List<CampaignLevel> levels, List<CampaignGroup> groups) {
-        public CampaignMetadata { turns=List.copyOf(turns); levels=List.copyOf(levels); groups=List.copyOf(groups); }
+    public record CampaignMetadata(List<CampaignTurn> turns, List<CampaignLevel> levels, List<CampaignGroup> groups,
+                                   List<NewsAttachment> news) {
+        public CampaignMetadata { turns=List.copyOf(turns); levels=List.copyOf(levels); groups=List.copyOf(groups); news=List.copyOf(news); }
+        public CampaignMetadata(List<CampaignTurn> turns,List<CampaignLevel> levels,List<CampaignGroup> groups){this(turns,levels,groups,List.of());}
     }
     public record CampaignTurn(int turn, int sourceIndex, String title, String entryId) {}
     public record CampaignLevel(int turn, int turnSourceIndex, int stepIndex, String entryId, String exitId,
@@ -21,6 +23,10 @@ public final class Graph {
     
     public record CampaignGroup(String id, String entryId, String exitId, List<String> eventIds) {
         public CampaignGroup { eventIds=List.copyOf(eventIds); }
+    }
+    
+    public record NewsAttachment(String eventId, String effectId, List<String> newsIds) {
+        public NewsAttachment { newsIds=List.copyOf(newsIds); }
     }
 
     public static final class Node {

@@ -23,6 +23,14 @@ final class LoaderChecks {
         try {
             Files.writeString(entity,Json.pretty(catalogue));
             Files.writeString(dialogue,Json.pretty(Map.of("conversations",List.of(sourceConversation))));
+            Path actorNames=directory.resolve(Loader.ACTOR_NAMES_FILE);
+            try {
+                Files.writeString(actorNames,Json.pretty(Map.of("actorNames",Map.of("17","A source name","29",Map.of("unsupported","value")),"extra","retained")));
+                var accounted=Loader.load(entity,dialogue);
+                equal(3L,accounted.ignoredData().stream().filter(r->r.sourceFile().equals(Loader.ACTOR_NAMES_FILE)).count(),"Every actor-name record and unknown root field is retained");
+                Files.writeString(actorNames,"{ broken");
+                expectRejected(entity,dialogue,"Malformed optional actor source produces explicit load error");
+            }finally{Files.deleteIfExists(actorNames);}
             var data=Loader.load(entity,dialogue);
             equal(1,data.items().size(),"Structure validation accepts valid dumps with arbitrary filenames and excludes Rizia");
             equal(3,data.items().getFirst().turn(),"Synthetic item turn resolved from actual source name");

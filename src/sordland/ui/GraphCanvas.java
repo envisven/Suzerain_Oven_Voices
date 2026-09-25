@@ -3,6 +3,7 @@ package sordland.ui;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.input.MouseButton;
+import javafx.scene.control.Tooltip;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
@@ -17,21 +18,24 @@ public final class GraphCanvas extends Region {
     private final Canvas canvas=new Canvas();
     private Result result; private final Viewport viewport=new Viewport(); private double pressX,pressY,lastX,lastY;private boolean dragged;
     private String selected;private boolean speakerColors;
-    private String campaignQuery="",campaignType="All types";
+    private String campaignQuery="";
+    private final TextMeasurer textMetrics=new TextMeasurer();
+    private final Tooltip turnTooltip=new Tooltip();
     private final EdgeSelection edgeSelection=new EdgeSelection();
-    private final Map<String,Color> typeColors=new HashMap<>();
     private Map<String,Color> speakerPalette=Map.of();
     public void setSpeakerPalette(Map<String,Color> palette){speakerPalette=Map.copyOf(palette);}
     public BiConsumer<Graph.Node,Boolean> onNode=(n,metadata)->{};
     public Consumer<Graph.Edge> onEdge=e->{};
     public Consumer<String> onStatus=s->{};
     public GraphCanvas(){
-        getChildren().add(canvas);setMinSize(100,100);setStyle("-fx-background-color: #f3f1ec;");
+        getChildren().add(canvas);setMinSize(100,100);setStyle("-fx-background-color: "+Theme.BACKGROUND+";");
+        Tooltip.install(canvas,turnTooltip);
         canvas.setOnScroll(e->{zoomAt(Math.pow(1.0018,e.getDeltaY()),e.getX(),e.getY());e.consume();});
         canvas.setOnMousePressed(e->{pressX=lastX=e.getX();pressY=lastY=e.getY();dragged=false;canvas.requestFocus();});
         canvas.setOnMouseDragged(e->{if(Math.hypot(e.getX()-pressX,e.getY()-pressY)>4)dragged=true;if(dragged){viewport.panX+=e.getX()-lastX;viewport.panY+=e.getY()-lastY;redraw();}lastX=e.getX();lastY=e.getY();});
         canvas.setOnMouseReleased(e->{
             if(dragged||result==null||e.getButton()!=MouseButton.PRIMARY)return;
+            if(!result.sectors.isEmpty()&&e.getX()<64)return;
             double x=(e.getX()-viewport.panX)/viewport.scale,y=(e.getY()-viewport.panY)/viewport.scale;
             Box b=result.hit(x,y);
             if(b!=null){
@@ -47,6 +51,9 @@ public final class GraphCanvas extends Region {
         canvas.setOnMouseMoved(e->{
             if(result==null)return;
             double x=(e.getX()-viewport.panX)/viewport.scale,y=(e.getY()-viewport.panY)/viewport.scale;
+            String label=e.getX()>=8&&e.getX()<=64?result.sectors.stream().filter(s->y>=s.y()&&y<=s.y()+s.height()).map(Sector::label).findFirst().orElse(""):"";
+            turnTooltip.setText(label);if(label.isBlank())turnTooltip.hide();
+            if(!result.sectors.isEmpty()&&e.getX()<64){setCursor(javafx.scene.Cursor.DEFAULT);return;}
             Box b=result.hit(x,y);
             if(b!=null){setCursor(javafx.scene.Cursor.HAND);return;}
             setCursor(EdgeHitTest.candidates(result.lines,x,y,viewport.scale,6).size()==1?javafx.scene.Cursor.HAND:javafx.scene.Cursor.OPEN_HAND);
@@ -57,11 +64,12 @@ public final class GraphCanvas extends Region {
     public void setResult(Result r,boolean reset){if(!reset&&result!=null&&selected!=null){Box old=result.byId.get(selected),next=r.byId.get(selected);if(old!=null&&next!=null){viewport.panX+=(old.x()-next.x())*viewport.scale;viewport.panY+=(old.y()-next.y())*viewport.scale;}}result=r;edgeSelection.retainEdges(r.lines.stream().map(Line::edge).toList());if(reset){viewport.scale=.85;viewport.panX=48;viewport.panY=40;if(!r.boxes.isEmpty())focus(r.boxes.getFirst().node().id);}redraw();}
     public void setSpeakerColors(boolean value){speakerColors=value;redraw();}
     
-    public void setCampaignFilters(String query,String type){campaignQuery=Objects.requireNonNullElse(query,"").trim();campaignType=Objects.requireNonNullElse(type,"All types");redraw();}
+    public void setCampaignSearch(String query){campaignQuery=Objects.requireNonNullElse(query,"").trim();redraw();}
+    public void setCampaignFilters(String query,String ignoredLegacyType){setCampaignSearch(query);}
     public static boolean campaignMatch(Graph.Node node,String query){
         String q=Objects.requireNonNullElse(query,"").trim().toLowerCase(Locale.ROOT);
         if(q.isEmpty())return false;
-        if(node.kind!=Graph.Kind.EVENT&&!(node.kind==Graph.Kind.NOTICE&&node.type.equals("Unresolved")))return false;
+        if(node.kind==Graph.Kind.JUNCTION||node.kind==Graph.Kind.CONTROL||node.kind==Graph.Kind.TERMINAL)return false;
         String text=node.title+" "+node.text+" "+node.metadata;
         if(node.item!=null)text+=" "+node.item.internalName()+" "+node.item.path()+" "+node.item.condition();
         return text.toLowerCase(Locale.ROOT).contains(q);
@@ -75,35 +83,31 @@ public final class GraphCanvas extends Region {
     public double zoom(){return viewport.scale;} public double panX(){return viewport.panX;} public double panY(){return viewport.panY;}
     public String selected(){return selected;}
     private Color color(Graph.Node n){
-        return switch(n.kind){
-            case CONDITION->Color.web("#f7e5f2");case EFFECT->Color.web("#e2f1d8");case NARRATOR->Color.web("#e9e8e4");
-            case CHOICE->Color.web("#e0ebfa");case CONTROL,TERMINAL->Color.web("#e5e9e9");case REFERENCE,NOTICE->Color.web("#fff0d2");
-            case CHARACTER->speakerColors?speakerPalette.getOrDefault(n.speaker,Color.web("#fffefa")):Color.web("#fffefa");
-            case EVENT->typeColors.computeIfAbsent(n.type,t->Color.hsb(Math.floorMod(t.hashCode()*137,360),.18,.98));
-            case JUNCTION->Color.web("#87928e");
-        };
+        return n.kind==Graph.Kind.CHARACTER&&speakerColors&&speakerPalette.containsKey(n.speaker)?Theme.speakerFill(speakerPalette.get(n.speaker)):Theme.semanticFill(n);
     }
     public void redraw(){
-        GraphicsContext g=canvas.getGraphicsContext2D();g.setTransform(1,0,0,1,0,0);g.setFill(Color.web("#f3f1ec"));g.fillRect(0,0,getWidth(),getHeight());
-        if(result==null)return;if(result.boxes.isEmpty()){g.setFill(Color.web("#526557"));g.setFont(Font.font(16));g.fillText("No items match these filters. Clear the search or choose All types / All turns.",40,70);onStatus.accept("0 matching items");return;}g.save();g.translate(viewport.panX,viewport.panY);g.scale(viewport.scale,viewport.scale);
+        GraphicsContext g=canvas.getGraphicsContext2D();g.setTransform(1,0,0,1,0,0);g.setFill(Color.web(Theme.BACKGROUND));g.fillRect(0,0,getWidth(),getHeight());
+        if(result==null)return;if(result.boxes.isEmpty()){g.setFill(Color.web(Theme.MUTED));g.setFont(Font.font(16));g.fillText("No items match these filters. Select more types or clear the search.",40,70);onStatus.accept("0 matching items");return;}g.save();g.translate(viewport.panX,viewport.panY);g.scale(viewport.scale,viewport.scale);
         double left=-viewport.panX/viewport.scale,top=-viewport.panY/viewport.scale,vw=getWidth()/viewport.scale,vh=getHeight()/viewport.scale;
         int sectorIndex=0;
         for(var s:result.sectors){boolean alt=sectorIndex++%2==0;if(s.y()+s.height()<top||s.y()>top+vh)continue;
-            if(result.graph.campaign!=null){
-                if(s.y()+36>=top&&s.y()<=top+vh){
-                    g.setStroke(Color.web("#cccac3"));g.setLineWidth(1/viewport.scale);g.strokeLine(24,s.y()+12,result.width-24,s.y()+12);
-                    if(viewport.scale>.08){g.setFill(Color.web("#f3f1ec"));g.fillRect(42,s.y()-4,Math.min(result.width-84,s.label().length()*8.5+24),28);g.setFill(Color.web("#67746d"));g.setFont(Font.font("System",13));g.fillText(s.label(),54,s.y()+17);}
-                }
-                continue;
+            g.setFill(Color.web(alt?Theme.BAND_DARK:Theme.BAND_LIGHT));g.fillRect(left,s.y(),vw,s.height());g.setStroke(Color.web(Theme.BORDER));g.setLineWidth(1/viewport.scale);g.strokeLine(left,s.y(),left+vw,s.y());
+            if(viewport.scale>.08){
+                double visibleTop=Math.max(s.y(),top),visibleBottom=Math.min(s.y()+s.height(),top+vh);
+                double limit=Math.min(640,Math.max(0,(visibleBottom-visibleTop)*viewport.scale-48));
+                String label=textMetrics.ellipsize(s.label(),limit,TextMeasurer.TURN_LABEL);
+                double measured=textMetrics.width(label,TextMeasurer.TURN_LABEL);
+                g.save();g.translate(left+42/viewport.scale,(visibleTop+visibleBottom+measured/viewport.scale)/2);g.rotate(-90);g.scale(1/viewport.scale,1/viewport.scale);g.setFill(Color.web(Theme.TURN_TEXT));g.setFont(TextMeasurer.TURN_LABEL);g.fillText(label,0,0);g.restore();
             }
-            g.setFill(Color.web(alt?"#f3f1ec":"#eae8e2"));g.fillRect(0,s.y(),result.width,s.height());g.setStroke(Color.web("#cfcec8"));g.setLineWidth(1/viewport.scale);g.strokeLine(0,s.y(),result.width,s.y());
-            if(viewport.scale>.08){g.save();g.translate(48,s.y()+Math.min(s.height()-25,Math.max(160,s.height()/2)));g.rotate(-90);g.setFill(Color.web("#717c77"));g.setFont(Font.font("System",14));g.fillText(s.label(),0,0);g.restore();}
         }
+        
+        
+        if(!result.sectors.isEmpty()){g.beginPath();g.rect(left+64/viewport.scale,top,Math.max(0,vw-64/viewport.scale),vh);g.clip();}
         
         for(var group:result.groups){
             if(group.bottom()<top||group.y()>top+vh||group.x()+group.width()<left||group.x()>left+vw)continue;
-            g.setFill(Color.web("#e5e5e1"));g.fillRoundRect(group.x(),group.y(),group.width(),group.height(),20,20);
-            g.setStroke(Color.web("#b2b5b1"));g.setLineWidth(1.3);g.strokeRoundRect(group.x(),group.y(),group.width(),group.height(),20,20);
+            g.setFill(Color.web(Theme.GROUP));g.fillRoundRect(group.x(),group.y(),group.width(),group.height(),20,20);
+            g.setStroke(Color.web(Theme.GROUP_BORDER));g.setLineWidth(1.3);g.strokeRoundRect(group.x(),group.y(),group.width(),group.height(),20,20);
         }
         Graph.Edge selectedEdge=edgeSelection.selected();
         for(var line:result.lines)if(line.edge()!=selectedEdge)drawEdge(g,line,false,top,vh);
@@ -118,7 +122,7 @@ public final class GraphCanvas extends Region {
     private void drawEdge(GraphicsContext g,Line line,boolean highlighted,double top,double vh){
         var f=line.from();var t=line.to();boolean back=line.edge().back;
         double minY=Math.min(f.bottom(),t.y()),maxY=Math.max(f.bottom(),t.y());if(maxY+25<top||minY-25>top+vh)return;
-        g.setStroke(Color.web(highlighted?"#17634e":back?"#9672aa":"#87928e"));
+        g.setStroke(Color.web(highlighted?Theme.ACCENT:back?Theme.BACK_EDGE:Theme.EDGE));
         g.setLineWidth(highlighted?Math.max(3.2,2.4/viewport.scale):Math.max(1.2,1/viewport.scale));
         g.setLineDashes(back?new double[]{6,5}:new double[]{});
         g.beginPath();boolean first=true;for(var point:line.points()){if(first){g.moveTo(point.x(),point.y());first=false;}else g.lineTo(point.x(),point.y());}g.stroke();
@@ -127,29 +131,38 @@ public final class GraphCanvas extends Region {
             
             g.setLineDashes();g.strokeLine(end.x()-4,end.y()-7,end.x(),end.y());g.strokeLine(end.x()+4,end.y()-7,end.x(),end.y());
         }
-        boolean booleanBranch=result.graph.campaign!=null&&(line.edge().label.equalsIgnoreCase("true")||line.edge().label.equalsIgnoreCase("false"));
-        if(viewport.scale>.55&&(booleanBranch||line.edge().from.equals(selected))&&!line.edge().label.isBlank()){g.setFont(Font.font("System",10));g.setFill(Color.web(highlighted?"#17634e":"#62736c"));g.fillText(line.edge().label,end.x()+(result.graph.campaign!=null?8:-130),end.y()-10,260);}
+        boolean booleanBranch=result.graph.campaign!=null&&line.edge().label.toUpperCase(Locale.ROOT).matches(".*\\b(TRUE|FALSE)\\b.*");
+        if(viewport.scale>.45&&(booleanBranch||line.edge().from.equals(selected))&&!line.edge().label.isBlank()){
+            String label=textMetrics.ellipsize(booleanBranch?line.edge().label.toUpperCase(Locale.ROOT):line.edge().label,250,TextMeasurer.EDGE_LABEL);
+            Point anchor=end;
+            if(booleanBranch&&line.points().size()>2){
+                anchor=line.points().get(1);
+                for(int i=1;i<line.points().size();i++){Point a=line.points().get(i-1),b=line.points().get(i);if(a.y()==b.y()&&Math.abs(a.x()-b.x())>50){anchor=new Point((a.x()+b.x())/2,a.y()+20);break;}}
+            }
+            g.setFont(TextMeasurer.EDGE_LABEL);double w=textMetrics.width(label,TextMeasurer.EDGE_LABEL);
+            g.setFill(Color.web(Theme.BACKGROUND));g.fillRoundRect(anchor.x()+4,anchor.y()-17,w+10,19,5,5);
+            g.setFill(Color.web(highlighted?Theme.ACCENT:Theme.TEXT));g.fillText(label,anchor.x()+9,anchor.y()-3);
+        }
     }
     private void drawNode(GraphicsContext g,Box b){
         var n=b.node();
         if(n.kind==Graph.Kind.JUNCTION){
             
-            if(result.groups.stream().noneMatch(group->group.entryId().equals(n.id)||group.exitId().equals(n.id))){g.setFill(Color.web("#87928e"));g.fillOval(b.cx()-2,b.y()-1,4,4);}
+            if(!n.type.equals("Type projection")&&result.groups.stream().noneMatch(group->group.entryId().equals(n.id)||group.exitId().equals(n.id))){g.setFill(Color.web(Theme.EDGE));g.fillOval(b.cx()-2,b.y()-1,4,4);}
             return;
         }
         boolean rooted=result.graph.campaign!=null,match=rooted&&campaignMatch(n,campaignQuery);
-        boolean dim=rooted&&n.kind==Graph.Kind.EVENT&&!campaignType.equals("All types")&&!n.type.equals(campaignType);
-        g.save();if(dim)g.setGlobalAlpha(.32);
-        g.setFill(match?Color.web("#fff0b7"):color(n));g.fillRoundRect(b.x(),b.y(),b.w(),b.h(),12,12);
-        String border=n.id.equals(selected)?"#17634e":match?"#b98722":n.kind==Graph.Kind.CONDITION?"#9d69ad":rooted&&n.kind==Graph.Kind.NOTICE?"#bf9652":"#b9c1ba";
+        g.save();
+        g.setFill(match?Color.web(Theme.SEARCH):color(n));g.fillRoundRect(b.x(),b.y(),b.w(),b.h(),12,12);
+        String border=n.id.equals(selected)?Theme.ACCENT:match?Theme.SEARCH_BORDER:n.kind==Graph.Kind.CONDITION?"#ae83c6":rooted&&n.kind==Graph.Kind.NOTICE?"#cda269":Theme.BORDER;
         g.setStroke(Color.web(border));g.setLineWidth(n.id.equals(selected)||match?2.4:1);g.strokeRoundRect(b.x(),b.y(),b.w(),b.h(),12,12);
         if(viewport.scale<.13){g.restore();return;}
         double clipTop=-viewport.panY/viewport.scale-22,clipBottom=(getHeight()-viewport.panY)/viewport.scale+22;
-        double y=b.y()+22;g.setFill(Color.web("#26392f"));g.setFont(TextMeasurer.TITLE);
+        double y=b.y()+22;g.setFill(Color.web(Theme.TEXT));g.setFont(TextMeasurer.TITLE);
         for(String line:b.size().title()){if(y>=clipTop&&y<=clipBottom)g.fillText(line,b.x()+16,y);y+=18;}
-        if(n.kind==Graph.Kind.EVENT){g.setStroke(Color.web("#b9c1ba"));g.strokeLine(b.x()+b.w()-36,b.y(),b.x()+b.w()-36,b.y()+Math.max(42,24+b.size().title().size()*18));g.setFont(Font.font(19));g.fillText(b.size().metadata().isEmpty()?"›":"⌄",b.x()+b.w()-25,b.y()+27);}
+        if(n.kind==Graph.Kind.EVENT){g.setStroke(Color.web(Theme.BORDER));g.strokeLine(b.x()+b.w()-36,b.y(),b.x()+b.w()-36,b.y()+Math.max(42,24+b.size().title().size()*18));g.setFont(Font.font(19));g.fillText(b.size().metadata().isEmpty()?"›":"⌄",b.x()+b.w()-25,b.y()+27);}
         if(!b.size().body().isEmpty()){y+=12;g.setFont(TextMeasurer.BODY);for(String line:b.size().body()){if(y>=clipTop&&y<=clipBottom)g.fillText(line,b.x()+16,y);y+=20;}}
-        if(!b.size().metadata().isEmpty()){y+=14;g.setFont(TextMeasurer.META);g.setFill(Color.web("#526557"));for(String line:b.size().metadata()){if(y>=clipTop&&y<=clipBottom)g.fillText(line,b.x()+16,y);y+=17;}}
+        if(!b.size().metadata().isEmpty()){y+=14;g.setFont(TextMeasurer.META);g.setFill(Color.web(Theme.MUTED));for(String line:b.size().metadata()){if(y>=clipTop&&y<=clipBottom)g.fillText(line,b.x()+16,y);y+=17;}}
         g.restore();
     }
 }

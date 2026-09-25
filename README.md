@@ -8,7 +8,7 @@ A local JavaFX viewer built from the supplied Suzerain Sordland entity and conve
 2. In **File → Project Structure → Project SDK**, choose your existing **BellSoft Liberica JDK 25 FULL** installation. The FULL distribution includes JavaFX. If necessary, add its installation directory as a JDK first.
 3. Select the **Sordland Tree Viewer** run configuration and run it.
 
-The checked-in configuration sets the project directory as the working directory, enables `javafx.controls`, and explicitly permits the bundled JavaFX graphics module to load its native libraries. All three supplied files are included in `data/` under their canonical names. The entity and conversation files load automatically; the actor-name file is bundled and validated by headless tests without replacing dialogue speaker inference. If an input file is missing, the application offers a file chooser and checks its contents.
+The checked-in configuration sets the project directory as the working directory, enables `javafx.controls`, and explicitly permits the bundled JavaFX graphics module to load its native libraries. All three supplied files are included in `data/` under their canonical names. The entity and conversation files load automatically; the actor-name file is loaded from the entity file’s folder and retained in Ignored data because its list positions do not prove dialogue ActorIDs. If an input file is missing, the application offers a file chooser and checks its contents.
 
 ## Run from a terminal
 
@@ -49,30 +49,35 @@ The JVM property `-Dsuzerain.data=/absolute/path/to/data` is also supported. Use
 - Parsing and layout run in the background; use **Cancel** to return to the previous view.
 - **Event view: ROOTED** is the startup default. Click the same button to switch to **Event view: PLAIN** and back. The toggle is available only at campaign level.
 - ROOTED starts at synthetic **START** and follows the complete Sordland GameFlow. Selecting one turn uses **TURN START**; All turns restores the continuous graph.
-- In ROOTED, **Find** highlights matching events and cycles focus without removing intermediary nodes. Type filters dim nonmatching events; ancillary data is excluded. PLAIN retains the original catalogue filtering and ancillary checkbox.
+- In ROOTED, **Find** highlights matching visible cards and cycles focus without removing intermediary nodes. **Types X / Y** is the same independent checklist in ROOTED and PLAIN: all applicable types start selected except News. Condition is independent. Unchecked cards disappear; original routes are projected through hidden cards without merging alternatives. Search never restores hidden types. PLAIN search filters the catalogue.
+- **Ignored data** opens a searchable source inspector with collapsible source-file groups, exact locations, identities, reasons and raw JSON. Supported News and conditional instructions remain normal graphical types.
 - **Speaker Colors** assigns stable colors to character speakers. Narrator and player choices retain their fixed styles.
 
 ## Reading the graphs
 
-Conditions use light pink boxes with a purple border; gameplay effects have a dedicated style. Only the literal `BaseGame.` prefix is removed for display. Raw expressions and source identifiers remain available in metadata.
+Conditions use dark purple boxes with a purple border; gameplay effects have a dedicated style. Only the literal `BaseGame.` prefix is removed for display. Raw expressions and source identifiers remain available in metadata.
 
 Each exact source entry `(conversationID, dialogueID)` has one representation in a dialogue graph. Its condition, speech/control, effects, unknown commands and terminal markers remain in source order. Every outgoing source link points to that destination's single representation, including links from branches with different effects. The viewer displays the JSON pointer graph; it does not calculate whether a particular accumulated game state can take a route.
 
-The complete source graph is built without semantic-history copies or continuation pages. Repeated destinations reconverge, and source loops connect back to the existing entry. Player boxes say **YOU**; incoming edges carry **Choice 1**, **Choice 2**, and so on in source order. Dialogue conditions are displayed exactly and never evaluated or combined into inferred IF/ELSE branches. Campaign conditions can share a true/false split only when a strict parser proves complementarity.
+The complete source graph is built without semantic-history copies or continuation pages. Repeated destinations reconverge, and source loops connect back to the existing entry. Player boxes say **YOU**; incoming edges carry **Choice 1**, **Choice 2**, and so on in source order. Dialogue conditions are displayed exactly and never evaluated or combined into inferred IF/ELSE branches. Campaign activation conditions show TRUE and FALSE/skip routes to the authoritative step transition. A strict parser pairs complementary predicates; unknown turn-condition false destinations remain explicit unresolved notices.
 
 Dialogue connectors use separate ordered exit ports, destination ports and staggered channels. Long connectors and back-references route around node rectangles. Gaps or halos at unrelated crossings distinguish crossing lines from junctions. Arrowheads show direction; source back-references are dashed. A selected connector and its arrowhead use a thicker green stroke.
 
 Actor filtering projects this same source graph. It hides only character speech, narration and player-choice boxes. Remaining paths stay connected, with compact reference junctions where needed to preserve hidden branches or loops. The full graph supplies the actor list, so hiding an actor never removes their checkbox.
 
-**PLAIN** is the original flat source catalogue: all campaign entities, additional dialogue graphs, and optional ancillary records. Its activation lines do not assert execution order. The existing cards and item details remain available.
+**PLAIN** is the original flat source catalogue: all campaign entities, additional dialogue graphs, and supported News and conditional instructions. Its activation lines do not assert execution order. The existing cards and item details remain available.
 
-**ROOTED** uses only `GameFlowData` for `StoryPack_Main`. Numeric source indices give authoritative **Turn → Step → Fragment** order. Each step is a progression level; exact `NameInDatabase` matches resolve its fragments. The graph remains continuous across horizontal turn separators, which use `TransitionTitle` where present.
+**ROOTED** uses only `GameFlowData` for `StoryPack_Main`. Numeric source indices give authoritative **Turn → Step → Fragment** order. Each step is a progression level; exact `NameInDatabase` matches resolve its fragments. The graph remains continuous across alternating full-width turn bands. Large bold vertical labels use `TransitionTitle` where present, with measured single-line ellipsis and a full-title tooltip.
 
-`StoryFragmentCondition` appears in a separate pink **CONDITION** block, with the original expression retained in metadata. A small, conservative expression parser can combine proven complementary predicates into true/false paths. Other predicates remain separate. A direct decision branch is shown only when choices mechanically prove activation of the immediately following level, such as the Turn 3 Gasom extraction choice. Matching a variable across distant events never creates an edge.
+`StoryFragmentCondition` appears in a separate purple **CONDITION** block, with the original expression retained in metadata. A small, conservative expression parser can combine proven complementary predicates into true/false paths. Other predicates remain separate. A direct decision branch is shown only when choices mechanically prove activation of the immediately following level, such as the Turn 3 Gasom extraction choice. Matching a variable across distant events never creates an edge.
 
 Neutral junctions communicate progression and reconvergence whenever GameFlow does not prove a specific event parent. They are drawing mechanisms, not clickable campaign events. Tight gray rounded boxes enclose multiple unconditional events at the same step, without asserting an order between them. These boxes have no title, metadata or click behavior; each enclosed event remains clickable. Conditional events stay on their own branches. Missing identifiers become explicit **UNRESOLVED FRAGMENT** nodes at their source positions and receive diagnostics.
 
 Turn conditions and start instructions, step instructions, and original indices remain inspectable as source metadata. Scripts and conditions are never executed. See [data findings and limits](docs/DATA_DISCOVERY.md) for the evidence.
+
+News is available in ROOTED when an exact enable-variable write or exact `EnableNews` argument proves an association. It appears in a local annotation beside/below that source event/effect. Dialogue/choice evidence is explicitly **POSSIBLE NEWS EFFECT**, not a guaranteed outcome of completing the event. Article cards contain only a title and database identity. Full articles, newspapers, raw enable variables and source evidence remain in details/expanded metadata. Unproven articles remain available in PLAIN and are listed in ROOTED diagnostics.
+
+The shared dark palette preserves semantic type colors. Text uses the same actual font metrics as the Canvas renderer; long text wraps or truncates without horizontal compression. Type projection retains canonical topology and original connector provenance in the edge inspector. Compatible choices persist through ROOTED/PLAIN, turn changes and Back.
 
 ## Checks
 
@@ -90,7 +95,7 @@ An optional graphical smoke run creates local screenshots and exits:
 ./scripts/run.sh --smoke=/absolute/path/to/screenshot-folder
 ```
 
-This requires a graphical display. It fails with a nonzero exit code if it cannot complete within 60 seconds. The smoke run checks ROOTED startup, toggling both ways, isolated turns, structure-preserving filters, event detail/dialogue callbacks and Back navigation. A graphical session is required; see the validation record for this environment’s result.
+This requires a graphical display. It fails with a nonzero exit code if it cannot complete within 60 seconds. The smoke run checks both modes, the actual checklist popup, type projection, News details, Ignored Data groups/search, turn selection, hidden-type search, event/dialogue navigation, actors, metadata, zoom and Canvas edge hit-testing. It was run successfully on the local Mac display; reviewed screenshots and results are included in the validation record.
 
 ## Project structure
 

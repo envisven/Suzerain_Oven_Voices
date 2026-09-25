@@ -37,7 +37,7 @@ public final class CampaignGraphBuilder {
                         "Condition", "", item.turn(), null, null, null));
                 edges.add(new Graph.Edge(cid,id,"requires",false));
             }
-            nodes.add(new Graph.Node(id,Graph.Kind.EVENT,item.title(),isStart?"START EVENT · source IsOnStart":"",metadata,item.type(),"",item.turn(),item,null,null));
+            nodes.add(new Graph.Node(id,Graph.Kind.EVENT,item.type().equals("News")?"NEWS · "+item.title():item.title(),item.type().equals("News")?item.internalName():isStart?"START EVENT · source IsOnStart":"",metadata,item.type(),"",item.turn(),item,null,null));
         }
         return new Graph("Sordland campaign",nodes,edges,List.of(
                 "PLAIN source catalogue grouped by proven turn. Lines attach activation predicates only; ROOTED uses GameFlow progression.",

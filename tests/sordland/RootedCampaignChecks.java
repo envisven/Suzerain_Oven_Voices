@@ -14,7 +14,7 @@ final class RootedCampaignChecks {
         equal("START",graph.nodes.getFirst().title,"Continuous campaign starts with synthetic START");
         var expected=new ArrayList<String>();
         actual.gameFlow().turns().forEach(t->t.steps().forEach(s->s.fragments().forEach(f->expected.add(f.name()))));
-        equal(expected,graph.nodes.stream().filter(n->n.kind==Graph.Kind.EVENT||n.title.equals("UNRESOLVED FRAGMENT")).map(n->n.text).toList(),"Every source fragment occurrence appears once in exact turn/step/fragment order");
+        equal(expected,graph.nodes.stream().filter(n->n.kind==Graph.Kind.EVENT&&!n.type.equals("News")||n.title.equals("UNRESOLVED FRAGMENT")).map(n->n.text).toList(),"Every source fragment occurrence appears once in exact turn/step/fragment order");
         Graph.Node inauguration=event(graph,"Turn01_Start_Inauguration");
         check(hasEdge(graph,"campaign:start",inauguration.id),"Inauguration is immediately reachable from START");
         Graph.Node extraction=event(graph,"Turn03_Decision_Extraction");
@@ -58,8 +58,16 @@ final class RootedCampaignChecks {
         Graph complementary=build(step(0,yes,no));
         equal(1,complementary.campaign.levels().getFirst().conditionIds().size(),"Identical boolean variables with opposite literals share one condition");
         String cid=complementary.campaign.levels().getFirst().conditionIds().getFirst();
-        equal(List.of("true","false"),complementary.edges.stream().filter(e->e.from.equals(cid)).map(e->e.label).toList(),"Mechanical boolean complement split labels both predicate outcomes");
+        equal(List.of("TRUE","FALSE"),complementary.edges.stream().filter(e->e.from.equals(cid)).map(e->e.label).toList(),"Mechanical boolean complement split labels both predicate outcomes");
         check(node(complementary,cid).metadata.contains(no.condition()),"Merged condition retains raw complementary source expression");
+        Graph optional=build(step(0,yes),step(1,a));
+        var optionalLevel=optional.campaign.levels().getFirst();String optionalGate=optionalLevel.conditionIds().getFirst();
+        check(optional.edges.stream().anyMatch(e->e.from.equals(optionalGate)&&e.to.equals(event(optional,"Yes").id)&&e.label.equals("TRUE")),"Standalone activation has explicit TRUE execution route");
+        check(optional.edges.stream().anyMatch(e->e.from.equals(optionalGate)&&e.to.equals(optionalLevel.exitId())&&e.label.equals("FALSE")),"Standalone activation retains immediate FALSE skip route to neutral level exit");
+        check(hasEdge(optional,event(optional,"Yes").id,optionalLevel.exitId()),"TRUE event path and FALSE skip reconverge immediately");
+        check(node(optional,optionalGate).metadata.contains("FALSE / skip proof"),"Skip route preserves its authoritative GameFlow activation evidence");
+        assertAcyclicAndReachable(optional);
+
         check(!RootedCampaignGraphBuilder.complements("BaseGame.X == 1","BaseGame.X == 2"),"Numeric alternatives are not claimed to be exhaustive");
         check(!RootedCampaignGraphBuilder.complements("BaseGame.X == true","Other.X == false"),"Same suffix in different namespaces never proves complementarity");
         check(!RootedCampaignGraphBuilder.complements("BaseGame.X == true and BaseGame.Y == true","BaseGame.X == false and BaseGame.Y == true"),"Compound conditions are not rewritten using guessed domains");
@@ -83,6 +91,10 @@ final class RootedCampaignChecks {
         check(event(turnGate,"A").metadata.contains(gated.onTurnStartInstruction())&&event(turnGate,"A").metadata.contains("BaseGame.StepStarted = true;"),"Turn and step instructions stay intact in source details");
         equal("Chapter Four",turnGate.campaign.turns().getFirst().title(),"Visual chapter title normalizes source HTML line breaks");
         assertAcyclicAndReachable(turnGate);
+        Graph.Node unknownFalse=turnGate.nodes.stream().filter(n->n.title.equals("FALSE DESTINATION UNRESOLVED")).findFirst().orElseThrow();
+        check(turnGate.edges.stream().anyMatch(e->e.from.equals(gate.id)&&e.to.equals(unknownFalse.id)&&e.label.equals("FALSE")),"Turn condition false semantics stay explicitly unresolved without inventing a later-turn destination");
+        check(turnGate.edges.stream().noneMatch(e->e.from.equals(unknownFalse.id)),"Unresolved false notice has no invented onward pointer");
+
         Item choice=item("Choice","",List.of(new Option("yes","","BaseGame.X = true;"),new Option("no","","BaseGame.X = false;")));
         Graph direct=build(step(0,choice),step(1,yes,no));
         check(hasEdge(direct,event(direct,"Choice").id,direct.campaign.levels().get(1).conditionIds().getFirst()),"Exact adjacent decision assignments prove a specific branch");

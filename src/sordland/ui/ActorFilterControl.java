@@ -29,7 +29,7 @@ public final class ActorFilterControl extends MenuButton {
             @Override public String toString(ActorFilterItem item){return item==null?"":item.name();}
             @Override public ActorFilterItem fromString(String value){throw new UnsupportedOperationException();}
         }));
-        Label hint=new Label("Show speech by actor.\nConditions and effects stay visible.");hint.setStyle("-fx-font-size: 11px; -fx-text-fill: #637467;");
+        Label hint=new Label("Show speech by actor.\nConditions and effects stay visible.");hint.setStyle("-fx-font-size: 11px; -fx-text-fill: "+Theme.MUTED+";");
         VBox content=new VBox(8,hint,list);CustomMenuItem item=new CustomMenuItem(content,false);getItems().add(item);
         debounce.setOnFinished(e->onChange.accept(selected()));
     }

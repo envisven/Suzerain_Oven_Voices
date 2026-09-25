@@ -17,8 +17,9 @@ public final class Domain {
         public boolean isPlayer() { return actorId == 5 || actorId == 6 || speaker.equals("Player") || speaker.equals("Player_Italic"); }
         public boolean isNarrator() { return actorId == 10 || speaker.equalsIgnoreCase("Narrator"); }
     }
-    public record Conversation(int id, String title, Map<Integer,Entry> entries) {
-        public Conversation { entries = immutableMap(entries); }
+    public record Conversation(int id, String title, Map<Integer,Entry> entries, Map<String,Object> raw) {
+        public Conversation { entries = immutableMap(entries); raw = immutableMap(raw); }
+        public Conversation(int id, String title, Map<Integer,Entry> entries) { this(id,title,entries,Map.of()); }
     }
     public record Option(String title, String condition, String instruction) {}
     public record Item(String id, String type, String title, String internalName,
@@ -47,12 +48,21 @@ public final class Domain {
         public boolean resolved() { return item != null; }
         public String id() { return name; }
     }
+    
+    public record IgnoredData(String sourceFile, String collection, String sourceIndex, String location,
+                              String identity, String reason, Object raw) {}
     public record Dataset(List<Item> items, Map<Integer,Conversation> conversations,
-                          List<Item> ancillary, List<String> diagnostics, GameFlow gameFlow) {
+                          List<Item> ancillary, List<String> diagnostics, GameFlow gameFlow,
+                          List<IgnoredData> ignoredData) {
         public Dataset {
             items = List.copyOf(items); conversations = immutableMap(conversations);
             ancillary = List.copyOf(ancillary); diagnostics = List.copyOf(diagnostics);
             gameFlow = Objects.requireNonNull(gameFlow);
+            ignoredData = List.copyOf(ignoredData);
+        }
+        public Dataset(List<Item> items, Map<Integer,Conversation> conversations,
+                       List<Item> ancillary, List<String> diagnostics, GameFlow gameFlow) {
+            this(items,conversations,ancillary,diagnostics,gameFlow,List.of());
         }
         
         public Dataset(List<Item> items, Map<Integer,Conversation> conversations,
@@ -63,6 +73,8 @@ public final class Domain {
             Conversation c = conversations.get(key.conversationId());
             return c == null ? null : c.entries().get(key.dialogueId());
         }
+        
+        public List<Item> news() { return ancillary.stream().filter(item->item.type().equals("News")).toList(); }
     }
     private static <K,V> Map<K,V> immutableMap(Map<K,V> map) {
         return Collections.unmodifiableMap(new LinkedHashMap<>(map));

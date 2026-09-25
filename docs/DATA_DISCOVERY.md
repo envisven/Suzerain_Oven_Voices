@@ -4,7 +4,7 @@ This report describes the supplied newest entity, Sordland conversation and acto
 
 ## JSON representation
 
-Both roots are objects. Most logical lists are serialized as dictionaries with numeric string keys (`"0"`, `"1"`, …) plus a `_type` marker. The loader orders those entries by their numeric keys and ignores the type marker as a list element. Conventional JSON arrays are also accepted. IDs are read from their explicit fields, not reconstructed from list position.
+All three roots are objects. Most logical lists are serialized as dictionaries with numeric string keys (`"0"`, `"1"`, …) plus a `_type` marker. The loader orders those entries by their numeric keys and ignores the type marker as a list element. Conventional JSON arrays are also accepted. IDs are read from their explicit fields, not reconstructed from list position.
 
 The parser reads UTF-8 through a buffered character reader, avoiding a second 123 MB input string. JSON structures are immutable. It rejects malformed JSON, duplicate object keys, trailing data, invalid collection shape, invalid integer IDs, duplicate dialogue identities, and links whose declared origin disagrees with their containing entry.
 
@@ -15,12 +15,12 @@ The parser reads UTF-8 through a buffered character reader, avoiding a second 12
 | `AllConversationsData` | 151 | 113 | Dialogue-bearing campaign entities |
 | `AllBillsData` | 22 | 4 | SIGN/VETO interactions |
 | `AllDecisionsData` | 56 | 254 | Source-defined option interactions |
-| `conditionalInstructionData` | 4 | 364 | Ancillary conditional calculations |
-| `NewsData` | 1,436 | 40 | Ancillary newspaper content |
+| `conditionalInstructionData` | 4 | 364 | Supported conditional calculations (PLAIN) |
+| `NewsData` | 1,436 | 40 | Supported News (PLAIN and proven ROOTED annotations) |
 
-There are 229 Sordland interactive catalogue entities and 1,440 ancillary records. No separate decree collection is supplied. A decree can appear as a conversation or a source command such as `ShowOneTimeDecreesPanel`; that is not evidence for an absent decree option schema.
+There are 229 Sordland interactive catalogue entities and 1,440 additional supported records (the internal storage field is still named `ancillary`). No separate decree collection is supplied. A decree can appear as a conversation or a source command such as `ShowOneTimeDecreesPanel`; that is not evidence for an absent decree option schema.
 
-All 229 interactive items have `Path` under `Sordland/` and `AppBundleProperties.StoryPacks` containing `StoryPack_Main`. Explicit Rizia paths or dialogue references are excluded. For records without a campaign path, the loader can use unambiguous `StoryPack_Main` membership while rejecting `StoryPack_Rizia`. All 775 excluded catalogue records in these files are Rizia records. Conversation titles must begin with `Sordland/`.
+All 229 interactive items have `Path` under `Sordland/` and `AppBundleProperties.StoryPacks` containing `StoryPack_Main`. Explicit Rizia paths or dialogue references are excluded. For records without a campaign path, the loader can use unambiguous `StoryPack_Main` membership while rejecting `StoryPack_Rizia`. All 775 excluded catalogue records in these files are Rizia records and are retained in Ignored data with a scope reason. The Rizia GameFlow is also retained. Conversation titles must begin with `Sordland/`.
 
 Catalogue metadata includes `NameInDatabase`, `Path`, `AssignedTokenProperties`, and `StoryFragmentProperties`. The latter contains `StoryFragmentCondition`, `OnStoryFragmentBeginInstruction`, and `OnStoryFragmentEndInstruction`.
 
@@ -57,7 +57,7 @@ GameFlow establishes progression between steps, but generally does not establish
 
 Several unconditional fragments in one step occupy the same progression level without an asserted relative completion order. Their gray container is purely visual. Conditional fragments at that step keep separate condition branches. Empty steps, turn conditions, `OnTurnStartInstruction` and `OnStepStartInstruction` retain their indices and raw metadata; no scripts are executed.
 
-Turn titles are visual separators, not new roots. Selecting one turn creates a synthetic TURN START. Search highlights/focuses events; type filtering dims cards while preserving all nodes and connections. PLAIN retains the full flat catalogue and its original filters. Ancillary records are excluded from ROOTED.
+Turn titles label alternating background bands, not new roots. Selecting one turn creates a synthetic TURN START. Search highlights/focuses visible cards. Independent Types checkboxes remove cards and project original connectivity through hidden nodes; the canonical graph remains unchanged. PLAIN retains the full flat catalogue and the same Types checklist. Exact source-proven News appears as local ROOTED annotations.
 
 The 249 links between different conversation IDs remain exact dialogue links, including subdialogue calls and returns. They are not promoted to campaign edges. No game-state simulation, inferred remote causality or feasibility solver is introduced.
 
@@ -71,7 +71,7 @@ The remaining 137 conversation graphs are retained as dialogue-fragment/ending i
 
 Each `outgoingLinks` element supplies `destinationConversationID`, `destinationDialogueID`, `originConversationID`, `originDialogueID`, `priority`, and `isConnector`. The loader preserves numeric source order, exact destination identity, priority, and connector status. There are no unresolved link destinations in the supplied dump.
 
-Entry `fields` is another numbered list of `{title, typeString, value}` objects. English spoken/narrated text is normally in the field titled `en`; `Dialogue Text` is the fallback. Player menu text is normally `Menu Text en`, with `Menu Text` as fallback. Base `Sequence` and localized `Sequence en` are both preserved. `Articy Id`, `InputId`, and `OutputId` remain available in entry metadata. To reduce memory, field objects are normalized into an immutable title-to-value map; redundant field wrapper/type objects and duplicated outgoing-link raw objects are not retained after interpretation.
+Entry `fields` is another numbered list of `{title, typeString, value}` objects. English spoken/narrated text is normally in the field titled `en`; `Dialogue Text` is the fallback. Player menu text is normally `Menu Text en`, with `Menu Text` as fallback. Base `Sequence` and localized `Sequence en` are both preserved. `Articy Id`, `InputId`, and `OutputId` remain available in entry metadata. The complete original entry, including field wrappers, type descriptors and raw outgoing links, is retained in immutable source metadata. A separate interpretation map supplies display text; ambiguous duplicate titles are not arbitrarily interpreted.
 
 ### Canonical visual representation
 
@@ -83,7 +83,7 @@ Source loops are ordinary back-references to an existing entry. Complete graphs 
 
 ## Speakers and choices
 
-The supplied `actor_names.json` contains a numbered name list, not an explicit ActorID mapping. For example its list index 4 is Player, whereas dialogue ActorID 5 is Player. It is packaged for future use and validated by the headless suite, without guessing an offset or replacing working dialogue naming. No portrait assets are supplied. Speaker names are corroborated across actual dialogue titles of the form `Speaker: "text"`, indexed by `ActorID`. Control labels such as `Jump to:` and script lines containing colons must not become actor names.
+The supplied `actor_names.json` contains a numbered name list, not an explicit ActorID mapping. For example its list index 4 is Player, whereas dialogue ActorID 5 is Player. All 103 records are loaded and retained individually in Ignored data with the exact index, value and an explicit unsupported-mapping reason. No offset is guessed and working dialogue naming is preserved. No portrait assets are supplied. Speaker names are corroborated across actual dialogue titles of the form `Speaker: "text"`, indexed by `ActorID`. Control labels such as `Jump to:` and script lines containing colons must not become actor names.
 
 The source repeatedly identifies actor 5 as `Player`, actor 6 as `Player_Italic`, and actor 10 as `Narrator`. Both player actors represent responses/actions; narrator is a distinct role. Other examples are 4 `Petr Vectern`, 38 `Lucian Galade`, and 51 `Symon Holl`. Actor 1 sometimes has the literal source label `...`; those entry-specific labels are preserved, while `Ovid Grecer` is the corroborated default for its control entries. Speaker names alone are used when no local portrait can be resolved.
 
@@ -107,7 +107,7 @@ Bills use `BillProperties.Title`, `Description`, `SignVariables`, `VetoVariables
 
 Decisions use `DecisionProperties.Options`, an ordered list of objects with `Text`, `Condition`, and `Instruction`. For example, `Turn01_Decision_InfrastructureProject` offers investment first (sets the investment flag and decreases government budget by 1), then rejection (sets rejection and `GameCondition` flags).
 
-Conditional-instruction ancillary records use `ConditionalInstructionProperties.ConditionalInstructions` with `Condition` and `Instruction`, together with scheduling fields including `CheckOnTurnNo`, `CheckOnStepNo`, `CheckPerTurn`, `CheckPerStep`, `CheckPerStoryFragment`, `Priority`, and `IsOneTime`. News uses `NewsProperties.Title`, `Description`, `TurnNo`, `Newspaper`, and `IsEnabledVariable`. Neither should be turned into fake decision options in the primary campaign tree.
+Supported conditional-instruction records use `ConditionalInstructionProperties.ConditionalInstructions` with `Condition` and `Instruction`, together with scheduling fields including `CheckOnTurnNo`, `CheckOnStepNo`, `CheckPerTurn`, `CheckPerStep`, `CheckPerStoryFragment`, `Priority`, and `IsOneTime`. News uses `NewsProperties.Title`, `Description`, `TurnNo`, `Newspaper`, and `IsEnabledVariable`. Neither should be turned into fake decision options in the primary campaign tree.
 
 ## Representative verification
 
@@ -117,3 +117,11 @@ Conditional-instruction ancillary records use `ConditionalInstructionProperties.
 - Entry `1:3`: Narrator, English text beginning “Symon Holl, Gus Manger and Lileas Graf...”, exact outgoing destination `1:246`.
 - Entry `1:348`: explicit `End();`, exact outgoing destination `1:2`.
 - Current build, test and graphical smoke results are recorded in [VALIDATION.md](VALIDATION.md).
+
+## Complete source accounting
+
+See [SOURCE_ACCOUNTING.md](SOURCE_ACCOUNTING.md) for the independent inventory, field retention checks and control-flow audit. No supplied readable record is unaccounted for. Ignored Data contains 881 entries: 775 out-of-scope catalogue records, one out-of-scope GameFlow, two unsupported Main GameFlow metadata fields (`Description`, `Path`) and 103 unmapped actor names. Conversation records need no ignored entries in the supplied complete dump; their original fields are retained in entry metadata.
+
+## News proof boundaries
+
+`NewsGraphBuilder` accepts whole supported statements and exact variable/name equality. It rejects unsupported control flow, ambiguous named calls and assignment expressions with potential calls; later false/computed writes invalidate a final enabled-state claim. No names, source adjacency or publication turn produce causal links. Exact reachable dialogue links identify possible inner source effects; conditions are not evaluated, so these remain labeled possibilities. Missing proof leaves articles in PLAIN with a diagnostic. ROOTED band placement uses the enabler’s turn; the publication/source turn remains in article metadata.

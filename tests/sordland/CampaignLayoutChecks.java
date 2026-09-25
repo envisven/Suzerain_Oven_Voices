@@ -4,6 +4,7 @@ import sordland.data.Domain.Dataset;
 import sordland.graph.Graph;
 import sordland.graph.Graph.*;
 import sordland.graph.RootedCampaignGraphBuilder;
+import sordland.graph.TypeProjection;
 import sordland.layout.LayoutEngine;
 import sordland.layout.LayoutEngine.*;
 import sordland.ui.TextMeasurer;
@@ -33,6 +34,36 @@ final class CampaignLayoutChecks {
         }
         var expanded=new LinkedHashSet<String>();graph.nodes.stream().filter(n->n.kind!=Kind.JUNCTION).forEach(n->expanded.add(n.id));
         inspect(engine.campaign(graph,expanded,measure),"Fully expanded rooted campaign");
+        var allTypes=new LinkedHashSet<>(TypeProjection.types(graph));
+        var withoutConditions=new LinkedHashSet<>(allTypes);withoutConditions.remove("Condition");
+        var withoutConversations=new LinkedHashSet<>(allTypes);withoutConversations.remove("Conversation");
+        for(Set<String> selection:List.of(TypeProjection.defaults(allTypes),Set.of("Conversation"),Set.of("News"),Set.of("News","Condition"),withoutConditions,withoutConversations,Set.<String>of())){
+            Graph projected=TypeProjection.project(graph,selection);
+            Result filtered=engine.campaign(projected,Set.of(),measure);
+            inspect(filtered,"Type-projected campaign "+selection);
+            for(var attachment:projected.campaign.news()){
+                Box parent=filtered.byId.get(attachment.eventId()),effect=filtered.byId.get(attachment.effectId());
+                check(effect.y()>parent.bottom(),"News effect sits immediately beside/below its exact enabling event");
+                var sector=filtered.sectors.stream().filter(s->Objects.equals(s.turn(),parent.node().turn)).findFirst().orElseThrow();
+                for(String id:attachment.newsIds()){
+                    Box article=filtered.byId.get(id);
+                    check(article.y()>=sector.y()&&article.bottom()<=sector.y()+sector.height(),"News annotation remains in the enabler's turn band");
+                }
+            }
+            var byEndpoints=new HashMap<String,List<Line>>();
+            for(Line line:filtered.lines)byEndpoints.computeIfAbsent(line.edge().from+"/"+line.edge().to,k->new ArrayList<>()).add(line);
+            for(var routes:byEndpoints.values())if(routes.size()>1)for(int i=1;i<routes.size();i++)check(!routes.getFirst().points().equals(routes.get(i).points()),"Immediate reconverging alternatives have visibly distinct routes after type projection");
+        }
+        
+        var categories=List.copyOf(allTypes);
+        for(int mask=0;mask<(1<<categories.size());mask++){
+            var selected=new LinkedHashSet<String>();
+            for(int bit=0;bit<categories.size();bit++)if((mask&(1<<bit))!=0)selected.add(categories.get(bit));
+            var projection=TypeProjection.project(graph,selected);
+            var result=engine.campaign(projection,Set.of(),measure);
+            inspect(result,"Exhaustive Types "+selected);
+            for(Node node:projection.nodes){String category=TypeProjection.category(node);check(category.isBlank()||selected.contains(category),"Unchecked category never reappears");}
+        }
         for(var turn:data.gameFlow().turns()){
             Result isolated=engine.campaign(new RootedCampaignGraphBuilder().build(data,turn.turnNumber()),Set.of(),measure);
             inspect(isolated,"Isolated turn "+turn.turnNumber());
@@ -50,7 +81,7 @@ final class CampaignLayoutChecks {
         check(wrapping.groups.stream().noneMatch(g->g.eventIds().contains("single")),"A singleton level has no gray enclosure");
     }
 
-    private static void inspect(Result result,String label){
+    static void inspect(Result result,String label){
         LayoutChecks.assertGeometry(result,label);
         equal(result.graph.nodes.size(),result.boxes.size(),label+" retains every source and layout node");
         for(Box box:result.boxes){
@@ -83,7 +114,7 @@ final class CampaignLayoutChecks {
                 Point a=line.points().get(i-1),b=line.points().get(i);
                 check(a.x()==b.x()||a.y()==b.y(),label+" connectors use orthogonal routed segments");
                 for(Box box:result.visible(Math.min(a.x(),b.x()),Math.min(a.y(),b.y()),Math.abs(a.x()-b.x()),Math.abs(a.y()-b.y())))if(box.node().kind!=Kind.JUNCTION)
-                    check(!intersects(a,b,box.x(),box.y(),box.w(),box.h()),label+" connector avoids card interior "+box.node().id);
+                    check(!intersects(a,b,box.x(),box.y(),box.w(),box.h()),label+" connector "+line.edge().from+" -> "+line.edge().to+" segment "+a+" -> "+b+" avoids card interior "+box.node().id+" "+box.x()+","+box.y());
                 for(Group group:result.groups)check(!intersects(a,b,group.x(),group.y(),group.width(),group.height()),label+" connector avoids sibling container interior");
             }
         }
