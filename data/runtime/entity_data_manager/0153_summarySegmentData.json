@@ -1,0 +1,2109 @@
+{
+  "dataset": "summarySegmentData",
+  "sourceFile": "EntityDataManager/0153_summarySegmentData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.summarySegmentData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.8893860Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "582",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "910",
+    "bytes": "189835"
+  },
+  "primitiveValuesParsed": 582,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 24,
+    "$items": [
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000650000CB2E",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_1",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 5,
+          "DefaultSegmentText": "",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 6,
+            "$declaredCount": 14,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 7,
+                "Condition": "RiziaDLC.Epilogue_Survived_Revolution == true || RiziaDLC.Epilogue_Prison_Revolution_Surrounded == true || RiziaDLC.Epilogue_Death_Revolution_Speech == true || RiziaDLC.Epilogue_Death_Revolution_Surrounded == true || RiziaDLC.Epilogue_KingdomDissolves_Revolution == true",
+                "Text": "During the Rizian Revolution, 3,439 soldiers died, 113 nobles were executed, and a further 36,211 revolutionaries were killed."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 8,
+                "Condition": "(RiziaDLC.Epilogue_Death_HouseFallouts == true || RiziaDLC.Epilogue_Prison_HouseFallouts == true || RiziaDLC.Epilogue_Usurped_HouseFallouts == true || RiziaDLC.Epilogue_Survived_HouseFallouts == true) && RiziaDLC.Ending_Coup_Azaro == true",
+                "Text": "During the coup led by House Azaro, 749 soldiers and 24,430 protesters were killed, and 66,646 protesters were detained."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 9,
+                "Condition": "(RiziaDLC.Epilogue_Death_HouseFallouts == true || RiziaDLC.Epilogue_Prison_HouseFallouts == true || RiziaDLC.Epilogue_Usurped_HouseFallouts == true || RiziaDLC.Epilogue_Survived_HouseFallouts == true) && RiziaDLC.Ending_Coup_Toras == true",
+                "Text": "During the coup led by House Toras, 435 soldiers and 13,875 protesters were killed, and 36,169 protesters were detained."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 10,
+                "Condition": "(RiziaDLC.Epilogue_Death_HouseFallouts == true || RiziaDLC.Epilogue_Prison_HouseFallouts == true || RiziaDLC.Epilogue_Usurped_HouseFallouts == true || RiziaDLC.Epilogue_Survived_HouseFallouts == true) && RiziaDLC.Ending_Coup_Sazon == true",
+                "Text": "During the coup led by House Sazon, 1942 soldiers and 39,321 protesters were killed, and 36,169 protesters were detained."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 11,
+                "Condition": "RiziaDLC.War_BorderOutcome_Peace_Annexation == true && RiziaDLC.Situation_Military_War_Pales_Destruction_Light == true",
+                "Text": "189,372 soldiers died during combat and 289,258 civilians from all sides died due to famine, disease, and shelling during the Second Rizo-Palesian War."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 12,
+                "Condition": "RiziaDLC.War_BorderOutcome_Peace_Annexation == true && RiziaDLC.Situation_Military_War_Pales_Destruction_Moderate == true",
+                "Text": "234,791 soldiers died during combat and 446,749 civilians from all sides died due to famine, disease, and shelling during the Second Rizo-Palesian War."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 13,
+                "Condition": "RiziaDLC.War_BorderOutcome_Peace_Annexation == true && RiziaDLC.Situation_Military_War_Pales_Destruction_Heavy == true",
+                "Text": "251,667 soldiers died during combat and 598,265 civilians from all sides died due to famine, disease, and shelling during the Second Rizo-Palesian War."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 14,
+                "Condition": "RiziaDLC.War_BorderOutcome_Peace_PreWarBorders == true || RiziaDLC.War_BorderOutcome_Peace_PalesAdminDistrictLost == true ",
+                "Text": "194,618 soldiers died during combat and 296,867 civilians from all sides died from hunger, lack of treatment, and collateral damage during the Second Rizo-Palesian War."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 15,
+                "Condition": "RiziaDLC.War_BorderOutcome_Peace_PalesDivided == true",
+                "Text": "267,306 soldiers died during combat and 566,911 civilians from all sides died from epidemics, displacement, and systemic breakdown during the Second Rizo-Palesian War."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 16,
+                "Condition": "RiziaDLC.War_Outcome_NoPeace_KeepFighting == true || RiziaDLC.War_Used_ExperimentalWeapons >= 2",
+                "Text": "382,102 soldiers died during combat and 1,1 million civilians from all sides died from widespread devastation, starvation, and collapsed public systems during the Second Rizo-Palesian War."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 17,
+                "Condition": "RiziaDLC.Situation_Economy_NewBusiness_MassiveRise == true",
+                "Text": "3.9 million people entered employment and 96,129 businesses were founded."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 18,
+                "Condition": "RiziaDLC.Situation_Economy_NewBusiness_SlowGrowth == true",
+                "Text": "1.2 million people entered employment and 42,583 businesses were founded."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 19,
+                "Condition": "RiziaDLC.Situation_Economy_NewBusiness_Reduction == true",
+                "Text": "343,194 people entered employment and 12,129 businesses were founded."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 20,
+                "Condition": "RiziaDLC.Situation_Economy_NewBusiness_Collapse == true",
+                "Text": "2.6 million people lost employment and 146,129 businesses were shut down."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 21,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 22,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 23,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000650000CB5E",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_10",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 24,
+          "DefaultSegmentText": "59,128 people joined the Rizian People's Party.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 25,
+            "$declaredCount": 6,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 26,
+                "Condition": "RiziaDLC.Reform_Success == true",
+                "Text": "19.4 million people participated in the new elections to form a democratic government."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 27,
+                "Condition": "RiziaDLC.Policy_RD_Welfare_ElectoralReform == true",
+                "Text": "1.9 million more people voted than before and their delegates were represented in government."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 28,
+                "Condition": "RiziaDLC.Policy_RD_Welfare_FreePress == true",
+                "Text": "5.7 million people read the Voice of Rizia for the first time and 852,957 became daily buyers."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 29,
+                "Condition": "RiziaDLC.Policy_RD_Welfare_DecriminalizeHomosexuality == true",
+                "Text": "The country became the 9th in the world to decriminalize homosexuality."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 30,
+                "Condition": "RiziaDLC.Path_Stratocracy == true",
+                "Text": "1,042 military officers were given government positions."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 31,
+                "Condition": "RiziaDLC.HouseOfDelegates_Abolished == true",
+                "Text": "19.4 million voters lost representation in government."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 32,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 33,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 34,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100008E00006F55",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_11",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 35,
+          "DefaultSegmentText": "203,124 foreigners migrated to the country.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 36,
+            "$declaredCount": 9,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 37,
+                "Condition": "RiziaDLC.Policy_Diplomacy_TradeDeal_Derdia == true && RiziaDLC.Policy_Diplomacy_TradeDeal_Lespia == true && RiziaDLC.Policy_Diplomacy_TradeDeal_Morella == true && RiziaDLC.Policy_Diplomacy_TradeDeal_Pales == true && RiziaDLC.Policy_Diplomacy_TradeDeal_Rumburg == true && RiziaDLC.Policy_Diplomacy_TradeDeal_Sordland == true && RiziaDLC.Policy_Diplomacy_TradeDeal_Wehlen == true",
+                "Text": "Trade quadrupled and 314 billion RG worth of goods were imported and exported."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 38,
+                "Condition": "RiziaDLC.Situation_Economy_AureusField_HighExtraction == true",
+                "Text": "75 billion cubic meters of gas were transferred from the Aureus field."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 39,
+                "Condition": "RiziaDLC.Situation_Economy_AureusField_MediumExtraction == true",
+                "Text": "35 billion cubic meters of gas were transferred from the Aureus field."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 40,
+                "Condition": "RiziaDLC.Situation_Diplomacy_Rumburg_HighEnergyExport == true",
+                "Text": "25 billion cubic meters of gas were delivered to the Kingdom of Rumburg."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 41,
+                "Condition": "RiziaDLC.Resources_BudgetModifiersTotal >= 10 || RiziaDLC.Resources_Budget >= 10",
+                "Text": "The treasury of the country amassed historical peak numbers."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 42,
+                "Condition": "RiziaDLC.Resources_Energy >= 10 || RiziaDLC.Resources_EnergyModifiersTotal >= 10",
+                "Text": "The energy storage facilities of the country were filled for the first time ever."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 43,
+                "Condition": "RiziaDLC.Situation_Diplomacy_Wehlen_ExportGas == true",
+                "Text": "15 billion cubic meters of gas were exported to Wehlen."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 44,
+                "Condition": "RiziaDLC.Situation_Diplomacy_PowerProjection_Overwhelming == true",
+                "Text": "7 nations across Merkopa and North Xina chose appeasement policies with the Golden Kingdom."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 45,
+                "Condition": "RiziaDLC.Situation_Diplomacy_PowerProjection_Weak == true",
+                "Text": "13 nations across Merkopa and North Xina chose confrontational policies with the Golden Kingdom."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 46,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 47,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 48,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100008E00006F5E",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_12",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 49,
+          "DefaultSegmentText": "403,438 people emigrated from the country.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 50,
+            "$declaredCount": 6,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 51,
+                "Condition": "RiziaDLC.Situation_Economy_MITZ_HighResourceOutput == true",
+                "Text": "59,175,353 tons were mined from the MITZ by Rizia."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 52,
+                "Condition": "RiziaDLC.Situation_Economy_MITZ_MediumResourceOutput == true",
+                "Text": "31,647,453 tons were mined from the MITZ by Rizia."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 53,
+                "Condition": "RiziaDLC.Situation_Economy_MITZ_LowResourceOutput == true",
+                "Text": "6,647,453 tons were mined from the MITZ by Rizia."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 54,
+                "Condition": "RiziaDLC.Situation_Economy_RRG_StateOwns100 == true",
+                "Text": "Rizian Royal Gold became fully state-owned and its employee count increased to 16,853."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 55,
+                "Condition": "RiziaDLC.Situation_Economy_RRG_StateOwns45 == true",
+                "Text": "The Rizian Royal Gold employee count increased to 13,853 and it became the second most important state corporation."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 56,
+                "Condition": "RiziaDLC.Situation_Economy_RRG_StateOwns15 == true",
+                "Text": "The Rizian Royal Gold employee count decreased by 4,583 and it became the fourth most important state corporation."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 57,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 58,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 59,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006A000062CC",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_2",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 60,
+          "DefaultSegmentText": "",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 61,
+            "$declaredCount": 10,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 62,
+                "Condition": "RiziaDLC.ZilleReferendum_Independence_Golcondist == true",
+                "Text": "564,245 Golcondists began their journey to the Holy Golcondist Protectorate of Zille."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 63,
+                "Condition": "RiziaDLC.ZilleReferendum_Independence_Bludish == true ",
+                "Text": "294,149 Bludish people began their journey to the Bludish Republic of Zille."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 64,
+                "Condition": "RiziaDLC.ZilleReferendum_Independence_Liberation == true",
+                "Text": "164,144 people renounced their Rizian citizenship and became Zilleans in the ZLF."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 65,
+                "Condition": "RiziaDLC.ZilleReferendum_Independence_Wruhecist == true",
+                "Text": "319,144 Dastnurists converted to Wruhecism under the Wruhecist Republic of Zille."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 66,
+                "Condition": "RiziaDLC.ZilleReferendum_Interfere_Agents_Success == true || RiziaDLC.ZilleReferendum_Interfere_Army_Success == true",
+                "Text": "1,325 people perished in the upheaval of the Zille referendum."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 67,
+                "Condition": "RiziaDLC.ZilleReferendum_Interfere_Agents_Fail == true || RiziaDLC.ZilleReferendum_Interfere_Army_Fail == true",
+                "Text": "4,325 people perished in the upheaval of the Zille referendum."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 68,
+                "Condition": "RiziaDLC.ZilleReferendum_Won == true || RiziaDLC.ZilleReturn_Success == true",
+                "Text": "Millions of Rizians in Zille officially reintegrated back to their homeland and thousands of foreigners left the territory."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 69,
+                "Condition": "RiziaDLC.ZilleReferendum_Lost == true || RiziaDLC.ZilleReferendum_Independence == true",
+                "Text": "1.3 million Rizians living in Zille fled to Rizia after the permanent loss of the territory."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 70,
+                "Condition": "(RiziaDLC.Situation_Law_WehlenRights_Full == true || RiziaDLC.Policy_RD_Welfare_NaturalizationForForeigners == true) && (RiziaDLC.ZilleReferendum_Won == true || RiziaDLC.ZilleReturn_Success == true)",
+                "Text": "Millions of Zille-born Rizians returned to their homeland and 79,242 Wehzeks applied for Rizian citizenship."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 71,
+                "Condition": "RiziaDLC.BirthdayGathering_ViolentAction == true",
+                "Text": "A dozen nobles and guards died or were injured in the \"Bloody Birthday\"."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 72,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 73,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 74,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000650000CB34",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_3",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 75,
+          "DefaultSegmentText": "",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 76,
+            "$declaredCount": 14,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 77,
+                "Condition": "RiziaDLC.Decision_Turn09_NationalDestabilizationTwo_StateOfEmergency == true",
+                "Text": "During the state of emergency, 123,593 citizens were arrested."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 78,
+                "Condition": "RiziaDLC.Decision_Turn09_NationalDestabilizationTwo_PoliceStateControl == true || RiziaDLC.Decision_Turn09_NationalDestabilizationTwo_Crackdown == true ",
+                "Text": "During nationwide protests, 49 billion RG worth of public property damage was done and 43,221 arrests were made."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 79,
+                "Condition": "RiziaDLC.Decision_Turn09_NationalDestabilization_Curfew == true ",
+                "Text": "During nationwide protests, 19 billion RG worth of public property damage was done and 3,221 arrests were made."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 80,
+                "Condition": "RiziaDLC.Decision_Turn09_NationalDestabilization_MilitaryDeployed == true",
+                "Text": "During nationwide protests, 395 soldiers were killed, 1,245 were wounded, and 53,951 arrests were made."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 81,
+                "Condition": "RiziaDLC.Decision_Turn09_NationalDestabilization_SecurityApparatus == true || RiziaDLC.NatDes_Oppress == true",
+                "Text": "During nationwide protests, 580 police officers were killed, 1,245 were wounded, and 31,161 arrests were made."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 82,
+                "Condition": "RiziaDLC.Situation_Order_ViolentProtests_Brenas == true",
+                "Text": "The province of Brenas faced 2 billion RG worth of public property damage due to violent protests."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 83,
+                "Condition": "RiziaDLC.Situation_Order_ViolentProtests_CardesseMontaklar == true",
+                "Text": "The province of Cardesse-Montaklar faced 3 billion RG worth of public property damage due to violent protests."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 84,
+                "Condition": "RiziaDLC.Situation_Order_ViolentProtests_Valenqiris == true",
+                "Text": "The province of Valenqiris faced 4 billion RG worth of public property damage due to violent protests."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 85,
+                "Condition": "RiziaDLC.Situation_Order_ViolentProtests_ReligiousViolence == true",
+                "Text": "3,584 people faced sectarian violence."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 86,
+                "Condition": "RiziaDLC.Reform_Movement_Grows == true && RiziaDLC.NatDes_Oppress == false",
+                "Text": "2.1 million people joined the reformist movement."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 87,
+                "Condition": "RiziaDLC.Iza_SuOminaPowerful == true",
+                "Text": "1.4 million people joined the nationalist movement."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 88,
+                "Condition": "RiziaDLC.Unrest_Religious_Grows == true && RiziaDLC.Unrest_NatDes_Happened == true",
+                "Text": "1.1 million people joined the religious movement."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 89,
+                "Condition": "RiziaDLC.Country_PublicOpinion <= -5",
+                "Text": "The approval rating of the monarchy fell to 35 percent."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 90,
+                "Condition": "RiziaDLC.Country_QuelledProtests >= 5",
+                "Text": "8,523 people were victims of state-sanctioned violence."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 91,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 92,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 93,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000650000CB3A",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_4",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 94,
+          "DefaultSegmentText": "",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 95,
+            "$declaredCount": 13,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 96,
+                "Condition": "RiziaDLC.Situation_Diplomacy_Zille_SuOminaActive == true && RiziaDLC.Situation_Order_SuOmina_AlliedToCrown == true && RiziaDLC.Situation_Diplomacy_Zille_StrongArmedResistance == true",
+                "Text": "119,498 non-Rizians were forced to flee from the Zille territory."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 97,
+                "Condition": "RiziaDLC.Situation_Order_SuOmina_Destabilizing == true",
+                "Text": "1,663 people were killed and 57,125 people were wounded by extremist Su Omina members."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 98,
+                "Condition": "RiziaDLC.Situation_Order_SuOmina_AlliedToCrown == true",
+                "Text": "26,685 foreigners and anti-monarchists were beaten by extremist Su Omina members."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 99,
+                "Condition": "RiziaDLC.Iza_Outcome_MaxOppression == true",
+                "Text": "654 people were killed and 11,143 foreigners in Iza were jailed."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 100,
+                "Condition": "RiziaDLC.Iza_Outcome_RebellionTolerated == true",
+                "Text": "36 people were killed and 343 foreigners in Iza were jailed."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 101,
+                "Condition": "RiziaDLC.Iza_Outcome_GeneralUnrest == true",
+                "Text": "69 people were killed and 794 foreigners in Iza were jailed."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 102,
+                "Condition": "RiziaDLC.Turn05_Security_InvestigateBombingWehlen == true || RiziaDLC.Turn05_Security_InvestigateBombingPales == true || RiziaDLC.Turn05_Security_InvestigateSuOmina == true",
+                "Text": "Investigations were launched on 1,257 state officials."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 103,
+                "Condition": "RiziaDLC.Situation_Order_Revolutionaries_Dangerous == true",
+                "Text": "1,314 people faced revolutionary violence."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 104,
+                "Condition": "RiziaDLC.Situation_Order_Revolutionaries_Growing == true",
+                "Text": "418 people faced revolutionary violence."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 105,
+                "Condition": "RiziaDLC.Situation_Order_SuOmina_ActivitiesIncrease == true",
+                "Text": "1,605 attacks on foreigners and other 'enemies of the state' were carried out by Su Omina members."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 106,
+                "Condition": "RiziaDLC.Religious_WruhecsGuardians_Sal == true",
+                "Text": "10,306 arrests were made by Wruhec's Guardians."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 107,
+                "Condition": "RiziaDLC.Situation_Order_DrugTrade_Curtailed == true",
+                "Text": "100 tons of drugs were confiscated in anti-narcotic operations."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 108,
+                "Condition": "RiziaDLC.Situation_Order_DrugTrade_Vibrant == true ",
+                "Text": "An estimated 130 tons of drugs were trafficked across Rizian borders."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 109,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 110,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 111,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000650000CB40",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_5",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 112,
+          "DefaultSegmentText": "",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 113,
+            "$declaredCount": 11,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 114,
+                "Condition": "RiziaDLC.Policy_RD_Welfare_LaborHandsLegalized == true",
+                "Text": "438,211 Labor Hands acquired full rights as workers."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 115,
+                "Condition": "RiziaDLC.Situation_Welfare_WorkersRights_Good == true",
+                "Text": "Millions of workers gained better rights and working conditions."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 116,
+                "Condition": "RiziaDLC.Situation_Welfare_WorkersRights_Horrible == true",
+                "Text": "Millions of workers suffered under horrible working conditions."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 117,
+                "Condition": "RiziaDLC.Situation_Law_TreatmentOfForeigners_Unfair == true",
+                "Text": "Millions of foreigners were treated unfairly under the legal system."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 118,
+                "Condition": "RiziaDLC.Situation_Law_TreatmentOfForeigners_Equal == true",
+                "Text": "Millions of foreigners achieved equal treatment under the legal system."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 119,
+                "Condition": "RiziaDLC.HouseAzaro_Conquered == true || RiziaDLC.HouseToras_Conquered == true || RiziaDLC.HouseSazon_Conquered == true",
+                "Text": "11 billion RG worth of noble holdings were seized by the Crown."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 120,
+                "Condition": "RiziaDLC.Adarfo_AbdicationPath == true || RiziaDLC.Birthday_Adarfo_Usurped == true",
+                "Text": "19 billion RG worth of noble holdings were seized by the revolutionaries."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 121,
+                "Condition": "RiziaDLC.Decision_Turn09_RRGFuturePostNationalization_WorkerLedShareDistributed == true",
+                "Text": "20 billion RG worth of assets from the Rizian Royal Gold corporation were redistributed to the workers."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 122,
+                "Condition": "RiziaDLC.Theocracy_Full == true",
+                "Text": "Millions of Wruhecist believers immigrated to {RiziaDLCText.TheocracyName}."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 123,
+                "Condition": "RiziaDLC.Situation_Welfare_Polio_Spreads == true",
+                "Text": "15,035 Rizians died from polio-related complications."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 124,
+                "Condition": "RiziaDLC.Situation_Welfare_IllegalSubstanceAbuse_High == true",
+                "Text": "3,402 people died from overconsumption of illegal substances."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 125,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 126,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 127,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000650000CB46",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_6",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 128,
+          "DefaultSegmentText": "",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 129,
+            "$declaredCount": 13,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 130,
+                "Condition": "RiziaDLC.Situation_Order_GolcondistCommunity_Happy == true && RiziaDLC.Situation_Order_DastnuristCommunity_Happy == true && RiziaDLC.Situation_Order_WruhecistCommunity_Happy == true",
+                "Text": "Thousands of Nurist believers de-radicalized."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 131,
+                "Condition": "RiziaDLC.Situation_Order_WruhecistCommunity_Happy == true",
+                "Text": "385,156 people subscribed to the Wruhecist branch of the Nurity faith."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 132,
+                "Condition": "RiziaDLC.Situation_Order_DastnuristCommunity_Happy == true",
+                "Text": "145,741 people subscribed to the Dastnurist branch of the Nurity faith."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 133,
+                "Condition": "RiziaDLC.Situation_Order_GolcondistCommunity_Happy == true",
+                "Text": "70,795 Golcondists began giving religious donations to the Office of Religious Affairs."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 134,
+                "Condition": "RiziaDLC.Policy_RD_Religion_EnforcedWruhecistEducation == true",
+                "Text": "2.1 million people were forced to learn the Wruhecist way of life."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 135,
+                "Condition": "RiziaDLC.Policy_RD_Religion_RemoveStateReligion == true",
+                "Text": "52,853 people renounced their religion."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 136,
+                "Condition": "RiziaDLC.Situation_Order_WruhecistCommunity_Dissatisfied == true",
+                "Text": "640,795 Wruhecists stopped giving religious donations to the Office of Religious Affairs."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 137,
+                "Condition": "RiziaDLC.Situation_Order_DastnuristCommunity_Dissatisfied == true",
+                "Text": "267,631 Dastnurists stopped giving religious donations to the Office of Religious Affairs."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 138,
+                "Condition": "RiziaDLC.Situation_Order_GolcondistCommunity_Dissatisfied  == true",
+                "Text": "98,124 Golcondists stopped giving religious donations to the Office of Religious Affairs."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 139,
+                "Condition": "RiziaDLC.Policy_RD_Law_WruhecismAsSoleFaith == true",
+                "Text": "294,052 non-Wruhecists fled the country due to religious persecution."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 140,
+                "Condition": "RiziaDLC.Policy_RD_Law_BanOnNonNurityFaiths == true && RiziaDLC.Policy_RD_Law_WruhecismAsSoleFaith == false",
+                "Text": "104,598 non-Nurists fled the country due to religious persecution."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 141,
+                "Condition": "RiziaDLC.Policy_Welfare_PlavoSanctuaryRestoration_Completed == true",
+                "Text": "The renovated Archsanctuary of Plavo drew 1.4 million visitors."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 142,
+                "Condition": "RiziaDLC.Policy_Welfare_SallabesSanctuaryExpansion_Completed == true",
+                "Text": "The expanded Sallabes Grandsanctuary drew 748,000 visitors."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 143,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 144,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 145,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000650000CB4C",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_7",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 146,
+          "DefaultSegmentText": "",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 147,
+            "$declaredCount": 7,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 148,
+                "Condition": "RiziaDLC.Situation_Law_WomensRights_Strong == true",
+                "Text": "9,345 women joined political life. 178,213 women joined the workforce."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 149,
+                "Condition": "RiziaDLC.Situation_Law_WomensRights_Adequate == true",
+                "Text": "2,345 women joined political life. 582,421 women joined the workforce."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 150,
+                "Condition": "RiziaDLC.Policy_RD_Welfare_DecriminalizeHomosexuality == true",
+                "Text": "3,405 Rizians convicted of homosexuality were released from prison. Crime against homosexuals went down by 40 percent."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 151,
+                "Condition": "RiziaDLC.Policy_RD_Welfare_RemoveDeathPenalty == true",
+                "Text": "19,213 death row prisoners were spared."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 152,
+                "Condition": "RiziaDLC.Situation_Welfare_Housing_FairHousingMarket == true",
+                "Text": "322,196 people found a roof over their heads."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 153,
+                "Condition": "RiziaDLC.Situation_Welfare_Housing_LackOfAffordable == true",
+                "Text": "127,131 people lost access to affordable housing."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 154,
+                "Condition": "RiziaDLC.Situation_Welfare_Housing_WorseningCrisis == true",
+                "Text": "763,859 people fell into housing insecurity condition and faced the risk of becoming homeless."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 155,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 156,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 157,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000650000CB52",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_8",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 158,
+          "DefaultSegmentText": "OMEC reported a 300% increase in manufacturing from the kingdom.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 159,
+            "$declaredCount": 14,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 160,
+                "Condition": "RiziaDLC.LeaningValue_ProBusiness >= 3",
+                "Text": "142 billion RG worth of foreign investment arrived."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 161,
+                "Condition": "RiziaDLC.LeaningValue_ProBusiness <= -4",
+                "Text": "78 billion RG worth of foreign investment left the country."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 162,
+                "Condition": "RiziaDLC.Decision_Turn08_NewManufacturing_HiTechMilitary == true",
+                "Text": "13,852 jobs were created in the high-tech military industry."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 163,
+                "Condition": "RiziaDLC.Decision_Turn08_NewManufacturing_Pharma == true || RiziaDLC.Situation_Economy_PharmaAdvanced == true",
+                "Text": "7,925 jobs were created in the pharmaceuticals industry."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 164,
+                "Condition": "RiziaDLC.Decision_Turn08_NewManufacturing_Renewable == true",
+                "Text": "2,925 jobs and electricity for 800,000 households were generated through the renewable energy industry."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 165,
+                "Condition": "RiziaDLC.Decision_Turn08_NewManufacturing_Shipbuilding == true",
+                "Text": "17,172 jobs were created in the shipbuilding industry."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 166,
+                "Condition": "RiziaDLC.Decision_Turn08_NewManufacturing_SteelMaking == true",
+                "Text": "15,286 jobs were created in the steelmaking industry."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 167,
+                "Condition": "RiziaDLC.Policy_Economy_Diversified == true && RiziaDLC.Situation_Economy_NewBusiness_MassiveRise == true",
+                "Text": "The economy developed non-energy sectors and heavily diversified, bringing in 214,974 new jobs."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 168,
+                "Condition": "RiziaDLC.Policy_Economy_ResourceBased == true && RiziaDLC.Resources_EnergyModifiersTotal >= 10",
+                "Text": "The economy heavily developed its energy sectors, producing energy equal to the production output of half of the world."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 169,
+                "Condition": "RiziaDLC.Policy_Economy_Mixed == true && RiziaDLC.Resources_EnergyModifiersTotal >= 2",
+                "Text": "The economy of the nation reached a balance of 50-50 between energy and non-energy sources."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 170,
+                "Condition": "RiziaDLC.Situation_Economy_PDStockExchange_Thriving == true",
+                "Text": "The Porte Drazon Stock Exchange generated 20 billion RG in shareholder wealth."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 171,
+                "Condition": "RiziaDLC.Situation_Economy_PDStockExchange_Balanced == true",
+                "Text": "The Porte Drazon Stock Exchange generated 10 billion RG in shareholder wealth."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 172,
+                "Condition": "RiziaDLC.Situation_Economy_TouristDestination_Global == true",
+                "Text": "Rizia attracted millions of tourists from across the globe."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 173,
+                "Condition": "RiziaDLC.Decision_Turn04_WineExportsSoar == true && RiziaDLC.Situation_Economy_WineIndustry_EnvironmentalDamage == false",
+                "Text": "5.4 billion RG worth of Rizian wine was exported to countries in Merkopa and beyond."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 174,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 175,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 176,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000650000CB58",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_SummarySegment_9",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 177,
+          "DefaultSegmentText": "21 new countries received a diplomatic mission from Rizia.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 178,
+            "$declaredCount": 10,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 179,
+                "Condition": "RiziaDLC.Policy_Diplomacy_Intermerkopum == true && RiziaDLC.Ending_Revolution == false",
+                "Text": "Intermerkopum became the fourth most influential alliance on the globe."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 180,
+                "Condition": "RiziaDLC.Policy_Diplomacy_GRACEMember == false",
+                "Text": "Another monarchy left GRACE and one more nation saw a revolutionary uprising."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 181,
+                "Condition": "RiziaDLC.Policy_Diplomacy_MITZBoardMember == false",
+                "Text": "43,124 jobs disappeared from the MITZ and the average Morellan GDP per capita increased."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 182,
+                "Condition": "RiziaDLC.Situation_Diplomacy_GlobalImage_Good == true",
+                "Text": "1,495 positive articles and broadcasts about Rizia were published in world news."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 183,
+                "Condition": "RiziaDLC.Situation_Diplomacy_GlobalImage_Bad == true",
+                "Text": "725 negative articles and broadcasts about Rizia were published in world news."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 184,
+                "Condition": "RiziaDLC.Situation_Diplomacy_CulturalProjection_Influential == true",
+                "Text": "132,843 people attended courses and events hosted by the Ariana Toras Association."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 185,
+                "Condition": "RiziaDLC.Situation_Diplomacy_CulturalProjection_Inconsequential == true",
+                "Text": "62,843 fewer people attended courses or events hosted by the Ariana Toras Association."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 186,
+                "Condition": "RiziaDLC.Decision_Turn01_InvestInRizianFootball_RealMontaklar == true",
+                "Text": "Real Montaklar gained 34,212 new fans and members."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 187,
+                "Condition": "RiziaDLC.Decision_Turn01_InvestInRizianFootball_FCPorteDrazon == true",
+                "Text": "FC Porte Drazon gained 34,212 new fans and members."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 188,
+                "Condition": "RiziaDLC.Decision_Turn01_InvestInRizianFootball_Balanced == true",
+                "Text": "Both Real Montaklar and FC Porte Drazon gained 18,312 new fans and members."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 189,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 190,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 191,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A000062C2",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_1",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 192,
+          "DefaultSegmentText": "304,754 people lost their jobs.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 193,
+            "$declaredCount": 14,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 194,
+                "Condition": "BaseGame.Ending_WorldWar == true",
+                "Text": "63 million people died during the world war."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 195,
+                "Condition": "BaseGame.Ending_RumburgWarWin == true && BaseGame.Rumburg_AlliesCalledToWar == false && BaseGame.Turn10_SnO_Phase1_Pincer == true && BaseGame.Turn10_SnO_Phase2_TakeThornbourgh == true",
+                "Text": "253,269 soldiers died during combat and 495,386 civilians from all sides died due to disease, starvation, and shelling in affected areas."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 196,
+                "Condition": "BaseGame.Ending_RumburgWarWin == true && ((BaseGame.Rumburg_AlliesCalledToWar == false && (BaseGame.Turn10_SnO_Phase1_Pincer == true && BaseGame.Turn10_SnO_Phase2_TakeDome == true || BaseGame.Turn10_SnO_Phase1_AssaultTzarsbourgh == true && BaseGame.Turn10_SnO_Phase2_TakeThornbourgh == true)) || (BaseGame.Rumburg_AlliesCalledToWar == true && BaseGame.Turn10_SnO_Phase1_Pincer == true && BaseGame.Turn10_SnO_Phase2_TakeThornbourgh == true))",
+                "Text": "338,836 soldiers died during combat and 788,485 civilians from all sides died from famine, illness, and collateral damage in contested regions."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 197,
+                "Condition": "BaseGame.Ending_RumburgWarWin == true && BaseGame.Rumburg_AlliesCalledToWar == true && BaseGame.Turn10_SnO_Phase1_DigDown == true && BaseGame.Turn10_SnO_Phase2_TakeDome == true",
+                "Text": "396,693 soldiers died during combat and 1,1 million civilians from all sides died from epidemics, food collapse, and urban bombardment during prolonged operations."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 198,
+                "Condition": "BaseGame.Ending_RumburgWarLost == true && BaseGame.Rumburg_AlliesCalledToWar == false && BaseGame.Turn10_SnO_Phase1_Pincer == true && BaseGame.Turn10_SnO_Phase2_TakeThornbourgh == true",
+                "Text": "458,553 soldiers died during combat and 683,594 civilians from all sides died due to hunger, lack of medicine, shelling, and gas exposure in civilian zones."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 199,
+                "Condition": "BaseGame.Ending_RumburgWarLost == true && ((BaseGame.Rumburg_AlliesCalledToWar == false && BaseGame.Turn10_SnO_Phase1_DigDown == true && BaseGame.Turn10_SnO_Phase2_TakeThornbourgh == true) || (BaseGame.Rumburg_AlliesCalledToWar == true && BaseGame.Turn10_SnO_Phase1_Pincer == true && BaseGame.Turn10_SnO_Phase2_TakeThornbourgh == true))",
+                "Text": "542,753 soldiers died during combat and 848,385 civilians from all sides died from failing supply chains, disease outbreaks, gas exposure, and destroyed infrastructure."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 200,
+                "Condition": "BaseGame.Ending_RumburgWarLost == true && BaseGame.Rumburg_AlliesCalledToWar == true && BaseGame.Turn10_SnO_Phase1_DigDown == true",
+                "Text": "645,986 soldiers died during combat and 1,3 million civilians from all sides died from famine, epidemics, gas exposure, and widespread devastation across occupied areas."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 201,
+                "Condition": "BaseGame.Ending_Coup == true && BaseGame.Turn09_EnT_SordishRecovery == true",
+                "Text": "During the coup 33 soldiers and 1,430 protesters were killed, 146,399 protesters were detained."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 202,
+                "Condition": "BaseGame.Situation_Economy_UnemploymentCrisis == true",
+                "Text": "1,6 million people lost their jobs."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 203,
+                "Condition": "BaseGame.Situation_Economy_HighEmployment == true",
+                "Text": "2,5 million people found a job."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 204,
+                "Condition": "BaseGame.Turn09_EnT_SordishDepression == true && (BaseGame.EconomyAction_PrintMoney == true || BaseGame.Turn09_EnT_HyperInflation == true || BaseGame.Situation_Economy_DebtCrisis == true)",
+                "Text": "Price of bread increased from 0,5 SR to 4 SR."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 205,
+                "Condition": "BaseGame.EconomyAction_HousingAssistance == true",
+                "Text": "110,467 people benefitted from state housing."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 206,
+                "Condition": "BaseGame.Turn03_EnT_Education_Budget_Decrease == true && BaseGame.Turn04_PSnW_Education_Privatization == false",
+                "Text": "42,316 teachers lost their jobs."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 207,
+                "Condition": "BaseGame.Bill_Turn04_WorkersRights_Signed == true",
+                "Text": "2,7 million workers benefitted from minimum wage."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 208,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 209,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 210,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00007D16",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_10",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 211,
+          "DefaultSegmentText": "",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 212,
+            "$declaredCount": 3,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 213,
+                "Condition": "BaseGame.Turn06_PSnW_Healthcare_Privatization == true",
+                "Text": "5 million people lost their state healthcare coverage."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 214,
+                "Condition": "BaseGame.Turn04_PSnW_Education_Privatization == true && BaseGame.EconomyAction_PayBackStudentDebt == false",
+                "Text": "259,498 students left secondary education without graduating."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 215,
+                "Condition": "BaseGame.Turn06_PSnW_Healthcare_Privatization == true && BaseGame.Turn04_PSnW_Education_Privatization == true",
+                "Text": "5 million people lost their state healthcare coverage and 400,030 students left secondary education without graduating."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 216,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 217,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 218,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00007D1A",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_11",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 219,
+          "DefaultSegmentText": "",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 220,
+            "$declaredCount": 6,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 221,
+                "Condition": "BaseGame.SordishStateCorporation_Privatization + BaseGame.NedamMiningGroup_Privatization >= 6 && BaseGame.Policy_Welfare_HealthPrivatization == true && BaseGame.Policy_Welfare_EducationPrivatization == true && BaseGame.Policy_Economy_EnergyProtectionAct_Removed == true",
+                "Text": "10,400 state employees lost their jobs while 55 oligarchs obtained 35% of the Sordish economy."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 222,
+                "Condition": "BaseGame.SordishStateCorporation_Privatization + BaseGame.NedamMiningGroup_Privatization >= 3 && (BaseGame.Policy_Welfare_HealthPrivatization == true || BaseGame.Policy_Welfare_EducationPrivatization == true) && (BaseGame.Policy_Economy_EnergyProtectionAct_49Percent == true || BaseGame.Policy_Economy_EnergyProtectionAct_Removed == true)",
+                "Text": "5,200 state employees lost their jobs while 55 oligarchs obtained 20% of the Sordish economy."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 223,
+                "Condition": "BaseGame.SordishStateCorporation_Privatization + BaseGame.NedamMiningGroup_Privatization >= 1",
+                "Text": "2,300 state employees lost their jobs while 55 oligarchs obtained 10% of the Sordish economy."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 224,
+                "Condition": "BaseGame.HeartOfSordland_Nationalization + BaseGame.BergiaSteel_Nationalization >= 6",
+                "Text": "Private assets worth 10 billion SR were seized by the state.\n"
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 225,
+                "Condition": "BaseGame.HeartOfSordland_Nationalization + BaseGame.BergiaSteel_Nationalization >= 3",
+                "Text": "Private assets worth 5 billion SR were seized by the state."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 226,
+                "Condition": "BaseGame.HeartOfSordland_Nationalization + BaseGame.BergiaSteel_Nationalization >= 1",
+                "Text": "Private assets worth 1 billion SR were seized by the state."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 227,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 228,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 229,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00007D1E",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_12",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 230,
+          "DefaultSegmentText": "",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 231,
+            "$declaredCount": 8,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 232,
+                "Condition": "BaseGame.Media_Censored == true",
+                "Text": "5,143 news articles were censored."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 233,
+                "Condition": "BaseGame.Media_SordlandToday_Bias == true",
+                "Text": "1,143 news articles were altered."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 234,
+                "Condition": "BaseGame.Joined_ATO == true",
+                "Text": "633 ATO officers arrived in Sordland."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 235,
+                "Condition": "BaseGame.Joined_CSP == true",
+                "Text": "998 CSP officers arrived in Sordland."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 236,
+                "Condition": "BaseGame.Situation_Diplomacy_UCAid == true || BaseGame.Situation_Diplomacy_ArcasiaAid == true",
+                "Text": "29,472 tonnes of material aid was received."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 237,
+                "Condition": "BaseGame.Policy_Diplomacy_Neutrality == true",
+                "Text": "12 countries opened embassies in Sordland."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 238,
+                "Condition": "BaseGame.Situation_Welfare_FundingDisruption == true",
+                "Text": "86,391 government welfare payments bounced."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 239,
+                "Condition": "BaseGame.Situation_Welfare_IncreasedDepression == true",
+                "Text": "693 accounts of suicide were reported to the police."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 240,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 241,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 242,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00007CF6",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_2",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 243,
+          "DefaultSegmentText": "57% fewer maternal deaths were recorded.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 244,
+            "$declaredCount": 4,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 245,
+                "Condition": "BaseGame.Situation_Welfare_EpidemicSpreads == true",
+                "Text": "29,213 people died due to complications related to Polio."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 246,
+                "Condition": "BaseGame.Situation_Welfare_EpidemicControlled == true",
+                "Text": "9,822 people died due to complications related to Polio."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 247,
+                "Condition": "BaseGame.Situation_Welfare_QualityRuralHealthServices == true",
+                "Text": "81% fewer maternal and infant deaths were recorded."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 248,
+                "Condition": "BaseGame.Situation_Welfare_NewHospitals == true",
+                "Text": "More than 721,699 people gained access to healthcare."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 249,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 250,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 251,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00007CFA",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_3",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 252,
+          "DefaultSegmentText": "3,278 people were arrested for their ties to organized crime.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 253,
+            "$declaredCount": 14,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 254,
+                "Condition": "BaseGame.Unrest_BFF_Happened == true && BaseGame.Turn09_UnrestStopped == false",
+                "Text": "228 police officers and 819 Bludish militants were killed in firefights."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 255,
+                "Condition": "BaseGame.Unrest_BFF_Happened == true && BaseGame.Turn09_UnrestStopped == true",
+                "Text": "99 police officers and 640 Bludish militants were killed in firefights."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 256,
+                "Condition": "BaseGame.Unrest_Violent_Happened == true && BaseGame.Turn09_UnrestStopped == false",
+                "Text": "During street clashes 52 police officers and 228 protesters were killed, 8,821 protesters were arrested."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 257,
+                "Condition": "BaseGame.Unrest_Violent_Happened == true && BaseGame.Turn09_UnrestStopped == true",
+                "Text": "During street clashes 39 police officers and 109 protesters were killed, 11,823 protesters were arrested."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 258,
+                "Condition": "BaseGame.Unrest_Peaceful_Happened == true && BaseGame.Turn09_UnrestStopped == false",
+                "Text": "During protests, 3 billion SR worth public property damage was done and 2,822 arrests were made."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 259,
+                "Condition": "BaseGame.Unrest_Peaceful_Happened == true && BaseGame.Turn09_UnrestStopped == true",
+                "Text": "During protests, 2 billion SR worth public property damage was done and 821 arrests were made."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 260,
+                "Condition": "BaseGame.Reform_Autocrat_Path == true && BaseGame.Decision_Turn08_ExtendEmergency_Extend == true",
+                "Text": "51,091 people were arrested in accordance to the state of emergency."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 261,
+                "Condition": "BaseGame.Reform_Autocrat_Path == true && BaseGame.Decision_Turn05_AutocratEmergency_Extend == true",
+                "Text": "22,934 people were arrested in accordance to the state of emergency."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 262,
+                "Condition": "BaseGame.Reform_EmergencyDecree_DetentionWithoutTrial == true",
+                "Text": "13,439 people were detained without trial."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 263,
+                "Condition": "BaseGame.Reform_EmergencyDecree_SuspendedProtests == true",
+                "Text": "18,220 people were arrested for protesting the state of emergency."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 264,
+                "Condition": "BaseGame.Reform_EmergencyDecree_PoliceAuthority == true",
+                "Text": "311 people were reported to have been killed by the Sordish law enforcement."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 265,
+                "Condition": "BaseGame.Situation_Order_CrimeWave == true",
+                "Text": "13,438 people died to criminal violence."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 266,
+                "Condition": "BaseGame.Situation_Order_OrganisedCrime == true",
+                "Text": "8,222 people died to criminal violence."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 267,
+                "Condition": "BaseGame.Situation_Order_OrganisedCrimeContained == true",
+                "Text": "1,278 people were arrested for their ties to organized crime."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 268,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 269,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 270,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00007CFE",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_4",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 271,
+          "DefaultSegmentText": "779 people were killed during the clashes between Red Youth and Young Sords.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 272,
+            "$declaredCount": 3,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 273,
+                "Condition": "BaseGame.Reform_EmergencyDecree_Banned_RY == true && BaseGame.Reform_EmergencyDecree_Banned_YS == true",
+                "Text": "33,760 people were arrested for their suspected ties to Red Youth and Young Sords."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 274,
+                "Condition": "BaseGame.Reform_EmergencyDecree_Banned_RY == true",
+                "Text": "18,320 people were arrested for their suspected ties to Red Youth."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 275,
+                "Condition": "BaseGame.Reform_EmergencyDecree_Banned_YS == true",
+                "Text": "15,440 people were arrested for their suspected ties to Young Sords."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 276,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 277,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 278,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00007D02",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_5",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 279,
+          "DefaultSegmentText": "1,314 conscripts died in training.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 280,
+            "$declaredCount": 9,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 281,
+                "Condition": "BaseGame.SordlandArmySize == 0 && BaseGame.Ending_RumburgWarWin == true",
+                "Text": "73,632 soldiers died during the Rumburg Invasion."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 282,
+                "Condition": "BaseGame.SordlandArmySize == 0 && BaseGame.Ending_RumburgWarLost == true",
+                "Text": "589,112 Sordish lives were lost during the Rumburg invasion."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 283,
+                "Condition": "BaseGame.SordlandArmySize == 1 && BaseGame.Ending_RumburgWarWin == true",
+                "Text": "99,332 soldiers died during the Rumburg Invasion."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 284,
+                "Condition": "BaseGame.SordlandArmySize == 1 && BaseGame.Ending_RumburgWarLost == true",
+                "Text": "156,332 soldiers died during the Rumburg Invasion."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 285,
+                "Condition": "BaseGame.SordlandArmySize == 2 && BaseGame.Ending_RumburgWarWin == true",
+                "Text": "189,229 soldiers died during the Rumburg Invasion."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 286,
+                "Condition": "BaseGame.SordlandArmySize == 2 && BaseGame.Ending_RumburgWarLost == true",
+                "Text": "433,165 soldiers died during the Rumburg Invasion."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 287,
+                "Condition": "BaseGame.Turn05_SnO_Military_ReduceSize == true",
+                "Text": "86,450 soldiers became unemployed."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 288,
+                "Condition": "BaseGame.Situation_Military_GreenGenerals == true",
+                "Text": "6,894 military personnel were forcibly retired."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 289,
+                "Condition": "BaseGame.Turn06_SnO_Conscription_Removed == true",
+                "Text": "102,345 conscripts joined the work force."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 290,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 291,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 292,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00007D06",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_6",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 293,
+          "DefaultSegmentText": "108,863 new Bludish voters registered to vote.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 294,
+            "$declaredCount": 4,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 295,
+                "Condition": "BaseGame.Reform_EmergencyDecree_Banned_Bluds == true",
+                "Text": "12,390 people were arrested for their ties to the Workers Party of Bludia."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 296,
+                "Condition": "BaseGame.Situation_Law_BludishOppression == true",
+                "Text": "11,222 people with Bludish descent were jailed and 663 were killed."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 297,
+                "Condition": "BaseGame.Situation_Law_BludishProblem == true",
+                "Text": "3,390 people with Bludish descent were jailed and 239 were killed."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 298,
+                "Condition": "BaseGame.Bill_Turn09_BludishCommission_Signed == true",
+                "Text": "More than 15,899 people with Bludish descent were released from prison."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 299,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 300,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 301,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00007D0A",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_7",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 302,
+          "DefaultSegmentText": "3,899 legal cases were delayed.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 303,
+            "$declaredCount": 6,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 304,
+                "Condition": "BaseGame.Policy_Order_SecretStatePolice == true",
+                "Text": "328 people disappeared without a trace."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 305,
+                "Condition": "BaseGame.Turn09_A_Investigation_OldGuard_GovernmentOfficialsPurge == true",
+                "Text": "4,109 state officials were arrested for corruption charges."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 306,
+                "Condition": "BaseGame.Turn07_Investigate_OldGuard == true && BaseGame.Policy_Order_AntiCorruptionPolice == true",
+                "Text": "Investigations were launched on 311 state officials."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 307,
+                "Condition": "BaseGame.Turn07_Investigate_Opposition == true && BaseGame.Policy_Order_AntiCorruptionPolice == true",
+                "Text": "Investigations were launched on 22 opposition politicians."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 308,
+                "Condition": "BaseGame.Turn07_Investigate_Oligarchs == true && BaseGame.Policy_Order_AntiCorruptionPolice == true",
+                "Text": "Investigations were launched on 48 businessmen."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 309,
+                "Condition": "BaseGame.Situation_Law_EfficientJusticeSystem == true",
+                "Text": "2,389 legal cases were closed."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 310,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 311,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 312,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00007D0E",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_8",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 313,
+          "DefaultSegmentText": "11,340 domestic violence cases were reported.",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 314,
+            "$declaredCount": 3,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 315,
+                "Condition": "BaseGame.Bill_Turn09_StrongWomensRights_Signed == true",
+                "Text": "614,470 women joined the workforce and 805,380 girls were enrolled at secondary education for the first time."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 316,
+                "Condition": "BaseGame.Bill_Turn09_WeakWomensRights_Signed == true && BaseGame.Situation_Welfare_GenderEqualityInEducation == true",
+                "Text": "1,340 women won a domestic violence case at the courts and 403,380 girls were enrolled at secondary education for the first time."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 317,
+                "Condition": "BaseGame.Bill_Turn09_WeakWomensRights_Signed == true",
+                "Text": "1,340 women won a domestic violence case at the courts."
+              }
+            ]
+          }
+        }
+      },
+{
+        "$type": "Il2Cpp.SummarySegmentData",
+        "$objectId": 318,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 319,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 320,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00007D12",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_SummarySegment_9",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummarySegmentProperties": {
+          "$type": "Il2Cpp.SummarySegmentProperties",
+          "$objectId": 321,
+          "DefaultSegmentText": "",
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummarySegmentProperties+SummarySegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 322,
+            "$declaredCount": 6,
+            "$items": [
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 323,
+                "Condition": "BaseGame.Situation_Economy_SmallBusiness_Growth == true && BaseGame.Turn09_EnT_SordishRecovery == true",
+                "Text": "13,142 businesses were founded."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 324,
+                "Condition": "BaseGame.Situation_Economy_LargeBusiness_CreateJobs == true && BaseGame.Turn09_EnT_SordishRecovery == true",
+                "Text": "409,784 jobs were created by four largest companies of Sordland."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 325,
+                "Condition": "BaseGame.Situation_Economy_LargeBusiness_CreateJobs == true && BaseGame.Turn09_EnT_SordishRecovery == true && BaseGame.Reform_PresiPower_Weak_FairTradeCommission == true",
+                "Text": "409,784 jobs were created by four largest companies of Sordland."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 326,
+                "Condition": "BaseGame.Turn09_EnT_SordishDepression == true",
+                "Text": "81,340 companies declared bankruptcy."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 327,
+                "Condition": "BaseGame.Situation_Economy_SmallBusiness_Stagnate == true",
+                "Text": "9,340 small businesses declared bankruptcy."
+              },
+{
+                "$type": "Il2Cpp.SummarySegmentProperties+SummarySegmentCondition",
+                "$objectId": 328,
+                "Condition": "BaseGame.Situation_Economy_LargeBusiness_Downsize == true",
+                "Text": "Foreign investors have pulled out around 3 billion SR from the Sordish market."
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "dataset": "ConditionalInstructionData",
+  "sourceFile": "EntityDataManager/0031_ConditionalInstructionData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.ConditionalInstructionData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.4598777Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "94",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "126",
+    "bytes": "22000"
+  },
+  "primitiveValuesParsed": 94,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalInstructionData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 4,
+    "$items": [
+{
+        "$type": "Il2Cpp.ConditionalInstructionData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CheckOnStepNo": -1,
+        "CheckOnTurnNo": -1,
+        "ConditionalInstructionProperties": {
+          "$type": "Il2Cpp.ConditionalInstructionProperties",
+          "$objectId": 5,
+          "CheckOnStepNo": -1,
+          "CheckOnTurnNo": -1,
+          "CheckPerStep": false,
+          "CheckPerStoryFragment": false,
+          "CheckPerTurn": false,
+          "ConditionalInstructions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 6,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction",
+                "$objectId": 7,
+                "Condition": "BaseGameSetup.CurrentTurn >= 8",
+                "Instruction": "BaseGame.Economy_DangerThreshold = 2"
+              },
+{
+                "$type": "Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction",
+                "$objectId": 8,
+                "Condition": "BaseGameSetup.CurrentTurn >= 8 && (BaseGame.Turn09_EnT_SordishDepression == true || (BaseGame.LateGameCrisis >= 3 && BaseGame.GovernmentBudget <= -10))",
+                "Instruction": "BaseGame.Economy_DangerThreshold = 8"
+              }
+            ]
+          },
+          "IsDone": false,
+          "IsOneTime": false,
+          "Priority": 20
+        },
+        "Id": "0x0100006A0001CA22",
+        "IsDone": false,
+        "IsWIP": false,
+        "NameInDatabase": "Calculation_Economy_DangerThreshold_PostTurn8",
+        "Notes": "",
+        "Path": "Sordland/Conditional Instructions/Manual",
+        "Priority": 20
+      },
+{
+        "$type": "Il2Cpp.ConditionalInstructionData",
+        "$objectId": 9,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 10,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 11,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CheckOnStepNo": -1,
+        "CheckOnTurnNo": -1,
+        "ConditionalInstructionProperties": {
+          "$type": "Il2Cpp.ConditionalInstructionProperties",
+          "$objectId": 12,
+          "CheckOnStepNo": -1,
+          "CheckOnTurnNo": -1,
+          "CheckPerStep": false,
+          "CheckPerStoryFragment": false,
+          "CheckPerTurn": false,
+          "ConditionalInstructions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 13,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction",
+                "$objectId": 14,
+                "Condition": "BaseGameSetup.CurrentTurn <= 7",
+                "Instruction": "BaseGame.Economy_DangerThreshold = 2"
+              },
+{
+                "$type": "Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction",
+                "$objectId": 15,
+                "Condition": "BaseGameSetup.CurrentTurn <= 7 && BaseGame.GovernmentBudget <= -8",
+                "Instruction": "BaseGame.Economy_DangerThreshold = 4"
+              }
+            ]
+          },
+          "IsDone": false,
+          "IsOneTime": false,
+          "Priority": 20
+        },
+        "Id": "0x0100006A0001CA0D",
+        "IsDone": false,
+        "IsWIP": false,
+        "NameInDatabase": "Calculation_Economy_DangerThreshold_PreTurn8",
+        "Notes": "",
+        "Path": "Sordland/Conditional Instructions/Manual",
+        "Priority": 20
+      },
+{
+        "$type": "Il2Cpp.ConditionalInstructionData",
+        "$objectId": 16,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 17,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 18,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CheckOnStepNo": -1,
+        "CheckOnTurnNo": -1,
+        "ConditionalInstructionProperties": {
+          "$type": "Il2Cpp.ConditionalInstructionProperties",
+          "$objectId": 19,
+          "CheckOnStepNo": -1,
+          "CheckOnTurnNo": -1,
+          "CheckPerStep": false,
+          "CheckPerStoryFragment": false,
+          "CheckPerTurn": false,
+          "ConditionalInstructions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 20,
+            "$declaredCount": 5,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction",
+                "$objectId": 21,
+                "Condition": "",
+                "Instruction": "EvaluateConditionalInstruction(\"Calculation_Economy_DangerThreshold_PreTurn8\");\nEvaluateConditionalInstruction(\"Calculation_Economy_DangerThreshold_PostTurn8\");"
+              },
+{
+                "$type": "Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction",
+                "$objectId": 22,
+                "Condition": "BaseGame.Economy <= BaseGame.Economy_DangerThreshold",
+                "Instruction": "BaseGame.Economy_Indicator = -2"
+              },
+{
+                "$type": "Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction",
+                "$objectId": 23,
+                "Condition": "BaseGame.Economy - BaseGame.Economy_DangerThreshold > 0 && BaseGame.Economy - BaseGame.Economy_DangerThreshold <= 2",
+                "Instruction": "BaseGame.Economy_Indicator = -1"
+              },
+{
+                "$type": "Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction",
+                "$objectId": 24,
+                "Condition": "BaseGame.Economy - BaseGame.Economy_DangerThreshold > 2 && BaseGame.Economy - BaseGame.Economy_DangerThreshold <= 10",
+                "Instruction": "BaseGame.Economy_Indicator = 0"
+              },
+{
+                "$type": "Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction",
+                "$objectId": 25,
+                "Condition": "BaseGame.Economy - BaseGame.Economy_DangerThreshold > 11",
+                "Instruction": "BaseGame.Economy_Indicator = 1"
+              }
+            ]
+          },
+          "IsDone": false,
+          "IsOneTime": false,
+          "Priority": 0
+        },
+        "Id": "0x0100006A0001C3A0",
+        "IsDone": false,
+        "IsWIP": false,
+        "NameInDatabase": "Calculation_Economy_Indicator",
+        "Notes": "",
+        "Path": "Sordland/Conditional Instructions/Manual",
+        "Priority": 0
+      },
+{
+        "$type": "Il2Cpp.ConditionalInstructionData",
+        "$objectId": 26,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 27,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 28,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CheckOnStepNo": 22,
+        "CheckOnTurnNo": 8,
+        "ConditionalInstructionProperties": {
+          "$type": "Il2Cpp.ConditionalInstructionProperties",
+          "$objectId": 29,
+          "CheckOnStepNo": 22,
+          "CheckOnTurnNo": 8,
+          "CheckPerStep": false,
+          "CheckPerStoryFragment": false,
+          "CheckPerTurn": false,
+          "ConditionalInstructions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 30,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction",
+                "$objectId": 31,
+                "Condition": "BaseGame.Economy >= 10",
+                "Instruction": "BaseGame.FiscalReview_Surplus = true;\nBaseGame.FiscalReview_Deficit = false"
+              },
+{
+                "$type": "Il2Cpp.ConditionalInstructionProperties+ConditionalInstruction",
+                "$objectId": 32,
+                "Condition": "BaseGame.Economy >= 5 && BaseGame.Economy <= 9",
+                "Instruction": "BaseGame.FiscalReview_Deficit = true;\nBaseGame.FiscalReview_Surplus = false"
+              }
+            ]
+          },
+          "IsDone": false,
+          "IsOneTime": false,
+          "Priority": 0
+        },
+        "Id": "0x010000C60000090D",
+        "IsDone": false,
+        "IsWIP": false,
+        "NameInDatabase": "FiscalReview_Set",
+        "Notes": "",
+        "Path": "Sordland/Conditional Instructions/Fiscal Review Set",
+        "Priority": 0
+      }
+    ]
+  }
+}

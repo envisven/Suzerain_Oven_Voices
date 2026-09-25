@@ -1,0 +1,121 @@
+{
+  "dataset": "summaryData",
+  "sourceFile": "EntityDataManager/0152_summaryData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.summaryData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.8887076Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "38",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "49",
+    "bytes": "6442"
+  },
+  "primitiveValuesParsed": 38,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummaryData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 2,
+    "$items": [
+{
+        "$type": "Il2Cpp.SummaryData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006A000062C8",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Summary",
+        "Notes": "",
+        "Path": "Rizia/Summary",
+        "SummaryProperties": {
+          "$type": "Il2Cpp.SummaryProperties",
+          "$objectId": 5,
+          "Segments": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 6,
+            "$declaredCount": 12,
+            "$items": [
+"Rizia_SummarySegment_1",
+"Rizia_SummarySegment_2",
+"Rizia_SummarySegment_3",
+"Rizia_SummarySegment_4",
+"Rizia_SummarySegment_5",
+"Rizia_SummarySegment_6",
+"Rizia_SummarySegment_7",
+"Rizia_SummarySegment_8",
+"Rizia_SummarySegment_9",
+"Rizia_SummarySegment_10",
+"Rizia_SummarySegment_11",
+"Rizia_SummarySegment_12"
+            ]
+          },
+          "SummaryTitle": "Between 1950-1958..."
+        }
+      },
+{
+        "$type": "Il2Cpp.SummaryData",
+        "$objectId": 7,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 8,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 9,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A000062BE",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Summary",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummaryProperties": {
+          "$type": "Il2Cpp.SummaryProperties",
+          "$objectId": 10,
+          "Segments": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 11,
+            "$declaredCount": 12,
+            "$items": [
+"Sordland_SummarySegment_1",
+"Sordland_SummarySegment_2",
+"Sordland_SummarySegment_3",
+"Sordland_SummarySegment_4",
+"Sordland_SummarySegment_5",
+"Sordland_SummarySegment_6",
+"Sordland_SummarySegment_7",
+"Sordland_SummarySegment_8",
+"Sordland_SummarySegment_9",
+"Sordland_SummarySegment_10",
+"Sordland_SummarySegment_11",
+"Sordland_SummarySegment_12"
+            ]
+          },
+          "SummaryTitle": "Between 1954-1958..."
+        }
+      }
+    ]
+  }
+}

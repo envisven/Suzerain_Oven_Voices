@@ -1,0 +1,172 @@
+{
+  "dataset": "operationData",
+  "sourceFile": "EntityDataManager/0142_operationData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.operationData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.7813365Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "61",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "77",
+    "bytes": "11648"
+  },
+  "primitiveValuesParsed": 61,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.OperationData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 3,
+    "$items": [
+{
+        "$type": "Il2Cpp.OperationData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100009A0000ECC7",
+        "IsFinished": false,
+        "IsWIP": false,
+        "NameInDatabase": "Operation_1",
+        "Notes": "",
+        "OperationProperties": {
+          "$type": "Il2Cpp.OperationProperties",
+          "$objectId": 5,
+          "IsFinished": false,
+          "IsOperationFinishedEarly": "RiziaDLC.War_CapturedCityCount == 4 || RiziaDLC.Army_Unit_GrandTotal_Deployed + RiziaDLC.Army_Unit_GrandTotal_Total <= 0",
+          "IsTutorial": false,
+          "LoseReport": "Operation_1_Result_Lost",
+          "OperationName": "Operation: Golden Shield",
+          "OperationStartCondition": "RiziaDLC.Army_Unit_Infantry_Total + RiziaDLC.Army_Unit_Infantry_Total + RiziaDLC.Army_Unit_Azaro_Total + RiziaDLC.Army_Unit_GoldenGuard_Total + RiziaDLC.Army_Unit_Mercenary_Total + RiziaDLC.Army_Unit_Mountaineer_Total + RiziaDLC.Army_Unit_Sazon_Total + RiziaDLC.Army_Unit_Support_Total + RiziaDLC.Army_Unit_Tank_Total + \nRiziaDLC.Army_Unit_Militia_Total + RiziaDLC.Army_Unit_Infantry_Deployed + RiziaDLC.Army_Unit_Infantry_Deployed + RiziaDLC.Army_Unit_Azaro_Deployed + RiziaDLC.Army_Unit_GoldenGuard_Deployed + RiziaDLC.Army_Unit_Mercenary_Deployed + RiziaDLC.Army_Unit_Mountaineer_Deployed + RiziaDLC.Army_Unit_Sazon_Deployed + RiziaDLC.Army_Unit_Support_Deployed + RiziaDLC.Army_Unit_Tank_Deployed + \nRiziaDLC.Army_Unit_Militia_Deployed >= 8",
+          "Phases": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 6,
+            "$declaredCount": 3,
+            "$items": [
+"WarFragment_1_1",
+"WarFragment_1_2",
+"WarFragment_1_3"
+            ]
+          },
+          "ResultConditionalInstruction": "Operation_1_Result",
+          "ResultVariable": "RiziaDLC.War_Pales_Operation1_Won",
+          "TotalEnemyDeadVariable": "RiziaDLC.War_Operation1_TotalEnemy_Dead",
+          "TotalPlayerDeadVariable": "RiziaDLC.War_Operation1_TotalPlayer_Dead",
+          "WinReport": "Operation_1_Result_Won"
+        },
+        "Path": "Rizia/Operations"
+      },
+{
+        "$type": "Il2Cpp.OperationData",
+        "$objectId": 7,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 8,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 9,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100009A0000EDAC",
+        "IsFinished": false,
+        "IsWIP": false,
+        "NameInDatabase": "Operation_2",
+        "Notes": "",
+        "OperationProperties": {
+          "$type": "Il2Cpp.OperationProperties",
+          "$objectId": 10,
+          "IsFinished": false,
+          "IsOperationFinishedEarly": "RiziaDLC.War_Objective_Captured_Pales == true || RiziaDLC.Army_Unit_GrandTotal_Deployed + RiziaDLC.Army_Unit_GrandTotal_Total <= 0 || RiziaDLC.War_WehlenJoined == true || RiziaDLC.Decision_Turn10_Ceasefire_Accepted == true",
+          "IsTutorial": false,
+          "LoseReport": "Operation_2_Result_Lost",
+          "OperationName": "Operation: Total Tranquility",
+          "OperationStartCondition": "RiziaDLC.Army_Unit_Infantry_Total + RiziaDLC.Army_Unit_Infantry_Total + RiziaDLC.Army_Unit_Azaro_Total + RiziaDLC.Army_Unit_GoldenGuard_Total + RiziaDLC.Army_Unit_Mercenary_Total + RiziaDLC.Army_Unit_Mountaineer_Total + RiziaDLC.Army_Unit_Sazon_Total + RiziaDLC.Army_Unit_Support_Total + RiziaDLC.Army_Unit_Tank_Total + \nRiziaDLC.Army_Unit_Militia_Total + RiziaDLC.Army_Unit_Infantry_Deployed + RiziaDLC.Army_Unit_Infantry_Deployed + RiziaDLC.Army_Unit_Azaro_Deployed + RiziaDLC.Army_Unit_GoldenGuard_Deployed + RiziaDLC.Army_Unit_Mercenary_Deployed + RiziaDLC.Army_Unit_Mountaineer_Deployed + RiziaDLC.Army_Unit_Sazon_Deployed + RiziaDLC.Army_Unit_Support_Deployed + RiziaDLC.Army_Unit_Tank_Deployed + \nRiziaDLC.Army_Unit_Militia_Deployed >= 5 && RiziaDLC.War_Pales_Operation1_Won == true",
+          "Phases": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 11,
+            "$declaredCount": 3,
+            "$items": [
+"WarFragment_2_1",
+"WarFragment_2_2",
+"WarFragment_2_3"
+            ]
+          },
+          "ResultConditionalInstruction": "Operation_2_Result",
+          "ResultVariable": "RiziaDLC.War_Pales_Won",
+          "TotalEnemyDeadVariable": "RiziaDLC.War_Operation2_TotalEnemy_Dead",
+          "TotalPlayerDeadVariable": "RiziaDLC.War_Operation2_TotalPlayer_Dead",
+          "WinReport": "Operation_2_Result_Won"
+        },
+        "Path": "Rizia/Operations"
+      },
+{
+        "$type": "Il2Cpp.OperationData",
+        "$objectId": 12,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 13,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 14,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100009A0000EDBB",
+        "IsFinished": false,
+        "IsWIP": false,
+        "NameInDatabase": "Operation_Tutorial",
+        "Notes": "",
+        "OperationProperties": {
+          "$type": "Il2Cpp.OperationProperties",
+          "$objectId": 15,
+          "IsFinished": false,
+          "IsOperationFinishedEarly": "",
+          "IsTutorial": true,
+          "LoseReport": "Operation_Tutorial_Result",
+          "OperationName": "Tutorial",
+          "OperationStartCondition": "",
+          "Phases": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 1,
+            "$items": [
+"WarFragment_Tutorial"
+            ]
+          },
+          "ResultConditionalInstruction": "",
+          "ResultVariable": "",
+          "TotalEnemyDeadVariable": "",
+          "TotalPlayerDeadVariable": "",
+          "WinReport": "Operation_Tutorial_Result"
+        },
+        "Path": "Rizia/Operations"
+      }
+    ]
+  }
+}

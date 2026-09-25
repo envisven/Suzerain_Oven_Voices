@@ -1,0 +1,1115 @@
+{
+  "dataset": "mapSegmentData",
+  "sourceFile": "EntityDataManager/0133_mapSegmentData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.mapSegmentData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.6511713Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "576",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "705",
+    "bytes": "64441"
+  },
+  "primitiveValuesParsed": 576,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.MapSegmentData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 16,
+    "$items": [
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.82,
+          "g": 0.882,
+          "r": 0.247
+        },
+        "Id": "0x010000990000011B",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 5,
+          "Color_A": 1,
+          "Color_B": 0.82,
+          "Color_G": 0.882,
+          "Color_R": 0.247,
+          "FocusTokenOnClick": "Rizia_Country_Derdia",
+          "IsEnabled": true,
+          "Offset_X": 1.5,
+          "Offset_Y": -0.29,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.612,
+          "OutlineColor_G": 0.624,
+          "OutlineColor_R": 0.725,
+          "Texture": "Maps/T_DerdiaFlag",
+          "Tiling_X": 3,
+          "Tiling_Y": 3,
+          "UvRotation": 35.97
+        },
+        "NameInDatabase": "Rizia_MapSegment_Derdia",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": 1.5,
+          "y": -0.29
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.612,
+          "g": 0.624,
+          "r": 0.725
+        },
+        "Path": "Rizia/Map Segments/Rizia",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 3,
+          "y": 3
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 6,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 7,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.667,
+          "g": 0.667,
+          "r": 1
+        },
+        "Id": "0x0100009900000108",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 9,
+          "Color_A": 1,
+          "Color_B": 0.667,
+          "Color_G": 0.667,
+          "Color_R": 1,
+          "FocusTokenOnClick": "Rizia_Country_Lespia",
+          "IsEnabled": true,
+          "Offset_X": -0.34,
+          "Offset_Y": -0.78,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.145,
+          "OutlineColor_G": 0.863,
+          "OutlineColor_R": 1,
+          "Texture": "Maps/T_LespiaFlag",
+          "Tiling_X": 1.5,
+          "Tiling_Y": 1.5,
+          "UvRotation": -18.63
+        },
+        "NameInDatabase": "Rizia_MapSegment_Lespia",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": -0.34,
+          "y": -0.78
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.145,
+          "g": 0.863,
+          "r": 1
+        },
+        "Path": "Rizia/Map Segments/Rizia",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 1.5,
+          "y": 1.5
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 10,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 11,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 12,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0,
+          "g": 1,
+          "r": 1
+        },
+        "Id": "0x0100009900000127",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 13,
+          "Color_A": 1,
+          "Color_B": 0,
+          "Color_G": 1,
+          "Color_R": 1,
+          "FocusTokenOnClick": "Rizia_Country_Morella",
+          "IsEnabled": true,
+          "Offset_X": 1.01,
+          "Offset_Y": -0.03,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.631,
+          "OutlineColor_G": 0.82,
+          "OutlineColor_R": 0.647,
+          "Texture": "Maps/T_MorellaFlag",
+          "Tiling_X": 2,
+          "Tiling_Y": 2,
+          "UvRotation": -20.49
+        },
+        "NameInDatabase": "Rizia_MapSegment_Morella",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": 1.01,
+          "y": -0.03
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.631,
+          "g": 0.82,
+          "r": 0.647
+        },
+        "Path": "Rizia/Map Segments/Rizia",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 2,
+          "y": 2
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 14,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 15,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.667,
+          "g": 0.259,
+          "r": 0.549
+        },
+        "Id": "0x010000A100003F0F",
+        "IsEnabled": false,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 17,
+          "Color_A": 1,
+          "Color_B": 0.667,
+          "Color_G": 0.259,
+          "Color_R": 0.549,
+          "FocusTokenOnClick": "Rizia_Country_Pales",
+          "IsEnabled": false,
+          "Offset_X": 2.43,
+          "Offset_Y": 0.63,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.388,
+          "OutlineColor_G": 0.667,
+          "OutlineColor_R": 0.867,
+          "Texture": "Maps/T_PalesFlag",
+          "Tiling_X": 3.5,
+          "Tiling_Y": 3.5,
+          "UvRotation": -17.96
+        },
+        "NameInDatabase": "Rizia_MapSegment_Pales_Big",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": 2.43,
+          "y": 0.63
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.388,
+          "g": 0.667,
+          "r": 0.867
+        },
+        "Path": "Rizia/Map Segments/Rizia",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 3.5,
+          "y": 3.5
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 18,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 19,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 20,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.667,
+          "g": 0.259,
+          "r": 0.549
+        },
+        "Id": "0x0100009900000131",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 21,
+          "Color_A": 1,
+          "Color_B": 0.667,
+          "Color_G": 0.259,
+          "Color_R": 0.549,
+          "FocusTokenOnClick": "Rizia_Country_Pales",
+          "IsEnabled": true,
+          "Offset_X": 2.3,
+          "Offset_Y": 1.31,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.388,
+          "OutlineColor_G": 0.667,
+          "OutlineColor_R": 0.867,
+          "Texture": "Maps/T_PalesFlag",
+          "Tiling_X": 5,
+          "Tiling_Y": 5,
+          "UvRotation": -17.96
+        },
+        "NameInDatabase": "Rizia_MapSegment_Pales_Default",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": 2.3,
+          "y": 1.31
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.388,
+          "g": 0.667,
+          "r": 0.867
+        },
+        "Path": "Rizia/Map Segments/Rizia",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 5,
+          "y": 5
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 22,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 23,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 24,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.667,
+          "g": 0.259,
+          "r": 0.549
+        },
+        "Id": "0x010000A100003F05",
+        "IsEnabled": false,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 25,
+          "Color_A": 1,
+          "Color_B": 0.667,
+          "Color_G": 0.259,
+          "Color_R": 0.549,
+          "FocusTokenOnClick": "Rizia_Country_Pales",
+          "IsEnabled": false,
+          "Offset_X": 2.02,
+          "Offset_Y": 1.31,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.388,
+          "OutlineColor_G": 0.667,
+          "OutlineColor_R": 0.867,
+          "Texture": "Maps/T_PalesFlag",
+          "Tiling_X": 8,
+          "Tiling_Y": 8,
+          "UvRotation": -17.96
+        },
+        "NameInDatabase": "Rizia_MapSegment_Pales_Half",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": 2.02,
+          "y": 1.31
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.388,
+          "g": 0.667,
+          "r": 0.867
+        },
+        "Path": "Rizia/Map Segments/Rizia",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 8,
+          "y": 8
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 26,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 27,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 28,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.945,
+          "g": 0.349,
+          "r": 0.396
+        },
+        "Id": "0x0100009900000111",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 29,
+          "Color_A": 1,
+          "Color_B": 0.945,
+          "Color_G": 0.349,
+          "Color_R": 0.396,
+          "FocusTokenOnClick": "Rizia_Country_Wehlen",
+          "IsEnabled": true,
+          "Offset_X": 0.37,
+          "Offset_Y": -0.8,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.184,
+          "OutlineColor_G": 0.376,
+          "OutlineColor_R": 0.906,
+          "Texture": "Maps/T_WehlenFlag",
+          "Tiling_X": 3,
+          "Tiling_Y": 3,
+          "UvRotation": -14.49
+        },
+        "NameInDatabase": "Rizia_MapSegment_Wehlen",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": 0.37,
+          "y": -0.8
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.184,
+          "g": 0.376,
+          "r": 0.906
+        },
+        "Path": "Rizia/Map Segments/Rizia",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 3,
+          "y": 3
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 30,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 31,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 32,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.42,
+          "g": 0.725,
+          "r": 0.518
+        },
+        "Id": "0x0100009D000004A8",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 33,
+          "Color_A": 1,
+          "Color_B": 0.42,
+          "Color_G": 0.725,
+          "Color_R": 0.518,
+          "FocusTokenOnClick": "Rizia_Country_Wehlen",
+          "IsEnabled": true,
+          "Offset_X": 0.37,
+          "Offset_Y": -0.8,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.184,
+          "OutlineColor_G": 0.376,
+          "OutlineColor_R": 0.906,
+          "Texture": "Maps/T_WehlenFlag",
+          "Tiling_X": 3,
+          "Tiling_Y": 3,
+          "UvRotation": -14.49
+        },
+        "NameInDatabase": "Rizia_MapSegment_Zille",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": 0.37,
+          "y": -0.8
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.184,
+          "g": 0.376,
+          "r": 0.906
+        },
+        "Path": "Rizia/Map Segments/Rizia",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 3,
+          "y": 3
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 34,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 35,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 36,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.42,
+          "g": 0.725,
+          "r": 0.518
+        },
+        "Id": "0x010000A100003EFB",
+        "IsEnabled": false,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 37,
+          "Color_A": 1,
+          "Color_B": 0.42,
+          "Color_G": 0.725,
+          "Color_R": 0.518,
+          "FocusTokenOnClick": "Rizia_Country_Zille",
+          "IsEnabled": false,
+          "Offset_X": 0.37,
+          "Offset_Y": -0.8,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.522,
+          "OutlineColor_G": 0.502,
+          "OutlineColor_R": 0.173,
+          "Texture": "Maps/T_ZilleFlag",
+          "Tiling_X": 3,
+          "Tiling_Y": 3,
+          "UvRotation": -14.49
+        },
+        "NameInDatabase": "Rizia_MapSegment_ZilleIndependent",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": 0.37,
+          "y": -0.8
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.522,
+          "g": 0.502,
+          "r": 0.173
+        },
+        "Path": "Rizia/Map Segments/Rizia",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 3,
+          "y": 3
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 38,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 39,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 40,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 1,
+          "g": 0.894,
+          "r": 0
+        },
+        "Id": "0x010000990000013B",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 41,
+          "Color_A": 1,
+          "Color_B": 1,
+          "Color_G": 0.894,
+          "Color_R": 0,
+          "FocusTokenOnClick": "Rizia_City_PorteDrazon",
+          "IsEnabled": true,
+          "Offset_X": -1.41,
+          "Offset_Y": -1.58,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 1,
+          "OutlineColor_G": 0.894,
+          "OutlineColor_R": 0,
+          "Texture": "Maps/T_RiziaFlag",
+          "Tiling_X": 5,
+          "Tiling_Y": 5,
+          "UvRotation": -25
+        },
+        "NameInDatabase": "Rizia_World_MapSegment_Rizia",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": -1.41,
+          "y": -1.58
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 1,
+          "g": 0.894,
+          "r": 0
+        },
+        "Path": "Rizia/Map Segments/World",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 5,
+          "y": 5
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 42,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 43,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 44,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.071,
+          "g": 1,
+          "r": 0
+        },
+        "Id": "0x0100006A00000070",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 45,
+          "Color_A": 1,
+          "Color_B": 0.071,
+          "Color_G": 1,
+          "Color_R": 0,
+          "FocusTokenOnClick": "Sordland_Country_Agnolia",
+          "IsEnabled": true,
+          "Offset_X": -5.88,
+          "Offset_Y": 1.76,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.518,
+          "OutlineColor_G": 0.831,
+          "OutlineColor_R": 0.427,
+          "Texture": "Maps/T_AgnoliaFlag",
+          "Tiling_X": 2.8,
+          "Tiling_Y": 2.8,
+          "UvRotation": 41.35
+        },
+        "NameInDatabase": "Sordland_MapSegment_Agnolia",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": -5.88,
+          "y": 1.76
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.518,
+          "g": 0.831,
+          "r": 0.427
+        },
+        "Path": "Sordland/Map Segments/Sordland",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 2.8,
+          "y": 2.8
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 46,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 47,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 48,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0,
+          "g": 0.659,
+          "r": 1
+        },
+        "Id": "0x0100006A0000006C",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 49,
+          "Color_A": 1,
+          "Color_B": 0,
+          "Color_G": 0.659,
+          "Color_R": 1,
+          "FocusTokenOnClick": "Sordland_Country_Lespia",
+          "IsEnabled": true,
+          "Offset_X": -0.21,
+          "Offset_Y": -0.78,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.145,
+          "OutlineColor_G": 0.863,
+          "OutlineColor_R": 1,
+          "Texture": "Maps/T_LespiaFlag",
+          "Tiling_X": 1.5,
+          "Tiling_Y": 1.5,
+          "UvRotation": -1.7
+        },
+        "NameInDatabase": "Sordland_MapSegment_Lespia",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": -0.21,
+          "y": -0.78
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.145,
+          "g": 0.863,
+          "r": 1
+        },
+        "Path": "Sordland/Map Segments/Sordland",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 1.5,
+          "y": 1.5
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 50,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 51,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 52,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 1,
+          "g": 0.235,
+          "r": 0.031
+        },
+        "Id": "0x0100006A00000074",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 53,
+          "Color_A": 1,
+          "Color_B": 1,
+          "Color_G": 0.235,
+          "Color_R": 0.031,
+          "FocusTokenOnClick": "Sordland_Country_Rumburg",
+          "IsEnabled": true,
+          "Offset_X": -5.24,
+          "Offset_Y": 2.34,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.604,
+          "OutlineColor_G": 0.498,
+          "OutlineColor_R": 0.475,
+          "Texture": "Maps/T_RumburgFlag",
+          "Tiling_X": 1.4,
+          "Tiling_Y": 1.4,
+          "UvRotation": 31.69
+        },
+        "NameInDatabase": "Sordland_MapSegment_Rumburg",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": -5.24,
+          "y": 2.34
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.604,
+          "g": 0.498,
+          "r": 0.475
+        },
+        "Path": "Sordland/Map Segments/Sordland",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 1.4,
+          "y": 1.4
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 54,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 55,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 56,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 1,
+          "g": 0.988,
+          "r": 0
+        },
+        "Id": "0x0100006A00000078",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 57,
+          "Color_A": 1,
+          "Color_B": 1,
+          "Color_G": 0.988,
+          "Color_R": 0,
+          "FocusTokenOnClick": "Sordland_Country_Valgsland",
+          "IsEnabled": true,
+          "Offset_X": -3.67,
+          "Offset_Y": 3.36,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.925,
+          "OutlineColor_G": 0.859,
+          "OutlineColor_R": 0.294,
+          "Texture": "Maps/T_ValgslandFlag",
+          "Tiling_X": 2.5,
+          "Tiling_Y": 2.5,
+          "UvRotation": 19.61
+        },
+        "NameInDatabase": "Sordland_MapSegment_Valgsland",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": -3.67,
+          "y": 3.36
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.925,
+          "g": 0.859,
+          "r": 0.294
+        },
+        "Path": "Sordland/Map Segments/Sordland",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 2.5,
+          "y": 2.5
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 58,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 59,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 60,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0,
+          "g": 0,
+          "r": 0.839
+        },
+        "Id": "0x0100006A0000007C",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 61,
+          "Color_A": 1,
+          "Color_B": 0,
+          "Color_G": 0,
+          "Color_R": 0.839,
+          "FocusTokenOnClick": "Sordland_Country_Wehlen",
+          "IsEnabled": true,
+          "Offset_X": -1.9,
+          "Offset_Y": 4.29,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.184,
+          "OutlineColor_G": 0.376,
+          "OutlineColor_R": 0.906,
+          "Texture": "Maps/T_WehlenFlag",
+          "Tiling_X": 1.6,
+          "Tiling_Y": 1.6,
+          "UvRotation": -18.3
+        },
+        "NameInDatabase": "Sordland_MapSegment_Wehlen",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": -1.9,
+          "y": 4.29
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.184,
+          "g": 0.376,
+          "r": 0.906
+        },
+        "Path": "Sordland/Map Segments/Sordland",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 1.6,
+          "y": 1.6
+        }
+      },
+{
+        "$type": "Il2Cpp.MapSegmentData",
+        "$objectId": 62,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 63,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 64,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Color": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 1,
+          "g": 0,
+          "r": 0.894
+        },
+        "Id": "0x0100006A0000010C",
+        "IsEnabled": true,
+        "IsWIP": false,
+        "MapSegmentProperties": {
+          "$type": "Il2Cpp.MapSegmentProperties",
+          "$objectId": 65,
+          "Color_A": 1,
+          "Color_B": 1,
+          "Color_G": 0,
+          "Color_R": 0.894,
+          "FocusTokenOnClick": "Sordland_City_Holsord",
+          "IsEnabled": true,
+          "Offset_X": -3.47,
+          "Offset_Y": -3.35,
+          "Opacity": 0.3,
+          "OutlineColor_A": 1,
+          "OutlineColor_B": 0.369,
+          "OutlineColor_G": 0.851,
+          "OutlineColor_R": 0.992,
+          "Texture": "Maps/T_SordlandFlag",
+          "Tiling_X": 8,
+          "Tiling_Y": 8,
+          "UvRotation": -25
+        },
+        "NameInDatabase": "Sordland_World_MapSegment_Sordland",
+        "Notes": "",
+        "Offset": {
+          "$type": "UnityEngine.Vector2",
+          "x": -3.47,
+          "y": -3.35
+        },
+        "OutlineColor": {
+          "$type": "UnityEngine.Color",
+          "a": 1,
+          "b": 0.369,
+          "g": 0.851,
+          "r": 0.992
+        },
+        "Path": "Sordland/Map Segments/World",
+        "Tiling": {
+          "$type": "UnityEngine.Vector2",
+          "x": 8,
+          "y": 8
+        }
+      }
+    ]
+  }
+}

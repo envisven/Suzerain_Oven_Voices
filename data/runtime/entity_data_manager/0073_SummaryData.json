@@ -1,0 +1,74 @@
+{
+  "dataset": "SummaryData",
+  "sourceFile": "EntityDataManager/0073_SummaryData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.SummaryData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.7968806Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "19",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "25",
+    "bytes": "3568"
+  },
+  "primitiveValuesParsed": 19,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.SummaryData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 1,
+    "$items": [
+{
+        "$type": "Il2Cpp.SummaryData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A000062BE",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Summary",
+        "Notes": "",
+        "Path": "Sordland/Summary",
+        "SummaryProperties": {
+          "$type": "Il2Cpp.SummaryProperties",
+          "$objectId": 5,
+          "Segments": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 6,
+            "$declaredCount": 12,
+            "$items": [
+"Sordland_SummarySegment_1",
+"Sordland_SummarySegment_2",
+"Sordland_SummarySegment_3",
+"Sordland_SummarySegment_4",
+"Sordland_SummarySegment_5",
+"Sordland_SummarySegment_6",
+"Sordland_SummarySegment_7",
+"Sordland_SummarySegment_8",
+"Sordland_SummarySegment_9",
+"Sordland_SummarySegment_10",
+"Sordland_SummarySegment_11",
+"Sordland_SummarySegment_12"
+            ]
+          },
+          "SummaryTitle": "Between 1954-1958..."
+        }
+      }
+    ]
+  }
+}

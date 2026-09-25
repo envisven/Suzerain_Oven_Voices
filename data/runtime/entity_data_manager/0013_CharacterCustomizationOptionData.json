@@ -1,0 +1,2997 @@
+{
+  "dataset": "CharacterCustomizationOptionData",
+  "sourceFile": "EntityDataManager/0013_CharacterCustomizationOptionData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.CharacterCustomizationOptionData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.0535413Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "990",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "1387",
+    "bytes": "225219"
+  },
+  "primitiveValuesParsed": 990,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CharacterCustomizationOptionData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 99,
+    "$items": [
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 5,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Accessories_BlackGlasses",
+          "Instruction": "",
+          "Title": "Black Glasses"
+        },
+        "Id": "0x010000580000383F",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Accessories_BlackGlasses",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Accessories"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 6,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 7,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 9,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Accessories_BrownGlasses",
+          "Instruction": "",
+          "Title": "Brown Glasses"
+        },
+        "Id": "0x0100005D00000541",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Accessories_BrownGlasses",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Accessories"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 10,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 11,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 12,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 13,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Accessories_LespianCigar",
+          "Instruction": "",
+          "Title": "Lespian Cigar"
+        },
+        "Id": "0x0100005D00000548",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Accessories_LespianCigar",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Accessories"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 14,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 15,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 17,
+          "Condition": "",
+          "ImagePath": "",
+          "Instruction": "",
+          "Title": "None"
+        },
+        "Id": "0x01000046000222E3",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Accessories_None",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Accessories"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 18,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 19,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 20,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 21,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Accessories_ThinGlasses",
+          "Instruction": "",
+          "Title": "Thin Glasses"
+        },
+        "Id": "0x0100005D0000054F",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Accessories_ThinGlasses",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Accessories"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 22,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 23,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 24,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 25,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Accessories_ValgslandianPipe",
+          "Instruction": "",
+          "Title": "Valgslandian Pipe"
+        },
+        "Id": "0x0100005D00000556",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Accessories_ValgslandianPipe",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Accessories"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 26,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 27,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 28,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 29,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Suit_Default",
+          "Instruction": "",
+          "Title": "Default"
+        },
+        "Id": "0x0100005800003838",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Attire_Default",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 30,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 31,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 32,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 33,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Suit_Grand",
+          "Instruction": "",
+          "Title": "Grand"
+        },
+        "Id": "0x0100005D00000568",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Attire_Grand",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 34,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 35,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 36,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 37,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Suit_Malenyevist",
+          "Instruction": "",
+          "Title": "Malenyevist"
+        },
+        "Id": "0x0100005800003831",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Attire_Malenyevist",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 38,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 39,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 40,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 41,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Suit_MaroonSuit",
+          "Instruction": "",
+          "Title": "Maroon Suit"
+        },
+        "Id": "0x0100005D0000056F",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Attire_MaroonSuit",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 42,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 43,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 44,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 45,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Suit_SordlandFirst",
+          "Instruction": "",
+          "Title": "Sordland First"
+        },
+        "Id": "0x0100005D00000576",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Attire_SordlandFirst",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 46,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 47,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 48,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 49,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Suit_Tuxedo",
+          "Instruction": "",
+          "Title": "Tuxedo"
+        },
+        "Id": "0x0100005D0000057D",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Attire_Tuxedo",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 50,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 51,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 52,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 53,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Suit_WhiteSuit",
+          "Instruction": "",
+          "Title": "White Suit"
+        },
+        "Id": "0x0100005D00000584",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Attire_WhiteSuit",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 54,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 55,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 56,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 57,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Gold",
+          "Instruction": "",
+          "Title": "Gold"
+        },
+        "Id": "0x0100005D00000590",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Background_Gold",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 58,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 59,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 60,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 61,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Green",
+          "Instruction": "",
+          "Title": "Green"
+        },
+        "Id": "0x0100005D00000597",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Background_Green",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 62,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 63,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 64,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 65,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Maroon",
+          "Instruction": "",
+          "Title": "Maroon"
+        },
+        "Id": "0x0100005D0000059E",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Background_Maroon",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 66,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 67,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 68,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 69,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Office",
+          "Instruction": "",
+          "Title": "Office"
+        },
+        "Id": "0x0100005800003846",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Background_Office",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 70,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 71,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 72,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 73,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Red",
+          "Instruction": "",
+          "Title": "Red"
+        },
+        "Id": "0x0100005D000005A5",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Background_Red",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 74,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 75,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 76,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 77,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Default",
+          "Instruction": "",
+          "Title": "Tan"
+        },
+        "Id": "0x010000580000384D",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Background_Tan",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 78,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 79,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 80,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 81,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Turquoise",
+          "Instruction": "",
+          "Title": "Turquoise"
+        },
+        "Id": "0x0100005D000005AC",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Background_Turquoise",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 82,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 83,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 84,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 85,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_ChiefStrategist",
+          "Instruction": "",
+          "Title": "Chief Strategist"
+        },
+        "Id": "0x0100005D000005BF",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_ChiefStrategist",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 86,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 87,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 88,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 89,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Classy",
+          "Instruction": "",
+          "Title": "Classy"
+        },
+        "Id": "0x0100005D000005C6",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Classy",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 90,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 91,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 92,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 93,
+          "Condition": "",
+          "ImagePath": "",
+          "Instruction": "",
+          "Title": "Clean Shaven"
+        },
+        "Id": "0x0100005D000005D4",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_CleanShaven",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 94,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 95,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 96,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 97,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Comrade",
+          "Instruction": "",
+          "Title": "Comrade"
+        },
+        "Id": "0x0100005D000005B8",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Comrade",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 98,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 99,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 100,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 101,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Default",
+          "Instruction": "",
+          "Title": "Default"
+        },
+        "Id": "0x0100005800003854",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Default",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 102,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 103,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 104,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 105,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Idealist",
+          "Instruction": "",
+          "Title": "Idealist"
+        },
+        "Id": "0x0100005D000005CD",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Idealist",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 106,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 107,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 108,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 109,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Intellectual",
+          "Instruction": "",
+          "Title": "Intellectual"
+        },
+        "Id": "0x0100005D000005DB",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Intellectual",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 110,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 111,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 112,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 113,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Markian",
+          "Instruction": "",
+          "Title": "Markian"
+        },
+        "Id": "0x0100005D00000605",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Markian",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 114,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 115,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 116,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 117,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_MarkianNoble",
+          "Instruction": "",
+          "Title": "Markian Noble"
+        },
+        "Id": "0x0100005D0000060C",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_MarkianNoble",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 118,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 119,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 120,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 121,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Monarchist",
+          "Instruction": "",
+          "Title": "Monarchist"
+        },
+        "Id": "0x010000580000385B",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Monarchist",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 122,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 123,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 124,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 125,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Renan",
+          "Instruction": "",
+          "Title": "Renan"
+        },
+        "Id": "0x0100005D0000061A",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Renan",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 126,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 127,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 128,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 129,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Revolutionary",
+          "Instruction": "",
+          "Title": "Revolutionary"
+        },
+        "Id": "0x0100005D00000613",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Revolutionary",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 130,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 131,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 132,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 133,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_SordGentleman",
+          "Instruction": "",
+          "Title": "Sord Gentleman"
+        },
+        "Id": "0x0100005D000005E2",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_SordGentleman",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 134,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 135,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 136,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 137,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Sordist",
+          "Instruction": "",
+          "Title": "Sordist"
+        },
+        "Id": "0x0100005D000005E9",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Sordist",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 138,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 139,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 140,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 141,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Strategist",
+          "Instruction": "",
+          "Title": "Strategist"
+        },
+        "Id": "0x0100005D000005F0",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Strategist",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 142,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 143,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 144,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 145,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Theorist",
+          "Instruction": "",
+          "Title": "Theorist"
+        },
+        "Id": "0x0100005D000005F7",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Theorist",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 146,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 147,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 148,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 149,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Facial_Valgslandian",
+          "Instruction": "",
+          "Title": "Valgslandian"
+        },
+        "Id": "0x0100005D000005FE",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_FacialHair_Valgslandian",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 150,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 151,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 152,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 153,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_20s",
+          "Instruction": "",
+          "Title": "20s"
+        },
+        "Id": "0x010000580000382A",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_20s",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 154,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 155,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 156,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 157,
+          "Condition": "",
+          "ImagePath": "",
+          "Instruction": "",
+          "Title": "Bald"
+        },
+        "Id": "0x01000058000037FC",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_Bald",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 158,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 159,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 160,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 161,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_Balding",
+          "Instruction": "",
+          "Title": "Balding"
+        },
+        "Id": "0x0100005D00000709",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_Balding",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 162,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 163,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 164,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 165,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_Default",
+          "Instruction": "",
+          "Title": "Default"
+        },
+        "Id": "0x0100005D00000702",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_Default",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 166,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 167,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 168,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 169,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_Gentleman",
+          "Instruction": "",
+          "Title": "Gentleman"
+        },
+        "Id": "0x01000046000222DC",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_Gentleman",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 170,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 171,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 172,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 173,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_GentlemansHat",
+          "Instruction": "",
+          "Title": "Gentleman's Hat"
+        },
+        "Id": "0x0100005D00000725",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_GentlemansHat",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 174,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 175,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 176,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 177,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_Koronelli",
+          "Instruction": "",
+          "Title": "Koranelli"
+        },
+        "Id": "0x0100005D0000072C",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_Koronelli",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 178,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 179,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 180,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 181,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_Long",
+          "Instruction": "",
+          "Title": "Long"
+        },
+        "Id": "0x0100005D00000748",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_Long",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 182,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 183,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 184,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 185,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_MovieStar",
+          "Instruction": "",
+          "Title": "Movie Star"
+        },
+        "Id": "0x0100005D00000710",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_MovieStar",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 186,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 187,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 188,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 189,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_Rebellious",
+          "Instruction": "",
+          "Title": "Rebellious"
+        },
+        "Id": "0x0100005D00000717",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_Rebellious",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 190,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 191,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 192,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 193,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_SordishFedora",
+          "Instruction": "",
+          "Title": "Sordish Fedora"
+        },
+        "Id": "0x0100005D00000733",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_SordishFedora",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 194,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 195,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 196,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 197,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_Stylish",
+          "Instruction": "",
+          "Title": "Stylish"
+        },
+        "Id": "0x0100005D0000071E",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_Stylish",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 198,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 199,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 200,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 201,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Hair_WhiteTrilby",
+          "Instruction": "",
+          "Title": "White Trilby"
+        },
+        "Id": "0x0100005D0000073A",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_AntonRayne_Hair_WhiteTrilby",
+        "Notes": "",
+        "Path": "Sordland/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 202,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 203,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 204,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 205,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Accessories_GoldGlasses",
+          "Instruction": "",
+          "Title": "Gold Glasses"
+        },
+        "Id": "0x0100005B000000D1",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Accessories_GoldGlasses",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Accessories"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 206,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 207,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 208,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 209,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Accessories_LespianCigar",
+          "Instruction": "",
+          "Title": "Lespian Cigar"
+        },
+        "Id": "0x0100005B000000D8",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Accessories_LespianCigar",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Accessories"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 210,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 211,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 212,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 213,
+          "Condition": "",
+          "ImagePath": "",
+          "Instruction": "",
+          "Title": "None"
+        },
+        "Id": "0x0100005B000000C3",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Accessories_None",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Accessories"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 214,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 215,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 216,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 217,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Accessories_ThinGlasses",
+          "Instruction": "",
+          "Title": "Thin Glasses"
+        },
+        "Id": "0x0100005B000000CA",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Accessories_ThinGlasses",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Accessories"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 218,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 219,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 220,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 221,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Accessories_ValgishPipe",
+          "Instruction": "",
+          "Title": "Valgish Pipe"
+        },
+        "Id": "0x0100005B000000E6",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Accessories_ValgslandianPipe",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Accessories"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 222,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 223,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 224,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 225,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Suit_BrownSuit",
+          "Instruction": "",
+          "Title": "Brown Suit"
+        },
+        "Id": "0x0100005B000001D4",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Attire_BrownSuit",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 226,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 227,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 228,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 229,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Suit_CeremonialAttire",
+          "Instruction": "",
+          "Title": "Ceremonial Attire"
+        },
+        "Id": "0x0100005B000001C6",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Attire_CeremonialAttire",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 230,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 231,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 232,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 233,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Suit_Default",
+          "Instruction": "",
+          "Title": "Default"
+        },
+        "Id": "0x0100005B000001CD",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Attire_Default",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 234,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 235,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 236,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 237,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Suit_GreySuit",
+          "Instruction": "",
+          "Title": "Grey Suit"
+        },
+        "Id": "0x0100005B000001DB",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Attire_GreySuit",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 238,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 239,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 240,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 241,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Suit_RedVelvet",
+          "Instruction": "",
+          "Title": "Red Velvet"
+        },
+        "Id": "0x0100005B000001E2",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Attire_RedVelvet",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 242,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 243,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 244,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 245,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Suit_TorasRoyalAttire",
+          "Instruction": "",
+          "Title": "Toras Royal Attire"
+        },
+        "Id": "0x0100009E0000C278",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Attire_TorasRoyalAttire",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 246,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 247,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 248,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 249,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Suit_WhiteTuxedo",
+          "Instruction": "",
+          "Title": "White Tuxedo"
+        },
+        "Id": "0x0100005B000001E9",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Attire_WhiteTuxedo",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 250,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 251,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 252,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 253,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Suit_WisemansRobe",
+          "Instruction": "",
+          "Title": "Wiseman's Robe"
+        },
+        "Id": "0x0100009E0000C271",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Attire_WisemansRobe",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Attire"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 254,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 255,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 256,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 257,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Gold",
+          "Instruction": "",
+          "Title": "Gold"
+        },
+        "Id": "0x0100005B00000108",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Background_Gold",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 258,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 259,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 260,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 261,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Green",
+          "Instruction": "",
+          "Title": "Green"
+        },
+        "Id": "0x0100005B0000010F",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Background_Green",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 262,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 263,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 264,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 265,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Maroon",
+          "Instruction": "",
+          "Title": "Maroon"
+        },
+        "Id": "0x0100005B00000116",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Background_Maroon",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 266,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 267,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 268,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 269,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Red",
+          "Instruction": "",
+          "Title": "Red"
+        },
+        "Id": "0x0100005B0000011D",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Background_Red",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 270,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 271,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 272,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 273,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Default",
+          "Instruction": "",
+          "Title": "Tan"
+        },
+        "Id": "0x0100005B00000101",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Background_Tan",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 274,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 275,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 276,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 277,
+          "Condition": "",
+          "ImagePath": "Character Customization/Anton_Background_Turquoise",
+          "Instruction": "",
+          "Title": "Turquoise"
+        },
+        "Id": "0x0100005B00000124",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Background_Turquoise",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Background"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 278,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 279,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 280,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 281,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_Circle",
+          "Instruction": "",
+          "Title": "Circle"
+        },
+        "Id": "0x0100005B00000157",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_Circle",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 282,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 283,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 284,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 285,
+          "Condition": "",
+          "ImagePath": "",
+          "Instruction": "",
+          "Title": "Clean Shaven"
+        },
+        "Id": "0x0100005B0000016C",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_CleanShaven",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 286,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 287,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 288,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 289,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_FullBeard",
+          "Instruction": "",
+          "Title": "Full Beard"
+        },
+        "Id": "0x0100005B0000015E",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_FullBeard",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 290,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 291,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 292,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 293,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_Intellectual",
+          "Instruction": "",
+          "Title": "Intellectual"
+        },
+        "Id": "0x0100005B00000173",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_Intellectual",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 294,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 295,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 296,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 297,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_Magnificent",
+          "Instruction": "",
+          "Title": "Magnificent"
+        },
+        "Id": "0x0100005B00000142",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_Magnificent",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 298,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 299,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 300,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 301,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_Markian",
+          "Instruction": "",
+          "Title": "Markian"
+        },
+        "Id": "0x0100005B0000019D",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_Markian",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 302,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 303,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 304,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 305,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_Moustache",
+          "Instruction": "",
+          "Title": "Moustache"
+        },
+        "Id": "0x0100005B000001A4",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_Moustache",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 306,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 307,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 308,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 309,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_PetitGoatee",
+          "Instruction": "",
+          "Title": "Petit Goatee"
+        },
+        "Id": "0x0100005B000001B2",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_PetitGoatee",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 310,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 311,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 312,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 313,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_RezenidGoatee",
+          "Instruction": "",
+          "Title": "Rezenid Goatee"
+        },
+        "Id": "0x0100005B000001AB",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_RezenidGoatee",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 314,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 315,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 316,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 317,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_Rizian",
+          "Instruction": "",
+          "Title": "The Rizian"
+        },
+        "Id": "0x0100005B0000017A",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_Rizian",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 318,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 319,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 320,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 321,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_RizianWithSides",
+          "Instruction": "",
+          "Title": "The Rizian With Sides"
+        },
+        "Id": "0x0100005B00000181",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_RizianWithSides",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 322,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 323,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 324,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 325,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_Sideburns",
+          "Instruction": "",
+          "Title": "Sideburns"
+        },
+        "Id": "0x0100005B00000188",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_Sideburns",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 326,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 327,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 328,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 329,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_Theorist",
+          "Instruction": "",
+          "Title": "Theorist"
+        },
+        "Id": "0x0100005B0000018F",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_Theorist",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 330,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 331,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 332,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 333,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Facial_Valgslandian",
+          "Instruction": "",
+          "Title": "Valgslandian"
+        },
+        "Id": "0x0100005B00000196",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_FacialHair_Valgslandian",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Facial Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 334,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 335,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 336,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 337,
+          "Condition": "",
+          "ImagePath": "",
+          "Instruction": "",
+          "Title": "Bald"
+        },
+        "Id": "0x0100005B00000052",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_Bald",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 338,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 339,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 340,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 341,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_Balding",
+          "Instruction": "",
+          "Title": "Balding"
+        },
+        "Id": "0x0100005B00000078",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_Balding",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 342,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 343,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 344,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 345,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_Bicorne",
+          "Instruction": "",
+          "Title": "Bicorne"
+        },
+        "Id": "0x0100005B00000086",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_Bicorne",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 346,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 347,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 348,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 349,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_RoyalCap",
+          "Instruction": "",
+          "Title": "Royal Cap"
+        },
+        "Id": "0x0100009E0000C2A4",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_Cap",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 350,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 351,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 352,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 353,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_Crown",
+          "Instruction": "",
+          "Title": "Crown"
+        },
+        "Id": "0x0100005B0000008D",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_Crown",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 354,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 355,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 356,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 357,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_CrownWithNoHair",
+          "Instruction": "",
+          "Title": "Crown With No Hair"
+        },
+        "Id": "0x0100009E0000C29D",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_CrownBald",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 358,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 359,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 360,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 361,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_Default",
+          "Instruction": "",
+          "Title": "Default"
+        },
+        "Id": "0x0100005B00000071",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_Default",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 362,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 363,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 364,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 365,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_Gentleman",
+          "Instruction": "",
+          "Title": "Gentleman"
+        },
+        "Id": "0x0100005B0000004B",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_Gentleman",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 366,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 367,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 368,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 369,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_Professional",
+          "Instruction": "",
+          "Title": "The Professional"
+        },
+        "Id": "0x0100005B0000006A",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_Professional",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 370,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 371,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 372,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 373,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_PushedBack",
+          "Instruction": "",
+          "Title": "Pushed Back"
+        },
+        "Id": "0x0100005B00000094",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_PushedBack",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 374,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 375,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 376,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 377,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_Short",
+          "Instruction": "",
+          "Title": "Short"
+        },
+        "Id": "0x0100005B0000009B",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_Short",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 378,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 379,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 380,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 381,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_SordishFedora",
+          "Instruction": "",
+          "Title": "Sordish Fedora"
+        },
+        "Id": "0x0100005B000000A2",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_SordishFedora",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 382,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 383,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 384,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 385,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_Wavy",
+          "Instruction": "",
+          "Title": "Wavy"
+        },
+        "Id": "0x0100005B000000B0",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_Wavy",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 386,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 387,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 388,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 389,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_WhiteHat",
+          "Instruction": "",
+          "Title": "White Hat"
+        },
+        "Id": "0x0100005B000000A9",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_WhiteHat",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 390,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 391,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 392,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 393,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_WhiteWig",
+          "Instruction": "",
+          "Title": "White Wig"
+        },
+        "Id": "0x0100005B0000007F",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_WhiteWig",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      },
+{
+        "$type": "Il2Cpp.CharacterCustomizationOptionData",
+        "$objectId": 394,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 395,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 396,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CharacterCustomizationOptionProperties": {
+          "$type": "Il2Cpp.CharacterCustomizationOptionProperties",
+          "$objectId": 397,
+          "Condition": "",
+          "ImagePath": "Character Customization/Romus_Hair_WisemansHat",
+          "Instruction": "",
+          "Title": "Wiseman's Hat"
+        },
+        "Id": "0x0100009E0000C2AB",
+        "IsWIP": false,
+        "NameInDatabase": "Customization_RomusToras_Hair_WisemansHat",
+        "Notes": "",
+        "Path": "Rizia/Customization Panel/Hair"
+      }
+    ]
+  }
+}

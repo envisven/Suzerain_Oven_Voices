@@ -1,0 +1,1050 @@
+{
+  "dataset": "reminderPanelSegmentData",
+  "sourceFile": "EntityDataManager/0146_reminderPanelSegmentData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.reminderPanelSegmentData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.8034510Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "271",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "418",
+    "bytes": "80709"
+  },
+  "primitiveValuesParsed": 271,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 21,
+    "$items": [
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000014C6",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section10_Citizenship",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Draft Constitutional Changes Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 5,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 6,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 7,
+                "Condition": "BaseGame.Reform_BludishRights_Amendment_Proposal",
+                "Text": "The term \"Sord\" will be removed from the Constitution, and Article 7 will be modified to: \"Everyone; regardless of language, race, color, gender, political thought, philosophical belief, religion or disability are equal before the law.\""
+              }
+            ]
+          },
+          "Title": "Section 10: Citizenship & Rights"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 8,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 9,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 10,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000151D",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section1_Ban_RedYouth",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Emergency Decree Reminder Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 11,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 12,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 13,
+                "Condition": "BaseGame.Reform_EmergencyDecree_Banned_RY",
+                "Text": "Red Youth is declared as a terrorist organization and a national security threat. The state will take action against its past and current members, and the people who assisted them."
+              }
+            ]
+          },
+          "Title": "Ban on Red Youth"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 14,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 15,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900001525",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section1_Ban_WPB",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Emergency Decree Reminder Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 17,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 18,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 19,
+                "Condition": "BaseGame.Reform_EmergencyDecree_Banned_Bluds",
+                "Text": "Workers Party of Bludia is declared as the direct successor of the Bludish Freedom Party, and in extension, will be banned from politics for supporting the Bludish Freedom Front. Their members are considered to be national security threats."
+              }
+            ]
+          },
+          "Title": "Ban On Workers Party of Bludia"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 20,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 21,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 22,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900001505",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section1_Ban_YoungSords",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Emergency Decree Reminder Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 23,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 24,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 25,
+                "Condition": "BaseGame.Reform_EmergencyDecree_Banned_YS",
+                "Text": "Young Sords is declared as a terrorist organization and a national security threat. The state will take action against its past and current members, and the people who assisted them."
+              }
+            ]
+          },
+          "Title": "Ban On Young Sords"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 26,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 27,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 28,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100009A0000384F",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section1_Morella_",
+        "Notes": "",
+        "Path": "Rizia/Reminder Panel/Morella Nationalization Demands",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 29,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 30,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 31,
+                "Condition": "",
+                "Text": "TBD"
+              }
+            ]
+          },
+          "Title": "Section 1"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 32,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 33,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 34,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000046000243D7",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section1_PresidentialVetoes",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Draft Constitutional Changes Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 35,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 36,
+            "$declaredCount": 4,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 37,
+                "Condition": "BaseGame.Reform_Law_Veto_Default",
+                "Text": "No Changes. (Presidents may use their veto on bills without limits.)"
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 38,
+                "Condition": "BaseGame.Reform_Law_Veto_Removed",
+                "Text": "Presidential vetoes will be removed from the Constitution."
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 39,
+                "Condition": "BaseGame.Reform_Law_Veto_Limited",
+                "Text": "Article 82 will be modified to include a new process to override a presidential veto with a supermajority in the Grand National Assembly of Sordland."
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 40,
+                "Condition": "BaseGame.Reform_Law_Veto_Loophole",
+                "Text": "Article 82 will be modified to include a limit to presidential vetoes but will not define a time limit for a president to act on a bill, giving the presidents an absolute pocket veto power."
+              }
+            ]
+          },
+          "Title": "Section 1: Vetoes"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 41,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 42,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 43,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100009A00003837",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section1_Wehlen",
+        "Notes": "",
+        "Path": "Rizia/Reminder Panel/Wehlen Trade Negotiations",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 44,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 45,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 46,
+                "Condition": "",
+                "Text": "TBD"
+              }
+            ]
+          },
+          "Title": "Section 1"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 47,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 48,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 49,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900001515",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section2_DetentionWithoutTrial",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Emergency Decree Reminder Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 50,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 51,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 52,
+                "Condition": "BaseGame.Reform_EmergencyDecree_DetentionWithoutTrial",
+                "Text": "Based on strong indications, if the person is suspected of crimes committed against internal and external security, but gathering of incriminating evidence is not possible, the suspect may be proposed to be detained until further notice."
+              }
+            ]
+          },
+          "Title": "Detention Without Trial"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 53,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 54,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 55,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006A00004DC8",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section2_PoliceAuthority",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Emergency Decree Reminder Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 56,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 57,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 58,
+                "Condition": "BaseGame.Reform_EmergencyDecree_PoliceAuthority",
+                "Text": "Police’s use of force, orders for confiscations as well as it’s right to stop and frisk, are permissible beyond the legal limits otherwise prescribed."
+              }
+            ]
+          },
+          "Title": "Increased Police Authority"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 59,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 60,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 61,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000146B",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section2_RemoveCourtVote",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Draft Constitutional Changes Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 62,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 63,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 64,
+                "Condition": "BaseGame.Reform_Law_Amendment_NoCourt",
+                "Text": "The Supreme Court's vote will be removed from the constitutional amendments process."
+              }
+            ]
+          },
+          "Title": "Section 2: Constitutional Amendments"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 65,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 66,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 67,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000153D",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section2_SuspendedProtests",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Emergency Decree Reminder Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 68,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 69,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 70,
+                "Condition": "BaseGame.Reform_EmergencyDecree_SuspendedProtests",
+                "Text": "The right for peaceful protests is suspended, and in extension the freedom to assemble and organize and the freedom of expression is restricted. The police may use the necessary force to disperse crowds or prevent their gathering."
+              }
+            ]
+          },
+          "Title": "Suspension of Protests and Large Assemblies"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 71,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 72,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 73,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000152D",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section3_Embargo_Arcasia",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Emergency Decree Reminder Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 74,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 75,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 76,
+                "Condition": "BaseGame.Reform_EmergencyDecree_Embargo_Arcasia",
+                "Text": "The State severs all of its diplomatic ties with Republic of Arcasia as they pose a national threat to the Republic of Sordland. The State places an embargo on Arcasia, and their citizens will be denied entry to Sordland."
+              }
+            ]
+          },
+          "Title": "Severance of Ties With Arcasia"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 77,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 78,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 79,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000150D",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section3_Embargo_Rumburg",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Emergency Decree Reminder Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 80,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 81,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 82,
+                "Condition": "BaseGame.Reform_EmergencyDecree_Embargo_Rumburg",
+                "Text": "The State severs all of its diplomatic ties with the Kingdom of Rumburg as they pose a national threat to the Republic of Sordland. The State places an embargo on Rumburg, and their citizens will be denied entry to Sordland."
+              }
+            ]
+          },
+          "Title": "Severance of Ties With Rumburg"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 83,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 84,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 85,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900001535",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section3_Embargo_UnitedContana",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Emergency Decree Reminder Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 86,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 87,
+            "$declaredCount": 1,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 88,
+                "Condition": "BaseGame.Reform_EmergencyDecree_Embargo_UC",
+                "Text": "The State severs all of its diplomatic ties with United Contana as they pose a national threat to the Republic of Sordland. The State places an embargo on United Contana, and their citizens will be denied entry to Sordland."
+              }
+            ]
+          },
+          "Title": "Severance of Ties With United Contana"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 89,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 90,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 91,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900001478",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section3_PresidentImpeachment",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Draft Constitutional Changes Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 92,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 93,
+            "$declaredCount": 3,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 94,
+                "Condition": "BaseGame.Reform_Law_Impeachment_Default",
+                "Text": "No Changes. (Supreme Court may impeach the president on grounds of unconstitutional behavior.)"
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 95,
+                "Condition": "BaseGame.Reform_Law_Impeachment_Harder",
+                "Text": "Article 17 will be modified to include both the Supreme Court and the Grand National Assembly in the impeachment process of the president."
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 96,
+                "Condition": "BaseGame.Reform_Law_Impeachment_Removed",
+                "Text": "The presidential impeachment process from Article 17 will be removed."
+              }
+            ]
+          },
+          "Title": "Section 3: Impeachment of the President"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 97,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 98,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 99,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900001485",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section4_Ministers",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Draft Constitutional Changes Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 100,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 101,
+            "$declaredCount": 4,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 102,
+                "Condition": "BaseGame.Reform_Law_Ministers_Default",
+                "Text": "No Changes. (The President appoints the Council of Ministers.)"
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 103,
+                "Condition": "BaseGame.Reform_Law_Ministers_ConfidenceVote",
+                "Text": "The President will nominate ministers which will require a confidence vote from the Grand National Assembly for their appointment."
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 104,
+                "Condition": "BaseGame.Reform_Law_Ministers_Assembly",
+                "Text": "The Grand National Assembly will nominate a list of ministers, which the President may appoint."
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 105,
+                "Condition": "BaseGame.Reform_Law_Veto_Loophole",
+                "Text": "Loophole"
+              }
+            ]
+          },
+          "Title": "Section 4: Appointment of Ministers"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 106,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 107,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 108,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900001492",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section5_Threshold",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Draft Constitutional Changes Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 109,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 110,
+            "$declaredCount": 4,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 111,
+                "Condition": "BaseGame.Reform_Law_Threshold_Default",
+                "Text": "No Changes. (A political party requires at least 10% of the general vote to win seats in the Grand National Assembly.)"
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 112,
+                "Condition": "BaseGame.Reform_Law_Threshold_15",
+                "Text": "The election threshold will be increased to 15%."
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 113,
+                "Condition": "BaseGame.Reform_Law_Threshold_8",
+                "Text": "The election threshold will be decreased to 8%"
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 114,
+                "Condition": "BaseGame.Reform_Law_Threshold_3",
+                "Text": "The election threshold will be decreased to 3%."
+              }
+            ]
+          },
+          "Title": "Section 5: Election Threshold"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 115,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 116,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 117,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000149F",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section6_Decrees",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Draft Constitutional Changes Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 118,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 119,
+            "$declaredCount": 4,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 120,
+                "Condition": "BaseGame.Reform_Law_Decrees_Default",
+                "Text": "No Changes. (The President may issue decrees in certain subjects without going through the Grand National Assembly.)"
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 121,
+                "Condition": "BaseGame.Reform_Law_Decrees_Removed",
+                "Text": "Presidential decrees will be removed from the Constitution."
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 122,
+                "Condition": "BaseGame.Reform_Law_Decrees_Weaker",
+                "Text": "Presidential decrees will require an enabling act to be passed by the Grand National Assembly."
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 123,
+                "Condition": "BaseGame.Reform_Law_Decrees_Stronger",
+                "Text": "Presidential decrees will be able to be issued in political, social, and economic issues that would carry the force of law, and will not be subject to judicial review."
+              }
+            ]
+          },
+          "Title": "Section 6: Presidential Decrees"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 124,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 125,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 126,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000014AC",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section7_TermLimit",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Draft Constitutional Changes Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 127,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 128,
+            "$declaredCount": 2,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 129,
+                "Condition": "BaseGame.Reform_Law_TermLimits_Default",
+                "Text": "No Changes. (The Constitution doesn't define any term limit.)"
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 130,
+                "Condition": "BaseGame.Reform_Law_TermLimits_2",
+                "Text": "A president will not be able to serve more than 2 terms."
+              }
+            ]
+          },
+          "Title": "Section 7: Term Limits"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 131,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 132,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 133,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000014B9",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section8_JusticeImpeachment",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Draft Constitutional Changes Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 134,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 135,
+            "$declaredCount": 3,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 136,
+                "Condition": "BaseGame.Reform_Law_Judges_Impeachment_Default",
+                "Text": "No Changes. (The Constitution gives the Justices of the Supreme Court absolute immunity before the law and describes no procedure of impeachment.)"
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 137,
+                "Condition": "BaseGame.Reform_Law_Judges_Impeachment_Assembly",
+                "Text": "The Grand National Assembly will have the right to propose an impeachment of a Justice on the legal grounds of unconstitutional behavior."
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 138,
+                "Condition": "BaseGame.Reform_Law_Judges_Impeachment_President",
+                "Text": "The President will have the right to appoint and replace the Justices of the Supreme Court."
+              }
+            ]
+          },
+          "Title": "Section 8: Impeachment of the Justices"
+        }
+      },
+{
+        "$type": "Il2Cpp.ReminderPanelSegmentData",
+        "$objectId": 139,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 140,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 141,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000014D3",
+        "IsNotificationActive": false,
+        "IsWIP": false,
+        "NameInDatabase": "ReminderSegment_Section9_MemberofHonor",
+        "Notes": "",
+        "Path": "Sordland/Reminder Panel/Draft Constitutional Changes Panel",
+        "ReminderPanelSegmentProperties": {
+          "$type": "Il2Cpp.ReminderPanelSegmentProperties",
+          "$objectId": 142,
+          "IsNotificationActive": false,
+          "SegmentConditions": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+            "$objectId": 143,
+            "$declaredCount": 4,
+            "$items": [
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 144,
+                "Condition": "BaseGame.Reform_Law_Honorary_Default",
+                "Text": "No Changes. (The Member of Honor has absolute immunity and is considered to be a permanent member of the Grand National Assembly.)"
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 145,
+                "Condition": "BaseGame.Reform_Law_Honorary_NoImmunity",
+                "Text": "The absolute immunity of the Member of Honor will be removed from Article 99."
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 146,
+                "Condition": "BaseGame.Reform_Law_Honorary_Abolished",
+                "Text": "Article 99 and the Member of Honor title will be removed from the Constitution."
+              },
+{
+                "$type": "Il2Cpp.ReminderPanelSegmentProperties+ReminderSegmentCondition",
+                "$objectId": 147,
+                "Condition": "BaseGame.Reform_Law_Honorary_Presidents",
+                "Text": "Every president will be considered a Member of Honor after the end of their service."
+              }
+            ]
+          },
+          "Title": "Section 9: Member of Honor"
+        }
+      }
+    ]
+  }
+}

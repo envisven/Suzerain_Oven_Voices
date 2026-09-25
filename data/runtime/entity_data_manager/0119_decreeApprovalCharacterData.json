@@ -1,0 +1,404 @@
+{
+  "dataset": "decreeApprovalCharacterData",
+  "sourceFile": "EntityDataManager/0119_decreeApprovalCharacterData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.decreeApprovalCharacterData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.5040282Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "117",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "170",
+    "bytes": "27345"
+  },
+  "primitiveValuesParsed": 117,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.DecreeApprovalCharacterData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 13,
+    "$items": [
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 5,
+          "Character": "Angelica Sazon",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Council_GrandVizier_Angelica == true"
+        },
+        "Id": "0x0100008E000052BC",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_AngelicaSazon",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Angelica Sazon"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 6,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 7,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 9,
+          "Character": "Axel Reinhart",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Axel_Arrested == false && RiziaDLC.Council_GrandVizier_Axel == true"
+        },
+        "Id": "0x0100008E000052C9",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_AxelReinhart",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Axel Reinhart"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 10,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 11,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 12,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 13,
+          "Character": "Daria de Rava",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Council_Treasury_Daria == true"
+        },
+        "Id": "0x0100006A000181B8",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_DariaDeRava",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Daria De Rava"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 14,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 15,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 17,
+          "Character": "Elena Werner",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Council_Treasury_Elena == true"
+        },
+        "Id": "0x0100006A000181BC",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_ElenaWerner",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Elena Werner"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 18,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 19,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 20,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 21,
+          "Character": "Hugo Toras",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Hugo_Arrested == false && RiziaDLC.Council_GrandVizier_Hugo == true"
+        },
+        "Id": "0x0100006A000181C2",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_HugoToras",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Hugo Toras"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 22,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 23,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 24,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 25,
+          "Character": "Laurento Esquibel",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Council_Foreign_Laurento == true"
+        },
+        "Id": "0x0100006A000181C7",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_LaurentoEsquibel",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Laurento Esquibel"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 26,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 27,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 28,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 29,
+          "Character": "Lucita Azaro",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Lucita_Arrested == false && RiziaDLC.Council_Security_Lucita == true"
+        },
+        "Id": "0x0100006A000181CC",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_LucitaAzaro",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Lucita Azaro"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 30,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 31,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 32,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 33,
+          "Character": "Rico Toras",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Rico_Arrested == false && RiziaDLC.Council_Security_Rico == true"
+        },
+        "Id": "0x0100008E000052E3",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_RicoToras",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Rico Toras"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 34,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 35,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 36,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 37,
+          "Character": "Russello Montoro",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Rusty_Arrested == false && RiziaDLC.Council_Treasury_Rusty == true"
+        },
+        "Id": "0x0100006A000181D4",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_RustyMontoro",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Rusty Montoro"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 38,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 39,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 40,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 41,
+          "Character": "Sal Ignacius",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Sal_Arrested == false && (RiziaDLC.Council_Wiseman_Sal == true || RiziaDLC.Council_GrandVizier_Sal == true)"
+        },
+        "Id": "0x0100006A000181D8",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_SalIgnacius",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Sal Ignacius"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 42,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 43,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 44,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 45,
+          "Character": "Taddeus Azaro",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Taddeus_Arrested == false && RiziaDLC.Council_Security_Taddeus == true"
+        },
+        "Id": "0x0100006A000181DC",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_TaddeusAzaro",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Taddeus Azaro"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 46,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 47,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 48,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 49,
+          "Character": "Titus Gordion",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Titus_Arrested == false && RiziaDLC.Council_Security_Titus == true"
+        },
+        "Id": "0x0100006A000181E0",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_TitusGordion",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Titus Gordion"
+      },
+{
+        "$type": "Il2Cpp.DecreeApprovalCharacterData",
+        "$objectId": 50,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 51,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 52,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "DecreeApprovalCharacterProperties": {
+          "$type": "Il2Cpp.DecreeApprovalCharacterProperties",
+          "$objectId": 53,
+          "Character": "Vina Toras",
+          "CharacterTitleOverride": "",
+          "Condition": "RiziaDLC.Council_Foreign_Vina == true"
+        },
+        "Id": "0x0100008E000052D6",
+        "IsWIP": false,
+        "NameInDatabase": "DecreeApproval_VinaToras",
+        "Notes": "",
+        "Path": "Rizia/Royal Decrees Panel/Decree Approvals/Vina Toras"
+      }
+    ]
+  }
+}

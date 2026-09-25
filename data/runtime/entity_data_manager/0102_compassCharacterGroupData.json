@@ -1,0 +1,128 @@
+{
+  "dataset": "compassCharacterGroupData",
+  "sourceFile": "EntityDataManager/0102_compassCharacterGroupData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.compassCharacterGroupData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.3934849Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "45",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "56",
+    "bytes": "9023"
+  },
+  "primitiveValuesParsed": 45,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CompassCharacterGroupData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 2,
+    "$items": [
+{
+        "$type": "Il2Cpp.CompassCharacterGroupData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CompassCharacterGroupProperties": {
+          "$type": "Il2Cpp.CompassCharacterGroupProperties",
+          "$objectId": 5,
+          "Characters": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 6,
+            "$declaredCount": 16,
+            "$items": [
+"Rizia_Compass_AngelicaSazon",
+"Rizia_Compass_AxelReinhart",
+"Rizia_Compass_DariaDeRava",
+"Rizia_Compass_ElenaWerner",
+"Rizia_Compass_EstelaToras",
+"Rizia_Compass_HugoToras",
+"Rizia_Compass_LaurentoEsquibel",
+"Rizia_Compass_LucitaAzaro",
+"Rizia_Compass_ManusSazon",
+"Rizia_Compass_RicoToras",
+"Rizia_Compass_RustyMontoro",
+"Rizia_Compass_SalIgnacius",
+"Rizia_Compass_TaddeusAzaro",
+"Rizia_Compass_TitusGordion",
+"Rizia_Compass_VinaToras",
+"Rizia_Compass_AdarfoSotelato"
+            ]
+          },
+          "GroupTitle": "Political Figures"
+        },
+        "Id": "0x010000650000CAA0",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_CharacterGroup_RizianPoliticians",
+        "Notes": "",
+        "Path": "Rizia/Compass"
+      },
+{
+        "$type": "Il2Cpp.CompassCharacterGroupData",
+        "$objectId": 7,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 8,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 9,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CompassCharacterGroupProperties": {
+          "$type": "Il2Cpp.CompassCharacterGroupProperties",
+          "$objectId": 10,
+          "Characters": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 11,
+            "$declaredCount": 15,
+            "$items": [
+"Sordland_Compass_TarquinSoll",
+"Sordland_Compass_RemusHolstron",
+"Sordland_Compass_PetrVectern",
+"Sordland_Compass_MansounLeke",
+"Sordland_Compass_ManolySuheil",
+"Sordland_Compass_LileasGraf",
+"Sordland_Compass_KesaroKibener",
+"Sordland_Compass_GloriaTory",
+"Sordland_Compass_FrensRicter",
+"Sordland_Compass_FetihEjall",
+"Sordland_Compass_EwaldAlphonso",
+"Sordland_Compass_DenisStahler",
+"Sordland_Compass_BernardCircas",
+"Sordland_Compass_ArtorWisci",
+"Sordland_Compass_AlbinClavin"
+            ]
+          },
+          "GroupTitle": "Sordish Politicians"
+        },
+        "Id": "0x0100006A00006A28",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_CharacterGroup_SordishPoliticians",
+        "Notes": "",
+        "Path": "Sordland/Compass"
+      }
+    ]
+  }
+}

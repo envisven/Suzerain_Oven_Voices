@@ -1,0 +1,28 @@
+{
+  "dataset": "OperationData",
+  "sourceFile": "EntityDataManager/0064_OperationData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.OperationData",
+    "GENERATED_UTC": "2026-09-21T10:59:01.7131207Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "0",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "1",
+    "bytes": "663"
+  },
+  "primitiveValuesParsed": 0,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.OperationData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 0,
+    "$items": [
+
+    ]
+  }
+}

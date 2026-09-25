@@ -1,0 +1,174 @@
+{
+  "dataset": "countryDetailsPanelData",
+  "sourceFile": "EntityDataManager/0116_countryDetailsPanelData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.countryDetailsPanelData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.4594254Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "49",
+    "errors": "0",
+    "cycles": "2",
+    "nodes": "66",
+    "bytes": "10834"
+  },
+  "primitiveValuesParsed": 49,
+  "referencesParsed": 2,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.CountryDetailsPanelData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 2,
+    "$items": [
+{
+        "$type": "Il2Cpp.CountryDetailsPanelData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "CountryDetailsPanelProperties": {
+          "$type": "Il2Cpp.CountryDetailsPanelProperties",
+          "$objectId": 5,
+          "Capital": "Porte Drazon",
+          "CodexEntry": "Locations_Countries_Rizia",
+          "ConditionalStatusEffectGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 6,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          },
+          "Demographics": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 7,
+            "$declaredCount": 6,
+            "$items": [
+"Rizia_Ethnicity",
+"Rizia_Religion",
+"Rizia_LastHouseElection",
+"Rizia_Age",
+"Rizia_PopPerRegion",
+"Rizia_GDPPerRegion"
+            ]
+          },
+          "GdpWorldRank": "14th",
+          "Government": "Constitutional Monarchy",
+          "ImagePath": "Codex Entries/c_rizia",
+          "Leader": "Romus Toras",
+          "OfficialLanguage": "Rizian",
+          "StatusEffects": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 3,
+            "$items": [
+"Country_AN",
+"Country_GRACE",
+"Country_OMEC"
+            ]
+          },
+          "Subtitle": "Anchored in Gold",
+          "Title": "Kingdom of Rizia"
+        },
+        "Government": "Constitutional Monarchy",
+        "Id": "0x0100006C00000D12",
+        "IsWIP": false,
+        "NameInDatabase": "CountryDetails_Rizia",
+        "Notes": "",
+        "Path": "Rizia/Country Details",
+        "StatusEffects": {
+          "$ref": 8,
+          "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+        }
+      },
+{
+        "$type": "Il2Cpp.CountryDetailsPanelData",
+        "$objectId": 9,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 10,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 11,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "CountryDetailsPanelProperties": {
+          "$type": "Il2Cpp.CountryDetailsPanelProperties",
+          "$objectId": 12,
+          "Capital": "Holsord",
+          "CodexEntry": "History_Timeline_RepublicOfSordland",
+          "ConditionalStatusEffectGroups": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 13,
+            "$declaredCount": 0,
+            "$items": [
+
+            ]
+          },
+          "Demographics": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 14,
+            "$declaredCount": 6,
+            "$items": [
+"Sordland_Ethnicity",
+"Sordland_Religion",
+"Sordland_LastElection",
+"Sordland_Age",
+"Sordland_PopPerRegion",
+"Sordland_GDPPerRegion"
+            ]
+          },
+          "GdpWorldRank": "16th",
+          "Government": "Presidential Republic",
+          "ImagePath": "Codex Entries/c_sordland",
+          "Leader": "Anton Rayne",
+          "OfficialLanguage": "Sordish",
+          "StatusEffects": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 15,
+            "$declaredCount": 2,
+            "$items": [
+"Country_AN",
+"Country_OMEC"
+            ]
+          },
+          "Subtitle": "A Morgna wes core",
+          "Title": "Republic of Sordland"
+        },
+        "Government": "Presidential Republic",
+        "Id": "0x0100006C00000940",
+        "IsWIP": false,
+        "NameInDatabase": "CountryDetails_Sordland",
+        "Notes": "",
+        "Path": "Sordland/Country Details",
+        "StatusEffects": {
+          "$ref": 15,
+          "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,1539 @@
+{
+  "dataset": "tooltipData",
+  "sourceFile": "EntityDataManager/0157_tooltipData.txt",
+  "headers": {
+    "TITLE": "EntityDataManager.tooltipData",
+    "GENERATED_UTC": "2026-09-21T10:59:02.9110536Z",
+    "WALKER": "ITERATIVE_V3_REFERENCE_IDS",
+    "LIMITS": "maxDepth=32; maxTraversalNodes=5000000; maxCollectionItems=5000000; maxBytes=1073741824"
+  },
+  "summary": {
+    "values": "432",
+    "errors": "0",
+    "cycles": "0",
+    "nodes": "649",
+    "bytes": "82111"
+  },
+  "primitiveValuesParsed": 432,
+  "referencesParsed": 0,
+  "data": {
+    "$kind": "collection",
+    "$type": "Il2CppSystem.Collections.Generic.List`1[[Il2Cpp.TooltipData, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+    "$objectId": 1,
+    "$declaredCount": 54,
+    "$items": [
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 2,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 3,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 4,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000405",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Azaro",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 5,
+          "Description": "One of Rizia's three noble houses, based in the province of Cardesse-Montaklar.",
+          "Title": "Azaro"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 6,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 7,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 8,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000412",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_CenturyofRevolutions",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 9,
+          "Description": "The period of upheaval during which many of the world's monarchies transitioned to democracies.",
+          "Title": "Century of Revolutions"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 10,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 11,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 12,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000690000046C",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Derdia",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 13,
+          "Description": "A theocratic country west of Rizia.",
+          "Title": "Derdia"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 14,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 15,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 16,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x01000069000003F3",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_EmpireofValgos",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 17,
+          "Description": "The historical empire comprising modern-day Valgsland and its many colonies.",
+          "Title": "Empire of Valgos"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 18,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 19,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 20,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000460",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Estela",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 21,
+          "Description": "Your mother.",
+          "Title": "Estela"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 22,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 23,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 24,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000478",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_HouseToras",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 25,
+          "Description": "Your family and Rizia's main royal house, based in the province of Valenqiris.",
+          "Title": "House Toras"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 26,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 27,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 28,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x01000069000003D5",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Hugo",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 29,
+          "Description": "Your uncle.",
+          "Title": "Hugo"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 30,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 31,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 32,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x01000069000003F9",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Iza",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 33,
+          "Description": "Capital city of Brenas. Home to Rizia's largest university.",
+          "Title": "Iza"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 34,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 35,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 36,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000690000043C",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_KingValero",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 37,
+          "Description": "Your father.",
+          "Title": "King Valero"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 38,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 39,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 40,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000448",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Lena",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 41,
+          "Description": "{RiziaDLCText.LenaTooltip}",
+          "Title": "Lena"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 42,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 43,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 44,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000690000040B",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Lespia",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 45,
+          "Description": "Your neighbor to the north. A wealthy democratic republic.",
+          "Title": "Lespia"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 46,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 47,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 48,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000430",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Monqiz",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 49,
+          "Description": "Your birthplace. Capital city of Valenqiris.",
+          "Title": "Monqiz"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 50,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 51,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 52,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x01000069000003FF",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Montaklar",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 53,
+          "Description": "Capital city of Cardesse-Montaklar.",
+          "Title": "Montaklar"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 54,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 55,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 56,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006A00017E41",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Morella",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 57,
+          "Description": "Rizia's western neighbor.",
+          "Title": "Morella"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 58,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 59,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 60,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x01000069000003E7",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Pabel",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 61,
+          "Description": "Son of the palace groundskeeper.",
+          "Title": "Pabel"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 62,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 63,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 64,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x01000069000003ED",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Pales",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 65,
+          "Description": "The peninsula to Rizia's south, formerly a part of the kingdom.",
+          "Title": "Pales"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 66,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 67,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 68,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x01000069000003E1",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_PorteDrazon",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 69,
+          "Description": "The capital of the Kingdom of Rizia.",
+          "Title": "Porte Drazon"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 70,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 71,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 72,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x01000069000003CF",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_PrinceValero",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 73,
+          "Description": "Your father.",
+          "Title": "Prince Valero"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 74,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 75,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 76,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000436",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_QueenBeatrice",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 77,
+          "Description": "Queen of Rumburg. Your sister-in-law.",
+          "Title": "Queen Beatrice"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 78,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 79,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 80,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x01000069000003C9",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_QueenLyza",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 81,
+          "Description": "Your grandmother.",
+          "Title": "Queen Lyza"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 82,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 83,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 84,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000472",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Reinhart",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 85,
+          "Description": "Grand Duke of Pales.",
+          "Title": "Axel Reinhart"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 86,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 87,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 88,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000690000045A",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Rico",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 89,
+          "Description": "Your cousin. Son of Hugo Toras.",
+          "Title": "Rico"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 90,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 91,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 92,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x01000069000003DB",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Rizia",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 93,
+          "Description": "The only home you've ever known.",
+          "Title": "Rizia"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 94,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 95,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 96,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000442",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Rumburg",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 97,
+          "Description": "The massive kingdom to your north.",
+          "Title": "Rumburg"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 98,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 99,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 100,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000418",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Sazon",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 101,
+          "Description": "One of Rizia's three noble houses. Based in the province of Brenas.",
+          "Title": "Sazon"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 102,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 103,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 104,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000454",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_SuOmina",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 105,
+          "Description": "A nationalist organization that puts Rizia \"above all\".",
+          "Title": "Su Omina"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 106,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 107,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 108,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000690000042A",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Valenqiris",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 109,
+          "Description": "Your home province.",
+          "Title": "Valenqiris"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 110,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 111,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 112,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000690000044E",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Vina",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 113,
+          "Description": "Your daughter.",
+          "Title": "Vina"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 114,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 115,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 116,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006A00017E49",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Wehlen",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 117,
+          "Description": "Rizia's north-western neighbor.",
+          "Title": "Wehlen"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 118,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 119,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 120,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x010000690000041E",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Wehzek",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 121,
+          "Description": "The culture and the people of Wehlen.",
+          "Title": "Wehzek"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 122,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 123,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 124,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000466",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Wruhecism",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 125,
+          "Description": "Rizia's main religion.",
+          "Title": "Wruhecism"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 126,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 127,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 128,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Rizia"
+            ]
+          }
+        },
+        "Id": "0x0100006900000424",
+        "IsWIP": false,
+        "NameInDatabase": "Rizia_Tooltip_Zille",
+        "Notes": "",
+        "Path": "Rizia/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 129,
+          "Description": "The region at Rizia's northern tip.",
+          "Title": "Zille"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 130,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 131,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 132,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000039D",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Deana",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 133,
+          "Description": "Your daughter.",
+          "Title": "Deana"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 134,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 135,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 136,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000037F",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_DeividWisci",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 137,
+          "Description": "Your teacher and mentor from university. He is the son of the first president of Sordland -- the revolutionary Artor S. Wisci.",
+          "Title": "Deivid Wisci"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 138,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 139,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 140,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000355",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Deyr",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 141,
+          "Description": "The second largest city in Sordland.",
+          "Title": "Deyr"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 142,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 143,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 144,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003A9",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_EwaldAlphonso",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 145,
+          "Description": "A reformist businessman who had become the leader of the reformist wing of the United Sordland Party.",
+          "Title": "Ewald Alphonso"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 146,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 147,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 148,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000397",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Franc",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 149,
+          "Description": "Your son.",
+          "Title": "Franc"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 150,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 151,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 152,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003AF",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_FrensRicter",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 153,
+          "Description": "A new and popular figure from the People's Freedom and Justice Party, who currently serves as its leader.",
+          "Title": "Frens Ricter"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 154,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 155,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 156,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100005800007E85",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_GeneralLuderin",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 157,
+          "Description": "The nationalist general who led a military coup and declared martial law in 1927.",
+          "Title": "Luderin"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 158,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 159,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 160,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000036D",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_GeneralRikard",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 161,
+          "Description": "The communist general who led an attack in 1928 against General Luderin's military coup.",
+          "Title": "Rikard"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 162,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 163,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 164,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003C1",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_GreciSordland",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 165,
+          "Description": "Sordish for: \"Great Sordland\"",
+          "Title": "Greci Sordland"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 166,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 167,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 168,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003BB",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_GusManger",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 169,
+          "Description": "The famous businessman and Minister of Rural Development, who's known for his close ties with President Alphonso.",
+          "Title": "Gus Manger"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 170,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 171,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 172,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000361",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Holsord",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 173,
+          "Description": "The capital of the Republic of Sordland.",
+          "Title": "Holsord"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 174,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 175,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 176,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000385",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_IosefLancea",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 177,
+          "Description": "A famous commanding officer from the Sordish Armed Forces who you served under.",
+          "Title": "Iosef Lancea"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 178,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 179,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 180,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000035B",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Lachaven",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 181,
+          "Description": "The richest city in Sordland.",
+          "Title": "Deyr"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 182,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 183,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 184,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000367",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Monica",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 185,
+          "Description": "The love of your life.",
+          "Title": "Monica"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 186,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 187,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 188,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000034F",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_PetrVectern",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 189,
+          "Description": "Your best friend.",
+          "Title": "Petr Vectern"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 190,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 191,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 192,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003B5",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_PresidentAlphonso",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 193,
+          "Description": "The President of Sordland and the new leader of the United Sordland Party.",
+          "Title": "President Alphonso"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 194,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 195,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 196,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x01000069000003A3",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_PresidentSoll",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 197,
+          "Description": "President Tarquin Soll, the famous colonel who re-established the republic in 1929.",
+          "Title": "President Soll"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 198,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 199,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 200,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100005800008302",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_RepublicOfSordland",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 201,
+          "Description": "The only home you've ever known.",
+          "Title": "Republic of Sordland"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 202,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 203,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 204,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000373",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_TarquinSoll",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 205,
+          "Description": "The President of Sordland and the famous colonel who re-established the republic in 1929.",
+          "Title": "Tarquin Soll"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 206,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 207,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 208,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000391",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_UnitedSordlandParty",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 209,
+          "Description": "Established in 1929 by Colonel Tarquin Soll, the USP is the governing party in Sordland.",
+          "Title": "United Sordland Party"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 210,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 211,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 212,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x0100006900000379",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_USP",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 213,
+          "Description": "Established in 1929 by Colonel Tarquin Soll, the United Sordland Party is the governing party in Sordland.",
+          "Title": "USP"
+        }
+      },
+{
+        "$type": "Il2Cpp.TooltipData",
+        "$objectId": 214,
+        "AppBundleProperties": {
+          "$type": "Il2Cpp.AppBundleProperties",
+          "$objectId": 215,
+          "StoryPacks": {
+            "$kind": "collection",
+            "$type": "Il2CppSystem.Collections.Generic.List`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+            "$objectId": 216,
+            "$declaredCount": 1,
+            "$items": [
+"StoryPack_Main"
+            ]
+          }
+        },
+        "Id": "0x010000690000038B",
+        "IsWIP": false,
+        "NameInDatabase": "Sordland_Tooltip_Wehlen",
+        "Notes": "",
+        "Path": "Sordland/Prologue Epilogue/Tooltips",
+        "TooltipProperties": {
+          "$type": "Il2Cpp.TooltipProperties",
+          "$objectId": 217,
+          "Description": "The Republic of Wehlen is a young and fragile republic located in south-east Merkopa.",
+          "Title": "Wehlen"
+        }
+      }
+    ]
+  }
+}
