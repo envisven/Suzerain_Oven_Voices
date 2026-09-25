@@ -4,7 +4,7 @@ import sordland.data.Domain.*;
 import sordland.data.Json;
 import java.util.*;
 
-                                                                                         
+
 public final class RuntimeDatabase {
     public static final Map<String,String> TYPES=Map.ofEntries(
         Map.entry("policiesdata","Policy"),Map.entry("situationsdata","Situation"),
@@ -62,7 +62,7 @@ public final class RuntimeDatabase {
     }
     public static RuntimeDatabase empty(){return new RuntimeDatabase(Map.of(),Map.of(),Map.of(),List.of());}
     public List<Entity> collection(String name){return collections.getOrDefault(name.toLowerCase(Locale.ROOT),List.of());}
-                                                                                                    
+
     public Entity resolve(String name,String... collections){
         Set<String> allowed=Set.of(collections);var matches=byName.getOrDefault(name,List.of()).stream().filter(e->allowed.contains(e.collection())).toList();return matches.size()==1?matches.getFirst():null;
     }

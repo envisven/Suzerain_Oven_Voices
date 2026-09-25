@@ -5,8 +5,8 @@ import sordland.graph.Graph.*;
 import sordland.graph.Semantics.CommandKind;
 import java.util.*;
 
-                                                                                     
-                                                                                             
+
+
 public final class DialogueGraphBuilder {
     private record Box(Kind kind, String title, String text, String metadata) {}
     private record EntryVisual(String first, String last, Entry entry, Semantics.Analysis analysis) {}
@@ -122,8 +122,8 @@ public final class DialogueGraphBuilder {
         return seen;
     }
 
-                                                                                   
-                                                                                      
+
+
     public static Graph classifyBackEdges(Graph graph) {
         Map<String,List<Integer>> outgoing = new HashMap<>();
         for (int i = 0; i < graph.edges.size(); i++)
@@ -152,8 +152,8 @@ public final class DialogueGraphBuilder {
         for (int i = 0; i < graph.edges.size(); i++) classified.add(graph.edges.get(i).withBack(back.contains(i)));
         return new Graph(graph.title, graph.nodes, classified, graph.diagnostics,graph.campaign,graph.panels);
     }
-                                                                                
-                                                                                     
+
+
     private static List<EntryKey> findRoots(Dataset dataset, Conversation conversation, List<String> diagnostics) {
         Map<Integer,Entry> entries = conversation.entries();
         var starts = new ArrayList<Entry>();
@@ -181,8 +181,8 @@ public final class DialogueGraphBuilder {
                 Entry entry = dataset.entry(key);
                 if (entry != null) for (Link link : entry.links()) pending.addLast(link.target());
             }
-                                                                              
-                                                                               
+
+
             if (roots.size() == 1) primaryReachable = (int) visited.stream()
                 .filter(k -> k.conversationId() == conversation.id() && entries.containsKey(k.dialogueId())).count();
         }
@@ -205,8 +205,8 @@ public final class DialogueGraphBuilder {
         boolean bareEnd = pureControl && analysis.terminal()
             && analysis.commands().stream().allMatch(c -> c.kind() == CommandKind.COSMETIC || c.kind() == CommandKind.TERMINAL);
         boolean hasSemanticBox = !entry.condition().isBlank() || analysis.commands().stream().anyMatch(c -> c.kind() != CommandKind.COSMETIC);
-                                                                            
-                                                                               
+
+
         if (!pureControl || !hasSemanticBox || rawTitle.equalsIgnoreCase("START") || rawTitle.equalsIgnoreCase("input") || rawTitle.equalsIgnoreCase("output")) {
             Kind kind;
             String caption;

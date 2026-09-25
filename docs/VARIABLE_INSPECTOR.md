@@ -1,4 +1,8 @@
-# Variable Inspector — implementation and validation
+# Variable Inspector — first-pass implementation and validation
+
+Historical first-pass report. The current, targeted second pass is documented in
+[DIALOGUE_GUARDS.md](DIALOGUE_GUARDS.md). It supersedes the local-only guard limitation
+and the state-table restrictions described below; architecture and discovery remain unchanged.
 
 Implemented against the submitted SordlandTreeViewer.zip only. Existing Loader,
 Dataset, RuntimeDatabase, Semantics, graph builders, layouts, and graph search are

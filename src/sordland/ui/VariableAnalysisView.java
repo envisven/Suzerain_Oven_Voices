@@ -21,9 +21,10 @@ public final class VariableAnalysisView extends VBox {
         long readWrite = analysis.count(Access.READ_WRITE);
         getChildren().add(new Label((analysis.count(Access.READ) + readWrite) + " reads   ·   "
             + (analysis.count(Access.WRITE) + readWrite) + " writes   ·   " + analysis.rules().size()
-            + " proven operations   ·   " + analysis.count(Access.UNRESOLVED) + " unresolved"));
+            + " proven operations   ·   " + analysis.count(Access.UNRESOLVED) + " unresolved operations   ·   "
+            + analysis.rules().stream().filter(o -> o.guardProof() != null && o.guardProof().kind() == DialogueGuardResolver.Kind.UNRESOLVED).count() + " unresolved incoming guards"));
         getChildren().add(heading("Derived mechanic"));
-        getChildren().add(text("These are local source operations when their source is reached or selected. They do not prove reachability, execution frequency, or a final game state."));
+        getChildren().add(text("Guards describe entry-state predicates on proven source paths; operations apply when their source is reached or selected. They do not prove reachability, execution frequency, or a final game state."));
         if (analysis.layout() == VariableAnalyzer.Layout.NUMERIC) {
             getChildren().add(table(analysis.rules(), false));
         } else if (!analysis.rules().isEmpty()) {
@@ -32,7 +33,8 @@ public final class VariableAnalysisView extends VBox {
             for (var group : groups.entrySet()) {
                 getChildren().add(heading(group.getKey().equals("SET = true") ? "SET TRUE WHEN" : group.getKey().equals("SET = false") ? "SET FALSE WHEN" : group.getKey() + " WHEN"));
                 var guards = new LinkedHashMap<VariableSyntax.Expr,List<Occurrence>>();
-                group.getValue().forEach(rule -> guards.computeIfAbsent(rule.condition(), key -> new ArrayList<>()).add(rule));
+                group.getValue().stream().sorted(Comparator.comparing((Occurrence rule) -> rule.condition().variables().isEmpty()))
+                    .forEach(rule -> guards.computeIfAbsent(rule.condition(), key -> new ArrayList<>()).add(rule));
                 boolean first = true;
                 for (var guarded : guards.values()) {
                     if (!first) getChildren().add(new Label("OR — another source operation"));
@@ -42,7 +44,7 @@ public final class VariableAnalysisView extends VBox {
                     for (Occurrence occurrence : guarded) sources.getChildren().addAll(text(context(occurrence)), evidence(occurrence));
                     TitledPane disclosure = new TitledPane(guarded.size() + " source operations · exact expressions and locations", sources);
                     disclosure.setExpanded(false);
-                    VBox card = new VBox(8, text(pretty(rule)), disclosure);
+                    VBox card = new VBox(8, text(pretty(rule)), text(guarded.stream().map(this::guardKind).distinct().collect(java.util.stream.Collectors.joining(" · "))), disclosure);
                     card.setPadding(new Insets(12));
                     card.setStyle(Theme.PANEL_STYLE + " -fx-border-color: " + Theme.BORDER + "; -fx-background-radius: 6;");
                     getChildren().add(card);
@@ -52,8 +54,8 @@ public final class VariableAnalysisView extends VBox {
         if (analysis.family() != null) {
             getChildren().addAll(heading("Proven state transitions"), text(String.join(" · ", analysis.family().members())), table(analysis.family().transitions(), true), text("Uncovered combinations: UNKNOWN / NOT PROVEN. Source order and reachability are not inferred."));
         }
-        getChildren().add(heading("Related variables · direct guard dependencies"));
-        if (analysis.dependencies().isEmpty()) getChildren().add(text("No directly encoded guard dependencies."));
+        getChildren().add(heading("Related variables · proven guard dependencies"));
+        if (analysis.dependencies().isEmpty()) getChildren().add(text("No proven guard dependencies."));
         analysis.dependencies().forEach((name, count) -> {
             Hyperlink link = new Hyperlink(index.label(name) + " · " + count + " rule reads");
             link.setWrapText(true);
@@ -62,7 +64,7 @@ public final class VariableAnalysisView extends VBox {
             getChildren().add(link);
         });
         getChildren().add(heading("Source evidence · " + analysis.evidence().size() + " operations"));
-                                                                                                   
+
         ListView<Occurrence> evidenceList = new ListView<>();
         evidenceList.getItems().setAll(analysis.evidence());
         evidenceList.setPrefHeight(320);
@@ -76,7 +78,12 @@ public final class VariableAnalysisView extends VBox {
         getChildren().add(evidenceList);
     }
     private String pretty(Occurrence rule) {
-        return rule.source().guard().isBlank() ? "No additional guard encoded in this source construct" : rule.condition().display(index::label);
+        if (rule.guardProof() != null && rule.guardProof().propagated()) return rule.condition().display(index::label);
+        return rule.source().guard().isBlank() ? "No proven incoming guard · source reachability remains unresolved" : rule.condition().display(index::label);
+    }
+    private String guardKind(Occurrence rule) {
+        return rule.guardProof() == null ? "Local source · " + rule.proof()
+            : "Guard proof: " + rule.guardProof().kind() + " · " + rule.guardProof().paths().size() + " retained paths";
     }
     private String context(Occurrence rule) {
         return (rule.source().turn() == null ? "Turn unspecified" : "Turn " + rule.source().turn()) + " · " + rule.source().title();
@@ -90,7 +97,9 @@ public final class VariableAnalysisView extends VBox {
                 TextArea exact = new TextArea(context(occurrence) + "\nProof: " + occurrence.proof() + "\nSource: " + source.identity()
                     + "\nField: " + source.field() + "\nOperation: " + occurrence.operation() + "\nOperation expression:\n" + occurrence.expression()
                     + "\nNormalized effect:\n" + (occurrence.effect() == null ? "Not a proven assignment" : occurrence.effect().display())
-                    + "\nGuard:\n" + source.guard() + "\nExact full field:\n" + source.original() + "\nAlternate runtime locations:\n" + String.join("\n", source.aliases()));
+                    + "\nLocal guard (exact):\n" + source.guard()
+                    + "\nResolved guard:\n" + occurrence.condition().display(Function.identity())
+                    + "\n" + (occurrence.guardProof() == null ? "Local source construct" : occurrence.guardProof().evidence()) + "\nExact full field:\n" + source.original() + "\nAlternate runtime locations:\n" + String.join("\n", source.aliases()));
                 exact.setEditable(false);
                 exact.setWrapText(true);
                 exact.setPrefRowCount(12);
@@ -102,10 +111,22 @@ public final class VariableAnalysisView extends VBox {
     }
     private TableView<Occurrence> table(List<Occurrence> rules, boolean family) {
         TableView<Occurrence> table = new TableView<>();
-        column(table, "Turn", o -> Objects.toString(o.source().turn(), "—"));
-        column(table, "Source / decision", o -> o.source().title());
-        column(table, "Condition", this::pretty);
-        column(table, family ? "Result" : "Effect", o -> family ? index.label(o.variable()) : o.effect().display());
+        if (family) table.setId("state-family-table");
+        if (family) {
+            column(table, "Condition / inputs", this::pretty);
+            column(table, "Result", o -> index.label(o.variable()));
+            column(table, "Source / proof", o -> o.source().identity() + " · " + guardKind(o));
+        } else {
+            column(table, "Turn", o -> Objects.toString(o.source().turn(), "—"));
+            column(table, "Source / decision", o -> o.source().title());
+            column(table, "Condition / inputs", this::pretty);
+            column(table, "Effect", o -> o.effect().display());
+        }
+        if (family) {
+            table.getColumns().get(0).setPrefWidth(620);
+            table.getColumns().get(1).setPrefWidth(180);
+            table.getColumns().get(2).setPrefWidth(260);
+        }
         table.getItems().setAll(rules);
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_FLEX_LAST_COLUMN);
         table.setPrefHeight(Math.min(440, 70 + rules.size() * 30));
@@ -117,7 +138,15 @@ public final class VariableAnalysisView extends VBox {
         column.setCellFactory(unused -> new TableCell<>() {
             @Override protected void updateItem(String text, boolean empty) {
                 super.updateItem(text, empty);
-                setText(empty ? null : text);
+                setText(null);
+                if (empty) setGraphic(null);
+                else {
+                    var wrapped = new javafx.scene.text.Text(text);
+                    wrapped.setFill(javafx.scene.paint.Color.web(Theme.TEXT));
+                    wrapped.wrappingWidthProperty().bind(column.widthProperty().subtract(18));
+                    setGraphic(wrapped);
+                    setPrefHeight(USE_COMPUTED_SIZE);
+                }
                 setTooltip(empty ? null : new Tooltip(text));
             }
         });

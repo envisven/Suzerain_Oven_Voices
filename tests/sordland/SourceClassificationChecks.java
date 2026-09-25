@@ -7,7 +7,7 @@ import java.nio.file.*;
 import java.util.*;
 import static sordland.TestSupport.*;
 
-                                                                                                          
+
 final class SourceClassificationChecks {
     private SourceClassificationChecks() {}
     static void run()throws Exception {
@@ -88,7 +88,7 @@ final class SourceClassificationChecks {
             check(Arrays.equals(entityBytes,Files.readAllBytes(entity))&&Arrays.equals(dialogueBytes,Files.readAllBytes(dialogue)),"Classification never rewrites supplied input files");
             check(data.ignoredData().stream().allMatch(i->!i.sourceFile().isBlank()&&!i.location().isBlank()&&!i.reason().isBlank()),"Every ignored record has inspectable provenance and reason");
 
-                                                                                                        
+
             Map<String,Object> noopBill=Map.of("NameInDatabase","NoopBill","Path","Sordland/Bills","BillProperties",Map.of("SignVariables","","VetoVariables",""));
             Map<String,Object> incompleteBill=Map.of("NameInDatabase","IncompleteBill","Path","Sordland/Bills","BillProperties",Map.of("SignVariables",""));
             Map<String,Object> wrongBill=Map.of("NameInDatabase","WrongBill","Path","Sordland/Bills","BillProperties",Map.of("SignVariables",123,"VetoVariables",""));
@@ -110,7 +110,7 @@ final class SourceClassificationChecks {
             check(find(duplicateFields,"conversations[0].dialogueEntries[0].fields[1]").reason().contains("Ambiguous"),"Duplicate source field values remain inspectable with an ambiguity reason");
             equal(Json.pretty(entry),Json.pretty(duplicateFields.entry(new EntryKey(77,0)).raw()),"Ambiguous dialogue fields preserve the entire original raw list");
 
-                                                                                                          
+
             var collision=new LinkedHashMap<>(incomplete);collision.put("NameInDatabase","Turn01_Exact");
             catalogue.put("AllConversationsData",List.of(goodEntity,collision));Files.writeString(entity,Json.pretty(catalogue));
             check(!Loader.load(entity,dialogue).gameFlow().turns().getFirst().steps().getFirst().fragments().getFirst().resolved(),"Incomplete duplicate source name blocks arbitrary exact-name resolution");

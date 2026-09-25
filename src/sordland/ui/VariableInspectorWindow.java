@@ -12,7 +12,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.function.Supplier;
 
-                                                                                                 
+
 public final class VariableInspectorWindow {
     private final Stage stage = new Stage();
     private final BorderPane root = new BorderPane();

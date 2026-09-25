@@ -14,7 +14,7 @@ import sordland.ui.*;
 import java.nio.file.*;
 import java.util.*;
 
-                                                                                    
+
 public final class RuntimeVisualChecks extends Application {
     private static int exit=2;
     public static void main(String[] args){launch(args);System.exit(exit);}
@@ -27,7 +27,7 @@ public final class RuntimeVisualChecks extends Application {
                 try {
                     root.applyCss();root.layout();canvas.setResult(result,true);canvas.fit();save(root,"budget-fit.png");
                     canvas.zoom(2);canvas.focus(graph.panels.getFirst().categories().get(2).headerId());save(root,"budget-education.png");
-                                                                                                                
+
                     root.resize(result.width,result.height);root.layout();canvas.setResult(result,true);canvas.fit();save(root,"budget-full.png");
                     for(var category:graph.panels.getFirst().categories())for(var branch:category.branches()){
                         var b=result.byId.get(branch.effectId());if(result.hit(b.cx(),b.y()+8)!=b)throw new AssertionError("Actual measured choice hit");

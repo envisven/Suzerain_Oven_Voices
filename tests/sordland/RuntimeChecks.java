@@ -11,7 +11,7 @@ import java.nio.file.*;
 import java.util.*;
 import static sordland.TestSupport.*;
 
-                                                                                                       
+
 final class RuntimeChecks {
     static void run(Path path,Dataset data)throws Exception {
         RuntimeDatabase db=data.runtime();
@@ -32,8 +32,8 @@ final class RuntimeChecks {
         equal("BaseGame.GovernmentBudget",panel.value("PanelCounterVariable"),"Counter provenance");
         var entry=data.entry(new EntryKey(26,209));check(entry!=null,"26:209 exists");
         check(Semantics.analyze(entry.script(),entry.sequence()).commands().stream().anyMatch(c->c.kind()==Semantics.CommandKind.PANEL&&"Panel_Budget".equals(PanelGraphBuilder.panelName(c.raw()))),"Structured panel command");
-                                                                                   
-                                                                                   
+
+
         equal(1,entry.links().size(),"Budget panel source has one outgoing source link");
         equal(new EntryKey(27,1),entry.links().getFirst().target(),"Budget panel source enters conversation 27 input");
         var intoPanel=data.conversations().get(26).entries().values().stream()
@@ -94,7 +94,7 @@ final class RuntimeChecks {
         var layout=new LayoutEngine().dialogue(graph,Set.of(),RuntimeChecks::measure);geometry(layout,group);
         var projected=ActorProjection.project(graph,Set.of());equal(graph.panels,projected.panels,"Actor filter retains panel mechanics");geometry(new LayoutEngine().dialogue(projected,Set.of(),RuntimeChecks::measure),group);
         var expanded=new LayoutEngine().dialogue(graph,Set.of(group.categories().getFirst().branches().getFirst().effectId()),RuntimeChecks::measure);geometry(expanded,group);
-                                                                                                       
+
         int graphs=0;
         for(Conversation c:data.conversations().values()){
             Graph g=new DialogueGraphBuilder().build(data,c);graphs++;var map=new HashMap<String,Node>();g.nodes.forEach(n->check(map.put(n.id,n)==null,"Unique enriched node id"));
@@ -219,7 +219,7 @@ final class RuntimeChecks {
         var noOptions=new RuntimeDatabase(Map.of("pageddecisionpanelsdata",List.of(panel),"carouselchoicepagedata",db.collection("carouselchoicepagedata")),db.catalog,db.sourceFiles,List.of());nodes.clear();notes.clear();edges.clear();groups.clear();
         PanelGraphBuilder.append(noOptions,"ShowPagedDecisionsPanel(\"Panel_Budget\")","brokenOptions",null,nodes,edges,groups,notes);equal(12L,nodes.stream().filter(n->n.kind==Kind.NOTICE).count(),"All missing options retained");
         Path absent=Files.createTempDirectory("sordland-runtime-test-");try{var empty=RuntimeDatabaseLoader.load(absent);check(empty.collections.isEmpty()&&!empty.diagnostics.isEmpty(),"Runtime absence graceful");}finally{Files.delete(absent);}
-                                                                                     
+
         for(var p:db.collection("pageddecisionpanelsdata")){nodes.clear();edges.clear();groups.clear();notes.clear();PanelGraphBuilder.append(db,"ShowPagedDecisionsPanel(\""+p.name()+"\")","panel",null,nodes,edges,groups,notes);check(!groups.isEmpty(),"Generic panel resolves "+p.name());for(Node n:nodes)if(n.kind==Kind.CONDITION){equal(1L,edges.stream().filter(e->e.from.equals(n.id)&&e.label.equals("TRUE")).count(),"Condition TRUE only");check(edges.stream().noneMatch(e->e.from.equals(n.id)&&e.label.equals("FALSE")),"No invented false destination");}}
     }
 }

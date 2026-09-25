@@ -2,7 +2,7 @@ package sordland.analysis;
 
 import java.util.*;
 
-                                                                                
+
 public final class VariableCatalog {
     private final VariableIndex index;
     public VariableCatalog(VariableIndex index) { this.index = index; }

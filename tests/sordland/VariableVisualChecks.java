@@ -10,10 +10,11 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.image.*;
 import javafx.stage.*;
 import sordland.data.Loader;
+import sordland.analysis.VariableIndex.Occurrence;
 import sordland.ui.VariableInspectorWindow;
 import java.nio.file.*;
 
-                                                                     
+
 public final class VariableVisualChecks extends Application {
     private static int exit = 2;
     private int phase;
@@ -74,15 +75,22 @@ public final class VariableVisualChecks extends Application {
             } else if (phase == 3 && scene.lookup("#variable-analysis") != null) {
                 scene.getRoot().applyCss();
                 scene.getRoot().layout();
-                WritableImage image = scene.snapshot(null);
-                int width = (int) image.getWidth(), height = (int) image.getHeight();
-                int[] pixels = new int[width * height];
-                image.getPixelReader().getPixels(0, 0, width, height, PixelFormat.getIntArgbInstance(), pixels, 0, width);
-                var bitmap = new java.awt.image.BufferedImage(width, height, java.awt.image.BufferedImage.TYPE_INT_ARGB);
-                bitmap.setRGB(0, 0, width, height, pixels, 0, width);
-                Files.createDirectories(Path.of("docs/variable-validation"));
-                javax.imageio.ImageIO.write(bitmap, "png", Path.of("docs/variable-validation/energy-inspector.png").toFile());
-                System.out.println("PASS: variable window, real filtering, no typing analysis, exact mouse selection, rendered analysis.");
+                save(scene, "energy-inspector.png");
+                @SuppressWarnings("unchecked") TableView<Occurrence> table = (TableView<Occurrence>) scene.lookup("#state-family-table");
+                if (table == null) throw new AssertionError("Proven family lost after guard propagation");
+                Occurrence epa = table.getItems().stream().filter(o -> o.source().identity().equals("Conversation 44 / Dialogue 450")).findFirst().orElseThrow();
+                if (epa.guardProof() == null || !epa.guardProof().propagated() || epa.condition().variables().isEmpty()) throw new AssertionError("Family table missing actual EPA guard");
+                table.scrollTo(epa);
+                ScrollPane scroll = (ScrollPane) scene.getRoot().lookupAll(".scroll-pane").stream()
+                    .filter(n -> n instanceof ScrollPane p && p.getContent() != null && "variable-analysis".equals(p.getContent().getId())).findFirst().orElseThrow();
+                double contentHeight = scroll.getContent().getBoundsInLocal().getHeight();
+                scroll.setVvalue(table.getBoundsInParent().getMinY() / (contentHeight - scroll.getViewportBounds().getHeight()));
+                phase++;
+            } else if (phase == 4) {
+                scene.getRoot().applyCss();
+                scene.getRoot().layout();
+                save(scene, "energy-guard-family.png");
+                System.out.println("PASS: filtering/selection separation, reconstructed EPA guard in live family table, summary and family snapshots.");
                 exit = 0;
                 timer.stop();
                 inspector.close();
@@ -97,4 +105,15 @@ public final class VariableVisualChecks extends Application {
             Platform.exit();
         }
     }
+    private static void save(Scene scene, String name) throws Exception {
+        WritableImage image = scene.snapshot(null);
+        int width = (int) image.getWidth(), height = (int) image.getHeight();
+        int[] pixels = new int[width * height];
+        image.getPixelReader().getPixels(0, 0, width, height, PixelFormat.getIntArgbInstance(), pixels, 0, width);
+        var bitmap = new java.awt.image.BufferedImage(width, height, java.awt.image.BufferedImage.TYPE_INT_ARGB);
+        bitmap.setRGB(0, 0, width, height, pixels, 0, width);
+        Files.createDirectories(Path.of("docs/variable-validation"));
+        javax.imageio.ImageIO.write(bitmap, "png", Path.of("docs/variable-validation", name).toFile());
+    }
+
 }

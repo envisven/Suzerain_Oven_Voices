@@ -11,7 +11,7 @@ import sordland.ui.TextMeasurer;
 import java.util.*;
 import static sordland.TestSupport.*;
 
-                                                                                                  
+
 final class CampaignLayoutChecks {
     private CampaignLayoutChecks() {}
     static void run(Dataset data) {
@@ -54,7 +54,7 @@ final class CampaignLayoutChecks {
             for(Line line:filtered.lines)byEndpoints.computeIfAbsent(line.edge().from+"/"+line.edge().to,k->new ArrayList<>()).add(line);
             for(var routes:byEndpoints.values())if(routes.size()>1)for(int i=1;i<routes.size();i++)check(!routes.getFirst().points().equals(routes.get(i).points()),"Immediate reconverging alternatives have visibly distinct routes after type projection");
         }
-                                                                                
+
         var categories=List.copyOf(allTypes);
         for(int mask=0;mask<(1<<categories.size());mask++){
             var selected=new LinkedHashSet<String>();

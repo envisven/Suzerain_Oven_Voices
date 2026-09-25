@@ -22,7 +22,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.function.*;
 
-                                                                                          
+
 public final class Main extends Application {
     private Stage stage;private BorderPane root;private StackPane center;private VBox top;
     private final ExecutorService worker=Executors.newSingleThreadExecutor(r->{Thread t=new Thread(r,"sordland-model");t.setDaemon(true);return t;});
@@ -387,8 +387,8 @@ public final class Main extends Application {
             }
             if(smokeStage==32){smokeStage=33;turn.setValue("All turns");return;}
             if(smokeStage==33){
-                                                                                           
-                                                                                            
+
+
                 if(!current.selectedTypes.equals(Set.of("News"))){smokeStage=34;for(String name:current.types)typeFilter.setSelected(name,name.equals("News"));return;}
                 smokeStage=4;eventView.fire();return;
             }
@@ -425,7 +425,7 @@ public final class Main extends Application {
             smokeStage=9;Graph.Node event=current.canvas.result().graph.nodes.stream().filter(n->n.item!=null).findFirst().orElseThrow();current.canvas.onNode.accept(event,true);
         }catch(Exception e){error(e);}
     }
-                                                                                          
+
     private void smokeClickEdge(){
         var canvas=current.canvas;var layout=canvas.result();
         for(var line:layout.lines)for(int i=1;i<line.points().size();i++){

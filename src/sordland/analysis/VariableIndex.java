@@ -6,10 +6,10 @@ import sordland.data.runtime.RuntimeDatabase;
 import sordland.graph.Semantics;
 import java.util.*;
 
-                                                                                  
+
 public final class VariableIndex {
     public enum Access { READ, WRITE, READ_WRITE, REFERENCE, UNRESOLVED }
-    public enum Proof { EXACT, EXPLICIT_STRUCTURE, UNRESOLVED }
+    public enum Proof { EXACT, EXPLICIT_STRUCTURE, DIALOGUE_GUARD, UNRESOLVED }
     public record Source(String identity, String title, Integer turn, String field,
                          String original, String guard, List<String> aliases) {
         public Source { aliases = List.copyOf(aliases); }
@@ -17,7 +17,12 @@ public final class VariableIndex {
     }
     public record Occurrence(String variable, Access access, Proof proof, Source source,
                              int operation, String expression, VariableSyntax.Expr condition,
-                             VariableSyntax.Effect effect) {}
+                             VariableSyntax.Effect effect, DialogueGuardResolver.Resolved guardProof) {
+        public Occurrence(String variable, Access access, Proof proof, Source source, int operation,
+                          String expression, VariableSyntax.Expr condition, VariableSyntax.Effect effect) {
+            this(variable, access, proof, source, operation, expression, condition, effect, null);
+        }
+    }
     private final Map<String,List<Occurrence>> occurrences = new TreeMap<>();
     private final Map<String,String> labels = new TreeMap<>();
     public VariableIndex(Dataset data) {
@@ -45,6 +50,7 @@ public final class VariableIndex {
                 add(id, title, item.turn(), "Options[" + i + "].Instruction", option.instruction(), combined, false, aliases);
             }
         }
+        var dialogueGuards = new DialogueGuardResolver(data);
         for (Conversation conversation : data.conversations().values()) {
             Item item = conversations.get(conversation.id());
             for (Entry entry : conversation.entries().values()) {
@@ -53,8 +59,11 @@ public final class VariableIndex {
                 String title = conversation.title() + " / Dialogue " + entry.key().dialogueId();
                 Integer turn = item == null ? null : item.turn();
                 add(id, title, turn, "conditionsString", entry.condition(), "", true, List.of());
-                add(id, title, turn, "userScript", entry.script(), entry.condition(), false, List.of());
-                add(id, title, turn, "Sequence", entry.sequence(), entry.condition(), false, List.of());
+                if (!entry.script().isBlank() || !entry.sequence().isBlank()) {
+                    var resolved = dialogueGuards.resolve(entry.key());
+                    add(id, title, turn, "userScript", entry.script(), entry.condition(), false, List.of(), resolved);
+                    add(id, title, turn, "Sequence", entry.sequence(), entry.condition(), false, List.of(), resolved);
+                }
             }
         }
         for (Turn turn : data.gameFlow().turns()) {
@@ -72,7 +81,7 @@ public final class VariableIndex {
                 labels.putIfAbsent(enabled, entity.title());
                 add(entity.location(), entity.title(), null, "IsEnabledVariable", enabled, "", null, List.of());
             }
-                                                                                                 
+
             if (names.contains(entity.collection() + ":" + entity.name())) continue;
             String identity = entity.collection() + ":" + (entity.id().isBlank() ? entity.name() : entity.id());
             if (!seenRuntime.add(identity)) continue;
@@ -139,6 +148,10 @@ public final class VariableIndex {
         return a.isBlank() ? b : b.isBlank() ? a : "(" + a + ") && (" + b + ")";
     }
     private void add(String id, String title, Integer turn, String field, String text, String guard, Boolean condition, List<String> aliases) {
+        add(id, title, turn, field, text, guard, condition, aliases, null);
+    }
+    private void add(String id, String title, Integer turn, String field, String text, String guard,
+                     Boolean condition, List<String> aliases, DialogueGuardResolver.Resolved resolved) {
         if (text.isBlank()) return;
         Source source = new Source(id, title, turn, field, text, guard, aliases);
         VariableSyntax.Expr predicate = VariableSyntax.parse(guard);
@@ -157,8 +170,8 @@ public final class VariableIndex {
             for (String name : VariableSyntax.references(command.raw())) {
                 Access access = !known ? Access.UNRESOLVED : name.equals(effect.variable())
                     ? effect.readsTarget() ? Access.READ_WRITE : Access.WRITE : Access.READ;
-                put(new Occurrence(name, access, !known ? Proof.UNRESOLVED : guard.isBlank() ? Proof.EXACT : Proof.EXPLICIT_STRUCTURE,
-                    source, operation, command.raw(), predicate, effect));
+                put(new Occurrence(name, access, !known ? Proof.UNRESOLVED : resolved != null && resolved.propagated() ? Proof.DIALOGUE_GUARD : guard.isBlank() ? Proof.EXACT : Proof.EXPLICIT_STRUCTURE,
+                    source, operation, command.raw(), predicate, effect, resolved));
             }
         }
     }

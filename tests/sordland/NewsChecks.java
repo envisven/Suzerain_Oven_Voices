@@ -6,7 +6,7 @@ import sordland.graph.*;
 import java.util.*;
 import static sordland.TestSupport.*;
 
-                                                                                          
+
 final class NewsChecks {
     private NewsChecks() {}
     static void run(Dataset actual) {

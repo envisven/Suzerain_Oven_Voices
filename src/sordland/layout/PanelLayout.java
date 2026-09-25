@@ -6,33 +6,33 @@ import sordland.graph.Graph.*;
 import sordland.layout.LayoutEngine.*;
 import java.util.*;
 
-   
-                                                                     
-  
-                                                                  
-  
-           
-         
-         
-                                                                 
-                                                                 
-                                                                 
-                                               
-                                                 
-                                                 
-                                                 
-                                               
-                                       
-                              
-                              
-                                 
-  
-                                                                           
-                                                                         
-                                                                              
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public final class PanelLayout {
-                                                          
+
     private static final double OUTER_PAD = 38;
     private static final double ENTRY_TO_FIRST_HEADER = 58;
     private static final double HEADER_TO_CHOICES = 42;
@@ -42,7 +42,7 @@ public final class PanelLayout {
     private static final double BOTTOM_PAD = 46;
     private static final double SPINE_INSET = 16;
 
-                                       
+
     private static final double BUDGET_OUTER_PAD_X = 32;
     private static final double BUDGET_GROUP_TOP = 18;
     private static final double BUDGET_GROUP_PAD_TOP = 30;
@@ -75,12 +75,12 @@ public final class PanelLayout {
             sizes.put(n.id,measurer.measure(n,expanded.contains(n.id)));
         }
 
-                                                                              
-                                                                              
-                                                                                  
-                                                                              
-                                                                                  
-                                                                         
+
+
+
+
+
+
         if(graph.panels.size()==1&&isBudget(graph.panels.getFirst(),byId))
             return layoutBudgetGateway(graph,graph.panels.getFirst(),expanded,measurer,byId,sizes);
 
@@ -91,9 +91,9 @@ public final class PanelLayout {
             metrics.put(panel.id(),measurePanel(panel,sizes,byId));
         }
 
-                                                                                
-                                                                              
-                                                                     
+
+
+
         var macroNodes=graph.nodes.stream()
             .filter(n->!owners.containsKey(n.id)||owners.get(n.id).entryId().equals(n.id))
             .toList();
@@ -132,12 +132,12 @@ public final class PanelLayout {
             double groupY=macroBox.y()+m.groupTop();
 
             if(m.budget()){
-                                                                           
-                                                 
+
+
                 boxes.add(new Box(byId.get(panel.entryId()),macroBox.cx()-1,groupY,
                     new Size(2,2,List.of(),List.of(),List.of())));
 
-                                                                           
+
                 for(CategoryPlacement cp:m.categories()){
                     Box header=at(byId,sizes,cp.headerId(),macroBox.cx()+cp.centerOffset(),macroBox.y()+cp.headerY());
                     boxes.add(header);
@@ -151,18 +151,18 @@ public final class PanelLayout {
                     }
                 }
 
-                                                                               
+
                 boxes.add(at(byId,sizes,panel.completionId(),macroBox.cx(),macroBox.y()+m.completionY()));
 
-                                                                              
-                                                                                
+
+
                 List<String> headerIds=panel.categories().stream().map(PanelCategory::headerId).toList();
                 Group group=new Group(panel.id(),groupX,groupY,m.groupWidth(),m.groupHeight(),
                     panel.entryId(),panel.completionId(),headerIds);
                 groups.add(group);
                 groupByPanel.put(panel.id(),group);
             }else{
-                                                                      
+
                 boxes.add(at(byId,sizes,panel.entryId(),macroBox.cx(),macroBox.y()));
                 boxes.add(new Box(byId.get(panel.completionId()),macroBox.cx()-1,macroBox.bottom()-2,
                     new Size(2,2,List.of(),List.of(),List.of())));
@@ -189,8 +189,8 @@ public final class PanelLayout {
         boxes.forEach(b->placed.put(b.node().id,b));
         var lines=new ArrayList<Line>();
 
-                                                                             
-                                                                                 
+
+
         for(Line line:base.lines){
             Edge original=originals.get(line.edge());
             if(original==null)continue;
@@ -216,8 +216,8 @@ public final class PanelLayout {
             lines.add(new Line(original,from,to,line.lane(),List.copyOf(points)));
         }
 
-                                                                              
-                             
+
+
         for(Edge e:graph.edges){
             PanelGroup panel=owners.get(e.from);
             if(panel==null||panel!=owners.get(e.to))continue;
@@ -231,7 +231,7 @@ public final class PanelLayout {
                 continue;
             }
 
-                                                                               
+
             if(e.from.equals(panel.entryId())&&e.to.equals(panel.completionId()))continue;
             Group group=groupByPanel.get(panel.id());
             List<Point> points;
@@ -261,8 +261,8 @@ public final class PanelLayout {
     private static List<Point> budgetRoute(PanelGroup panel,Edge edge,Box from,Box to,
                                            Map<String,Box> placed,Group group){
         if(edge.from.equals(panel.entryId())&&isHeader(panel,edge.to)){
-                                                                                 
-                                                                             
+
+
             double busY=group.y()+18;
             return List.of(
                 new Point(group.cx(),group.y()),
@@ -272,8 +272,8 @@ public final class PanelLayout {
         }
 
         if(isHeader(panel,edge.from)){
-                                                                               
-                                                               
+
+
             double fanY=from.bottom()+20;
             return List.of(
                 new Point(from.cx(),from.bottom()),
@@ -283,8 +283,8 @@ public final class PanelLayout {
         }
 
         if(edge.to.equals(panel.completionId())){
-                                                                               
-                                                   
+
+
             double mergeY=to.y()-30;
             return List.of(
                 new Point(from.cx(),from.bottom()),
@@ -293,7 +293,7 @@ public final class PanelLayout {
                 new Point(to.cx(),to.y()));
         }
 
-                                                                               
+
         if(Math.abs(from.cx()-to.cx())<0.01){
             return List.of(new Point(from.cx(),from.bottom()),new Point(to.cx(),to.y()));
         }
@@ -303,21 +303,21 @@ public final class PanelLayout {
     }
 
 
-       
-                                                                                 
-                                                                               
-                                                                                 
-                                                                                
-                                                                                 
-                                                                             
-       
+
+
+
+
+
+
+
+
     private static Result layoutBudgetGateway(Graph graph,PanelGroup panel,Set<String> expanded,Measurer measurer,
                                               Map<String,Node> nodes,Map<String,Size> sizes){
         Set<String> members=new LinkedHashSet<>(panel.members());
 
-                                                                                
-                                                                                
-                                                                     
+
+
+
         var forward=new HashMap<String,List<String>>();
         var reverse=new HashMap<String,List<String>>();
         for(Edge edge:graph.edges){
@@ -331,25 +331,25 @@ public final class PanelLayout {
         pre.removeAll(members);
         post.removeAll(members);
 
-                                                                             
-                                                                           
+
+
         var overlap=new LinkedHashSet<>(pre);
         overlap.retainAll(post);
         if(!overlap.isEmpty())
             throw new IllegalArgumentException("Panel_Budget is no longer a source gateway; pre/post overlap: "+overlap);
 
-                                                                            
-                                                                                
-                                                                     
+
+
+
         EntryKey panelSource=nodes.get(panel.entryId()).source;
         for(Node node:graph.nodes){
             if(members.contains(node.id)||pre.contains(node.id)||post.contains(node.id))continue;
             if(panelSource!=null&&node.source!=null&&node.source.conversationId()==panelSource.conversationId())pre.add(node.id);
-            else pre.add(node.id);                                                                              
+            else pre.add(node.id);
         }
 
-                                                                         
-                                                             
+
+
         var bypass=new ArrayList<Edge>();
         for(Edge edge:graph.edges)
             if(pre.contains(edge.from)&&post.contains(edge.to))bypass.add(edge);
@@ -364,11 +364,11 @@ public final class PanelLayout {
         Metrics metrics=measureBudget(panel,sizes,nodes);
         double preMaxBottom=preLayout.boxes.stream().mapToDouble(Box::bottom).max().orElse(64);
         double panelMacroY=preMaxBottom+82-metrics.groupTop();
-        double fullGroupX=0;                                         
+        double fullGroupX=0;
         double fullGroupY=panelMacroY+metrics.groupTop();
 
-                                                                               
-                                                                    
+
+
         Size completionSize=sizes.get(panel.completionId());
         double fullGroupHeight=metrics.completionY()+completionSize.height()+BUDGET_GROUP_PAD_BOTTOM-metrics.groupTop();
         double fullPanelBottom=fullGroupY+fullGroupHeight;
@@ -388,7 +388,7 @@ public final class PanelLayout {
         appendShifted(preLayout,preDx,0,boxes,lines);
         appendShifted(postLayout,postDx,postDy,boxes,lines);
 
-                                                                         
+
         boxes.add(new Box(nodes.get(panel.entryId()),center-1,fullGroupY,
             new Size(2,2,List.of(),List.of(),List.of())));
 
@@ -412,7 +412,7 @@ public final class PanelLayout {
         var placed=new HashMap<String,Box>();
         boxes.forEach(b->placed.put(b.node().id,b));
 
-                                                                        
+
         for(Edge edge:graph.edges){
             if(!members.contains(edge.from)||!members.contains(edge.to))continue;
             Box from=placed.get(edge.from),to=placed.get(edge.to);
@@ -420,11 +420,11 @@ public final class PanelLayout {
             lines.add(new Line(edge,from,to,0,budgetRoute(panel,edge,from,to,placed,group)));
         }
 
-                                                                                 
-                                                                                 
-                                                                                
-                                                                                
-                                            
+
+
+
+
+
         double preLeft=boxes.stream().filter(b->pre.contains(b.node().id)).mapToDouble(Box::x).min().orElse(group.x());
         double incomingLane=Math.min(preLeft-36,group.x()-36);
         for(Edge edge:graph.edges){
@@ -442,9 +442,9 @@ public final class PanelLayout {
                 new Point(group.cx(),group.y()))));
         }
 
-                                                                                  
-                                                                               
-                                                               
+
+
+
         for(Edge edge:graph.edges){
             if(!edge.from.equals(panel.completionId())||members.contains(edge.to))continue;
             Box from=placed.get(panel.completionId()),to=placed.get(edge.to);
@@ -459,14 +459,14 @@ public final class PanelLayout {
                 new Point(to.cx(),to.y()))));
         }
 
-                                                                                   
-                                                                                 
-                                                                           
+
+
+
         for(Edge edge:graph.edges){
             if(members.contains(edge.from)||members.contains(edge.to))continue;
             boolean samePre=pre.contains(edge.from)&&pre.contains(edge.to);
             boolean samePost=post.contains(edge.from)&&post.contains(edge.to);
-            if(samePre||samePost)continue;                                       
+            if(samePre||samePost)continue;
             Box from=placed.get(edge.from),to=placed.get(edge.to);
             if(from==null||to==null)continue;
             double lane=group.x()-48;
@@ -532,7 +532,7 @@ public final class PanelLayout {
     private static Metrics measureBudget(PanelGroup panel,Map<String,Size> sizes,Map<String,Node> nodes){
         var orderedCategories=new ArrayList<>(panel.categories());
 
-                                                                                
+
         var categoryWidths=new LinkedHashMap<String,Double>();
         double maxHeaderHeight=0,maxConditionHeight=0,maxChoiceHeight=0,maxEffectHeight=0;
         for(PanelCategory category:orderedCategories){
@@ -673,7 +673,7 @@ public final class PanelLayout {
         return entry!=null&&entry.item!=null&&"Panel_Budget".equals(entry.item.internalName());
     }
 
-                                                                                     
+
     private static int budgetVisualOrder(Node node){
         if(node==null)return 99;
         String t=node.title.toUpperCase(Locale.ROOT);

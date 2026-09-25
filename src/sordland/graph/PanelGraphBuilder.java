@@ -8,7 +8,7 @@ import sordland.graph.Graph.*;
 import java.util.*;
 import java.util.regex.Pattern;
 
-                                                                              
+
 public final class PanelGraphBuilder {
     private static final Pattern SHOW=Pattern.compile("^ShowPagedDecisionsPanel\\s*\\(\\s*([\"'])([^\"'\\\\]+)\\1\\s*\\)$");
 
@@ -31,9 +31,9 @@ public final class PanelGraphBuilder {
         boolean budget="Panel_Budget".equals(name);
         String details=panel.metadata()+"\nInvoking command: "+command+"\nSource dialogue: "+source;
 
-                                                                                  
-                                                                               
-                                      
+
+
+
         nodes.add(new Node(id,Kind.JUNCTION,panel.title(),"",details,"Dialogue","",null,panel.item(),source));
 
         var categories=new ArrayList<PanelCategory>();
@@ -107,9 +107,9 @@ public final class PanelGraphBuilder {
                 }
 
                 if(budget){
-                                                                                 
-                                                                                  
-                                                                        
+
+
+
                     String choiceId=baseId+":choice";
                     String effectId=baseId+":effect";
                     members.add(choiceId);
@@ -129,9 +129,9 @@ public final class PanelGraphBuilder {
                     edges.add(new Edge(choiceId,effectId,"",false));
                     branches.add(new PanelBranch(cid,choiceId,effectId));
                 }else{
-                                                                                 
-                                                                                  
-                                                              
+
+
+
                     String effectId=baseId;
                     members.add(effectId);
                     nodes.add(new Node(effectId,Kind.EFFECT,
@@ -155,9 +155,9 @@ public final class PanelGraphBuilder {
             nodes.add(new Node(completion,Kind.CONTROL,"Budget chosen","",
                 details+"\nVisual merge after all budget alternatives; the exact source continuation remains singular.",
                 "Panel completion","",null,null,source));
-                                                                                 
-                                                                                
-                                                          
+
+
+
             for(PanelCategory category:categories)
                 for(PanelBranch branch:category.branches())
                     edges.add(new Edge(branch.effectId(),completion,"",false));

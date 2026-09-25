@@ -3,15 +3,15 @@ package sordland.graph;
 import java.util.*;
 import static sordland.graph.Graph.*;
 
-                                                                                         
-                                                                                              
+
+
 public final class TypeProjection {
     private TypeProjection() {}
     public static String category(Node node) {
         if(node.kind==Kind.CONDITION)return "Condition";
         if(node.kind==Kind.EVENT)return node.type;
         if(node.kind==Kind.EFFECT)return node.type.equals("News")||sordland.data.runtime.RuntimeDatabase.TYPES.containsValue(node.type)?node.type:"Effect";
-        return "";                                                                                  
+        return "";
     }
     public static List<String> types(Graph graph) {
         var types=new TreeSet<String>();
@@ -31,8 +31,8 @@ public final class TypeProjection {
             if(!nodes.containsKey(edge.from)||!nodes.containsKey(edge.to))throw new IllegalArgumentException("Unresolved visual edge in type projection");
             outgoing.computeIfAbsent(edge.from,k->new ArrayList<>()).add(edge);incoming.merge(edge.to,1,Integer::sum);
         }
-                                                                                           
-                                                                                          
+
+
         var useful=new HashSet<String>();var reverse=new HashMap<String,List<String>>();
         for(Edge edge:canonical.edges)reverse.computeIfAbsent(edge.to,k->new ArrayList<>()).add(edge.from);
         var pending=new ArrayDeque<String>();for(Node node:canonical.nodes)if(!hidden.contains(node.id))pending.add(node.id);
@@ -43,7 +43,7 @@ public final class TypeProjection {
             long out=outgoing.getOrDefault(id,List.of()).stream().filter(e->useful.contains(e.to)).count();
             if(out>1||incoming.getOrDefault(id,0)>1)anchors.add(id);
         }
-                                                                                   
+
         var settled=new HashSet<String>();
         for(String start:hidden){
             if(!useful.contains(start)||anchors.contains(start)||settled.contains(start))continue;
@@ -86,7 +86,7 @@ public final class TypeProjection {
                 }
                 if(path.size()==1&&!hidden.contains(first.from)&&!hidden.contains(first.to)){edges.add(first);continue;}
                 var labels=new ArrayList<String>();for(Edge step:path)if(!step.label.isBlank())labels.add(step.label);
-                                                                                                       
+
                 edges.add(new Edge(node.id,id,String.join(" → ",labels),path.stream().anyMatch(e->e.back),flatten(path)));
             }
         }

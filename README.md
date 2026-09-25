@@ -144,9 +144,9 @@ inspector and its caches.
 
 **EXACT** identifies a supported local operation; **EXPLICIT_STRUCTURE** identifies
 an operation tied to its own encoded guard or runtime panel/choice fields.
-**UNRESOLVED** appearances remain in source evidence and never become confident
+**DIALOGUE_GUARD** identifies a condition reconstructed from encoded dialogue paths. **UNRESOLVED** appearances remain in source evidence and never become confident
 rules. A source with no local guard is not proof that it is globally reachable or
-unconditional. Earlier dialogue predicates are never inferred as causes.
+unconditional. Dialogue guards propagate only through verified source links and transparent entries; exact paths and stopping boundaries remain in evidence. Chronological proximity never establishes a cause, and false branches are never invented.
 
 Scripts are **never executed**, and source JSON remains read-only. Expand source
 operations or evidence rows for exact expressions, full source fields, guards,
@@ -156,3 +156,5 @@ are provided instead of changing the viewer's graph-navigation history.
 Run `./scripts/test-variable-ui.sh` for the optional desktop inspector smoke test.
 See [Variable Inspector validation](docs/VARIABLE_INSPECTOR.md) for architecture,
 coverage, real-data results, and deliberate limits.
+
+The targeted second pass adds cached dialogue guard proofs and feeds them into the existing rule and state-family views. See [guard reconstruction and validation](docs/DIALOGUE_GUARDS.md).

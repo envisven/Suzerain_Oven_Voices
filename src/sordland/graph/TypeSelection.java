@@ -2,7 +2,7 @@ package sordland.graph;
 
 import java.util.*;
 
-                                                                                            
+
 public final class TypeSelection {
     private final Map<String,Boolean> preferences=new LinkedHashMap<>();
     public TypeSelection() {}

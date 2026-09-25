@@ -7,7 +7,7 @@ import sordland.graph.Graph.*;
 import java.util.*;
 import java.util.regex.Pattern;
 
-                                                                                                 
+
 public final class RuntimeGraphBuilder {
     private static final Pattern WRITE=Pattern.compile("^([A-Za-z_]\\w*(?:\\.[A-Za-z_]\\w*)+)\\s*=\\s*(true|false)$");
     private static final Pattern CALL=Pattern.compile("^(AddReport|AddJournalEntry|AddTokenStatus|RemoveTokenStatus|ShowOneTimeDecreesPanel)\\s*\\((.*)\\)$");
@@ -17,7 +17,7 @@ public final class RuntimeGraphBuilder {
         var out=new ArrayList<Evidence>();var analysis=Semantics.analyze(script,"");
         for(var command:analysis.commands()){
             if(command.kind()==Semantics.CommandKind.TERMINAL)break;
-                                                                                                   
+
             String raw=command.raw();var write=WRITE.matcher(raw);
             if(command.kind()==Semantics.CommandKind.EFFECT&&write.matches())for(Entity e:db.byEnabledVariable.getOrDefault(write.group(1),List.of()))out.add(new Evidence(e,raw,"Exact IsEnabledVariable write: "+write.group(1)+" = "+write.group(2)));
             var call=CALL.matcher(raw);if(!call.matches())continue;

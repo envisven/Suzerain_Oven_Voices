@@ -5,7 +5,7 @@ import javafx.scene.layout.VBox;
 import sordland.analysis.*;
 import java.util.function.Consumer;
 
-                                                                              
+
 public final class VariablePicker extends VBox {
     private final TextField query = new TextField();
     private final ListView<String> choices = new ListView<>();

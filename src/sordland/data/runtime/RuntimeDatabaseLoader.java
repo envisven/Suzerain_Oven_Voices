@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.*;
 
-                                                                                                
+
 public final class RuntimeDatabaseLoader {
     private RuntimeDatabaseLoader(){}
     public static RuntimeDatabase load(Path directory){
