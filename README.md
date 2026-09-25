@@ -123,3 +123,36 @@ This requires a graphical display. It fails with a nonzero exit code if it canno
 | `build/` | Generated compilation and test outputs |
 
 The application is an inspection tool. It does not execute game scripts, evaluate a playthrough's full game state, change saves, or modify source databases.
+
+## Game variable inspector
+
+The compact search-mode menu after **Find** offers **Current view** (the unchanged
+startup graph search) and **Game variable**. Game variable opens a separate,
+resizable themed window. Closing it returns the menu to Current view.
+
+Type any case-insensitive substring to filter the cached variable catalog, then
+**click an exact variable option** to analyse it. Typing, highlighting a row, or
+pressing Enter in the filter does not analyse free text. Runtime titles appear
+alongside canonical names where available.
+
+The inspector groups boolean and assigned-value rules, uses a modifier table for
+predominantly numeric variables, and shows a small state-transition table only
+when complete one-hot co-writes prove it. Related guard variables support
+navigation with Back/Forward. Catalog creation and cached analyses use a separate
+background worker with cancellation; loading new source files discards the old
+inspector and its caches.
+
+**EXACT** identifies a supported local operation; **EXPLICIT_STRUCTURE** identifies
+an operation tied to its own encoded guard or runtime panel/choice fields.
+**UNRESOLVED** appearances remain in source evidence and never become confident
+rules. A source with no local guard is not proof that it is globally reachable or
+unconditional. Earlier dialogue predicates are never inferred as causes.
+
+Scripts are **never executed**, and source JSON remains read-only. Expand source
+operations or evidence rows for exact expressions, full source fields, guards,
+identities, proof categories, and alternate runtime locations. Source identities
+are provided instead of changing the viewer's graph-navigation history.
+
+Run `./scripts/test-variable-ui.sh` for the optional desktop inspector smoke test.
+See [Variable Inspector validation](docs/VARIABLE_INSPECTOR.md) for architecture,
+coverage, real-data results, and deliberate limits.

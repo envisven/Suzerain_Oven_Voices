@@ -1,0 +1,28 @@
+Compiled Sordland Tree Viewer.
+ACCOUNT SuzerainDataDumper.entity_data.json/AllBillsData: total=26 consumed=22 retained=4 unaccounted=0
+ACCOUNT SuzerainDataDumper.entity_data.json/AllConversationsData: total=264 consumed=151 retained=113 unaccounted=0
+ACCOUNT SuzerainDataDumper.entity_data.json/AllDecisionsData: total=310 consumed=56 retained=254 unaccounted=0
+ACCOUNT SuzerainDataDumper.entity_data.json/conditionalInstructionData: total=368 consumed=4 retained=364 unaccounted=0
+ACCOUNT SuzerainDataDumper.entity_data.json/GameFlowData: total=2 consumed=1 retained=1 unaccounted=0
+ACCOUNT SuzerainDataDumper.entity_data.json/NewsData: total=1476 consumed=1436 retained=40 unaccounted=0
+ACCOUNT SuzerainDataDumper.conversations_Sordland.json: conversations=286 entries=83454 fields=868521 links=104553; all consumed/raw-retained; unaccounted=0
+ACCOUNT SuzerainDataDumper.actor_names.json: total=103 consumed=0 retained=103 rejected=0 unaccounted=0
+Real dialogue coverage: 286 complete canonical graphs; 159924 boxes; 187600 exact source links; maximum 3187 boxes (conversation 257); zero continuations.
+Runtime ROOTED types: [Decree, Journal, Policy, Report, Situation, Token status]
+Runtime counts: {carouselchoiceoptiondata=55, multiplechoiceoptiondata=64, pageddecisionpanelsdata=8, carouselchoicepagedata=17, situationsdata=228, decreesdata=19, journalentriesdata=561, multiplechoicepagedata=24, policiesdata=164, reportsdata=862, tokenstatuseffectsdata=106}; 286 enriched dialogue graphs, exact Budget effects/continuation and panel geometry PASS.
+VARIABLE BaseGame.Malenyevist layout=NUMERIC reads=92 writes=103 unresolved=0 family=false
+  +5 WHEN true @ Conversation 1 / Dialogue 233/userScript
+  -3 WHEN true @ Conversation 1 / Dialogue 234/userScript
+VARIABLE BaseGame.Economy layout=NUMERIC reads=240 writes=219 unresolved=0 family=false
+  +1 WHEN true @ Conversation 1 / Dialogue 233/userScript
+  +2 WHEN true @ StoryPack_Main / Turns[0]/Steps[5]/OnStepStartInstruction
+VARIABLE BaseGame.Situation_Diplomacy_Energy_PriceBalanced layout=BOOLEAN reads=14 writes=24 unresolved=0 family=true
+  SET = false WHEN true @ Conversation 3 / Dialogue 159/userScript
+  SET = false WHEN true @ Conversation 44 / Dialogue 449/userScript
+VARIABLE BaseGame.Situation_Diplomacy_Energy_PriceFluctuation layout=BOOLEAN reads=30 writes=24 unresolved=0 family=true
+  SET = true WHEN true @ Conversation 3 / Dialogue 159/userScript
+  SET = true WHEN true @ Conversation 44 / Dialogue 449/userScript
+VARIABLE BaseGame.Situation_Diplomacy_Energy_PriceSurge layout=BOOLEAN reads=32 writes=24 unresolved=0 family=true
+  SET = false WHEN true @ Conversation 3 / Dialogue 159/userScript
+  SET = false WHEN true @ Conversation 44 / Dialogue 449/userScript
+PASS: 12.041.423 checks in 11,60 s

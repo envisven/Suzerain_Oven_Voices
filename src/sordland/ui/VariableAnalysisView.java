@@ -1,0 +1,129 @@
+package sordland.ui;
+
+import javafx.beans.property.ReadOnlyStringWrapper;
+import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.control.*;
+import javafx.scene.layout.*;
+import sordland.analysis.*;
+import java.util.*;
+import java.util.function.*;
+import static sordland.analysis.VariableIndex.*;
+
+public final class VariableAnalysisView extends VBox {
+    private final VariableIndex index;
+    public VariableAnalysisView(VariableIndex index, VariableAnalyzer.Analysis analysis, Consumer<String> navigate) {
+        super(14);
+        this.index = index;
+        setPadding(new Insets(20));
+        setId("variable-analysis");
+        getChildren().addAll(heading(index.label(analysis.variable())), mono(analysis.variable()));
+        long readWrite = analysis.count(Access.READ_WRITE);
+        getChildren().add(new Label((analysis.count(Access.READ) + readWrite) + " reads   ·   "
+            + (analysis.count(Access.WRITE) + readWrite) + " writes   ·   " + analysis.rules().size()
+            + " proven operations   ·   " + analysis.count(Access.UNRESOLVED) + " unresolved"));
+        getChildren().add(heading("Derived mechanic"));
+        getChildren().add(text("These are local source operations when their source is reached or selected. They do not prove reachability, execution frequency, or a final game state."));
+        if (analysis.layout() == VariableAnalyzer.Layout.NUMERIC) {
+            getChildren().add(table(analysis.rules(), false));
+        } else if (!analysis.rules().isEmpty()) {
+            var groups = new TreeMap<String,List<Occurrence>>(Comparator.reverseOrder());
+            for (Occurrence rule : analysis.rules()) groups.computeIfAbsent(rule.effect().display(), key -> new ArrayList<>()).add(rule);
+            for (var group : groups.entrySet()) {
+                getChildren().add(heading(group.getKey().equals("SET = true") ? "SET TRUE WHEN" : group.getKey().equals("SET = false") ? "SET FALSE WHEN" : group.getKey() + " WHEN"));
+                var guards = new LinkedHashMap<VariableSyntax.Expr,List<Occurrence>>();
+                group.getValue().forEach(rule -> guards.computeIfAbsent(rule.condition(), key -> new ArrayList<>()).add(rule));
+                boolean first = true;
+                for (var guarded : guards.values()) {
+                    if (!first) getChildren().add(new Label("OR — another source operation"));
+                    first = false;
+                    Occurrence rule = guarded.getFirst();
+                    VBox sources = new VBox(6);
+                    for (Occurrence occurrence : guarded) sources.getChildren().addAll(text(context(occurrence)), evidence(occurrence));
+                    TitledPane disclosure = new TitledPane(guarded.size() + " source operations · exact expressions and locations", sources);
+                    disclosure.setExpanded(false);
+                    VBox card = new VBox(8, text(pretty(rule)), disclosure);
+                    card.setPadding(new Insets(12));
+                    card.setStyle(Theme.PANEL_STYLE + " -fx-border-color: " + Theme.BORDER + "; -fx-background-radius: 6;");
+                    getChildren().add(card);
+                }
+            }
+        } else getChildren().add(text("No proven assignments. Read, reference, and unresolved evidence is available below."));
+        if (analysis.family() != null) {
+            getChildren().addAll(heading("Proven state transitions"), text(String.join(" · ", analysis.family().members())), table(analysis.family().transitions(), true), text("Uncovered combinations: UNKNOWN / NOT PROVEN. Source order and reachability are not inferred."));
+        }
+        getChildren().add(heading("Related variables · direct guard dependencies"));
+        if (analysis.dependencies().isEmpty()) getChildren().add(text("No directly encoded guard dependencies."));
+        analysis.dependencies().forEach((name, count) -> {
+            Hyperlink link = new Hyperlink(index.label(name) + " · " + count + " rule reads");
+            link.setWrapText(true);
+            link.setTooltip(new Tooltip(name));
+            link.setOnAction(event -> navigate.accept(name));
+            getChildren().add(link);
+        });
+        getChildren().add(heading("Source evidence · " + analysis.evidence().size() + " operations"));
+                                                                                                   
+        ListView<Occurrence> evidenceList = new ListView<>();
+        evidenceList.getItems().setAll(analysis.evidence());
+        evidenceList.setPrefHeight(320);
+        evidenceList.setCellFactory(list -> new ListCell<>() {
+            @Override protected void updateItem(Occurrence value, boolean empty) {
+                super.updateItem(value, empty);
+                setText(null);
+                setGraphic(empty || value == null ? null : evidence(value));
+            }
+        });
+        getChildren().add(evidenceList);
+    }
+    private String pretty(Occurrence rule) {
+        return rule.source().guard().isBlank() ? "No additional guard encoded in this source construct" : rule.condition().display(index::label);
+    }
+    private String context(Occurrence rule) {
+        return (rule.source().turn() == null ? "Turn unspecified" : "Turn " + rule.source().turn()) + " · " + rule.source().title();
+    }
+    private TitledPane evidence(Occurrence occurrence) {
+        Source source = occurrence.source();
+        var pane = new TitledPane(occurrence.access() + " · " + source.identity() + " · " + source.field(), null);
+        pane.setExpanded(false);
+        pane.expandedProperty().addListener((observable, previous, expanded) -> {
+            if (expanded && pane.getContent() == null) {
+                TextArea exact = new TextArea(context(occurrence) + "\nProof: " + occurrence.proof() + "\nSource: " + source.identity()
+                    + "\nField: " + source.field() + "\nOperation: " + occurrence.operation() + "\nOperation expression:\n" + occurrence.expression()
+                    + "\nNormalized effect:\n" + (occurrence.effect() == null ? "Not a proven assignment" : occurrence.effect().display())
+                    + "\nGuard:\n" + source.guard() + "\nExact full field:\n" + source.original() + "\nAlternate runtime locations:\n" + String.join("\n", source.aliases()));
+                exact.setEditable(false);
+                exact.setWrapText(true);
+                exact.setPrefRowCount(12);
+                exact.setStyle(Theme.TEXT_AREA_STYLE);
+                pane.setContent(exact);
+            }
+        });
+        return pane;
+    }
+    private TableView<Occurrence> table(List<Occurrence> rules, boolean family) {
+        TableView<Occurrence> table = new TableView<>();
+        column(table, "Turn", o -> Objects.toString(o.source().turn(), "—"));
+        column(table, "Source / decision", o -> o.source().title());
+        column(table, "Condition", this::pretty);
+        column(table, family ? "Result" : "Effect", o -> family ? index.label(o.variable()) : o.effect().display());
+        table.getItems().setAll(rules);
+        table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY_FLEX_LAST_COLUMN);
+        table.setPrefHeight(Math.min(440, 70 + rules.size() * 30));
+        return table;
+    }
+    private static void column(TableView<Occurrence> table, String title, Function<Occurrence,String> value) {
+        TableColumn<Occurrence,String> column = new TableColumn<>(title);
+        column.setCellValueFactory(cell -> new ReadOnlyStringWrapper(value.apply(cell.getValue())));
+        column.setCellFactory(unused -> new TableCell<>() {
+            @Override protected void updateItem(String text, boolean empty) {
+                super.updateItem(text, empty);
+                setText(empty ? null : text);
+                setTooltip(empty ? null : new Tooltip(text));
+            }
+        });
+        table.getColumns().add(column);
+    }
+    private static Label text(String value) { Label label = new Label(value); label.setWrapText(true); return label; }
+    private static Label mono(String value) { Label label = text(value); label.setStyle("-fx-font-family: monospace; -fx-text-fill: " + Theme.MUTED + ";"); return label; }
+    private static Label heading(String value) { Label label = text(value); label.setStyle("-fx-font-size: 18px; -fx-font-weight: bold;"); return label; }
+}

@@ -22,6 +22,7 @@ public final class AllTests {
         CampaignLayoutChecks.run(dataset);
         DialogueChecks.realData(dataset);
         RuntimeChecks.run(data,runtimeDataset);
+        VariableChecks.run(runtimeDataset);
         System.out.printf("PASS: %,d checks in %.2f s%n",TestSupport.count(),(System.nanoTime()-start)/1_000_000_000.0);
     }
 }

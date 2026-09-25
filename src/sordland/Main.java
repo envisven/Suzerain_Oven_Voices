@@ -12,6 +12,7 @@ import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import sordland.data.*;
+import sordland.analysis.SearchMode;
 import sordland.data.Domain.*;
 import sordland.graph.*;
 import sordland.layout.LayoutEngine;
@@ -25,6 +26,9 @@ import java.util.function.*;
 public final class Main extends Application {
     private Stage stage;private BorderPane root;private StackPane center;private VBox top;
     private final ExecutorService worker=Executors.newSingleThreadExecutor(r->{Thread t=new Thread(r,"sordland-model");t.setDaemon(true);return t;});
+    private VariableInspectorWindow variableWindow;
+    private final MenuButton searchModeControl = new MenuButton(SearchMode.GRAPH_SEARCH.toString());
+    private SearchMode searchMode = SearchMode.GRAPH_SEARCH;
     private Dataset data;private View current,campaign;private final Deque<View> history=new ArrayDeque<>();
     private final Label status=new Label("Loading source data…"),notice=new Label(),title=new Label("Sordland campaign");
     private final TextField search=new TextField();private final ComboBox<String> turn=new ComboBox<>();
@@ -70,9 +74,28 @@ public final class Main extends Application {
         HBox toolbar=new HBox(9,back,title,eventView,itemDetails,minus,plus,fit,readable,speakerColors);toolbar.setAlignment(Pos.CENTER_LEFT);toolbar.setPadding(new Insets(0,20,12,20));
         search.setPromptText("Find title or database name…");search.setPrefWidth(340);search.setOnAction(e->search());
         Button find=new Button("Find");find.setOnAction(e->search());
+        for (SearchMode mode : SearchMode.values()) {
+            MenuItem choice = new MenuItem(mode.toString());
+            choice.setOnAction(e -> {
+                if (mode == SearchMode.GRAPH_SEARCH) {
+                    if (variableWindow != null) variableWindow.close();
+                    return;
+                }
+                if (data == null) return;
+                searchMode = mode;
+                searchModeControl.setText(mode.toString());
+                if (variableWindow == null) variableWindow = new VariableInspectorWindow(stage, data, () -> {
+                    variableWindow = null;
+                    searchMode = SearchMode.GRAPH_SEARCH;
+                    searchModeControl.setText(searchMode.toString());
+                });
+                else variableWindow.show();
+            });
+            searchModeControl.getItems().add(choice);
+        }
         typeFilter.setPrefWidth(170);turn.setPrefWidth(150);turn.setOnAction(e->{if(!initializing)rebuildCampaign();});ignoredData.setOnAction(e->openIgnoredData());
         runtimeSources.setOnAction(e->{if(data!=null){history.push(current);show(new View(null,null,false,"Runtime sources",null,new IgnoredDataView(data.runtime().sourceInspection()),Set.of()));}});
-        filters=new HBox(10,search,find,typeFilter,turn,ignoredData,runtimeSources,actorFilter);filters.setAlignment(Pos.CENTER_LEFT);filters.setPadding(new Insets(0,20,12,20));
+        filters=new HBox(10,search,find,searchModeControl,typeFilter,turn,ignoredData,runtimeSources,actorFilter);filters.setAlignment(Pos.CENTER_LEFT);filters.setPadding(new Insets(0,20,12,20));
         notice.setWrapText(true);notice.setStyle("-fx-font-size: 11px; -fx-text-fill: #bac9d8;");notice.setPadding(new Insets(0,20,11,20));
         top.getChildren().addAll(mast,toolbar,filters,notice);root.setTop(top);
         status.setPadding(new Insets(8,20,8,20));status.setStyle("-fx-background-color: #17212d; -fx-text-fill: #bac9d8;");status.setMaxWidth(Double.MAX_VALUE);root.setBottom(status);
@@ -87,6 +110,7 @@ public final class Main extends Application {
         if(conversations==null){if(data==null)loadCancelled();return;}
         Path ep=entity,cp=conversations;
         runWork("Reading and validating Sordland source files…",()->Loader.load(ep,cp),loaded->{
+            if (variableWindow != null) variableWindow.close();
             data=loaded;speakerPalette.clear();var speakers=new TreeSet<String>();
             data.conversations().values().forEach(c->c.entries().values().stream().filter(e->!e.isPlayer()&&!e.isNarrator()).forEach(e->speakers.add(e.speaker())));
             int speakerIndex=0;for(String name:speakers)speakerPalette.put(name,javafx.scene.paint.Color.hsb((speakerIndex++*137.50776405003785)%360,.35,.30));
@@ -419,11 +443,20 @@ public final class Main extends Application {
         throw new IllegalStateException("SMOKE: no visible unique connector target");
     }
     private void smokeFinish(){
-        try{smokeCheck(!current.expanded.isEmpty(),"metadata expansion persists");snapshot("campaign-metadata");smokeExitCode=0;
+        try{smokeCheck(!current.expanded.isEmpty(),"metadata expansion persists");snapshot("campaign-metadata");
+            smokeCheck(searchMode == SearchMode.GRAPH_SEARCH && searchModeControl.getItems().size() == 2, "two search modes; Current view default");
+            View beforeInspector = current;
+            searchModeControl.show();
+            searchModeControl.getItems().get(1).fire();
+            searchModeControl.hide();
+            smokeCheck(variableWindow != null && searchMode == SearchMode.VARIABLE_INSPECTOR, "Game variable opens owned inspector");
+            variableWindow.close();
+            smokeCheck(variableWindow == null && searchMode == SearchMode.GRAPH_SEARCH && current == beforeInspector, "closing inspector restores mode and preserves graph view");
+            smokeExitCode=0;
             System.out.println("SMOKE PASSED: ROOTED/PLAIN; multi-select Types; News defaults/evidence/details; Condition projection; turn/search state; ignored data; event/dialogue navigation; actors; metadata; zoom/fit/readable; edge trace. Snapshots at "+smokeDir);
         }catch(Exception e){e.printStackTrace();}finally{Platform.exit();}
     }
-    @Override public void stop(){worker.shutdownNow();if(smokeMode)System.exit(smokeExitCode);}
+    @Override public void stop(){if(variableWindow!=null)variableWindow.close();worker.shutdownNow();if(smokeMode)System.exit(smokeExitCode);}
     public static void main(String[] args){
         smokeMode=Arrays.stream(args).anyMatch(a->a.startsWith("--smoke="));
         if(smokeMode){Thread watchdog=new Thread(()->{try{Thread.sleep(60_000);System.err.println("SMOKE FAILED: no completed JavaFX snapshot within 60 seconds. A graphical display is required.");Runtime.getRuntime().halt(2);}catch(InterruptedException ignored){}},"smoke-timeout");watchdog.setDaemon(true);watchdog.start();}
