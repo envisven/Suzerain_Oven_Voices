@@ -11,7 +11,7 @@ import javafx.util.StringConverter;
 import java.util.*;
 import java.util.function.Consumer;
 
-                                                                                           
+
 public final class ActorFilterControl extends MenuButton {
     public static final class ActorFilterItem {
         private final String name;

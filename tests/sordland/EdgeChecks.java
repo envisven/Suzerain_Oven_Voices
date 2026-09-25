@@ -76,7 +76,7 @@ final class EdgeChecks {
         if (xy.length%2!=0) throw new IllegalArgumentException("Coordinates must be x/y pairs");
         List<LayoutEngine.Point> points=new ArrayList<>();
         for(int i=0;i<xy.length;i+=2)points.add(new LayoutEngine.Point(xy[i],xy[i+1]));
-                                                               
+        
         return new LayoutEngine.Line(edge,null,null,0,List.copyOf(points));
     }
 }

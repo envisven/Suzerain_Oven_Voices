@@ -5,7 +5,7 @@ import sordland.graph.*;
 import java.util.*;
 import static sordland.TestSupport.*;
 
-                                                                                                     
+
 final class ActorFilterChecks {
     private ActorFilterChecks() {}
     static void run(){

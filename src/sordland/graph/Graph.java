@@ -5,13 +5,27 @@ import sordland.data.Domain.Item;
 import sordland.data.Domain.Link;
 import java.util.*;
 
-                                                                                
+
 public final class Graph {
-    public enum Kind { EVENT, CONDITION, EFFECT, CHARACTER, NARRATOR, CHOICE, CONTROL, TERMINAL, REFERENCE, NOTICE }
+    public enum Kind { EVENT, CONDITION, EFFECT, CHARACTER, NARRATOR, CHOICE, CONTROL, TERMINAL, REFERENCE, NOTICE, JUNCTION }
+
+    
+    public record CampaignMetadata(List<CampaignTurn> turns, List<CampaignLevel> levels, List<CampaignGroup> groups) {
+        public CampaignMetadata { turns=List.copyOf(turns); levels=List.copyOf(levels); groups=List.copyOf(groups); }
+    }
+    public record CampaignTurn(int turn, int sourceIndex, String title, String entryId) {}
+    public record CampaignLevel(int turn, int turnSourceIndex, int stepIndex, String entryId, String exitId,
+                                List<String> eventIds, List<String> conditionIds, List<String> groupIds) {
+        public CampaignLevel { eventIds=List.copyOf(eventIds); conditionIds=List.copyOf(conditionIds); groupIds=List.copyOf(groupIds); }
+    }
+    
+    public record CampaignGroup(String id, String entryId, String exitId, List<String> eventIds) {
+        public CampaignGroup { eventIds=List.copyOf(eventIds); }
+    }
 
     public static final class Node {
         public final String id, title, text, metadata, type, speaker;
-                                                                                       
+        
         public final String actor;
         public final Kind kind;
         public final Integer turn;
@@ -41,7 +55,7 @@ public final class Graph {
     public static final class Edge {
         public final String from, to, label;
         public final boolean back;
-                                                                                       
+        
         public final EntryKey sourceFrom, sourceTo;
         public final Link sourceLink;
         public final List<Edge> projectionPath;
@@ -71,11 +85,17 @@ public final class Graph {
     public final List<Node> nodes;
     public final List<Edge> edges;
     public final List<String> diagnostics;
+    
+    public final CampaignMetadata campaign;
 
     public Graph(String title, List<Node> nodes, List<Edge> edges, List<String> diagnostics) {
+        this(title,nodes,edges,diagnostics,null);
+    }
+    public Graph(String title, List<Node> nodes, List<Edge> edges, List<String> diagnostics, CampaignMetadata campaign) {
         this.title = Objects.requireNonNullElse(title, "");
         this.nodes = List.copyOf(nodes);
         this.edges = List.copyOf(edges);
         this.diagnostics = List.copyOf(diagnostics);
+        this.campaign = campaign;
     }
 }

@@ -1,47 +1,38 @@
-# Validation record
+# Validation record — GameFlow campaign implementation
 
-## Current revision: verification in progress
+## Build and complete automated suite
 
-Command, from the project folder:
+The existing `./scripts/build.sh` and `./scripts/test.sh` scripts pass with the local Liberica JDK 25 FULL runtime. Final integrated run: **3,994,635 checks passed in 4.85 seconds**.
 
-```sh
-./scripts/test.sh
-```
+The complete suite includes:
 
-The canonical-source redesign, actor filtering and new connector routing are undergoing their complete regression pass. Final counts, timing and pass status will be recorded after that run. The earlier result of 976,850 boxes and 140,916 continuation endpoints measured the superseded state-history/chunk implementation and is not a current graph size or acceptance result.
+- Exact StoryPack_Main loading: 11 turns, 132 steps, 227 fragment occurrences, zero unresolved references in the supplied source. Every source turn, step, fragment, condition, instruction and index is compared with the raw JSON.
+- Missing, ambiguous, case-mismatched and repeated fragment fixtures; sparse source indices; invalid schema and duplicate Main schedules; explicit unresolved graph nodes and diagnostics.
+- Immediate START → Inauguration, one continuous root, isolated TURN START, local Gasom decision → condition → event branches without a bypass, neutral fallback, safe Boolean complements and separate unrelated/numeric predicates.
+- Multiple unconditional siblings, singleton exclusion, mixed levels, empty turns/steps, retained source instructions and acyclic/reachable graph coverage.
+- Deterministic measured layout for the whole campaign, all metadata expanded, every isolated turn and a wrapping mixed-level fixture. No card overlaps; every visible connector is orthogonal and avoids card and group interiors. Groups have tight 14-unit bounding padding, one top-middle incoming connector and one bottom-middle outgoing connector. Containers and junctions have no click target; event/condition hit targets remain available.
+- PLAIN builds and retains filtering/catalogue behavior. Decision option instructions and Bill SIGN/VETO source actions remain valid.
+- All existing dialogue tests remain unchanged. All 286 complete canonical dialogue graphs build: 159,924 visual boxes and 187,600 exact outgoing source links across those graphs; the largest has 3,187 boxes. Actor filtering, source identity, reconvergence, loops, routing, connector selection, viewport and text measurement regressions pass.
+- The dialogue builder, actor projection, semantic analyzer and dialogue edge router are byte-for-byte unchanged from the supplied project.
 
-The revised verification covers:
+## Graphical verification limit
 
-- Building all 286 complete conversation graphs, with one representation per reachable source identity and no continuation portals.
-- Exact outgoing-link endpoints, order, priority and cross-conversation calls/returns; conditions, effects and unknown commands retained.
-- A synthetic diamond reconverging at one destination with or without effects, conditions or unknown commands.
-- Both state-changing and ordinary loops becoming source back-references without repeated expansion.
-- Actor normalization, all-selected defaults, independent speech filtering, retained mechanics and connected projected paths.
-- Unique connector selection, previous-highlight replacement, ambiguity preservation, endpoint/diagonal/zero-length segments, shared trunks and zoom-consistent hit tolerance.
-- Measured node layout, rectangle overlap, connector intersections with node interiors, and source choice ordering.
-- Correct campaign turn containment before and after metadata expansion, viewport transforms, schema failures and source integrity.
+The graphical smoke test was attempted with `./scripts/run.sh --smoke=...`. This execution environment exposes no JavaFX display: native startup fails in `Screen.getMainScreen` / `MTLPipeline`. The desktop tool also rejected Terminal access for safety reasons. **No successful interactive application or JavaFX screenshot run is claimed.**
 
-These are the verification targets for this revision; this list is not a claim that the full pass has completed.
+The smoke harness is included for a desktop run. It verifies ROOTED startup; toggling to PLAIN and back; isolated turns; search/type filters preserving graph and layout; existing Decision/Bill and dialogue click callbacks; and Back navigation. A plain Java launcher starts the 60-second smoke watchdog before JavaFX initialization; the environment-limited smoke attempt exits with code 2 rather than hanging.
+
+Separate headless previews of the actual measured layout were inspected for Turn 1 sibling groups and Turn 3 Gasom branching. These confirm geometry and grouping, not JavaFX window interaction. Physical clicking, window rendering, file choosers and toolbar presentation still require a graphical desktop session.
 
 ## Source integrity
 
-Reference SHA-256 values of the bundled files from the supplied archive:
+All three canonical files are byte-for-byte identical to the newest inputs supplied for this task. The regression suite also verifies unchanged source bytes after parsing/build/layout. Actor names remain packaged and parse-validated without changing dialogue speaker inference.
 
 | File | SHA-256 |
 | --- | --- |
+| `SuzerainDataDumper.actor_names.json` | `336d59165011e37425c5c8e1322df820c9fecf8696abd591ddb08c142ae5bd5c` |
 | `SuzerainDataDumper.conversations_Sordland.json` | `e74761760ae80f14b8445c01450f8a03d638b4c1713b2e46816ab3c7f0440531` |
-| `SuzerainDataDumper.entity_data.json` | `b2aaa87c97cce245ecbbe0fe73f5bfdc1dac0c77186766e354cdc88d1ced523e` |
+| `SuzerainDataDumper.entity_data.json` | `884143c99773afd420d0f6fc716a8086efdd431fd543f4adb7fb8043cbf7e6ec` |
 
-The regression suite compares source bytes before and after loading and graph work. A current archive-integrity confirmation will be recorded with the final verification results. The application does not modify source JSON. No new source databases or runtime dependencies are required.
+## Interpretation limits
 
-## Desktop verification remains separate
-
-No successful interactive UI or screenshot run is claimed for this revision. A prior graphical smoke attempt in the development sandbox could not obtain a screen and failed in `Screen.getMainScreen`. Headless font measurement and geometry checks can run without a visible application window.
-
-Visual styling, physical mouse clicks, actor-checkbox interaction, file choosers and complete Back navigation through the actual window still need a desktop session with a display. Automated model, geometry and selection checks do not replace that interactive pass.
-
-The optional `--smoke=/absolute/folder` command requires a display, has a 60-second timeout and reports failure with a nonzero exit code. It is not part of a claim that interactive verification succeeded.
-
-## Source limitation
-
-The supplied archive contains generated HTML/JavaScript presentation files and two JSON dumps, not the campaign scheduler. Known activation predicates and turn placement do not establish event execution order. Campaign progression remains explicitly unresolved. No total campaign route, condition solver or ordered event IF/ELSE chain is fabricated.
+GameFlow authoritatively establishes Turn → Step → Fragment ordering. It usually does not prove a unique event parent, so neutral junctions communicate progression. Direct branches are restricted to exact adjacent decision evidence; only strictly proven Boolean complements share an if/else block. Conditions/scripts are displayed, never executed. Gray sibling containers are visual, not campaign events. No Rizia view is implemented.

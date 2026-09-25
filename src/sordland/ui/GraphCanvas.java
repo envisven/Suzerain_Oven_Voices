@@ -12,11 +12,12 @@ import sordland.layout.LayoutEngine.*;
 import java.util.*;
 import java.util.function.*;
 
-                                                                                                       
+
 public final class GraphCanvas extends Region {
     private final Canvas canvas=new Canvas();
     private Result result; private final Viewport viewport=new Viewport(); private double pressX,pressY,lastX,lastY;private boolean dragged;
     private String selected;private boolean speakerColors;
+    private String campaignQuery="",campaignType="All types";
     private final EdgeSelection edgeSelection=new EdgeSelection();
     private final Map<String,Color> typeColors=new HashMap<>();
     private Map<String,Color> speakerPalette=Map.of();
@@ -55,6 +56,16 @@ public final class GraphCanvas extends Region {
     public Result result(){return result;}
     public void setResult(Result r,boolean reset){if(!reset&&result!=null&&selected!=null){Box old=result.byId.get(selected),next=r.byId.get(selected);if(old!=null&&next!=null){viewport.panX+=(old.x()-next.x())*viewport.scale;viewport.panY+=(old.y()-next.y())*viewport.scale;}}result=r;edgeSelection.retainEdges(r.lines.stream().map(Line::edge).toList());if(reset){viewport.scale=.85;viewport.panX=48;viewport.panY=40;if(!r.boxes.isEmpty())focus(r.boxes.getFirst().node().id);}redraw();}
     public void setSpeakerColors(boolean value){speakerColors=value;redraw();}
+    
+    public void setCampaignFilters(String query,String type){campaignQuery=Objects.requireNonNullElse(query,"").trim();campaignType=Objects.requireNonNullElse(type,"All types");redraw();}
+    public static boolean campaignMatch(Graph.Node node,String query){
+        String q=Objects.requireNonNullElse(query,"").trim().toLowerCase(Locale.ROOT);
+        if(q.isEmpty())return false;
+        if(node.kind!=Graph.Kind.EVENT&&!(node.kind==Graph.Kind.NOTICE&&node.type.equals("Unresolved")))return false;
+        String text=node.title+" "+node.text+" "+node.metadata;
+        if(node.item!=null)text+=" "+node.item.internalName()+" "+node.item.path()+" "+node.item.condition();
+        return text.toLowerCase(Locale.ROOT).contains(q);
+    }
     public void zoom(double factor){zoomAt(factor,getWidth()/2,getHeight()/2);}
     private void zoomAt(double factor,double x,double y){viewport.zoomAt(factor,x,y);redraw();}
     public void fit(){if(result==null)return;viewport.fit(getWidth(),getHeight(),result.width,result.height);redraw();}
@@ -69,6 +80,7 @@ public final class GraphCanvas extends Region {
             case CHOICE->Color.web("#e0ebfa");case CONTROL,TERMINAL->Color.web("#e5e9e9");case REFERENCE,NOTICE->Color.web("#fff0d2");
             case CHARACTER->speakerColors?speakerPalette.getOrDefault(n.speaker,Color.web("#fffefa")):Color.web("#fffefa");
             case EVENT->typeColors.computeIfAbsent(n.type,t->Color.hsb(Math.floorMod(t.hashCode()*137,360),.18,.98));
+            case JUNCTION->Color.web("#87928e");
         };
     }
     public void redraw(){
@@ -77,15 +89,31 @@ public final class GraphCanvas extends Region {
         double left=-viewport.panX/viewport.scale,top=-viewport.panY/viewport.scale,vw=getWidth()/viewport.scale,vh=getHeight()/viewport.scale;
         int sectorIndex=0;
         for(var s:result.sectors){boolean alt=sectorIndex++%2==0;if(s.y()+s.height()<top||s.y()>top+vh)continue;
+            if(result.graph.campaign!=null){
+                if(s.y()+36>=top&&s.y()<=top+vh){
+                    g.setStroke(Color.web("#cccac3"));g.setLineWidth(1/viewport.scale);g.strokeLine(24,s.y()+12,result.width-24,s.y()+12);
+                    if(viewport.scale>.08){g.setFill(Color.web("#f3f1ec"));g.fillRect(42,s.y()-4,Math.min(result.width-84,s.label().length()*8.5+24),28);g.setFill(Color.web("#67746d"));g.setFont(Font.font("System",13));g.fillText(s.label(),54,s.y()+17);}
+                }
+                continue;
+            }
             g.setFill(Color.web(alt?"#f3f1ec":"#eae8e2"));g.fillRect(0,s.y(),result.width,s.height());g.setStroke(Color.web("#cfcec8"));g.setLineWidth(1/viewport.scale);g.strokeLine(0,s.y(),result.width,s.y());
             if(viewport.scale>.08){g.save();g.translate(48,s.y()+Math.min(s.height()-25,Math.max(160,s.height()/2)));g.rotate(-90);g.setFill(Color.web("#717c77"));g.setFont(Font.font("System",14));g.fillText(s.label(),0,0);g.restore();}
+        }
+        
+        for(var group:result.groups){
+            if(group.bottom()<top||group.y()>top+vh||group.x()+group.width()<left||group.x()>left+vw)continue;
+            g.setFill(Color.web("#e5e5e1"));g.fillRoundRect(group.x(),group.y(),group.width(),group.height(),20,20);
+            g.setStroke(Color.web("#b2b5b1"));g.setLineWidth(1.3);g.strokeRoundRect(group.x(),group.y(),group.width(),group.height(),20,20);
         }
         Graph.Edge selectedEdge=edgeSelection.selected();
         for(var line:result.lines)if(line.edge()!=selectedEdge)drawEdge(g,line,false,top,vh);
         for(var line:result.lines)if(line.edge()==selectedEdge)drawEdge(g,line,true,top,vh);
         g.setLineDashes();var visible=result.visible(left,top,vw,vh);
         for(var b:visible)drawNode(g,b);
-        g.restore();onStatus.accept(String.format(Locale.ROOT,"%,d / %,d boxes visible   ·   %.0f%%",visible.size(),result.boxes.size(),viewport.scale*100));
+        g.restore();
+        long visibleCards=visible.stream().filter(b->b.node().kind!=Graph.Kind.JUNCTION).count(),allCards=result.boxes.stream().filter(b->b.node().kind!=Graph.Kind.JUNCTION).count();
+        String matches=result.graph.campaign!=null&&!campaignQuery.isEmpty()?String.format(Locale.ROOT,"   ·   %,d search matches",result.graph.nodes.stream().filter(n->campaignMatch(n,campaignQuery)).count()):"";
+        onStatus.accept(String.format(Locale.ROOT,"%,d / %,d boxes visible   ·   %.0f%%%s",visibleCards,allCards,viewport.scale*100,matches));
     }
     private void drawEdge(GraphicsContext g,Line line,boolean highlighted,double top,double vh){
         var f=line.from();var t=line.to();boolean back=line.edge().back;
@@ -95,21 +123,33 @@ public final class GraphCanvas extends Region {
         g.setLineDashes(back?new double[]{6,5}:new double[]{});
         g.beginPath();boolean first=true;for(var point:line.points()){if(first){g.moveTo(point.x(),point.y());first=false;}else g.lineTo(point.x(),point.y());}g.stroke();
         var end=line.points().getLast();
-        if(result.sectors.isEmpty()&&viewport.scale>.18){
-                                                                               
+        if((result.sectors.isEmpty()||result.graph.campaign!=null)&&viewport.scale>.18&&t.node().kind!=Graph.Kind.JUNCTION){
+            
             g.setLineDashes();g.strokeLine(end.x()-4,end.y()-7,end.x(),end.y());g.strokeLine(end.x()+4,end.y()-7,end.x(),end.y());
         }
-        if(viewport.scale>.55&&line.edge().from.equals(selected)&&!line.edge().label.isBlank()){g.setFont(Font.font("System",10));g.setFill(Color.web(highlighted?"#17634e":"#62736c"));g.fillText(line.edge().label,end.x()-130,end.y()-10,260);}
+        boolean booleanBranch=result.graph.campaign!=null&&(line.edge().label.equalsIgnoreCase("true")||line.edge().label.equalsIgnoreCase("false"));
+        if(viewport.scale>.55&&(booleanBranch||line.edge().from.equals(selected))&&!line.edge().label.isBlank()){g.setFont(Font.font("System",10));g.setFill(Color.web(highlighted?"#17634e":"#62736c"));g.fillText(line.edge().label,end.x()+(result.graph.campaign!=null?8:-130),end.y()-10,260);}
     }
     private void drawNode(GraphicsContext g,Box b){
-        var n=b.node();g.setFill(color(n));g.fillRoundRect(b.x(),b.y(),b.w(),b.h(),12,12);
-        g.setStroke(Color.web(n.id.equals(selected)?"#17634e":n.kind==Graph.Kind.CONDITION?"#9d69ad":"#b9c1ba"));g.setLineWidth(n.id.equals(selected)?2.4:1);g.strokeRoundRect(b.x(),b.y(),b.w(),b.h(),12,12);
-        if(viewport.scale<.13)return;
+        var n=b.node();
+        if(n.kind==Graph.Kind.JUNCTION){
+            
+            if(result.groups.stream().noneMatch(group->group.entryId().equals(n.id)||group.exitId().equals(n.id))){g.setFill(Color.web("#87928e"));g.fillOval(b.cx()-2,b.y()-1,4,4);}
+            return;
+        }
+        boolean rooted=result.graph.campaign!=null,match=rooted&&campaignMatch(n,campaignQuery);
+        boolean dim=rooted&&n.kind==Graph.Kind.EVENT&&!campaignType.equals("All types")&&!n.type.equals(campaignType);
+        g.save();if(dim)g.setGlobalAlpha(.32);
+        g.setFill(match?Color.web("#fff0b7"):color(n));g.fillRoundRect(b.x(),b.y(),b.w(),b.h(),12,12);
+        String border=n.id.equals(selected)?"#17634e":match?"#b98722":n.kind==Graph.Kind.CONDITION?"#9d69ad":rooted&&n.kind==Graph.Kind.NOTICE?"#bf9652":"#b9c1ba";
+        g.setStroke(Color.web(border));g.setLineWidth(n.id.equals(selected)||match?2.4:1);g.strokeRoundRect(b.x(),b.y(),b.w(),b.h(),12,12);
+        if(viewport.scale<.13){g.restore();return;}
         double clipTop=-viewport.panY/viewport.scale-22,clipBottom=(getHeight()-viewport.panY)/viewport.scale+22;
         double y=b.y()+22;g.setFill(Color.web("#26392f"));g.setFont(TextMeasurer.TITLE);
         for(String line:b.size().title()){if(y>=clipTop&&y<=clipBottom)g.fillText(line,b.x()+16,y);y+=18;}
         if(n.kind==Graph.Kind.EVENT){g.setStroke(Color.web("#b9c1ba"));g.strokeLine(b.x()+b.w()-36,b.y(),b.x()+b.w()-36,b.y()+Math.max(42,24+b.size().title().size()*18));g.setFont(Font.font(19));g.fillText(b.size().metadata().isEmpty()?"›":"⌄",b.x()+b.w()-25,b.y()+27);}
         if(!b.size().body().isEmpty()){y+=12;g.setFont(TextMeasurer.BODY);for(String line:b.size().body()){if(y>=clipTop&&y<=clipBottom)g.fillText(line,b.x()+16,y);y+=20;}}
         if(!b.size().metadata().isEmpty()){y+=14;g.setFont(TextMeasurer.META);g.setFill(Color.web("#526557"));for(String line:b.size().metadata()){if(y>=clipTop&&y<=clipBottom)g.fillText(line,b.x()+16,y);y+=17;}}
+        g.restore();
     }
 }

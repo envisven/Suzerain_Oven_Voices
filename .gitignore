@@ -22,3 +22,7 @@ dist/
 *.dmg
 *.pkg
 *.app
+
+# Game data distributed separately
+data/SuzerainDataDumper.conversations_Sordland.json
+data/SuzerainDataDumper.entity_data.json

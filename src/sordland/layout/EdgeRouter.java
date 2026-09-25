@@ -4,7 +4,7 @@ import sordland.graph.Graph;
 import sordland.layout.LayoutEngine.*;
 import java.util.*;
 
-                                                                                              
+
 public final class EdgeRouter {
     private static final double TRACK=14, PORT=10, MARGIN=64;
     private record Port(double x, Graph.Edge edge) {}
@@ -32,8 +32,8 @@ public final class EdgeRouter {
             Route route=new Route(edge,from,to,ranks.get(edge.from),ranks.get(edge.to));routes.add(route);
             outgoing.computeIfAbsent(edge.from,k->new ArrayList<>()).add(route);incoming.computeIfAbsent(edge.to,k->new ArrayList<>()).add(route);
         }
-                                                                          
-                                                                                  
+        
+        
         var occupied=new HashMap<Integer,List<Port>>();
         for(var group:outgoing.values()){
             Box box=group.getFirst().from;double spread=Math.min(box.w()-44,Math.max(0,(group.size()-1)*22));
@@ -48,7 +48,7 @@ public final class EdgeRouter {
                 r.tx=freePort(preferred,box.x()+18,box.x()+box.w()-18,ports,r.edge);ports.add(new Port(r.tx,r.edge));
             }
         }
-                                                                                               
+        
         var detours=routes.stream().filter(r->!r.adjacent()).sorted(Comparator.comparingInt(r->Math.min(r.start,r.end))).toList();
         var laneEnds=new ArrayList<Integer>();
         for(var r:detours){int low=Math.min(r.start,r.end)-1,high=Math.max(r.start,r.end)+1,lane=0;
@@ -87,7 +87,7 @@ public final class EdgeRouter {
         return new Result(graph,boxes,lines,List.of(),width+(laneEnds.isEmpty()?0:60+laneEnds.size()*18),y+MARGIN);
     }
     private static double freePort(double preferred,double left,double right,List<Port> occupied,Graph.Edge edge){
-                                                                             
+        
         for(double spacing:new double[]{PORT,5,2,.5}){
             for(int step=0;step<=Math.ceil((right-left)/spacing)+1;step++)for(int direction:new int[]{1,-1}){
                 double candidate=preferred+step*spacing*direction;if(candidate<left||candidate>right)continue;

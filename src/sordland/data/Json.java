@@ -5,7 +5,7 @@ import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 import java.util.*;
 
-                                                                                                        
+
 public final class Json {
     private Json() {}
     public static Object parse(Path path) throws IOException {
@@ -19,7 +19,7 @@ public final class Json {
     public static Map<String,Object> object(Object value) {
         return value instanceof Map<?,?> ? (Map<String,Object>) value : Map.of();
     }
-                                                                                 
+    
     public static List<Object> list(Object value) {
         if (value instanceof List<?> a) return new ArrayList<>(a);
         if (!(value instanceof Map<?,?>)) return List.of();

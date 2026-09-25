@@ -31,6 +31,7 @@ public final class TextMeasurer implements LayoutEngine.Measurer {
         return List.copyOf(lines);
     }
     @Override public LayoutEngine.Size measure(Graph.Node n,boolean expanded) {
+        if(n.kind==Graph.Kind.JUNCTION)return new LayoutEngine.Size(2,2,List.of(),List.of(),List.of());
         var key=new MeasureKey(n.kind,n.title,n.text,expanded?n.metadata:"");
         var cached=sizes.get(key);if(cached!=null)return cached;
         double w=switch(n.kind){case EVENT->350;case CONDITION,EFFECT->390;case CONTROL,TERMINAL->290;default->350;};

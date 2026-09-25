@@ -1,6 +1,6 @@
 package sordland.ui;
 
-                                                                                       
+
 public final class Viewport {
     double scale=.8,panX=40,panY=40;
     public record State(double scale,double panX,double panY) {}

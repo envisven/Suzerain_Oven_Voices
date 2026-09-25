@@ -2,7 +2,7 @@ package sordland.data;
 
 import java.util.*;
 
-                                                                                        
+
 public final class Domain {
     private Domain() {}
 
@@ -27,11 +27,37 @@ public final class Domain {
                        List<Option> options, Map<String,Object> raw) {
         public Item { options = List.copyOf(options); raw = immutableMap(raw); }
     }
+    
+    public record GameFlow(String storyPack, int sourceIndex, List<Turn> turns, Map<String,Object> raw) {
+        public GameFlow { turns = List.copyOf(turns); raw = immutableMap(raw); }
+        public static GameFlow empty() { return new GameFlow("", -1, List.of(), Map.of()); }
+    }
+    public record Turn(int sourceIndex, String condition, String transitionTitle,
+                       String onTurnStartInstruction, List<Step> steps, Map<String,Object> raw) {
+        public Turn { steps = List.copyOf(steps); raw = immutableMap(raw); }
+        
+        public int turnNumber() { return sourceIndex + 1; }
+    }
+    public record Step(int sourceIndex, String onStepStartInstruction,
+                       List<Fragment> fragments, Map<String,Object> raw) {
+        public Step { fragments = List.copyOf(fragments); raw = immutableMap(raw); }
+    }
+    
+    public record Fragment(int sourceIndex, String name, Item item, String diagnostic) {
+        public boolean resolved() { return item != null; }
+        public String id() { return name; }
+    }
     public record Dataset(List<Item> items, Map<Integer,Conversation> conversations,
-                          List<Item> ancillary, List<String> diagnostics) {
+                          List<Item> ancillary, List<String> diagnostics, GameFlow gameFlow) {
         public Dataset {
             items = List.copyOf(items); conversations = immutableMap(conversations);
             ancillary = List.copyOf(ancillary); diagnostics = List.copyOf(diagnostics);
+            gameFlow = Objects.requireNonNull(gameFlow);
+        }
+        
+        public Dataset(List<Item> items, Map<Integer,Conversation> conversations,
+                       List<Item> ancillary, List<String> diagnostics) {
+            this(items, conversations, ancillary, diagnostics, GameFlow.empty());
         }
         public Entry entry(EntryKey key) {
             Conversation c = conversations.get(key.conversationId());

@@ -6,10 +6,11 @@ import java.util.*;
 import java.util.regex.*;
 import static sordland.data.Domain.*;
 
-                                                                                                         
+
 public final class Loader {
     public static final String ENTITY_FILE = "SuzerainDataDumper.entity_data.json";
     public static final String CONVERSATIONS_FILE = "SuzerainDataDumper.conversations_Sordland.json";
+    public static final String ACTOR_NAMES_FILE = "SuzerainDataDumper.actor_names.json";
     private static final Pattern TURN = Pattern.compile("(?:^|[/_ -])Turn(\\d+)(?=[/_ -]|$)",Pattern.CASE_INSENSITIVE);
     private static final Pattern SPEAKER = Pattern.compile("^([^:\\n]{1,80}):\\s*\"");
     private Loader() {}
@@ -33,7 +34,7 @@ public final class Loader {
         Set<Integer> referenced = new HashSet<>();
         int excluded=0;
         for(var collection:catalogue.entrySet()) {
-            if(collection.getKey().equals("_type"))continue;
+            if(collection.getKey().equals("_type") || collection.getKey().equals("GameFlowData"))continue;
             if(!(collection.getValue() instanceof Map<?,?> || collection.getValue() instanceof List<?>))continue;
             int index=0;
             List<String> sourceKeys=collection.getValue() instanceof Map<?,?> ? Json.object(collection.getValue()).keySet().stream()
@@ -48,13 +49,15 @@ public final class Loader {
                 else ancillary.add(item);
             }
         }
+        
+        GameFlow gameFlow=readGameFlow(catalogue.get("GameFlowData"),items,ancillary,diagnostics);
         int fragments=0;
         for(Conversation c:conversations.values()) {
             if(referenced.contains(c.id()))continue;
             Map<String,Object> raw=new LinkedHashMap<>();raw.put("id",c.id());raw.put("Title",c.title());
             raw.put("Source", "Conversation database only; no campaign entity was supplied for this graph.");
             raw.put("TurnSource", turn(c.title())==null ? "Unspecified in source" : "Conversation.Title path");
-            raw.put("Progression", "Unresolved: dialogue fragment links are not campaign event sequencing.");
+            raw.put("Progression", "Not a GameFlow entity reference; dialogue links do not establish campaign event sequencing.");
             String type=isEnding(c.title()) ? "Ending" : "Dialogue fragment";
             items.add(new Item("conversation:"+c.id(),type,lastPart(c.title()),c.title(),c.title(),turn(c.title()),c.id(),"","","","No catalogue entity; retained for complete access to supplied Sordland dialogue.",List.of(),raw));
             fragments++;
@@ -63,9 +66,84 @@ public final class Loader {
         diagnostics.add("Loaded "+conversations.size()+" Sordland conversations with "+entryCount+" dialogue entries.");
         diagnostics.add("Loaded "+(items.size()-fragments)+" campaign catalogue items and "+fragments+" additional dialogue graphs; "+ancillary.size()+" ancillary records.");
         diagnostics.add("Excluded "+excluded+" non-Sordland catalogue records using explicit path/story-pack evidence.");
-        diagnostics.add("Campaign execution order is absent from the supplied files. Turn placement and activation predicates are known; event-to-event progression is unresolved.");
-        diagnostics.add("No actor database or local portrait assets were supplied. Speaker names are corroborated from source dialogue titles.");
-        return new Dataset(items,conversations,ancillary,diagnostics);
+        diagnostics.add("Speaker names are corroborated from source dialogue titles. The packaged actor-name list is not assumed to use dialogue ActorID numbering.");
+        return new Dataset(items,conversations,ancillary,diagnostics,gameFlow);
+    }
+
+    private static GameFlow readGameFlow(Object source,List<Item> items,List<Item> ancillary,List<String> diagnostics)throws IOException {
+        if(source==null) {
+            diagnostics.add("No GameFlowData was supplied; ROOTED campaign progression is unavailable for this input. PLAIN catalogue and dialogue views remain available.");
+            return GameFlow.empty();
+        }
+        List<IndexedValue> flows=indexedValues(source,"GameFlowData");
+        IndexedValue selected=null;
+        for(IndexedValue flow:flows) {
+            Map<String,Object> raw=requireObject(flow.value(),"GameFlowData["+flow.index()+"]");
+            if(!"StoryPack_Main".equals(Json.string(raw,"StoryPack")))continue;
+            if(selected!=null)throw new IOException("GameFlowData has more than one StoryPack_Main entry; refusing to choose an ambiguous schedule.");
+            selected=flow;
+        }
+        if(selected==null) {
+            diagnostics.add("GameFlowData contains no StoryPack_Main entry; no other story pack is used for Sordland progression.");
+            return GameFlow.empty();
+        }
+        Map<String,List<Item>> byName=new LinkedHashMap<>();
+        for(List<Item> collection:List.of(items,ancillary))for(Item item:collection)
+            byName.computeIfAbsent(item.internalName(),key->new ArrayList<>()).add(item);
+        Map<String,Object> raw=requireObject(selected.value(),"StoryPack_Main");
+        List<Turn> turns=new ArrayList<>();int stepCount=0,fragmentCount=0,unresolvedCount=0;
+        for(IndexedValue turnValue:indexedValues(raw.get("Turns"),"StoryPack_Main.Turns")) {
+            String turnContext="GameFlowData["+selected.index()+"].Turns["+turnValue.index()+"]";
+            Map<String,Object> turn=requireObject(turnValue.value(),turnContext);
+            List<Step> steps=new ArrayList<>();
+            for(IndexedValue stepValue:indexedValues(turn.get("Steps"),turnContext+".Steps")) {
+                String stepContext=turnContext+".Steps["+stepValue.index()+"]";
+                Map<String,Object> step=requireObject(stepValue.value(),stepContext);
+                List<Fragment> fragments=new ArrayList<>();
+                for(IndexedValue fragmentValue:indexedValues(step.get("Fragments"),stepContext+".Fragments")) {
+                    if(!(fragmentValue.value() instanceof String name))throw new IOException(stepContext+".Fragments["+fragmentValue.index()+"] must be a fragment ID string.");
+                    List<Item> candidates=byName.getOrDefault(name,List.of());
+                    Item resolved=candidates.size()==1?candidates.getFirst():null;
+                    String diagnostic="";
+                    if(resolved==null) {
+                        diagnostic="Unresolved GameFlow fragment "+name+" at "+stepContext+".Fragments["+fragmentValue.index()+"]: "
+                            +(candidates.isEmpty()?"no loaded Sordland entity has this exact NameInDatabase."
+                                :"ambiguous exact NameInDatabase matches "+candidates.stream().map(Item::id).toList()+"; no entity was guessed.");
+                        diagnostics.add(diagnostic);unresolvedCount++;
+                    }
+                    fragments.add(new Fragment(fragmentValue.index(),name,resolved,diagnostic));fragmentCount++;
+                }
+                steps.add(new Step(stepValue.index(),sourceText(step,"OnStepStartInstruction",stepContext),fragments,step));stepCount++;
+            }
+            turns.add(new Turn(turnValue.index(),sourceText(turn,"Condition",turnContext),sourceText(turn,"TransitionTitle",turnContext),
+                sourceText(turn,"OnTurnStartInstruction",turnContext),steps,turn));
+        }
+        diagnostics.add("Loaded StoryPack_Main GameFlow: "+turns.size()+" turns, "+stepCount+" steps, "+fragmentCount+" fragment references; "+unresolvedCount+" unresolved. Source Turn → Step → Fragment order is authoritative; it does not by itself prove a specific event parent.");
+        return new GameFlow("StoryPack_Main",selected.index(),turns,raw);
+    }
+
+    private record IndexedValue(int index,Object value) {}
+    
+    private static List<IndexedValue> indexedValues(Object value,String context)throws IOException {
+        requireCollection(value,context);List<IndexedValue> result=new ArrayList<>();
+        if(value instanceof List<?> list) {
+            for(int i=0;i<list.size();i++)result.add(new IndexedValue(i,list.get(i)));
+        } else {
+            Set<Integer> seen=new HashSet<>();
+            for(var entry:Json.object(value).entrySet()) {
+                if(entry.getKey().equals("_type"))continue;
+                int index;
+                try {index=Integer.parseInt(entry.getKey());}
+                catch(NumberFormatException e){throw new IOException(context+" source index is outside the supported integer range: "+entry.getKey(),e);}
+                if(!seen.add(index))throw new IOException(context+" contains ambiguous numeric source index "+index);
+                result.add(new IndexedValue(index,entry.getValue()));
+            }
+            result.sort(Comparator.comparingInt(IndexedValue::index));
+        }
+        return result;
+    }
+    private static String sourceText(Map<String,Object> raw,String key,String context)throws IOException {
+        return raw.containsKey(key)?requiredString(raw,key,context):"";
     }
 
     private static Map<Integer,Conversation> readConversations(Path path,List<String> diagnostics)throws IOException {
@@ -74,7 +152,7 @@ public final class Loader {
         List<Object> values=Json.list(collection);
         if(values.isEmpty())throw new IOException("Conversation database has no conversations.");
         Map<Integer,Map<String,Integer>> names=new LinkedHashMap<>();
-                                                                                                     
+        
         for(Object value:values) {
             Map<String,Object> c=requireObject(value,"Conversation");
             if(!Json.string(c,"Title").startsWith("Sordland/"))continue;
@@ -159,7 +237,7 @@ public final class Loader {
         if(type.equals("Bill")) {
             options.add(new Option("SIGN","",Json.string(p,"SignVariables")));
             String disabled=Json.string(p,"IsVetoDisabledCondition");
-                                                                                                                   
+            
             options.add(new Option("VETO",disabled.isBlank()?"":"Disabled when: "+disabled,Json.string(p,"VetoVariables")));
         } else if(type.equals("Decision")) {
             requireCollection(p.get("Options"),name+".DecisionProperties.Options");

@@ -1,12 +1,6 @@
 # Supplied data: findings and limits
 
-This report describes the two JSON files and the reference material in the supplied `databases.zip`. No online data or external assumptions were used. The viewer reads the source files without modifying them.
-
-## Archive and reference viewer
-
-The archive contains the two JSON dumps, generated `out/index.html`, generated conversation HTML pages, `style.css`, and a 61-line `script.js`. The script implements collapsible sections, anchor navigation, and display controls. The supplied archive does **not** contain the original JSON-to-HTML generator, game campaign scheduler, or an actor/portrait database.
-
-The generated pages corroborate numeric IDs and outgoing-link destinations. For example, `conversation1.html` presents conversation ID 1 and anchors such as `DialogueEntry-3`. The index position `[0]` is a collection position, **not** conversation ID 0. Neither the index order nor the browser script supplies campaign progression logic.
+This report describes the supplied newest entity, Sordland conversation and actor-name JSON files, packaged under canonical names in `data/`. The application reads them without modification. Only `StoryPack_Main` is used for campaign GameFlow; no Rizia view or execution model is implemented.
 
 ## JSON representation
 
@@ -51,13 +45,21 @@ An actual inconsistency is retained and reported: `WIP_Turn04_EnT_RuralDevelopme
 
 Conversation-only paths with no numeric turn, including `Sordland/Prologue` and numerous `Sordland/Epilogue...` graphs, remain explicitly unplaced. Their name does not prove a numeric turn. `NewsProperties.TurnNo` is a real numeric turn field and is used for news. Conditional instructions have schedule/check metadata rather than ordinary event turn membership.
 
-## Progression: what is and is not established
+## GameFlow progression
 
-`ConversationProperties.IsOnStart` is true only for `Turn01_Start_Inauguration` (conversation 6). That establishes its start flag. It does not establish a total route through the catalogue.
+`GameFlowData` contains a `StoryPack_Main` entry with **11 turns, 132 steps and 227 fragment occurrences**. The numbered dictionaries preserve source collection indices; each turn’s displayed number is its source index plus one. No catalogue sort, title similarity or dialogue link supplies campaign ordering.
 
-Source activation predicates are present on 82 conversations, 14 bills, and 45 decisions. These are **independent predicates**. No ordered IF/ELSE IF campaign routing, next-event field, scheduler steps, or explicit event-to-event execution order is present. A variable assignment matching another item's activation condition proves a state dependency; it does not prove that the latter item runs immediately next or excludes every intervening event.
+Each fragment resolves by exact `NameInDatabase` against loaded Sordland entities. Conversation entities in turn resolve through exact `ConversationProperties.Dialogue` → `Conversation.Title` identity. Absent or ambiguous names remain explicit unresolved occurrences with diagnostics. The supplied 227 fragment references all resolve. Two catalogue entities outside this GameFlow remain available in PLAIN rather than being appended as invented campaign steps.
 
-The 249 links between different conversation IDs are dialogue links, including subdialogue calls and returns. They cannot be promoted to campaign event edges. Commands such as `AdvanceTimeline` do not supply the missing scheduler. The application must mark campaign progression unresolved and avoid fabricating edges from turns, catalogue order, common flags, or cross-conversation dialogue calls. A grouped timeline/catalogue is necessarily the truthful fallback for these specific files.
+The first source step contains only `Turn01_Start_Inauguration`, so the synthetic START connects immediately to it. Turn 3 Step 4 contains `Turn03_Decision_Extraction`; Step 5 contains `Turn03_A_AddressTheProtestors` then `Turn03_Personal_HelicopterEscape`. Its decision options set the corresponding exact Boolean flags tested by those next-step activation conditions. This supports the specific local decision-to-condition branches. They reconverge before Step 6 (Late Briefing and Stability Order).
+
+GameFlow establishes progression between steps, but generally does not establish that a particular event causes a particular event in the following step. Neutral junctions are the safe default. Direct branches require strictly parsed choice writes and conditions at adjacent steps; distant shared flags never become edges. Independently conditional candidates do not become an unconditional cross-product. Only mechanically complementary Boolean predicates share a true/false condition block; unsupported expressions remain separate.
+
+Several unconditional fragments in one step occupy the same progression level without an asserted relative completion order. Their gray container is purely visual. Conditional fragments at that step keep separate condition branches. Empty steps, turn conditions, `OnTurnStartInstruction` and `OnStepStartInstruction` retain their indices and raw metadata; no scripts are executed.
+
+Turn titles are visual separators, not new roots. Selecting one turn creates a synthetic TURN START. Search highlights/focuses events; type filtering dims cards while preserving all nodes and connections. PLAIN retains the full flat catalogue and its original filters. Ancillary records are excluded from ROOTED.
+
+The 249 links between different conversation IDs remain exact dialogue links, including subdialogue calls and returns. They are not promoted to campaign edges. No game-state simulation, inferred remote causality or feasibility solver is introduced.
 
 ## Conversation identity, text, and source order
 
@@ -81,7 +83,7 @@ Source loops are ordinary back-references to an existing entry. Complete graphs 
 
 ## Speakers and choices
 
-There is no actor collection or portrait asset in this archive. Speaker names are corroborated across actual dialogue titles of the form `Speaker: "text"`, indexed by `ActorID`. Control labels such as `Jump to:` and script lines containing colons must not become actor names.
+The supplied `actor_names.json` contains a numbered name list, not an explicit ActorID mapping. For example its list index 4 is Player, whereas dialogue ActorID 5 is Player. It is packaged for future use and validated by the headless suite, without guessing an offset or replacing working dialogue naming. No portrait assets are supplied. Speaker names are corroborated across actual dialogue titles of the form `Speaker: "text"`, indexed by `ActorID`. Control labels such as `Jump to:` and script lines containing colons must not become actor names.
 
 The source repeatedly identifies actor 5 as `Player`, actor 6 as `Player_Italic`, and actor 10 as `Narrator`. Both player actors represent responses/actions; narrator is a distinct role. Other examples are 4 `Petr Vectern`, 38 `Lucian Galade`, and 51 `Symon Holl`. Actor 1 sometimes has the literal source label `...`; those entry-specific labels are preserved, while `Ovid Grecer` is the corroborated default for its control entries. Speaker names alone are used when no local portrait can be resolved.
 
@@ -114,4 +116,4 @@ Conditional-instruction ancillary records use `ConditionalInstructionProperties.
 - Conversation 1: `Sordland/Turn01/EnT_EconomicOverview`, 352 entries.
 - Entry `1:3`: Narrator, English text beginning “Symon Holl, Gus Manger and Lileas Graf...”, exact outgoing destination `1:246`.
 - Entry `1:348`: explicit `End();`, exact outgoing destination `1:2`.
-- A complete loader smoke run with the local Liberica Full 25 JDK produced the counts above, resolved every link, and reported the known WIP turn conflict in approximately 1.4 seconds on the supplied machine.
+- Current build, test and graphical smoke results are recorded in [VALIDATION.md](VALIDATION.md).

@@ -3,7 +3,7 @@ package sordland.layout;
 import sordland.graph.Graph;
 import java.util.*;
 
-                                                                                                     
+
 public final class LayoutEngine {
     public interface Measurer { Size measure(Graph.Node node, boolean expanded); }
     public record Size(double width, double height, List<String> title, List<String> body, List<String> metadata) {}
@@ -13,14 +13,25 @@ public final class LayoutEngine {
         public boolean contains(double px,double py){return px>=x&&px<=x+w()&&py>=y&&py<=bottom();}
     }
     public record Sector(Integer turn, String label, double y, double height) {}
+    
+    public record Group(String id,double x,double y,double width,double height,
+                        String entryId,String exitId,List<String> eventIds) {
+        public Group { eventIds=List.copyOf(eventIds); }
+        public double cx(){return x+width/2;} public double bottom(){return y+height;}
+    }
     public record Point(double x, double y) {}
     public record Line(Graph.Edge edge, Box from, Box to, double lane, List<Point> points) {}
     public static final class Result {
         public final Graph graph; public final List<Box> boxes; public final List<Line> lines;
         public final List<Sector> sectors; public final double width,height; public final Map<String,Box> byId;
+        public final List<Group> groups;
         private final Map<Integer,List<Box>> buckets = new HashMap<>();
         public Result(Graph graph,List<Box> boxes,List<Line> lines,List<Sector> sectors,double width,double height) {
+            this(graph,boxes,lines,sectors,List.of(),width,height);
+        }
+        public Result(Graph graph,List<Box> boxes,List<Line> lines,List<Sector> sectors,List<Group> groups,double width,double height) {
             this.graph=graph;this.boxes=List.copyOf(boxes);this.lines=List.copyOf(lines);this.sectors=List.copyOf(sectors);
+            this.groups=List.copyOf(groups);
             this.width=width;this.height=height;
             var ids=new LinkedHashMap<String,Box>();
             for(var b:boxes){ ids.put(b.node.id,b); for(int i=(int)Math.floor(b.y/400);i<=(int)Math.floor(b.bottom()/400);i++) buckets.computeIfAbsent(i,k->new ArrayList<>()).add(b); }
@@ -33,11 +44,12 @@ public final class LayoutEngine {
             for(int i=start;i<=end;i++)for(var b:buckets.getOrDefault(i,List.of()))if(b.x+b.w()>=x&&b.x<=x+w&&b.bottom()>=y&&b.y<=y+h)result.add(b);
             return List.copyOf(result);
         }
-        public Box hit(double x,double y){for(var b:buckets.getOrDefault((int)Math.floor(y/400),List.of()))if(b.contains(x,y))return b;return null;}
+        public Box hit(double x,double y){for(var b:buckets.getOrDefault((int)Math.floor(y/400),List.of()))if(b.node.kind!=Graph.Kind.JUNCTION&&b.contains(x,y))return b;return null;}
     }
     private static final double GAP_X=46,GAP_Y=66,MARGIN=64;
 
     public Result campaign(Graph graph, Set<String> expanded, Measurer measurer) {
+        if(graph.campaign!=null)return new RootedCampaignLayout().layout(graph,expanded,measurer);
         var sizes=measure(graph,expanded,measurer);
         var children=new LinkedHashMap<String,List<String>>();var parents=new HashMap<String,String>();
         var byId=new LinkedHashMap<String,Graph.Node>();graph.nodes.forEach(n->byId.put(n.id,n));
@@ -82,15 +94,15 @@ public final class LayoutEngine {
         nodes.keySet().forEach(id->incoming.put(id,0));
         for(var e:graph.edges)if(!e.back&&nodes.containsKey(e.from)&&nodes.containsKey(e.to)){adj.computeIfAbsent(e.from,k->new ArrayList<>()).add(e.to);incoming.merge(e.to,1,Integer::sum);}
         var queue=new ArrayDeque<String>();incoming.forEach((id,count)->{if(count==0)queue.add(id);});
-                                                                        
+        
         queue.clear();for(String id:nodes.keySet())if(incoming.get(id)==0)queue.add(id);
         var rank=new HashMap<String,Integer>();var topo=new ArrayList<String>();
         for(String id:queue)rank.put(id,0);
         while(!queue.isEmpty()){String id=queue.remove();topo.add(id);for(String c:adj.getOrDefault(id,List.of())){rank.merge(c,rank.getOrDefault(id,0)+1,Math::max);if(incoming.merge(c,-1,Integer::sum)==0)queue.add(c);}}
         if(topo.size()!=nodes.size())throw new IllegalArgumentException("Forward dialogue links contain a cycle that was not marked as a back-reference.");
-                                                                           
-                                                                             
-                                                                   
+        
+        
+        
         var preferred=new LinkedHashMap<String,Integer>();
         for(String root:topo){
             var stack=new ArrayDeque<String>();stack.push(root);
@@ -111,14 +123,14 @@ public final class LayoutEngine {
         while(!ready.isEmpty()){String id=ready.remove();horizontalOrder.add(id);for(String c:orderEdges.getOrDefault(id,Set.of()))if(orderDegree.merge(c,-1,Integer::sum)==0)ready.add(c);}
         if(horizontalOrder.size()!=nodes.size())throw new IllegalArgumentException("Horizontal layout constraints contain an unexpected cycle.");
         var layers=new TreeMap<Integer,List<String>>();for(String id:horizontalOrder)layers.computeIfAbsent(rank.get(id),k->new ArrayList<>()).add(id);
-                                                                                
-                                                                               
+        
+        
         for(var layer:layers.values())for(int i=1;i<layer.size();i++)orderEdges.computeIfAbsent(layer.get(i-1),k->new LinkedHashSet<>()).add(layer.get(i));
         double baseCenter=MARGIN+sizes.values().stream().mapToDouble(Size::width).max().orElse(350)/2;
         var centers=new HashMap<String,Double>();
         for(String id:horizontalOrder){double center=centers.getOrDefault(id,baseCenter);centers.put(id,center);for(String c:orderEdges.getOrDefault(id,Set.of()))centers.merge(c,center+(sizes.get(id).width()+sizes.get(c).width())/2+GAP_X,Math::max);}
-                                                                            
-                                                                                
+        
+        
         for(String id:horizontalOrder){var cs=adj.getOrDefault(id,List.of());if(cs.size()>1){double average=cs.stream().mapToDouble(centers::get).average().orElse(baseCenter);centers.merge(id,average,Math::max);}}
         for(String id:horizontalOrder)for(String c:orderEdges.getOrDefault(id,Set.of()))centers.merge(c,centers.get(id)+(sizes.get(id).width()+sizes.get(c).width())/2+GAP_X,Math::max);
         var boxes=new ArrayList<Box>();double y=MARGIN,maxWidth=600;
@@ -145,15 +157,15 @@ public final class LayoutEngine {
             var from=ids.get(e.from);var to=ids.get(e.to);if(from==null||to==null)continue;
             if(!sectors.isEmpty()&&!e.back){lines.add(new Line(e,from,to,0,List.of(new Point(from.cx(),from.bottom()),new Point(to.cx(),to.y))));continue;}
             double exitY=layerBottoms.get(from.y)+22,entryY=to.y-22;
-                                                                                  
-                                                                                   
+            
+            
             if(!e.back&&layerOrder.get(to.y)==layerOrder.get(from.y)+1){
                 double channel=(layerBottoms.get(from.y)+to.y)/2;
                 lines.add(new Line(e,from,to,0,List.of(new Point(from.cx(),from.bottom()),new Point(from.cx(),channel),new Point(to.cx(),channel),new Point(to.cx(),to.y))));
             }else detours.add(new Detour(e,from,to,exitY,entryY));
         }
-                                                                                  
-                                                                              
+        
+        
         detours.sort(Comparator.comparingDouble(d->Math.min(d.startY,d.endY)));
         var laneEnds=new ArrayList<Double>();
         for(var d:detours){double low=Math.min(d.startY,d.endY),high=Math.max(d.startY,d.endY);int lane=0;

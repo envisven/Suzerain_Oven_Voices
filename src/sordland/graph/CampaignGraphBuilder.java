@@ -4,7 +4,8 @@ import sordland.data.Domain.*;
 import sordland.data.Json;
 import java.util.*;
 
-                                                                                                   
+
+
 public final class CampaignGraphBuilder {
     public Graph build(Dataset data, String query, String type, Integer turn, boolean ancillary) {
         var nodes = new ArrayList<Graph.Node>();
@@ -28,7 +29,7 @@ public final class CampaignGraphBuilder {
                     +(item.condition().isBlank()?"":"\nActivation: "+display(item.condition()))
                     +(item.beginInstruction().isBlank()?"":"\nOn begin: "+display(item.beginInstruction()))
                     +(item.endInstruction().isBlank()?"":"\nOn end: "+display(item.endInstruction()))
-                    +"\nProgression: unresolved; catalogue does not encode execution order.";
+                    +"\nView: PLAIN catalogue. Select ROOTED to follow GameFlow progression.";
             if (!item.condition().isBlank()) {
                 String cid = id+":condition";
                 nodes.add(new Graph.Node(cid, Graph.Kind.CONDITION, "ACTIVATION PREDICATE", display(item.condition()),
@@ -39,7 +40,7 @@ public final class CampaignGraphBuilder {
             nodes.add(new Graph.Node(id,Graph.Kind.EVENT,item.title(),isStart?"START EVENT · source IsOnStart":"",metadata,item.type(),"",item.turn(),item,null,null));
         }
         return new Graph("Sordland campaign",nodes,edges,List.of(
-                "Independent catalogue items grouped by proven turn. Lines attach activation predicates only; campaign execution order is unresolved.",
+                "PLAIN source catalogue grouped by proven turn. Lines attach activation predicates only; ROOTED uses GameFlow progression.",
                 "No event-to-event routes or ordered if/else chains are inferred from names, chronology, predicates, or dialogue calls."));
     }
 

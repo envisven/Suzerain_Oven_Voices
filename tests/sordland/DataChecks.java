@@ -56,8 +56,8 @@ final class DataChecks {
         var campaign=new CampaignGraphBuilder().build(data,"","All types",null,false);
         var ids=new HashMap<String,Graph.Node>();campaign.nodes.forEach(n->ids.put(n.id,n));
         equal(data.items().size(),(int)campaign.nodes.stream().filter(n->n.kind==Graph.Kind.EVENT).count(),"Campaign presents every interactive item/uncatalogued graph");
-        check(campaign.edges.stream().noneMatch(e->ids.get(e.from).kind==Graph.Kind.EVENT&&ids.get(e.to).kind==Graph.Kind.EVENT),"Missing campaign scheduler never becomes invented chronological edges");
-        check(campaign.diagnostics.stream().anyMatch(d->d.toLowerCase(Locale.ROOT).contains("unresolved")),"Unresolved campaign progression is explicit");
+        check(campaign.edges.stream().noneMatch(e->ids.get(e.from).kind==Graph.Kind.EVENT&&ids.get(e.to).kind==Graph.Kind.EVENT),"PLAIN remains a flat catalogue without event progression edges");
+        equal("StoryPack_Main",data.gameFlow().storyPack(),"Authoritative Sordland GameFlow is available independently of the PLAIN catalogue");
         var engine=new LayoutEngine();
         var compact=engine.campaign(campaign,Set.of(),new sordland.ui.TextMeasurer());
         LayoutChecks.assertGeometry(compact,"Complete actual campaign"); LayoutChecks.assertTurns(compact);
