@@ -6,7 +6,7 @@ import java.util.*;
 import java.util.regex.*;
 import static sordland.data.Domain.*;
 
-
+                                                                                                         
 public final class Loader {
     public static final String ENTITY_FILE = "SuzerainDataDumper.entity_data.json";
     public static final String CONVERSATIONS_FILE = "SuzerainDataDumper.conversations_Sordland.json";
@@ -74,7 +74,7 @@ public final class Loader {
         List<Object> values=Json.list(collection);
         if(values.isEmpty())throw new IOException("Conversation database has no conversations.");
         Map<Integer,Map<String,Integer>> names=new LinkedHashMap<>();
-        
+                                                                                                     
         for(Object value:values) {
             Map<String,Object> c=requireObject(value,"Conversation");
             if(!Json.string(c,"Title").startsWith("Sordland/"))continue;
@@ -159,7 +159,7 @@ public final class Loader {
         if(type.equals("Bill")) {
             options.add(new Option("SIGN","",Json.string(p,"SignVariables")));
             String disabled=Json.string(p,"IsVetoDisabledCondition");
-            
+                                                                                                                   
             options.add(new Option("VETO",disabled.isBlank()?"":"Disabled when: "+disabled,Json.string(p,"VetoVariables")));
         } else if(type.equals("Decision")) {
             requireCollection(p.get("Options"),name+".DecisionProperties.Options");

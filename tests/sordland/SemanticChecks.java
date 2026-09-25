@@ -13,13 +13,13 @@ final class SemanticChecks {
         var analysis=Semantics.analyze("BaseGame.GovernmentBudget -= 1; BaseGame.Relations_Monica_Opinion += 1; GameCondition.Flag = true;", "PlaySceneMusic(\"song;name\"); Continue();");
         equal(List.of("BaseGame.GovernmentBudget -= 1","BaseGame.Relations_Monica_Opinion += 1","GameCondition.Flag = true"),analysis.effects(),"Persistent assignments identified in source order");
         equal(2,analysis.cosmetic().size(),"Music/continue commands recognized without splitting quoted semicolon");
-        equal(3,analysis.barriers().size(),"Cosmetic commands never create semantic barriers");
+        equal(3L,analysis.commands().stream().filter(c->c.kind()==Semantics.CommandKind.EFFECT).count(),"Cosmetic commands do not become gameplay effect boxes");
         check(!analysis.terminal(),"Assignments do not terminate dialogue");
         check(Semantics.analyze("End();","").terminal(),"End() is recognized as conversation terminal plumbing");
         equal(0,Semantics.analyze("End();","").effects().size(),"End() is not a state mutation");
         var unknown=Semantics.analyze("MaybeSetPolicy(42);","");
         equal(List.of("MaybeSetPolicy(42)"),unknown.unknown(),"Unrecognized commands are retained as unknown");
-        equal(1,unknown.barriers().size(),"Unknown commands prevent unsafe flavour convergence");
+        equal(Semantics.CommandKind.UNKNOWN,unknown.commands().getFirst().kind(),"Unknown commands retain their explicit source classification");
         var guarded=Semantics.analyze("if BaseGame.Ready then BaseGame.Flag = true; end","");
         equal(0,guarded.effects().size(),"Guarded assignment is not misrepresented as an unconditional effect");
         equal(1,guarded.unknown().size(),"Unsupported control construct retained whole");

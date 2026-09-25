@@ -4,7 +4,7 @@ import sordland.data.Domain.*;
 import sordland.data.Json;
 import java.util.*;
 
-
+                                                                                                   
 public final class CampaignGraphBuilder {
     public Graph build(Dataset data, String query, String type, Integer turn, boolean ancillary) {
         var nodes = new ArrayList<Graph.Node>();

@@ -2,7 +2,7 @@ package sordland.data;
 
 import java.util.*;
 
-
+                                                                                        
 public final class Domain {
     private Domain() {}
 

@@ -1,31 +1,41 @@
-# Second implementation pass
+# Canonical dialogue graph, actor filtering and connector selection
 
-## Graph correctness and layout
+This revision replaces the earlier expansion by route history. Earlier counts of duplicated occurrences and continuation endpoints describe the superseded design.
 
-- Replaced dialogue leaf/subtree widths with layered ordering and horizontal separation constraints. This fixes an observed player-choice order inversion in conversation 1, including choices placed on different layers after reconvergence.
-- Added explicit routing around intermediate boxes for long forward connectors and back-references. Source connectors retain direction; campaign activation connectors remain straight.
-- Followed cross-conversation links when determining root reachability. A return destination is no longer mistakenly duplicated as an independent component.
-- Prevented continuation loops that made no progress when one source entry exceeded the configured segment size. Such entries are now expanded atomically and the exception is reported.
-- Exposed exact preceding semantic history in the source inspector. Removed redundant raw-entry text copies from every visual occurrence.
+## Source graph
 
-## Navigation and usability
+- Each `(conversationID, dialogueID)` is represented once per dialogue graph. Different incoming effects, conditions or choice numbers do not duplicate the destination.
+- Conditions, speech/control, effects, unresolved commands and terminal boxes remain visible in source order within each entry.
+- Exact outgoing links, their order, priority and connector metadata remain authoritative, including cross-conversation calls and returns.
+- Player nodes use the caption **YOU**. Choice numbers belong to incoming edges.
+- Both state-changing and other source loops return to the existing entry and use back-reference connectors.
+- Removed semantic-context interning, route-history inspection, changed-context loop portals and the old continuation/chunk architecture. Graphs contain their complete source routes.
 
-- Retained search text and viewport state through Back navigation.
-- Anchored a selected event during metadata expansion and corrected Readable to use 100% zoom.
-- Added repeated-match Find navigation, Item details, Data files selection/recovery, and cancellation of background work.
-- Assigned speaker colors from the complete source speaker set so the palette stays stable between graphs. Narrator and player styles remain fixed.
-- Focused the source-marked starting event on initial load and displayed its start flag, dialogue reference, category and turn provenance.
-- Added measured-text caching and avoided drawing off-screen text baselines inside large nodes.
+## Actor filtering
 
-## Parsing and verification
+- Dialogue views offer an independent JavaFX checkbox for each actor in the complete graph. All begin selected; player actors 5 and 6 share **You**, and narration uses **Narrator**.
+- Hiding an actor removes only CHARACTER, NARRATOR and CHOICE speech boxes. Conditions, effects, unknown commands, control boxes and terminal information remain.
+- Filtering is a visual projection over the source graph. Routes bypass hidden speech; compact reference junctions preserve hidden branching and loops when required.
+- Actor choices belong to the retained view and survive relayout and Back navigation. Opening another event starts with all of its actors selected.
 
-- Unified namespace display handling; unrelated names containing BaseGame remain intact.
-- Preserved sparse catalogue dictionary keys, rejected Rizia-only conversation input, and left ambiguous title references unresolved instead of selecting an arbitrary conversation.
-- Excluded “Jump to” control labels from speaker-name inference.
-- Added cancellation checks to the JSON reader and measured layout pass.
-- Extended regression checks to actual fonts and the default 4,000-box segment size across all supplied conversations.
-- Configured JavaFX native access in launch configurations and added a timeout/failure exit code to graphical smoke checks.
+## Connectors
 
-## Scope limits
+- Ordered source ports, separate destination ports and staggered gap channels keep outgoing routes distinguishable. Long links and loops route around node rectangles; unrelated crossings use visual gaps or halos.
+- A unique connector click highlights that edge and arrowhead in thicker accent green and shows endpoint details. Node clicks retain priority.
+- Hit-testing uses polyline segment distance with a six-screen-pixel tolerance. It deduplicates by edge identity before deciding whether a hit is unique.
+- Shared trunks, overlapping connectors and intersections never cause an arbitrary selection. Ambiguous and empty clicks preserve the current highlight. Selecting another edge replaces it; filtering away the selected edge clears it.
+- Geometry and selection logic live in JavaFX-independent helpers for headless regression tests.
 
-The supplied files still do not establish campaign event execution order. The campaign view is a turn-banded catalogue of independent items and activation predicates. No scheduler or event routes were fabricated. Interactive visual verification still requires a desktop display; the development sandbox exposes none to JavaFX.
+## Retained behavior and scope
+
+Turn sectors, independent campaign predicates, source-driven metadata, detail views for non-dialogue items, Speaker Colors, search, zoom, pan, Fit, Readable, loading recovery and background work remain part of the viewer. Source databases stay read-only. The project still uses the JavaFX bundled with Liberica JDK 25 FULL without Maven, Gradle or external UI dependencies.
+
+Campaign event execution order remains unresolved in the supplied files. This revision does not infer an event scheduler, solve conditions, simulate Lua or calculate playthrough state.
+
+## Verification
+
+The revised complete-graph, actor-filter, routing and connector-selection checks are being run. See [VALIDATION.md](VALIDATION.md) for confirmed results and remaining desktop checks; previous chunk-based test totals are not current acceptance results.
+
+## Routing background
+
+Optional design references: [Graphviz spline routing](https://graphviz.org/docs/attrs/splines/) and [yFiles orthogonal edge routing](https://docs.yworks.com/yfiles/doc/developers-guide/orthogonal_edge_router.html). These are background references only. Neither Graphviz nor yFiles is a project or runtime dependency.

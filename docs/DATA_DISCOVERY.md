@@ -71,6 +71,14 @@ Each `outgoingLinks` element supplies `destinationConversationID`, `destinationD
 
 Entry `fields` is another numbered list of `{title, typeString, value}` objects. English spoken/narrated text is normally in the field titled `en`; `Dialogue Text` is the fallback. Player menu text is normally `Menu Text en`, with `Menu Text` as fallback. Base `Sequence` and localized `Sequence en` are both preserved. `Articy Id`, `InputId`, and `OutputId` remain available in entry metadata. To reduce memory, field objects are normalized into an immutable title-to-value map; redundant field wrapper/type objects and duplicated outgoing-link raw objects are not retained after interpretation.
 
+### Canonical visual representation
+
+The dialogue view represents the JSON pointer graph. A source identity `(conversationID, dialogueID)` is materialized once, as its ordered sequence of condition, speech/control and instruction/terminal boxes. Multiple boxes belonging to one entry are parts of that single representation, not duplicate source occurrences.
+
+Each outgoing source link connects the entry's last box to the exact destination entry's first box. Different effects or conditions on incoming paths do not produce copies of the destination. Conditions and effects remain visible, but the viewer does not evaluate game state or claim that every structural path is feasible for a particular playthrough.
+
+Source loops are ordinary back-references to an existing entry. Complete graphs replace the previous semantic-history expansion and continuation pages. There is no calculated route history to show in the inspector. Verification of complete-graph sizes and layout is recorded in [VALIDATION.md](VALIDATION.md).
+
 ## Speakers and choices
 
 There is no actor collection or portrait asset in this archive. Speaker names are corroborated across actual dialogue titles of the form `Speaker: "text"`, indexed by `ActorID`. Control labels such as `Jump to:` and script lines containing colons must not become actor names.
@@ -78,6 +86,12 @@ There is no actor collection or portrait asset in this archive. Speaker names ar
 The source repeatedly identifies actor 5 as `Player`, actor 6 as `Player_Italic`, and actor 10 as `Narrator`. Both player actors represent responses/actions; narrator is a distinct role. Other examples are 4 `Petr Vectern`, 38 `Lucian Galade`, and 51 `Symon Holl`. Actor 1 sometimes has the literal source label `...`; those entry-specific labels are preserved, while `Ovid Grecer` is the corroborated default for its control entries. Speaker names alone are used when no local portrait can be resolved.
 
 Player choice order comes from the incoming source node's ordered outgoing links. It must not be derived from dialogue IDs, alphabetical text, or screen position.
+
+Choice numbers are properties of those incoming edges. A shared player response keeps one **YOU** box even if different sources reach it under different choice numbers.
+
+The dialogue actor filter uses the complete graph's source speaker set. Actors 5 and 6 normalize to **You**; narration normalizes to **Narrator**; other actors use their source speaker names. Names are deduplicated, with You and Narrator first when present, followed by the remaining names alphabetically. It does not invent missing actors.
+
+Each checkbox controls only that actor's CHARACTER, NARRATOR or CHOICE boxes. Conditions, effects, unresolved commands, control and terminal boxes stay visible regardless of the entry's actor. Bypassing hidden speech is a visual projection; compact reference junctions may preserve a hidden branch or loop. The underlying source entries and links are unchanged.
 
 ## Effects, controls, conditions, and non-dialogue options
 

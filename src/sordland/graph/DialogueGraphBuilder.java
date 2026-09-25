@@ -5,43 +5,147 @@ import sordland.graph.Graph.*;
 import sordland.graph.Semantics.CommandKind;
 import java.util.*;
 
-
-
+                                                                                     
+                                                                                             
 public final class DialogueGraphBuilder {
-    public static final int DEFAULT_NODE_LIMIT = 4000;
-    private final int nodeLimit;
-
-    public DialogueGraphBuilder() { this(DEFAULT_NODE_LIMIT); }
-    public DialogueGraphBuilder(int nodeLimit) {
-        if (nodeLimit < 8) throw new IllegalArgumentException("Node limit must be at least 8");
-        this.nodeLimit = nodeLimit;
-    }
+    private record Box(Kind kind, String title, String text, String metadata) {}
+    private record EntryVisual(String first, String last, Entry entry, Semantics.Analysis analysis) {}
 
     public Graph build(Dataset dataset, Conversation conversation) {
         Objects.requireNonNull(dataset);
         Objects.requireNonNull(conversation);
-        Build build = new Build(dataset, conversation.title());
-        List<EntryKey> roots = findRoots(dataset, conversation, build.diagnostics);
-        for (EntryKey root : roots) {
-            SemanticContext context = new SemanticContext(null, "root:" + root);
-            build.schedule(root, context, null, null, "", 0);
+        List<String> diagnostics = new ArrayList<>();
+        List<EntryKey> roots = findRoots(dataset, conversation, diagnostics);
+        Set<EntryKey> primaryReachable = roots.isEmpty() ? Set.of() : reachable(dataset, roots.getFirst());
+        Set<EntryKey> componentRoots = new HashSet<>(roots);
+        if (!roots.isEmpty()) componentRoots.remove(roots.getFirst());
+        List<Node> nodes = new ArrayList<>();
+        List<Edge> edges = new ArrayList<>();
+        Map<EntryKey,EntryVisual> visuals = new LinkedHashMap<>();
+        Deque<EntryKey> pending = new ArrayDeque<>(roots);
+        Set<EntryKey> missing = new LinkedHashSet<>();
+        int unknownEntries = 0;
+        while (!pending.isEmpty()) {
+            if (Thread.currentThread().isInterrupted()) throw new java.util.concurrent.CancellationException("Dialogue construction cancelled");
+            EntryKey key = pending.removeFirst();
+            if (visuals.containsKey(key)) continue;
+            Entry entry = dataset.entry(key);
+            if (entry == null) {
+                String id = boxId(key, 0);
+                nodes.add(new Node(id, Kind.NOTICE, "UNRESOLVED SOURCE LINK", "Missing conversation/dialogue " + key,
+                    "This exact outgoing source pointer is preserved, but its destination is absent from the supplied dump.",
+                    "Unresolved", "", null, null, key));
+                visuals.put(key, new EntryVisual(id, id, null, null));
+                missing.add(key);
+                continue;
+            }
+            Semantics.Analysis analysis = Semantics.analyze(entry.script(), entry.sequence());
+            if (!analysis.unknown().isEmpty()) unknownEntries++;
+            List<Box> boxes = boxes(entry, analysis, !primaryReachable.contains(key));
+            String first = boxId(key, 0);
+            String previous = null;
+            for (int i = 0; i < boxes.size(); i++) {
+                Box box = boxes.get(i);
+                String id = boxId(key, i);
+                String caption = i == 0 && componentRoots.contains(key) ? "SOURCE COMPONENT · " + box.title() : box.title();
+                String actor = switch (box.kind()) {
+                    case CHOICE -> "You";
+                    case NARRATOR -> "Narrator";
+                    case CHARACTER -> entry.speaker().isBlank() ? "UNKNOWN SPEAKER" : entry.speaker();
+                    default -> "";
+                };
+                nodes.add(new Node(id, box.kind(), caption, box.text(), box.metadata(), "Dialogue", entry.speaker(),
+                    null, null, key, actor));
+                if (previous != null) edges.add(new Edge(previous, id, "", false));
+                previous = id;
+            }
+            visuals.put(key, new EntryVisual(first, previous, entry, analysis));
+            for (Link link : ordered(entry.links())) pending.addLast(link.target());
         }
-        return build.finish();
+        int sourceLinks = 0;
+        for (Map.Entry<EntryKey,EntryVisual> materialized : visuals.entrySet()) {
+            EntryKey key = materialized.getKey();
+            EntryVisual visual = materialized.getValue();
+            if (visual.entry() == null) continue;
+            for (Link link : ordered(visual.entry().links())) {
+                EntryVisual targetVisual = visuals.get(link.target());
+                Entry target = targetVisual.entry();
+                String label = "";
+                if (target != null && isChoice(target)) label = "Choice " + (link.order() + 1);
+                if (target != null && !target.condition().isBlank()) label = append(label, "predicate must hold");
+                if (!link.priority().isBlank() && !link.priority().equalsIgnoreCase("Normal")) label = append(label, "priority " + link.priority());
+                if (link.connector()) label = append(label, "source connector");
+                if (link.target().conversationId() != key.conversationId()) label = append(label, "to conversation " + link.target().conversationId());
+                if (visual.analysis().terminal()) label = append(label, "source link after End()");
+                edges.add(new Edge(visual.last(), targetVisual.first(), label, false, key, link));
+                sourceLinks++;
+            }
+        }
+        if (!missing.isEmpty()) diagnostics.add("Exact linked destinations missing from the supplied dump: " + missing);
+        if (unknownEntries > 0) diagnostics.add(unknownEntries + " source entries contain unresolved commands, shown explicitly without interpreting their behavior.");
+        diagnostics.add("Complete source coverage: " + (visuals.size() - missing.size()) + " unique entries, " + sourceLinks
+            + " exact outgoing links, " + nodes.size() + " visual boxes. Each source entry is represented once.");
+        diagnostics.add("Conditions/effects are displayed but not evaluated. Source order is retained; no IF/ELSE relationship is inferred. End()/output denotes conversation control, not a campaign ending.");
+        Graph result = classifyBackEdges(new Graph(conversation.title(), nodes, edges, diagnostics));
+        long back = result.edges.stream().filter(e -> e.back).count();
+        if (back > 0) {
+            diagnostics.add(back + " source loop/back-reference connections use dashed connectors.");
+            result = new Graph(result.title, result.nodes, result.edges, diagnostics);
+        }
+        return result;
     }
 
-    public Graph buildContinuation(Dataset dataset, Continuation continuation) {
-        Objects.requireNonNull(continuation);
-        Build build = new Build(dataset, continuation.title);
-        build.diagnostics.add("Continuation at " + continuation.target + ": " + continuation.reason
-            + ". Preserved " + continuation.context.depth + " preceding semantic barriers.");
-        
-        
-        build.schedule(continuation.target, continuation.context, null, null, "", 0);
-        return build.finish();
+    private static String boxId(EntryKey key, int index) { return "entry-" + key.conversationId() + "-" + key.dialogueId() + "-" + index; }
+    private static List<Link> ordered(List<Link> links) {
+        List<Link> result = new ArrayList<>(links);
+        result.sort(Comparator.comparingInt(Link::order));
+        return result;
+    }
+    private static Set<EntryKey> reachable(Dataset dataset, EntryKey root) {
+        Set<EntryKey> seen = new HashSet<>();
+        Deque<EntryKey> pending = new ArrayDeque<>();
+        pending.add(root);
+        while (!pending.isEmpty()) {
+            EntryKey key = pending.removeFirst();
+            if (!seen.add(key)) continue;
+            Entry entry = dataset.entry(key);
+            if (entry != null) for (Link link : entry.links()) pending.addLast(link.target());
+        }
+        return seen;
     }
 
-    
-
+                                                                                   
+                                                                                      
+    public static Graph classifyBackEdges(Graph graph) {
+        Map<String,List<Integer>> outgoing = new HashMap<>();
+        for (int i = 0; i < graph.edges.size(); i++)
+            outgoing.computeIfAbsent(graph.edges.get(i).from, ignored -> new ArrayList<>()).add(i);
+        Map<String,Integer> color = new HashMap<>();
+        Set<Integer> back = new HashSet<>();
+        record Frame(String node, Iterator<Integer> links) {}
+        for (Node node : graph.nodes) {
+            if (color.containsKey(node.id)) continue;
+            Deque<Frame> stack = new ArrayDeque<>();
+            color.put(node.id, 1);
+            stack.push(new Frame(node.id, outgoing.getOrDefault(node.id, List.of()).iterator()));
+            while (!stack.isEmpty()) {
+                Frame frame = stack.peek();
+                if (!frame.links().hasNext()) { color.put(frame.node(), 2); stack.pop(); continue; }
+                int index = frame.links().next();
+                String target = graph.edges.get(index).to;
+                if (color.getOrDefault(target, 0) == 1) back.add(index);
+                else if (!color.containsKey(target)) {
+                    color.put(target, 1);
+                    stack.push(new Frame(target, outgoing.getOrDefault(target, List.of()).iterator()));
+                }
+            }
+        }
+        List<Edge> classified = new ArrayList<>(graph.edges.size());
+        for (int i = 0; i < graph.edges.size(); i++) classified.add(graph.edges.get(i).withBack(back.contains(i)));
+        return new Graph(graph.title, graph.nodes, classified, graph.diagnostics);
+    }
+                                                                                
+                                                                                     
     private static List<EntryKey> findRoots(Dataset dataset, Conversation conversation, List<String> diagnostics) {
         Map<Integer,Entry> entries = conversation.entries();
         var starts = new ArrayList<Entry>();
@@ -69,8 +173,8 @@ public final class DialogueGraphBuilder {
                 Entry entry = dataset.entry(key);
                 if (entry != null) for (Link link : entry.links()) pending.addLast(link.target());
             }
-            
-            
+                                                                              
+                                                                               
             if (roots.size() == 1) primaryReachable = (int) visited.stream()
                 .filter(k -> k.conversationId() == conversation.id() && entries.containsKey(k.dialogueId())).count();
         }
@@ -83,140 +187,9 @@ public final class DialogueGraphBuilder {
         return roots;
     }
 
-    private record Occurrence(EntryKey source, SemanticContext context, int choiceOrder) {}
-    private record Extension(SemanticContext parent, String token) {}
-    private record Trail(EntryKey source, SemanticContext context, String head, Trail parent) {}
-    private record Pending(Occurrence occurrence, String head, Trail parent) {}
-    private record Box(Kind kind, String title, String text, String metadata) {}
-
-    private final class Build {
-        private final Dataset dataset;
-        private final String title;
-        private final List<Node> nodes = new ArrayList<>();
-        private final List<Edge> edges = new ArrayList<>();
-        private final List<String> diagnostics = new ArrayList<>();
-        private final Deque<Pending> pending = new ArrayDeque<>();
-        private final Map<Occurrence,String> heads = new HashMap<>();
-        private final Map<Extension,SemanticContext> contexts = new HashMap<>();
-        private final Map<EntryKey,Semantics.Analysis> analyses = new HashMap<>();
-        private final Set<EntryKey> missing = new HashSet<>();
-        private final Set<EntryKey> unknown = new HashSet<>();
-        private int nextId, chunkPortals, changingLoops, stableLoops, reconvergences;
-
-        Build(Dataset dataset, String title) { this.dataset = dataset; this.title = title; }
-        private String id() { return "d" + nextId++; }
-
-        private void schedule(EntryKey key, SemanticContext context, Trail trail, String from, String label, int choiceOrder) {
-            Entry entry = dataset.entry(key);
-            int ordinal = entry != null && isChoice(entry) ? choiceOrder : 0;
-            for (Trail ancestor = trail; ancestor != null; ancestor = ancestor.parent()) {
-                if (!ancestor.source().equals(key)) continue;
-                if (ancestor.context() == context) {
-                    edges.add(new Edge(from, ancestor.head(), append(label, "loop / same semantic context"), true));
-                    stableLoops++;
-                } else {
-                    String portalId = id();
-                    addPortal(portalId, key, context, "RE-EVALUATE LOOP", "The source returns to " + key
-                        + " after conditions, effects, or unresolved commands. Open to inspect another iteration with this history.");
-                    if (from != null) edges.add(new Edge(from, portalId, append(label, "loop / changed context"), false));
-                    changingLoops++;
-                }
-                return;
-            }
-            Occurrence occurrence = new Occurrence(key, context, ordinal);
-            String existing = heads.get(occurrence);
-            if (existing != null) {
-                if (from != null) edges.add(new Edge(from, existing, label, false));
-                reconvergences++;
-                return;
-            }
-            String head = id();
-            heads.put(occurrence, head);
-            pending.addLast(new Pending(occurrence, head, trail));
-            if (from != null) edges.add(new Edge(from, head, label, false));
-        }
-
-        private Graph finish() {
-            while (!pending.isEmpty()) {
-                if (Thread.currentThread().isInterrupted()) throw new java.util.concurrent.CancellationException("Dialogue construction cancelled");
-                Pending next = pending.removeFirst();
-                EntryKey key = next.occurrence().source();
-                Entry entry = dataset.entry(key);
-                if (entry == null) {
-                    nodes.add(new Node(next.head(), Kind.NOTICE, "UNRESOLVED SOURCE LINK", "Missing conversation/dialogue " + key,
-                        "The outgoing source link is preserved, but this exact destination is absent from the loaded Sordland dump.",
-                        "Unresolved", "", null, null, key, null));
-                    missing.add(key);
-                    continue;
-                }
-                Semantics.Analysis analysis = analyses.computeIfAbsent(key, ignored -> Semantics.analyze(entry.script(), entry.sequence()));
-                List<Box> boxes = boxes(entry, analysis, next.occurrence().choiceOrder(), next.occurrence().context());
-                
-                
-                
-                if (!nodes.isEmpty() && nodes.size() + pending.size() + boxes.size() + entry.links().size() > nodeLimit) {
-                    addPortal(next.head(), key, next.occurrence().context(), "CONTINUE GRAPH", "This chunk is bounded at " + nodeLimit
-                        + " boxes. Open this exact source destination to continue; no route has been discarded.");
-                    chunkPortals++;
-                    continue;
-                }
-                if (nodes.isEmpty() && boxes.size() + pending.size() + entry.links().size() > nodeLimit)
-                    diagnostics.add("A single source occurrence exceeds the chunk target. It is expanded atomically so opening its continuation always advances.");
-                String previous = null;
-                for (int i = 0; i < boxes.size(); i++) {
-                    Box box = boxes.get(i);
-                    String nodeId = i == 0 ? next.head() : id();
-                    nodes.add(new Node(nodeId, box.kind(), box.title(), box.text(), box.metadata(), "Dialogue", entry.speaker(),
-                        null, null, key, null, next.occurrence().context()));
-                    if (previous != null) edges.add(new Edge(previous, nodeId, box.kind() == Kind.CONDITION ? "" : "", false));
-                    previous = nodeId;
-                }
-                SemanticContext outgoing = next.occurrence().context();
-                if (!entry.condition().isBlank()) outgoing = extend(outgoing, "condition@" + key + ":" + entry.condition());
-                for (String barrier : analysis.barriers()) outgoing = extend(outgoing, "command@" + key + ":" + barrier);
-                if (!analysis.unknown().isEmpty()) unknown.add(key);
-                Trail ancestry = new Trail(key, next.occurrence().context(), next.head(), next.parent());
-                List<Link> links = new ArrayList<>(entry.links());
-                links.sort(Comparator.comparingInt(Link::order));
-                for (Link link : links) {
-                    Entry target = dataset.entry(link.target());
-                    String label = "";
-                    if (target != null && isChoice(target)) label = "Choice " + (link.order() + 1);
-                    if (target != null && !target.condition().isBlank()) label = append(label, "predicate must hold");
-                    if (!link.priority().isBlank() && !link.priority().equalsIgnoreCase("Normal"))
-                        label = append(label, "priority " + link.priority());
-                    if (link.target().conversationId() != key.conversationId()) label = append(label, "to conversation " + link.target().conversationId());
-                    if (analysis.terminal()) label = append(label, "source link after End()");
-                    schedule(link.target(), outgoing, ancestry, previous, label, target != null && isChoice(target) ? link.order() + 1 : 0);
-                }
-            }
-            if (!missing.isEmpty()) diagnostics.add("Exact linked destinations missing from the supplied dump: " + missing);
-            if (!unknown.isEmpty()) diagnostics.add(unknown.size() + " source entries contain unresolved commands. These are visible and prevent semantic merging.");
-            if (reconvergences > 0) diagnostics.add(reconvergences + " repeated arrivals share the exact source entry and semantic history.");
-            if (stableLoops > 0) diagnostics.add(stableLoops + " unchanged-context loop connections are shown as back-references.");
-            if (changingLoops > 0) diagnostics.add(changingLoops + " loops cross semantic barriers; explicit re-evaluation portals preserve their context.");
-            if (chunkPortals > 0) diagnostics.add(chunkPortals + " continuation portals preserve the unexpanded frontier at the " + nodeLimit + "-box chunk boundary. Click any portal to continue.");
-            diagnostics.add("Predicates are preserved in source order and are not evaluated. Separate predicates do not imply an invented IF/ELSE chain. End()/output denotes conversation control, not a campaign ending.");
-            return new Graph(title, nodes, markAdditionalBackEdges(nodes, edges), diagnostics);
-        }
-
-        private SemanticContext extend(SemanticContext parent, String token) {
-            return contexts.computeIfAbsent(new Extension(parent, token), key -> new SemanticContext(parent, token));
-        }
-
-        private void addPortal(String id, EntryKey key, SemanticContext context, String caption, String reason) {
-            Entry entry = dataset.entry(key);
-            String targetTitle = entry == null ? key.toString() : entry.title();
-            Continuation continuation = new Continuation(key, context, title, reason);
-            nodes.add(new Node(id, Kind.REFERENCE, caption, targetTitle + "\nOpen continuation →",
-                "Exact target: " + key + "\n" + reason + "\nPreserved semantic barriers: " + context.depth,
-                "Continuation", "", null, null, key, continuation));
-        }
-    }
-
-    private static List<Box> boxes(Entry entry, Semantics.Analysis analysis, int choiceOrder, SemanticContext context) {
+    private static List<Box> boxes(Entry entry, Semantics.Analysis analysis, boolean detached) {
         var result = new ArrayList<Box>();
-        String metadata = metadata(entry, analysis, context);
+        String metadata = metadata(entry, analysis, detached);
         if (!entry.condition().isBlank()) result.add(new Box(Kind.CONDITION, "CONDITION", Semantics.conditionDisplay(entry.condition()), metadata));
         String text = entry.text().isBlank() ? entry.menuText() : entry.text();
         String rawTitle = entry.title().trim();
@@ -224,8 +197,8 @@ public final class DialogueGraphBuilder {
         boolean bareEnd = pureControl && analysis.terminal()
             && analysis.commands().stream().allMatch(c -> c.kind() == CommandKind.COSMETIC || c.kind() == CommandKind.TERMINAL);
         boolean hasSemanticBox = !entry.condition().isBlank() || analysis.commands().stream().anyMatch(c -> c.kind() != CommandKind.COSMETIC);
-        
-        
+                                                                            
+                                                                               
         if (!pureControl || !hasSemanticBox || rawTitle.equalsIgnoreCase("START") || rawTitle.equalsIgnoreCase("input") || rawTitle.equalsIgnoreCase("output")) {
             Kind kind;
             String caption;
@@ -233,7 +206,7 @@ public final class DialogueGraphBuilder {
                 kind = rawTitle.equalsIgnoreCase("output") ? Kind.TERMINAL : Kind.CONTROL;
                 caption = rawTitle.isBlank() ? "CONNECTOR" : rawTitle;
                 text = rawTitle.equalsIgnoreCase("output") ? "Conversation output" : "";
-            } else if (entry.isPlayer()) { kind = Kind.CHOICE; caption = choiceOrder > 0 ? "YOU · " + choiceOrder : "YOU"; }
+            } else if (entry.isPlayer()) { kind = Kind.CHOICE; caption = "YOU"; }
             else if (entry.isNarrator()) { kind = Kind.NARRATOR; caption = "NARRATOR"; }
             else { kind = Kind.CHARACTER; caption = entry.speaker().isBlank() ? "UNKNOWN SPEAKER" : entry.speaker(); }
             result.add(new Box(kind, caption, text, metadata));
@@ -255,47 +228,15 @@ public final class DialogueGraphBuilder {
     private static boolean isChoice(Entry entry) { return entry.isPlayer() && (!entry.text().isBlank() || !entry.menuText().isBlank()); }
     private static String append(String a, String b) { return a.isBlank() ? b : a + " · " + b; }
 
-    private static String metadata(Entry entry, Semantics.Analysis analysis, SemanticContext context) {
+    private static String metadata(Entry entry, Semantics.Analysis analysis, boolean detached) {
         return "Source conversation/dialogue: " + entry.key() + "\nActor: " + entry.actorId() + " · " + entry.speaker()
             + "\nSource title: " + entry.title() + "\nCondition (original): " + entry.condition()
             + "\nUser script (original):\n" + entry.script() + "\nSequence (original):\n" + entry.sequence()
             + "\nSource outgoing links (order/priority/connector retained): " + entry.links()
-            + "\nSemantic history barriers on arrival: " + context.depth
+            + (detached ? "\nSOURCE INSPECTION COMPONENT: not reachable from the selected conversation root." : "")
             + "\nKnown presentation commands: " + analysis.cosmetic()
             + "\nUnknown commands: " + analysis.unknown();
     }
 
-    
 
-    private static List<Edge> markAdditionalBackEdges(List<Node> nodes, List<Edge> edges) {
-        Map<String,List<Integer>> outgoing = new HashMap<>();
-        for (int i = 0; i < edges.size(); i++) if (!edges.get(i).back)
-            outgoing.computeIfAbsent(edges.get(i).from, ignored -> new ArrayList<>()).add(i);
-        Map<String,Integer> color = new HashMap<>();
-        Set<Integer> back = new HashSet<>();
-        record Frame(String node, Iterator<Integer> links) {}
-        for (Node node : nodes) {
-            if (color.containsKey(node.id)) continue;
-            var stack = new ArrayDeque<Frame>();
-            color.put(node.id, 1);
-            stack.push(new Frame(node.id, outgoing.getOrDefault(node.id, List.of()).iterator()));
-            while (!stack.isEmpty()) {
-                Frame frame = stack.peek();
-                if (!frame.links().hasNext()) { color.put(frame.node(), 2); stack.pop(); continue; }
-                int index = frame.links().next();
-                String target = edges.get(index).to;
-                if (color.getOrDefault(target, 0) == 1) back.add(index);
-                else if (!color.containsKey(target)) {
-                    color.put(target, 1);
-                    stack.push(new Frame(target, outgoing.getOrDefault(target, List.of()).iterator()));
-                }
-            }
-        }
-        var result = new ArrayList<Edge>(edges.size());
-        for (int i = 0; i < edges.size(); i++) {
-            Edge edge = edges.get(i);
-            result.add(back.contains(i) ? new Edge(edge.from, edge.to, append(edge.label, "back-reference"), true) : edge);
-        }
-        return result;
-    }
 }

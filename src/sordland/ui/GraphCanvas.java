@@ -7,31 +7,53 @@ import javafx.scene.layout.Region;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import sordland.graph.Graph;
+import sordland.layout.EdgeHitTest;
 import sordland.layout.LayoutEngine.*;
 import java.util.*;
 import java.util.function.*;
 
-
+                                                                                                       
 public final class GraphCanvas extends Region {
     private final Canvas canvas=new Canvas();
     private Result result; private final Viewport viewport=new Viewport(); private double pressX,pressY,lastX,lastY;private boolean dragged;
     private String selected;private boolean speakerColors;
+    private final EdgeSelection edgeSelection=new EdgeSelection();
     private final Map<String,Color> typeColors=new HashMap<>();
     private Map<String,Color> speakerPalette=Map.of();
     public void setSpeakerPalette(Map<String,Color> palette){speakerPalette=Map.copyOf(palette);}
     public BiConsumer<Graph.Node,Boolean> onNode=(n,metadata)->{};
+    public Consumer<Graph.Edge> onEdge=e->{};
     public Consumer<String> onStatus=s->{};
     public GraphCanvas(){
         getChildren().add(canvas);setMinSize(100,100);setStyle("-fx-background-color: #f3f1ec;");
         canvas.setOnScroll(e->{zoomAt(Math.pow(1.0018,e.getDeltaY()),e.getX(),e.getY());e.consume();});
         canvas.setOnMousePressed(e->{pressX=lastX=e.getX();pressY=lastY=e.getY();dragged=false;canvas.requestFocus();});
         canvas.setOnMouseDragged(e->{if(Math.hypot(e.getX()-pressX,e.getY()-pressY)>4)dragged=true;if(dragged){viewport.panX+=e.getX()-lastX;viewport.panY+=e.getY()-lastY;redraw();}lastX=e.getX();lastY=e.getY();});
-        canvas.setOnMouseReleased(e->{if(dragged||result==null||e.getButton()!=MouseButton.PRIMARY)return;double x=(e.getX()-viewport.panX)/viewport.scale,y=(e.getY()-viewport.panY)/viewport.scale;Box b=result.hit(x,y);if(b!=null){selected=b.node().id;redraw();onNode.accept(b.node(),b.node().kind==Graph.Kind.EVENT&&x>=b.x()+b.w()-36&&y<=b.y()+Math.max(42,24+b.size().title().size()*18));}});
-        canvas.setOnMouseMoved(e->{if(result==null)return;Box b=result.hit((e.getX()-viewport.panX)/viewport.scale,(e.getY()-viewport.panY)/viewport.scale);setCursor(b==null?javafx.scene.Cursor.OPEN_HAND:javafx.scene.Cursor.HAND);});
+        canvas.setOnMouseReleased(e->{
+            if(dragged||result==null||e.getButton()!=MouseButton.PRIMARY)return;
+            double x=(e.getX()-viewport.panX)/viewport.scale,y=(e.getY()-viewport.panY)/viewport.scale;
+            Box b=result.hit(x,y);
+            if(b!=null){
+                selected=b.node().id;redraw();
+                onNode.accept(b.node(),b.node().kind==Graph.Kind.EVENT&&x>=b.x()+b.w()-36&&y<=b.y()+Math.max(42,24+b.size().title().size()*18));
+                return;
+            }
+            if(edgeSelection.click(result.lines,x,y,viewport.scale,6)){
+                redraw();
+                onEdge.accept(edgeSelection.selected());
+            }
+        });
+        canvas.setOnMouseMoved(e->{
+            if(result==null)return;
+            double x=(e.getX()-viewport.panX)/viewport.scale,y=(e.getY()-viewport.panY)/viewport.scale;
+            Box b=result.hit(x,y);
+            if(b!=null){setCursor(javafx.scene.Cursor.HAND);return;}
+            setCursor(EdgeHitTest.candidates(result.lines,x,y,viewport.scale,6).size()==1?javafx.scene.Cursor.HAND:javafx.scene.Cursor.OPEN_HAND);
+        });
     }
     @Override protected void layoutChildren(){canvas.setWidth(getWidth());canvas.setHeight(getHeight());redraw();}
     public Result result(){return result;}
-    public void setResult(Result r,boolean reset){if(!reset&&result!=null&&selected!=null){Box old=result.byId.get(selected),next=r.byId.get(selected);if(old!=null&&next!=null){viewport.panX+=(old.x()-next.x())*viewport.scale;viewport.panY+=(old.y()-next.y())*viewport.scale;}}result=r;if(reset){viewport.scale=.85;viewport.panX=48;viewport.panY=40;if(!r.boxes.isEmpty())focus(r.boxes.getFirst().node().id);}redraw();}
+    public void setResult(Result r,boolean reset){if(!reset&&result!=null&&selected!=null){Box old=result.byId.get(selected),next=r.byId.get(selected);if(old!=null&&next!=null){viewport.panX+=(old.x()-next.x())*viewport.scale;viewport.panY+=(old.y()-next.y())*viewport.scale;}}result=r;edgeSelection.retainEdges(r.lines.stream().map(Line::edge).toList());if(reset){viewport.scale=.85;viewport.panX=48;viewport.panY=40;if(!r.boxes.isEmpty())focus(r.boxes.getFirst().node().id);}redraw();}
     public void setSpeakerColors(boolean value){speakerColors=value;redraw();}
     public void zoom(double factor){zoomAt(factor,getWidth()/2,getHeight()/2);}
     private void zoomAt(double factor,double x,double y){viewport.zoomAt(factor,x,y);redraw();}
@@ -58,20 +80,26 @@ public final class GraphCanvas extends Region {
             g.setFill(Color.web(alt?"#f3f1ec":"#eae8e2"));g.fillRect(0,s.y(),result.width,s.height());g.setStroke(Color.web("#cfcec8"));g.setLineWidth(1/viewport.scale);g.strokeLine(0,s.y(),result.width,s.y());
             if(viewport.scale>.08){g.save();g.translate(48,s.y()+Math.min(s.height()-25,Math.max(160,s.height()/2)));g.rotate(-90);g.setFill(Color.web("#717c77"));g.setFont(Font.font("System",14));g.fillText(s.label(),0,0);g.restore();}
         }
-        g.setLineWidth(Math.max(1.2,1/viewport.scale));
-        for(var line:result.lines){var f=line.from();var t=line.to();boolean back=line.edge().back;
-            double minY=Math.min(f.bottom(),t.y()),maxY=Math.max(f.bottom(),t.y());if(maxY+25<top||minY-25>top+vh)continue;
-            g.setStroke(Color.web(back?"#9672aa":"#87928e"));g.setLineDashes(back?new double[]{6,5}:new double[]{});
-            g.beginPath();boolean first=true;for(var point:line.points()){if(first){g.moveTo(point.x(),point.y());first=false;}else g.lineTo(point.x(),point.y());}g.stroke();
-            if(result.sectors.isEmpty()&&viewport.scale>.18){
-                
-                g.setLineDashes();g.strokeLine(t.cx()-4,t.y()-7,t.cx(),t.y());g.strokeLine(t.cx()+4,t.y()-7,t.cx(),t.y());
-            }
-            if(viewport.scale>.55&&line.edge().from.equals(selected)&&!line.edge().label.isBlank()){g.setFont(Font.font("System",10));g.setFill(Color.web("#62736c"));g.fillText(line.edge().label,t.cx()-130,t.y()-10,260);}
-        }
+        Graph.Edge selectedEdge=edgeSelection.selected();
+        for(var line:result.lines)if(line.edge()!=selectedEdge)drawEdge(g,line,false,top,vh);
+        for(var line:result.lines)if(line.edge()==selectedEdge)drawEdge(g,line,true,top,vh);
         g.setLineDashes();var visible=result.visible(left,top,vw,vh);
         for(var b:visible)drawNode(g,b);
         g.restore();onStatus.accept(String.format(Locale.ROOT,"%,d / %,d boxes visible   ·   %.0f%%",visible.size(),result.boxes.size(),viewport.scale*100));
+    }
+    private void drawEdge(GraphicsContext g,Line line,boolean highlighted,double top,double vh){
+        var f=line.from();var t=line.to();boolean back=line.edge().back;
+        double minY=Math.min(f.bottom(),t.y()),maxY=Math.max(f.bottom(),t.y());if(maxY+25<top||minY-25>top+vh)return;
+        g.setStroke(Color.web(highlighted?"#17634e":back?"#9672aa":"#87928e"));
+        g.setLineWidth(highlighted?Math.max(3.2,2.4/viewport.scale):Math.max(1.2,1/viewport.scale));
+        g.setLineDashes(back?new double[]{6,5}:new double[]{});
+        g.beginPath();boolean first=true;for(var point:line.points()){if(first){g.moveTo(point.x(),point.y());first=false;}else g.lineTo(point.x(),point.y());}g.stroke();
+        var end=line.points().getLast();
+        if(result.sectors.isEmpty()&&viewport.scale>.18){
+                                                                               
+            g.setLineDashes();g.strokeLine(end.x()-4,end.y()-7,end.x(),end.y());g.strokeLine(end.x()+4,end.y()-7,end.x(),end.y());
+        }
+        if(viewport.scale>.55&&line.edge().from.equals(selected)&&!line.edge().label.isBlank()){g.setFont(Font.font("System",10));g.setFill(Color.web(highlighted?"#17634e":"#62736c"));g.fillText(line.edge().label,end.x()-130,end.y()-10,260);}
     }
     private void drawNode(GraphicsContext g,Box b){
         var n=b.node();g.setFill(color(n));g.fillRoundRect(b.x(),b.y(),b.w(),b.h(),12,12);

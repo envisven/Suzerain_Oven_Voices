@@ -3,7 +3,7 @@ package sordland.graph;
 import java.util.*;
 import java.util.regex.Pattern;
 
-
+                                                                                         
 public final class Semantics {
     private Semantics() {}
     public enum CommandKind { EFFECT, UNKNOWN, COSMETIC, TERMINAL }
@@ -14,10 +14,6 @@ public final class Semantics {
         public List<String> unknown() { return ofKind(CommandKind.UNKNOWN); }
         public List<String> cosmetic() { return ofKind(CommandKind.COSMETIC); }
         public boolean terminal() { return commands.stream().anyMatch(c -> c.kind() == CommandKind.TERMINAL); }
-        public List<String> barriers() {
-            return commands.stream().filter(c -> c.kind() != CommandKind.COSMETIC)
-                .map(c -> c.kind() + ":" + c.origin() + ":" + c.raw()).toList();
-        }
         private List<String> ofKind(CommandKind kind) {
             return commands.stream().filter(c -> c.kind() == kind).map(Command::raw).toList();
         }
@@ -29,15 +25,15 @@ public final class Semantics {
     private static final Pattern CALL = Pattern.compile("^([A-Za-z_]\\w*)\\s*\\(.*\\)\\s*$", Pattern.DOTALL);
     private static final Pattern COMPLEX = Pattern.compile("(?m)(?:^|;)\\s*(?:if|elseif|else|for|while|repeat|until|function|return|goto)\\b");
 
-    
-    
+                                                                                 
+                                                                                   
     private static final Set<String> COSMETIC = Set.of(
         "Continue", "WaitForMessage", "WaitforMessage", "AddConversant", "RemoveConversant",
         "PlaySceneMusic", "PlaySoundEffect", "SetRichPresenceData", "SetRichPresence",
         "LookAt", "LookAtModeOff", "FocusToken", "PlayCustomMapMusic", "PlayMusic",
         "PlayLoopedMusic", "DontPlayMapMusic", "DontPlayMapAmbience", "PrologueImage", "AnalyticsEvent");
-    
-    
+                                                                                
+                                                                                  
     private static final Set<String> STATE_CALLS = Set.of(
         "AddTokenStatus", "RemoveTokenStatus", "RemoveTokenStatusAllCities", "AssignConnection",
         "UpdateCharacterTitle", "UpdateCountryRelationship", "EnableNews", "UpdateProgress",
@@ -46,7 +42,7 @@ public final class Semantics {
         "EnableToken", "EnableCodexEntry", "UnlockAchievement", "UnlockSteamAchievement",
         "AddReport", "AddNews", "AddJournalEntry", "AdvanceTimeline");
 
-    
+                                                                                     
     public static String conditionDisplay(String source) {
         return BASE_GAME.matcher(Objects.requireNonNullElse(source, "")).replaceAll("");
     }
@@ -61,8 +57,8 @@ public final class Semantics {
     private static void classify(String source, String origin, List<Command> result) {
         String withoutComments = removeComments(source).trim();
         if (withoutComments.isEmpty()) return;
-        
-        
+                                                                                 
+                                                                             
         if (COMPLEX.matcher(withoutComments).find() || !balanced(withoutComments)) {
             result.add(new Command(CommandKind.UNKNOWN, source.trim(), origin));
             return;
@@ -102,7 +98,7 @@ public final class Semantics {
         return quote == 0 && brackets.isEmpty();
     }
 
-    
+                                                                                      
     static List<String> statements(String source) {
         var result = new ArrayList<String>();
         StringBuilder current = new StringBuilder();
@@ -128,7 +124,7 @@ public final class Semantics {
             }
         }
         addStatement(current, result);
-        
+                                                                                 
         if (quote != 0 || depth != 0) return List.of(source.trim());
         return result;
     }
@@ -139,7 +135,7 @@ public final class Semantics {
         current.setLength(0);
     }
 
-    
+                                                                              
     private static String removeComments(String source) {
         StringBuilder result = new StringBuilder();
         char quote = 0;

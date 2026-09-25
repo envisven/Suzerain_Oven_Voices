@@ -21,7 +21,7 @@ import java.util.*;
 import java.util.concurrent.*;
 import java.util.function.*;
 
-
+                                                                                          
 public final class Main extends Application {
     private Stage stage;private BorderPane root;private StackPane center;private VBox top;
     private final ExecutorService worker=Executors.newSingleThreadExecutor(r->{Thread t=new Thread(r,"sordland-model");t.setDaemon(true);return t;});
@@ -31,6 +31,7 @@ public final class Main extends Application {
     private final CheckBox ancillary=new CheckBox("Ancillary data"),speakerColors=new CheckBox("Speaker Colors");
     private final Button back=new Button("← Back"),itemDetails=new Button("Item details");private HBox filters;
     private final List<Button> zoomButtons=new ArrayList<>();
+    private final ActorFilterControl actorFilter=new ActorFilterControl();
     private Task<?> activeTask;
     private final Map<String,javafx.scene.paint.Color> speakerPalette=new HashMap<>();
     private final Set<String> campaignExpanded=new HashSet<>();
@@ -39,8 +40,9 @@ public final class Main extends Application {
     private static final class View {
         final GraphCanvas canvas;final Graph graph;final boolean campaign;final String name;final Item item;final javafx.scene.Node detail;
         final Set<String> expanded;
+        final List<String> actors;final Set<String> selectedActors=new LinkedHashSet<>();
         String query="",lastSearch="";int matchIndex=-1;
-        View(GraphCanvas canvas,Graph graph,boolean campaign,String name,Item item,javafx.scene.Node detail,Set<String> expanded){this.canvas=canvas;this.graph=graph;this.campaign=campaign;this.name=name;this.item=item;this.detail=detail;this.expanded=expanded;}
+        View(GraphCanvas canvas,Graph graph,boolean campaign,String name,Item item,javafx.scene.Node detail,Set<String> expanded){this.canvas=canvas;this.graph=graph;this.campaign=campaign;this.name=name;this.item=item;this.detail=detail;this.expanded=expanded;actors=graph!=null&&!campaign?ActorProjection.actors(graph):List.of();selectedActors.addAll(actors);}
     }
     @Override public void start(Stage stage){
         this.stage=stage;dataDir=Path.of(System.getProperty("suzerain.data","data")).toAbsolutePath();
@@ -64,7 +66,7 @@ public final class Main extends Application {
         search.setPromptText("Find title or database name…");search.setPrefWidth(340);search.setOnAction(e->search());
         Button find=new Button("Find");find.setOnAction(e->search());
         type.setPrefWidth(170);turn.setPrefWidth(150);type.setOnAction(e->{if(!initializing)rebuildCampaign();});turn.setOnAction(e->{if(!initializing)rebuildCampaign();});ancillary.setOnAction(e->rebuildCampaign());
-        filters=new HBox(10,search,find,type,turn,ancillary);filters.setAlignment(Pos.CENTER_LEFT);filters.setPadding(new Insets(0,20,12,20));
+        filters=new HBox(10,search,find,type,turn,ancillary,actorFilter);filters.setAlignment(Pos.CENTER_LEFT);filters.setPadding(new Insets(0,20,12,20));
         notice.setWrapText(true);notice.setStyle("-fx-font-size: 11px; -fx-text-fill: #637467;");notice.setPadding(new Insets(0,20,11,20));
         top.getChildren().addAll(mast,toolbar,filters,notice);root.setTop(top);
         status.setPadding(new Insets(8,20,8,20));status.setStyle("-fx-background-color: #fcfdf9; -fx-text-fill: #586e60;");status.setMaxWidth(Double.MAX_VALUE);root.setBottom(status);
@@ -108,44 +110,65 @@ public final class Main extends Application {
         if(current==null||current.campaign){rebuildCampaign();return;}
         if(current.canvas!=null){
             String q=search.getText().toLowerCase(Locale.ROOT).trim();
-            var matches=current.graph.nodes.stream().filter(n->(n.title+" "+n.text+" "+n.source).toLowerCase(Locale.ROOT).contains(q)).toList();
+            var matches=current.canvas.result().graph.nodes.stream().filter(n->(n.title+" "+n.text+" "+n.source).toLowerCase(Locale.ROOT).contains(q)).toList();
             if(q.isBlank()){status.setText("Enter dialogue text or a source ID, such as 6:12.");return;}
-            if(matches.isEmpty()){status.setText("No match in this graph segment. Open a continuation to search its nodes.");return;}
+            if(matches.isEmpty()){status.setText("No matching visible source box. Check the actor filter or try another search.");return;}
             current.matchIndex=q.equals(current.lastSearch)?(current.matchIndex+1)%matches.size():0;current.lastSearch=q;
-            current.canvas.focus(matches.get(current.matchIndex).id);status.setText("Match "+(current.matchIndex+1)+" of "+matches.size()+" in this segment · Find again for the next match");
+            current.canvas.focus(matches.get(current.matchIndex).id);status.setText("Match "+(current.matchIndex+1)+" of "+matches.size()+" · Find again for the next match");
         }
     }
     private void configure(View view){view.canvas.setSpeakerPalette(speakerPalette);view.canvas.onStatus=status::setText;view.canvas.onNode=(node,expand)->{
         if(expand){if(!view.expanded.add(node.id))view.expanded.remove(node.id);relayout(view);}
         else if(node.item!=null)openItem(node.item);
-        else if(node.continuation!=null)openContinuation(node.continuation);
         else inspect(node);
-    };}
-    private void relayout(View view){runWork("Updating measured layout…",()->view.campaign?new LayoutEngine().campaign(view.graph,view.expanded,new TextMeasurer()):new LayoutEngine().dialogue(view.graph,view.expanded,new TextMeasurer()),layout->{view.canvas.setResult(layout,false);show(view);});}
+    };view.canvas.onEdge=this::inspectEdge;}
+    private void relayout(View view){runWork("Updating measured layout…",()->view.campaign?new LayoutEngine().campaign(view.graph,view.expanded,new TextMeasurer()):new LayoutEngine().dialogue(ActorProjection.project(view.graph,view.selectedActors),view.expanded,new TextMeasurer()),layout->{view.canvas.setResult(layout,false);show(view);});}
     private void openItem(Item item){
         if(item.conversationId()==null){history.push(current);show(new View(null,null,false,item.title(),item,detail(item),Set.of()));return;}
         Conversation conversation=data.conversations().get(item.conversationId());
         if(conversation==null){error(new IllegalArgumentException("Unresolved conversation ID: "+item.conversationId()));return;}
         buildDialogue(item.title(),item,()->new DialogueGraphBuilder().build(data,conversation));
     }
-    private void openContinuation(Graph.Continuation continuation){buildDialogue(current.name,current.item,()->new DialogueGraphBuilder().buildContinuation(data,continuation));}
     private void buildDialogue(String name,Item item,Supplier<Graph> make){
-        View previous=current;runWork("Building source links and semantic route contexts…",()->{Graph graph=make.get();return new LayoutEngine().dialogue(graph,Set.of(),new TextMeasurer());},layout->{
+        View previous=current;runWork("Building the complete source dialogue graph…",()->{Graph graph=make.get();return new LayoutEngine().dialogue(graph,Set.of(),new TextMeasurer());},layout->{
             var canvas=new GraphCanvas();View view=new View(canvas,layout.graph,false,name,item,null,new HashSet<>());configure(view);canvas.setSpeakerColors(speakerColors.isSelected());canvas.setResult(layout,true);history.push(previous);show(view);Platform.runLater(()->{if(!layout.boxes.isEmpty())canvas.focus(initialNode(layout));});
         });
     }
     private void show(View view){if(current!=null&&current!=view)current.query=search.getText();current=view;search.setText(view.query);root.setRight(null);center.getChildren().setAll(view.canvas==null?view.detail:view.canvas);title.setText(view.name);title.setTooltip(new Tooltip(view.name));back.setVisible(!history.isEmpty());back.setManaged(!history.isEmpty());speakerColors.setVisible(!view.campaign&&view.canvas!=null);speakerColors.setManaged(!view.campaign&&view.canvas!=null);
         type.setVisible(view.campaign);type.setManaged(view.campaign);turn.setVisible(view.campaign);turn.setManaged(view.campaign);ancillary.setVisible(view.campaign);ancillary.setManaged(view.campaign);
-        search.setPromptText(view.campaign?"Find title or database name…":"Find text or source ID in this segment…");search.setVisible(view.canvas!=null);search.setManaged(view.canvas!=null);filters.getChildren().get(1).setVisible(view.canvas!=null);filters.getChildren().get(1).setManaged(view.canvas!=null);
+        search.setPromptText(view.campaign?"Find title or database name…":"Find text or source ID…");search.setVisible(view.canvas!=null);search.setManaged(view.canvas!=null);filters.getChildren().get(1).setVisible(view.canvas!=null);filters.getChildren().get(1).setManaged(view.canvas!=null);
+        boolean dialogue=!view.campaign&&view.canvas!=null;
+        actorFilter.setVisible(dialogue);actorFilter.setManaged(dialogue);
+        if(dialogue)actorFilter.configure(view.actors,view.selectedActors,chosen->{if(current==view)filterActors(view,chosen);});
         itemDetails.setVisible(view.item!=null&&view.canvas!=null);itemDetails.setManaged(view.item!=null&&view.canvas!=null);zoomButtons.forEach(b->b.setDisable(view.canvas==null));
-        notice.setText(view.campaign?"SOURCE CATALOGUE  ·  Activation lines only. Event progression is unresolved in the supplied data.  ·  Click a title to explore; › expands metadata.":view.canvas==null?"SOURCE OPTIONS  ·  Conditions and instructions are displayed exactly; this viewer does not execute them.":"SOURCE ROUTES  ·  State-sensitive occurrences stay separate. Dashed lines mark back-references. Amber boxes continue large graphs. Click a node for raw metadata.");
+        notice.setText(view.campaign?"SOURCE CATALOGUE  ·  Activation lines only. Event progression is unresolved in the supplied data.  ·  Click a title to explore; › expands metadata.":view.canvas==null?"SOURCE OPTIONS  ·  Conditions and instructions are displayed exactly; this viewer does not execute them.":"SOURCE ROUTES · Each source entry appears once; conditions and effects are not evaluated. Dashed arrows mark loops. Crossing gaps are not junctions. Click an arrow to trace it or a node for metadata.");
         if(view.canvas!=null){view.canvas.setSpeakerColors(speakerColors.isSelected());view.canvas.redraw();}else status.setText(view.item.type()+"  ·  "+view.item.internalName());
+    }
+    private void filterActors(View view,Set<String> selected){
+        Set<String> chosen=Set.copyOf(selected);
+        runWork("Updating actor visibility…",()->new LayoutEngine().dialogue(ActorProjection.project(view.graph,chosen),view.expanded,new TextMeasurer()),layout->{
+            view.selectedActors.clear();view.selectedActors.addAll(chosen);view.matchIndex=-1;view.lastSearch="";
+            view.canvas.setResult(layout,false);root.setRight(null);
+        },false);
+    }
+    private void inspectEdge(Graph.Edge edge){
+        var layout=current.canvas.result();var from=layout.byId.get(edge.from).node();var to=layout.byId.get(edge.to).node();
+        StringBuilder text=new StringBuilder("FROM: "+from.title+" ["+from.source+"]\nTO: "+to.title+" ["+to.source+"]\n"+edge.label);
+        if(edge.back)text.append("\nSource back-reference / loop");
+        if(edge.sourceLink!=null)text.append("\n\nEXACT JSON POINTER\n").append(edge.sourceFrom).append(" → ").append(edge.sourceTo).append("\nOrder: ").append(edge.sourceLink.order()+1).append("\nPriority: ").append(edge.sourceLink.priority()).append("\nConnector: ").append(edge.sourceLink.connector());
+        if(!edge.projectionPath.isEmpty()){
+            text.append("\n\nVISUAL PROJECTION THROUGH HIDDEN SPEECH\nThis arrow abbreviates the following original connectors; it is not a new JSON link.\n");
+            for(var original:edge.projectionPath)text.append(original.sourceLink==null?original.from+" → "+original.to:original.sourceFrom+" → "+original.sourceTo).append("  ").append(original.label).append('\n');
+        } else if(edge.sourceLink==null)text.append("\n\nInternal source-entry box sequence.");
+        Label heading=new Label("Selected arrow");heading.setStyle("-fx-font-weight: bold;");Button close=new Button("×");close.setOnAction(e->root.setRight(null));
+        HBox header=new HBox(16,heading,close);TextArea area=new TextArea(text.toString());area.setEditable(false);area.setWrapText(true);VBox.setVgrow(area,Priority.ALWAYS);
+        inspector=new VBox(12,header,area);inspector.setPadding(new Insets(16));inspector.setPrefWidth(365);root.setRight(inspector);
     }
     private void goBack(){if(!history.isEmpty()){revision++;show(history.pop());}}
     private void inspect(Graph.Node node){
         Label heading=new Label(node.source==null?node.title:"Source "+node.source);heading.setWrapText(true);heading.setStyle("-fx-font-weight: bold; -fx-text-fill: #244332;");
         Button close=new Button("×");close.setOnAction(e->root.setRight(null));HBox head=new HBox(12,heading,close);HBox.setHgrow(heading,Priority.ALWAYS);
-        String raw=node.metadata;if(node.context!=null)raw+="\n\nROUTE HISTORY BEFORE THIS SOURCE ENTRY\n"+String.join("\n\n",node.context.history());if(node.source!=null){Entry entry=data.entry(node.source);if(entry!=null)raw+="\n\nRAW ENTRY\n"+Json.pretty(entry.raw());}
+        String raw=node.metadata;if(node.source!=null){Entry entry=data.entry(node.source);if(entry!=null)raw+="\n\nRAW ENTRY\n"+Json.pretty(entry.raw());}
         TextArea area=new TextArea(raw);area.setEditable(false);area.setWrapText(true);area.setStyle("-fx-font-family: 'monospaced'; -fx-font-size: 11px;");VBox.setVgrow(area,Priority.ALWAYS);
         inspector=new VBox(12,head,area);inspector.setPadding(new Insets(16));inspector.setPrefWidth(365);inspector.setStyle("-fx-background-color: #fcfdf9;");root.setRight(inspector);
     }
@@ -195,12 +218,13 @@ public final class Main extends Application {
 
 
     private void diagnostics(){
-        if(data==null)return;String message="DATA DISCOVERY\n"+String.join("\n\n",data.diagnostics());if(current!=null&&current.graph!=null)message+="\n\nCURRENT GRAPH\n"+String.join("\n\n",current.graph.diagnostics);
+        if(data==null)return;String message="DATA DISCOVERY\n"+String.join("\n\n",data.diagnostics());if(current!=null&&current.canvas!=null)message+="\n\nCURRENT GRAPH\n"+String.join("\n\n",current.canvas.result().graph.diagnostics);
         Dialog<Void> dialog=new Dialog<>();dialog.initOwner(stage);dialog.setTitle("Source coverage and unresolved relationships");TextArea area=new TextArea(message);area.setEditable(false);area.setWrapText(true);area.setPrefSize(850,570);dialog.getDialogPane().setContent(area);dialog.getDialogPane().getButtonTypes().add(ButtonType.CLOSE);dialog.show();
     }
-    private <T> void runWork(String label,Callable<T> job,Consumer<T> success){
+    private <T> void runWork(String label,Callable<T> job,Consumer<T> success){runWork(label,job,success,true);}
+    private <T> void runWork(String label,Callable<T> job,Consumer<T> success,boolean freezeToolbar){
         if(activeTask!=null)activeTask.cancel(true);
-        long token=++revision;top.setDisable(true);ProgressIndicator progress=new ProgressIndicator();progress.setMaxSize(30,30);Label message=new Label(label);VBox busy=new VBox(16,progress,message);busy.setAlignment(Pos.CENTER);busy.setStyle("-fx-background-color: rgba(243,241,236,0.96);");center.getChildren().add(busy);status.setText(label);
+        long token=++revision;top.setDisable(freezeToolbar);ProgressIndicator progress=new ProgressIndicator();progress.setMaxSize(30,30);Label message=new Label(label);VBox busy=new VBox(16,progress,message);busy.setAlignment(Pos.CENTER);busy.setStyle("-fx-background-color: rgba(243,241,236,0.96);");center.getChildren().add(busy);status.setText(label);
         Task<T> task=new Task<>(){@Override protected T call() throws Exception{return job.call();}};
         task.setOnSucceeded(e->{center.getChildren().remove(busy);if(token==revision){top.setDisable(false);activeTask=null;success.accept(task.getValue());}});
         task.setOnFailed(e->{center.getChildren().remove(busy);if(token==revision){top.setDisable(false);activeTask=null;error(task.getException());}});
